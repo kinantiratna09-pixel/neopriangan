@@ -124,5 +124,69 @@ document.addEventListener('DOMContentLoaded', () => {
             timeline.scrollLeft += e.deltaY;
         });
     }
+    const slides = document.querySelectorAll(".hero-bg");
 
+    let current = 0;
+
+    setInterval(() => {
+
+        slides[current].classList.remove("active");
+
+        current++;
+
+        if (current >= slides.length) {
+
+            current = 0;
+
+        }
+
+        slides[current].classList.add("active");
+
+    }, 3000);
+
+    const counters = document.querySelectorAll(".counter");
+
+    const observer = new IntersectionObserver((entries) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                const counter = entry.target;
+
+                const target = +counter.dataset.target;
+
+                let count = 0;
+
+                const speed = target / 80;
+
+                const update = () => {
+
+                    count += speed;
+
+                    if (count < target) {
+
+                        counter.innerHTML = Math.floor(count) + "+";
+
+                        requestAnimationFrame(update);
+
+                    } else {
+
+                        counter.innerHTML = target + "+";
+
+                    }
+
+                }
+
+                update();
+
+                observer.unobserve(counter);
+
+            }
+
+        });
+
+    });
+
+    counters.forEach(counter => observer.observe(counter));
 });
