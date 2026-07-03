@@ -14,7 +14,7 @@
 <body>
 
     <header class="hero" id="home">
-        <nav class="navbar" id="navbar">
+        <nav class="navbar scrolled" id="navbar">
             <div class="container nav-inner">
                 <a class="brand" href="#home">
                     <img src="image/logo.png" alt="Bandung icon">
@@ -132,207 +132,932 @@
 
         </div>
 
-        <!-- Bagian Deretan Kartu Kategori Horizontal di Bawahnya -->
-        <div class="categories-wrapper">
-            <div class="category-grid">
-                <div class="category-card nature">
-                    <div class="cat-icon"><i class="fa-solid fa-leaf"></i></div>
-                    <div class="cat-info">
-                        <h4>Nature</h4>
-                        <p>Keindahan alam Bandung yang memukau dan menyegarkan.</p>
+        <!-- TOURISM CATEGORIES & BANNER -->
+        <section id="categories" class="section categories-section">
+            <div class="container">
+
+                <!-- Grid 5 Kartu Kategori Sesuai Gambar -->
+                <div class="category-image-grid">
+
+                    <!-- 1. Creative -->
+                    <div class="cat-image-card creative">
+                        <div class="card-bg-img" style="background-image: url('image/braga.png');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-top-content">
+                            <div class="cat-icon-circle"><i class="fa-solid fa-palette"></i></div>
+                            <div class="cat-text">
+                                <h4>Creative</h4>
+                                <p>Kota kreatif dengan komunitas dan industri kreatif yang berkembang pesat.</p>
+                            </div>
+                        </div>
+                        <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
                     </div>
-                    <button class="cat-arrow">➔</button>
+
+                    <!-- 2. Heritage -->
+                    <div class="cat-image-card heritage">
+                        <div class="card-bg-img" style="background-image: url('image/gedungsate.png');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-top-content">
+                            <div class="cat-icon-circle"><i class="fa-solid fa-building-columns"></i></div>
+                            <div class="cat-text">
+                                <h4>Heritage</h4>
+                                <p>Jejak sejarah di setiap sudut kota, dari masa kolonial hingga kemerdekaan.</p>
+                            </div>
+                        </div>
+                        <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- 3. Culinary -->
+                    <div class="cat-image-card culinary">
+                        <div class="card-bg-img" style="background-image: url('image/asiaafrica.jpg');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-top-content">
+                            <div class="cat-icon-circle"><i class="fa-solid fa-bowl-food"></i></div>
+                            <div class="cat-text">
+                                <h4>Culinary</h4>
+                                <p>Ragam kuliner khas Bandung yang lezat dan menggugah selera.</p>
+                            </div>
+                        </div>
+                        <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- 4. Nature -->
+                    <div class="cat-image-card nature">
+                        <div class="card-bg-img" style="background-image: url('image/kawah.png');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-top-content">
+                            <div class="cat-icon-circle"><i class="fa-solid fa-leaf"></i></div>
+                            <div class="cat-text">
+                                <h4>Nature</h4>
+                                <p>Keindahan alam pegunungan, kawah, dan udara yang menyegarkan.</p>
+                            </div>
+                        </div>
+                        <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
+                    <!-- 5. Smart City -->
+                    <div class="cat-image-card smartcity">
+                        <div class="card-bg-img" style="background-image: url('image/wisata.png');"></div>
+                        <div class="card-overlay"></div>
+                        <div class="card-top-content">
+                            <div class="cat-icon-circle"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="cat-text">
+                                <h4>Smart City</h4>
+                                <p>Inovasi teknologi untuk pelayanan publik yang modern dan terintegrasi.</p>
+                            </div>
+                        </div>
+                        <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
+                    </div>
+
                 </div>
-                <div class="category-card culinary">
-                    <div class="cat-icon"><i class="fa-solid fa-utensils"></i></div>
-                    <div class="cat-info">
-                        <h4>Culinary</h4>
-                        <p>Ragam kuliner lezat khas Bandung yang menggugah selera.</p>
+
+                <!-- Banner Gerak Menuju Kota Masa Depan (Bagian Bawah Gambar) -->
+                <div class="future-city-banner">
+                    <div class="banner-left">
+                        <div class="banner-icon"><i class="fa-solid fa-city"></i></div>
+                        <div class="banner-text">
+                            <h3>Bandung bergerak menuju kota masa depan</h3>
+                            <p>Dengan kolaborasi masyarakat, teknologi, dan pemerintah, Bandung terus berinovasi menjadi kota yang lebih baik.</p>
+                        </div>
                     </div>
-                    <button class="cat-arrow">➔</button>
+                    <a href="#destinations" class="btn-jelajahi">Jelajahi Destinasi <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
-                <div class="category-card heritage">
-                    <div class="cat-icon"><i class="fa-solid fa-building-columns"></i></div>
-                    <div class="cat-info">
-                        <h4>Heritage</h4>
-                        <p>Jejak sejarah dan bangunan ikonik penuh cerita.</p>
+
+            </div>
+        </section>
+
+
+        <!-- FEATURED DESTINATIONS SECTION -->
+        <section id="destinations" class="section destinations-section">
+            <div class="container">
+
+                <!-- Bagian Atas: Header Teks & Grid 3 Kartu Wisata Utama -->
+                <div class="destinations-main-layout">
+
+                    <!-- Kolom Judul & Sub-informasi (Kiri) -->
+                    <div class="destinations-header-text">
+                        <p class="section-eyebrow">DESTINASI PILIHAN</p>
+                        <h2>Tempat Terfavorit <br>di Bandung</h2>
+                        <p class="section-desc">Kunjungi destinasi ikonik pilihan pelancong dan temukan pengalaman tak terlupakan.</p>
+                        <div class="recommendation-badge">
+                            <i class="fa-solid fa-star"></i> Rekomendasi berdasarkan rating & popularitas
+                        </div>
                     </div>
-                    <button class="cat-arrow">➔</button>
+
+                    <!-- Grid Kartu Wisata Berjejer (Kanan) -->
+                    <div class="destinations-cards-grid">
+
+                        <!-- 1. Kawah Putih -->
+                        <div class="destination-premium-card">
+                            <img src="image/kawah.png" alt="Kawah Putih" class="card-main-img">
+                            <div class="card-top-tags">
+                                <span class="rating-tag"><i class="fa-solid fa-star"></i> 4.9</span>
+                            </div>
+                            <div class="card-bottom-info">
+                                <span class="category-tag nature">WISATA ALAM</span>
+                                <h3>Kawah Putih</h3>
+                                <p class="location-text"><i class="fa-solid fa-location-dot"></i> Ciwidey, Bandung Selatan</p>
+                            </div>
+                            <button class="arrow-action-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+
+                        <!-- 2. Jalan Braga -->
+                        <div class="destination-premium-card">
+                            <img src="image/braga.png" alt="Jalan Braga" class="card-main-img">
+                            <div class="card-top-tags">
+                                <span class="rating-tag"><i class="fa-solid fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="card-bottom-info">
+                                <span class="category-tag heritage">HERITAGE & CULTURE</span>
+                                <h3>Jalan Braga</h3>
+                                <p class="location-text"><i class="fa-solid fa-location-dot"></i> Sumur Bandung</p>
+                            </div>
+                            <button class="arrow-action-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+
+                        <!-- 3. Gedung Sate -->
+                        <div class="destination-premium-card">
+                            <img src="image/gedungsate.png" alt="Gedung Sate" class="card-main-img">
+                            <div class="card-top-tags">
+                                <span class="rating-tag"><i class="fa-solid fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="card-bottom-info">
+                                <span class="category-tag history">SEJARAH</span>
+                                <h3>Gedung Sate</h3>
+                                <p class="location-text"><i class="fa-solid fa-location-dot"></i> Cibeunying, Bandung Wetan</p>
+                            </div>
+                            <button class="arrow-action-btn"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="category-card culture">
-                    <div class="cat-icon"><i class="fa-solid fa-masks-theater"></i></div>
-                    <div class="cat-info">
-                        <h4>Culture</h4>
-                        <p>Budaya, seni, dan kreativitas masyarakat Bandung yang inspiratif.</p>
+
+                <!-- Banner Bawah: Ajakan Menjelajahi Destinasi Lainnya beserta Kolase Foto -->
+                <div class="more-destinations-banner">
+
+                    <div class="banner-info-side">
+                        <div class="banner-map-icon">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                        </div>
+                        <div class="banner-info-text">
+                            <h3>Masih banyak destinasi menarik lainnya!</h3>
+                            <p>Temukan lebih dari 150+ destinasi wisata Bandung lengkap dengan rating, lokasi, dan informasi menarik.</p>
+                        </div>
                     </div>
-                    <button class="cat-arrow">➔</button>
+
+                    <!-- Bagian Kanan Banner: Tumpukan Kolase Gambar Mini & Tombol Klik -->
+                    <div class="banner-interactive-side">
+                        <div class="photo-collage-wrapper">
+                            <img src="image/kawah.png" alt="Mini 1" class="collage-pic p1">
+                            <img src="image/braga.png" alt="Mini 2" class="collage-pic p2">
+                            <img src="image/asiaafrica.jpg" alt="Mini 3" class="collage-pic p3">
+                            <img src="image/wisata.png" alt="Mini 4" class="collage-pic p4">
+                        </div>
+
+                        <a href="#all-destinations" class="blue-action-block">
+                            <span>Lihat Semua Destinasi</span>
+                            <div class="circle-white-arrow"><i class="fa-solid fa-arrow-right"></i></div>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SUNDA CULTURE HUB SECTION -->
+        <section id="culture-hub" class="culture-section">
+            <div class="container">
+
+                <!-- Bagian Atas: Teks Budaya (Kiri) & Gambar Kebudayaan Melengkung (Kanan) -->
+                <div class="culture-hero-wrapper">
+
+                    <!-- Kolom Informasi Kiri -->
+                    <div class="culture-hero-text">
+                        <p class="section-eyebrow">SUNDA CULTURE HUB</p>
+                        <h2>Kenali Budaya Sunda, <br>Jiwa <span>Bandung</span></h2>
+                        <p class="section-desc">Budaya Sunda adalah bagian tak terpisahkan dari identitas masyarakat Bandung yang ramah, kreatif, dan penuh makna.</p>
+
+                        <!-- Kotak Kutipan Filosofi Sunda -->
+                        <div class="culture-quote-box">
+                            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+                            <div class="quote-content">
+                                <p>"Ngemban dina kaharmonisan, berkarya dengan kreativitas, menyapa dunia dengan keramahan."</p>
+                                <span>- Nilai Masyarakat Sunda</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kolom Gambar Kanan dengan Latar Belakang Lengkung Estetik -->
+                    <div class="culture-hero-image-side">
+                        <div class="curved-bg-decor"></div>
+                        <!-- Sediakan foto berformat PNG transparan sepasang pakaian adat sunda berlatar gedung sate -->
+                        <img src="image/sunda-heritage.png" alt="Sunda Culture" class="culture-main-illustration">
+                    </div>
+
+                </div>
+
+                <!-- Bagian Tengah: Grid 5 Kartu Unsur Kebudayaan -->
+                <div class="culture-cards-grid">
+
+                    <!-- 1. Bahasa Sunda Mini -->
+                    <div class="culture-item-card">
+                        <div class="card-header-row">
+                            <div class="badge-icon icon-blue"><i class="fa-solid fa-language"></i></div>
+                            <h4>Bahasa Sunda Mini</h4>
+                        </div>
+                        <div class="culture-thumb-wrap">
+                            <img src="image/aksara-sunda.png" alt="Bahasa Sunda">
+                        </div>
+                        <p>Kenali kosakata dan frasa dasar Bahasa Sunda yang digunakan dalam kehidupan sehari-hari.</p>
+                        <a href="#" class="btn-learn-more text-blue">Pelajari lebih lanjut ➔</a>
+                    </div>
+
+                    <!-- 2. Angklung -->
+                    <div class="culture-item-card">
+                        <div class="card-header-row">
+                            <div class="badge-icon icon-green"><i class="fa-solid fa-music"></i></div>
+                            <h4>Angklung</h4>
+                        </div>
+                        <div class="culture-thumb-wrap">
+                            <img src="image/angklung.png" alt="Angklung">
+                        </div>
+                        <p>Alat musik tradisional yang telah diakui UNESCO sebagai warisan budaya dunia.</p>
+                        <a href="#" class="btn-learn-more text-green">Pelajari lebih lanjut ➔</a>
+                    </div>
+
+                    <!-- 3. Tari Jaipong -->
+                    <div class="culture-item-card">
+                        <div class="card-header-row">
+                            <div class="badge-icon icon-orange"><i class="fa-solid fa-person-dancing"></i></div>
+                            <h4>Tari Jaipong</h4>
+                        </div>
+                        <div class="culture-thumb-wrap">
+                            <img src="image/jaipong.png" alt="Tari Jaipong">
+                        </div>
+                        <p>Tari khas Sunda yang energik, anggun, dan penuh ekspresi kegembiraan.</p>
+                        <a href="#" class="btn-learn-more text-orange">Pelajari lebih lanjut ➔</a>
+                    </div>
+
+                    <!-- 4. Pakaian Adat Sunda -->
+                    <div class="culture-item-card">
+                        <div class="card-header-row">
+                            <div class="badge-icon icon-purple"><i class="fa-solid fa-shirt"></i></div>
+                            <h4>Pakaian Adat Sunda</h4>
+                        </div>
+                        <div class="culture-thumb-wrap">
+                            <img src="image/baju-adat.png" alt="Pakaian Adat">
+                        </div>
+                        <p>Keindahan busana tradisional Sunda yang sarat makna dan nilai budaya.</p>
+                        <a href="#" class="btn-learn-more text-purple">Pelajari lebih lanjut ➔</a>
+                    </div>
+
+                    <!-- 5. Nilai Ramah & Kreatif -->
+                    <div class="culture-item-card">
+                        <div class="card-header-row">
+                            <div class="badge-icon icon-pink"><i class="fa-solid fa-user-group"></i></div>
+                            <h4>Nilai Ramah & Kreatif</h4>
+                        </div>
+                        <div class="culture-thumb-wrap">
+                            <img src="image/ramah-kreatif.png" alt="Nilai Budaya">
+                        </div>
+                        <p>Keramahan dan kreativitas masyarakat Bandung menjadi jiwa dari setiap karya dan inovasi.</p>
+                        <a href="#" class="btn-learn-more text-pink">Pelajari lebih lanjut ➔</a>
+                    </div>
+
+                </div>
+
+                <!-- Bagian Bawah: Banner Penutup Komunitas Budaya -->
+                <div class="culture-footer-banner">
+                    <div class="banner-left-content">
+                        <div class="mini-building-icon">
+                            <i class="fa-solid fa-landmark-dome"></i>
+                        </div>
+                        <div class="banner-message">
+                            <h3>Budaya adalah jembatan masa lalu dan masa depan</h3>
+                            <p>Mari lestarikan budaya Sunda dan terus berkarya untuk Bandung yang lebih baik, kreatif, dan membanggakan dunia.</p>
+                        </div>
+                    </div>
+                    <a href="#explore-culture" class="btn-jelajahi-budaya">Jelajahi Budaya Sunda ➔</a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- BANDUNG TIMELINE SECTION -->
+        <section id="timeline" class="timeline-section">
+            <div class="container">
+
+                <!-- Bagian Atas: Judul Kiri & Ilustrasi Gedung Sate Memudar (Kanan) -->
+                <div class="timeline-hero-wrapper">
+                    <div class="timeline-hero-text">
+                        <p class="section-eyebrow">BANDUNG TIMELINE</p>
+                        <h2>Perjalanan Sejarah <br>Kota Kembang</h2>
+                        <p class="section-desc">Dari masa ke masa, Bandung terus tumbuh menjadi kota yang kreatif, inovatif, dan selalu beradaptasi dengan perubahan zaman.</p>
+                    </div>
+                    <div class="timeline-hero-image-fade">
+                        <!-- Gunakan foto Gedung Sate dengan efek gradasi memudar di sisi kiri -->
+                        <img src="image/gedungsate-fade.png" alt="Gedung Sate History Layout" class="timeline-fade-img" onerror="this.src='https://placehold.co'">
+                    </div>
+                </div>
+
+                <!-- Bagian Tengah: Grid 4 Kartu Linimasa Sejarah -->
+                <div class="timeline-cards-grid">
+
+                    <!-- 1. Tahun 1900 -->
+                    <div class="timeline-history-card">
+                        <div class="card-year-header">
+                            <div class="year-icon-circle icon-blue"><i class="fa-solid fa-landmark"></i></div>
+                            <span class="year-number text-blue">1900</span>
+                        </div>
+                        <h4>Pendirian landmark kota bersejarah</h4>
+                        <p>Bandung mulai berkembang sebagai kota modern dengan dibangunnya berbagai bangunan ikonik peninggalan masa kolonial.</p>
+                        <div class="history-thumb-wrap">
+                            <img src="image/bandung-1900.png" alt="Bandung 1900" onerror="this.src='https://placehold.co'">
+                        </div>
+                    </div>
+
+                    <!-- 2. Tahun 1950 -->
+                    <div class="timeline-history-card">
+                        <div class="card-year-header">
+                            <div class="year-icon-circle icon-purple"><i class="fa-solid fa-palette"></i></div>
+                            <span class="year-number text-purple">1950</span>
+                        </div>
+                        <h4>Perkembangan seni dan pusat budaya</h4>
+                        <p>Bandung dikenal sebagai pusat kreativitas, seni, dan pendidikan yang melahirkan banyak tokoh serta karya inspiratif.</p>
+                        <div class="history-thumb-wrap">
+                            <img src="image/bandung-1950.png" alt="Bandung 1950" onerror="this.src='https://placehold.co'">
+                        </div>
+                    </div>
+
+                    <!-- 3. Tahun 2000 -->
+                    <div class="timeline-history-card">
+                        <div class="card-year-header">
+                            <div class="year-icon-circle icon-green"><i class="fa-solid fa-city"></i></div>
+                            <span class="year-number text-green">2000</span>
+                        </div>
+                        <h4>Modernisasi infrastruktur dan tata kota</h4>
+                        <p>Transformasi besar-besaran di bidang infrastruktur, transportasi, dan teknologi menjadikan Bandung kota yang semakin maju dan nyaman.</p>
+                        <div class="history-thumb-wrap">
+                            <img src="image/bandung-2000.png" alt="Bandung 2000" onerror="this.src='https://placehold.co'">
+                        </div>
+                    </div>
+
+                    <!-- 4. Tahun 2025 -->
+                    <div class="timeline-history-card">
+                        <div class="card-year-header">
+                            <div class="year-icon-circle icon-orange"><i class="fa-solid fa-rocket"></i></div>
+                            <span class="year-number text-orange">2025</span>
+                        </div>
+                        <h4>Inisiasi global integrasi Smart City</h4>
+                        <p>Bandung melangkah menuju kota cerdas yang terintegrasi, berkelanjutan, dan berdaya saing global.</p>
+                        <div class="history-thumb-wrap">
+                            <img src="image/bandung-2025.png" alt="Bandung 2025" onerror="this.src='https://placehold.co'">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Bagian Interaktif: Jalur Lintasan Titik Kemajuan Khas Gambar -->
+                <div class="timeline-progress-track">
+                    <div class="progress-line"></div>
+
+                    <div class="progress-node-wrap position-1">
+                        <div class="node-dot bg-blue"></div>
+                        <span class="node-label label-blue">Awal Kota</span>
+                    </div>
+
+                    <div class="progress-node-wrap position-2">
+                        <div class="node-dot bg-purple"></div>
+                        <span class="node-label label-purple">Masa Berkembang</span>
+                    </div>
+
+                    <div class="progress-node-wrap position-3">
+                        <div class="node-dot bg-green"></div>
+                        <span class="node-label label-green">Masa Modern</span>
+                    </div>
+
+                    <div class="progress-node-wrap position-4">
+                        <div class="node-dot bg-orange"></div>
+                        <span class="node-label label-orange">Masa Depan</span>
+                    </div>
+                </div>
+
+                <!-- Bagian Bawah: Banner Catatan Sejarah Masa Depan -->
+                <div class="timeline-footer-banner">
+                    <div class="banner-left-side">
+                        <div class="calendar-icon-circle">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <div class="banner-message">
+                            <h3>Sejarah membentuk masa depan</h3>
+                            <p>Dari warisan sejarah hingga inovasi modern, Bandung terus bergerak menjadi kota yang lebih baik untuk semua.</p>
+                        </div>
+                    </div>
+                    <a href="#read-history" class="btn-history-more">Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- UPCOMING EVENTS SECTION -->
+        <section id="events" class="events-section">
+            <div class="container">
+
+                <!-- Bagian Atas: Judul Kiri & Info Box + Background Gedung Sate (Kanan) -->
+                <div class="events-hero-wrapper">
+                    <div class="events-header-text">
+                        <p class="section-eyebrow">UPCOMING EVENTS</p>
+                        <h2>Event Seru yang <br><span>Akan Datang</span></h2>
+                        <p class="section-desc">Agenda perayaan kreativitas, budaya, dan inovasi terdekat di Kota Bandung.</p>
+                        <a href="#all-events" class="btn-all-events">Lihat Semua Event ➔</a>
+                    </div>
+
+                    <div class="events-hero-right">
+                        <!-- Box Kecil Pengingat di Kanan Atas -->
+                        <div class="reminder-card-box">
+                            <div class="reminder-icon"><i class="fa-regular fa-calendar-check"></i></div>
+                            <div class="reminder-text">
+                                <strong>Jangan sampai ketinggalan!</strong>
+                                <p>Catat tanggalnya dan ikut ramaikan event di Bandung.</p>
+                            </div>
+                        </div>
+                        <!-- Gambar Gedung Sate Transparan Latar Belakang -->
+                        <img src="image/gedungsate-fade.png" alt="Gedung Sate Background" class="events-bg-illustration" onerror="this.src='https://placehold.co'">
+                    </div>
+                </div>
+
+                <!-- Bagian Slider Konten Utama dengan Panah Navigasi -->
+                <div class="slider-container-wrapper">
+
+                    <!-- Tombol Panah Kiri -->
+                    <button class="slider-arrow-btn prev-btn"><i class="fa-solid fa-angle-left"></i></button>
+
+                    <!-- Grid 3 Kartu Event Utama -->
+                    <div class="events-cards-grid">
+
+                        <!-- KARTU 1: Bandung Food Fest -->
+                        <div class="event-premium-card">
+                            <div class="event-card-media">
+                                <img src="image/wisata.png" alt="Bandung Food Fest" onerror="this.src='https://unsplash.com'">
+                                <span class="event-badge badge-festival">FESTIVAL</span>
+                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                            <div class="event-card-body">
+                                <div class="event-main-info-row">
+                                    <!-- Blok Tanggal Kotak Kalender -->
+                                    <div class="calendar-date-box text-green bg-soft-green">
+                                        <span class="date-num">20</span>
+                                        <span class="date-month">JUL</span>
+                                        <span class="date-year">2026</span>
+                                    </div>
+                                    <div class="event-text-block">
+                                        <h3>Bandung Food Fest</h3>
+                                        <p>Festival kuliner terbesar di Bandung dengan berbagai hidangan khas dan kreatif dari lokal hingga internasional.</p>
+                                    </div>
+                                </div>
+                                <div class="event-meta-footer">
+                                    <span class="meta-item"><i class="fa-solid fa-location-dot"></i> Lap. Gasibu, Bandung</span>
+                                    <span class="meta-item"><i class="fa-regular fa-clock"></i> 10.00 - 22.00 WIB</span>
+                                </div>
+                                <a href="#" class="btn-selengkapnya text-green">Selengkapnya ➔</a>
+                            </div>
+                        </div>
+
+                        <!-- KARTU 2: Art & Culture Night -->
+                        <div class="event-premium-card">
+                            <div class="event-card-media">
+                                <img src="image/asiaafrica.jpg" alt="Art & Culture Night" onerror="this.src='https://unsplash.com'">
+                                <span class="event-badge badge-budaya">BUDAYA</span>
+                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                            <div class="event-card-body">
+                                <div class="event-main-info-row">
+                                    <div class="calendar-date-box text-purple bg-soft-purple">
+                                        <span class="date-num">05</span>
+                                        <span class="date-month">AUG</span>
+                                        <span class="date-year">2026</span>
+                                    </div>
+                                    <div class="event-text-block">
+                                        <h3>Art & Culture Night</h3>
+                                        <p>Malam penuh seni dan budaya dengan pertunjukan musik, tari, pameran seni, dan workshop kreatif.</p>
+                                    </div>
+                                </div>
+                                <div class="event-meta-footer">
+                                    <span class="meta-item"><i class="fa-solid fa-location-dot"></i> Taman Cikapundung</span>
+                                    <span class="meta-item"><i class="fa-regular fa-clock"></i> 18.00 - 23.00 WIB</span>
+                                </div>
+                                <a href="#" class="btn-selengkapnya text-purple">Selengkapnya ➔</a>
+                            </div>
+                        </div>
+
+                        <!-- KARTU 3: Smart City Expo -->
+                        <div class="event-premium-card">
+                            <div class="event-card-media">
+                                <img src="image/image.png" alt="Smart City Expo" onerror="this.src='https://unsplash.com'">
+                                <span class="event-badge badge-teknologi">TEKNOLOGI</span>
+                                <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                            <div class="event-card-body">
+                                <div class="event-main-info-row">
+                                    <div class="calendar-date-box text-blue bg-soft-blue">
+                                        <span class="date-num">12</span>
+                                        <span class="date-month">SEP</span>
+                                        <span class="date-year">2026</span>
+                                    </div>
+                                    <div class="event-text-block">
+                                        <h3>Smart City Expo</h3>
+                                        <p>Pameran teknologi dan inovasi kota pintar untuk masa depan Bandung yang lebih maju dan berkelanjutan.</p>
+                                    </div>
+                                </div>
+                                <div class="event-meta-footer">
+                                    <span class="meta-item"><i class="fa-solid fa-location-dot"></i> Trans Convention Center</span>
+                                    <span class="meta-item"><i class="fa-regular fa-clock"></i> 09.00 - 17.00 WIB</span>
+                                </div>
+                                <a href="#" class="btn-selengkapnya text-blue">Selengkapnya ➔</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Tombol Panah Kanan -->
+                    <button class="slider-arrow-btn next-btn"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+
+                <!-- Indikator Titik Slider (Dots) Bawah -->
+                <div class="slider-dots-navigation">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- INTERACTIVE QUIZ SECTION (VERSION 2) -->
+        <section id="interactive-quiz" class="quiz-v2-section">
+
+            <!-- ==========================================
+       BAGIAN ATAS: HERO BANNER UTAMA KUIS
+       ========================================== -->
+            <div class="quiz-v2-hero">
+                <div class="container quiz-v2-hero-inner">
+
+                    <!-- Sisi Kiri: Judul, Deskripsi, & 3 Indikator Fitur -->
+                    <div class="quiz-v2-left">
+                        <div class="quiz-v2-badge"><i class="fa-solid fa-gamepad"></i> INTERACTIVE QUIZ</div>
+                        <h2>Test Your Knowledge <br>About <span>Bandung!</span></h2>
+                        <p class="quiz-v2-desc">Uji pengetahuanmu tentang sejarah, budaya, dan destinasi wisata di Bandung melalui kuis interaktif ini.</p>
+
+                        <!-- 3 Indikator Fitur Samping -->
+                        <div class="quiz-v2-indicators">
+                            <div class="ind-item">
+                                <div class="ind-icon blue"><i class="fa-solid fa-circle-question"></i></div>
+                                <div class="ind-text"><strong>10 Pertanyaan</strong>
+                                    <p>Pilihan Ganda</p>
+                                </div>
+                            </div>
+                            <div class="ind-item">
+                                <div class="ind-icon yellow"><i class="fa-solid fa-star"></i></div>
+                                <div class="ind-text"><strong>Skor Instan</strong>
+                                    <p>Lihat hasilmu langsung</p>
+                                </div>
+                            </div>
+                            <div class="ind-item">
+                                <div class="ind-icon green"><i class="fa-solid fa-trophy"></i></div>
+                                <div class="ind-text"><strong>Papan Peringkat</strong>
+                                    <p>Bersaing dengan pengguna lain</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn-v2-start"><i class="fa-solid fa-rocket"></i> Mulai Kuis Sekarang ➔</button>
+                    </div>
+
+                    <!-- Sisi Kanan: Ilustrasi Gedung Sate & Mockup Gadget Kuis Melayang -->
+                    <div class="quiz-v2-right">
+                        <div class="glow-sphere-bg"></div>
+                        <img src="image/gedungsate.png" alt="Gedung Sate Hero" class="sate-illustration" onerror="this.src='https://placehold.co'">
+
+                        <!-- Mockup Tampilan Kuis di Gadget -->
+                        <div class="quiz-mockup-phone">
+                            <div class="mockup-header">
+                                <span>Pertanyaan 1 dari 10</span>
+                                <div class="mockup-progress">
+                                    <div class="mockup-progress-fill" style="width: 10%;"></div>
+                                </div>
+                                <span class="mockup-percent">10%</span>
+                            </div>
+                            <h4 class="mockup-question">Kota Bandung dijuluki sebagai kota apa?</h4>
+                            <div class="mockup-options">
+                                <div class="m-option active"><span>A</span> Kota Kembang</div>
+                                <div class="m-option"><span>B</span> Kota Hujan</div>
+                                <div class="m-option"><span>C</span> Kota Sejuta Bunga</div>
+                                <div class="m-option"><span>D</span> Kota Kreatif</div>
+                            </div>
+                        </div>
+
+                        <!-- Ikon-Ikon Lingkaran Dekoratif Melayang Sesuai Gambar -->
+                        <div class="float-circle icon-question"><i class="fa-solid fa-question"></i></div>
+                        <div class="float-circle icon-check"><i class="fa-solid fa-check"></i></div>
+                        <div class="float-circle icon-cup"><i class="fa-solid fa-trophy"></i></div>
+                    </div>
+
                 </div>
             </div>
 
-            <!-- Tombol Explore More Kategori -->
-            <div class="explore-more-container">
-                <a href="#destinations" class="btn-explore-more">Explore More ➔</a>
-            </div>
-        </div>
-    </main>
+            <!-- ==========================================
+       BAGIAN BAWAH: MANFAAT & PAPAN PERINGKAT
+       ========================================== -->
+            <div class="quiz-v2-dashboard">
+                <div class="container v2-dashboard-grid">
 
+                    <!-- PANEL KIRI: APA YANG AKAN KAMU DAPATKAN -->
+                    <div class="benefits-panel">
+                        <h3>Apa yang akan kamu dapatkan?</h3>
+                        <div class="benefits-rows-grid">
 
-    <!-- Popular Destinations -->
-    <section id="destinations" class="section featured">
-        <div class="container">
-            <div class="section-header">
-                <h2>Tempat Terfavorit di Bandung</h2>
-                <p>Kunjungi destinasi ikonik pilihan pelancong</p>
-            </div>
-            <div class="featured-grid">
-                <article class="destination-card">
-                    <div class="card-img-wrap">
-                        <img src="image/wisata.png" alt="Wisata Alam">
+                            <div class="benefit-card-box">
+                                <div class="b-icon-wrap ic-purple"><i class="fa-solid fa-brain"></i></div>
+                                <div class="b-text-wrap">
+                                    <h4>Tambah Wawasan</h4>
+                                    <p>Kenali lebih dalam tentang Bandung dengan cara yang menyenangkan.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-card-box">
+                                <div class="b-icon-wrap ic-green"><i class="fa-solid fa-map-location-dot"></i></div>
+                                <div class="b-text-wrap">
+                                    <h4>Jelajahi Lebih Banyak</h4>
+                                    <p>Temukan destinasi menarik yang mungkin belum kamu ketahui.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-card-box">
+                                <div class="b-icon-wrap ic-orange"><i class="fa-solid fa-medal"></i></div>
+                                <div class="b-text-wrap">
+                                    <h4>Dapatkan Badge</h4>
+                                    <p>Raih badge spesial jika berhasil menyelesaikan kuis dengan skor tinggi.</p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="meta">
-                        <span class="cat">Nature</span>
-                        <h4>Gunung Tangkuban Perahu</h4>
-                        <span class="rating">⭐ 4.8</span>
+
+                    <!-- PANEL KANAN: PAPAN PERINGKAT (LEADERBOARD) -->
+                    <div class="leaderboard-panel">
+                        <div class="leaderboard-header">
+                            <h3>Papan Peringkat</h3>
+                            <a href="#all-ranks" class="link-see-all">Lihat Semua</a>
+                        </div>
+
+                        <div class="leaderboard-list">
+                            <!-- Rank 1 -->
+                            <div class="leader-row-item">
+                                <span class="rank-badge gold">1</span>
+                                <img src="https://pravatar.cc" alt="Aulia Rahman" class="leader-avatar">
+                                <span class="leader-name">Aulia Rahman</span>
+                                <div class="leader-score">950 <i class="fa-solid fa-star"></i></div>
+                            </div>
+                            <!-- Rank 2 -->
+                            <div class="leader-row-item">
+                                <span class="rank-badge silver">2</span>
+                                <img src="https://pravatar.cc" alt="Dinda Putri" class="leader-avatar">
+                                <span class="leader-name">Dinda Putri</span>
+                                <div class="leader-score">870 <i class="fa-solid fa-star"></i></div>
+                            </div>
+                            <!-- Rank 3 -->
+                            <div class="leader-row-item">
+                                <span class="rank-badge bronze">3</span>
+                                <img src="https://pravatar.cc" alt="Rizky Maulana" class="leader-avatar">
+                                <span class="leader-name">Rizky Maulana</span>
+                                <div class="leader-score">820 <i class="fa-solid fa-star"></i></div>
+                            </div>
+                        </div>
                     </div>
-                </article>
-                <article class="destination-card">
-                    <div class="card-img-wrap">
-                        <img src="image/image.png" alt="Sejarah">
+
+                </div>
+
+                <!-- Banner Strip Ajakan Paling Bawah -->
+                <div class="container">
+                    <div class="quiz-v2-footer-strip">
+                        <p><i class="fa-solid fa-user-ninja"></i> Tantang <span>dirimu</span> dan buktikan seberapa besar kamu mengenal Bandung!</p>
+                        <button class="btn-strip-action">Mulai Kuis Sekarang ➔</button>
                     </div>
-                    <div class="meta">
-                        <span class="cat">History</span>
-                        <h4>Gedung Sate</h4>
-                        <span class="rating">⭐ 4.7</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MAPS & EXPLORE + FOOTER SECTION -->
+        <section id="maps" class="maps-explore-section">
+            <div class="container maps-main-grid">
+
+                <!-- SISI KIRI: PANEL PENCARIAN & LIST DESTINASI -->
+                <div class="maps-sidebar-panel">
+                    <p class="section-eyebrow">MAPS & EXPLORE</p>
+                    <h2>Jelajahi Bandung <br>Tanpa <span>Batas</span></h2>
+                    <p class="section-desc">Temukan destinasi menarik di setiap sudut kota. Klik pada lokasi untuk melihat detail lebih lanjut.</p>
+
+                    <!-- Bar Pencarian & Tombol Filter -->
+                    <div class="search-filter-row">
+                        <div class="search-input-wrap">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" placeholder="Cari destinasi di Bandung...">
+                        </div>
+                        <button class="btn-filter"><i class="fa-solid fa-sliders"></i> Filter</button>
                     </div>
-                </article>
-                <article class="destination-card">
-                    <div class="card-img-wrap">
-                        <img src="image/asiaafrica.jpg" alt="Kuliner">
+
+                    <!-- Kategori Filter Mini -->
+                    <div class="mini-category-filters">
+                        <button class="mini-filter-btn active">Semua</button>
+                        <button class="mini-filter-btn">🌲 Wisata Alam</button>
+                        <button class="mini-filter-btn">🏛️ Sejarah & Budaya</button>
+                        <button class="mini-filter-btn">🍴 Kuliner</button>
+                        <button class="mini-filter-btn">🎓 Edukasi</button>
                     </div>
-                    <div class="meta">
-                        <span class="cat">Culinary</span>
-                        <h4>Jalan Braga</h4>
-                        <span class="rating">⭐ 4.6</span>
+
+                    <!-- Daftar Kartu Destinasi Mini -->
+                    <div class="sidebar-destinations-list">
+
+                        <div class="mini-destination-card">
+                            <img src="image/gedungsate.png" alt="Gedung Sate" onerror="this.src='https://placehold.co'">
+                            <div class="mini-card-info">
+                                <div class="mini-card-header">
+                                    <h4>Gedung Sate</h4>
+                                    <span class="mini-rating"><i class="fa-solid fa-star"></i> 4.9</span>
+                                </div>
+                                <span class="mini-tag text-purple">Sejarah & Budaya</span>
+                                <p>Ikon arsitektur bersejarah kebanggaan kota Bandung.</p>
+                            </div>
+                        </div>
+
+                        <div class="mini-destination-card active">
+                            <img src="image/kawah.png" alt="Kawah Putih" onerror="this.src='https://placehold.co'">
+                            <div class="mini-card-info">
+                                <div class="mini-card-header">
+                                    <h4>Kawah Putih</h4>
+                                    <span class="mini-rating"><i class="fa-solid fa-star"></i> 4.8</span>
+                                </div>
+                                <span class="mini-tag text-green">Wisata Alam</span>
+                                <p>Keindahan danau kawah dengan asap belerang yang memukau.</p>
+                            </div>
+                        </div>
+
+                        <div class="mini-destination-card">
+                            <img src="image/wisata.png" alt="Floating Market" onerror="this.src='https://placehold.co'">
+                            <div class="mini-card-info">
+                                <div class="mini-card-header">
+                                    <h4>Floating Market</h4>
+                                    <span class="mini-rating"><i class="fa-solid fa-star"></i> 4.6</span>
+                                </div>
+                                <span class="mini-tag text-orange">Kuliner</span>
+                                <p>Wisata belanja kuliner di atas perahu yang unik.</p>
+                            </div>
+                        </div>
+
+                        <div class="mini-destination-card">
+                            <img src="image/image.png" alt="Museum Geologi" onerror="this.src='https://placehold.co'">
+                            <div class="mini-card-info">
+                                <div class="mini-card-header">
+                                    <h4>Museum Geologi</h4>
+                                    <span class="mini-rating"><i class="fa-solid fa-star"></i> 4.7</span>
+                                </div>
+                                <span class="mini-tag text-blue">Edukasi</span>
+                                <p>Edukasi sejarah bumi dan koleksi fosil purbakala Indonesia.</p>
+                            </div>
+                        </div>
+
                     </div>
-                </article>
-            </div>
-        </div>
-    </section>
 
-    <!-- Tourism Categories -->
-    <section id="categories" class="section categories">
-        <div class="container">
-            <div class="section-header">
-                <h2>Tourism Categories</h2>
-                <p>Temukan petualangan sesuai minat Anda</p>
-            </div>
-            <div class="category-grid">
-                <div class="cat-card"><span class="emoji">🌲</span><span>Nature</span></div>
-                <div class="cat-card"><span class="emoji">🍜</span><span>Culinary</span></div>
-                <div class="cat-card"><span class="emoji">🏛️</span><span>History</span></div>
-                <div class="cat-card"><span class="emoji">🛍️</span><span>Shopping</span></div>
-                <div class="cat-card"><span class="emoji">🎓</span><span>Education</span></div>
-                <div class="cat-card"><span class="emoji">🎉</span><span>Entertainment</span></div>
-            </div>
-        </div>
-    </section>
+                    <!-- Tautan Lihat Semua Destinasi -->
+                    <a href="#destinations" class="link-see-all-maps">
+                        <span><i class="fa-regular fa-compass"></i> Lihat Semua Destinasi di Bandung</span>
+                        <i class="fa-solid fa-angle-right"></i>
+                    </a>
+                </div>
 
-    <!-- Timeline -->
-    <section id="timeline" class="section timeline">
-        <div class="container">
-            <div class="section-header">
-                <h2>Bandung Timeline</h2>
-                <p>Perjalanan sejarah pembentukan Kota Kembang</p>
-            </div>
-            <div class="timeline-track" id="timelineTrack">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <strong>1900</strong>
-                    <p>Pendirian landmark kota bersejarah.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <strong>1950</strong>
-                    <p>Perkembangan seni dan pusat budaya.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <strong>2000</strong>
-                    <p>Modernisasi infrastruktur wilayah tata kota.</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <strong>2025</strong>
-                    <p>Inisiasi global integrasi Smart City.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+                <!-- SISI KANAN: VISUALISASI PETA & POPUP DETAIL -->
+                <div class="maps-visualization-container">
 
-    <!-- Events slider -->
-    <section id="events" class="section events">
-        <div class="container">
-            <div class="section-header">
-                <h2>Upcoming Events</h2>
-                <p>Agenda perayaan kreativitas terdekat di kota ini</p>
-            </div>
-            <div class="events-slider" id="eventsSlider">
-                <div class="event-card">
-                    <span class="event-tag">Festival</span>
-                    <h4>Bandung Food Fest</h4>
-                    <p>📅 20 Jul 2026</p>
+                    <!-- Filter Kategori di Atas Peta -->
+                    <div class="map-top-filters">
+                        <span class="map-f-item active"><i class="fa-solid fa-landmark"></i> Sejarah</span>
+                        <span class="map-f-item"><i class="fa-solid fa-leaf"></i> Alam</span>
+                        <span class="map-f-item"><i class="fa-solid fa-masks-theater"></i> Budaya</span>
+                        <span class="map-f-item"><i class="fa-solid fa-utensils"></i> Kuliner</span>
+                        <span class="map-f-item"><i class="fa-solid fa-graduation-cap"></i> Edukasi</span>
+                    </div>
+
+                    <!-- Area Canvas Peta Grafis -->
+                    <div class="map-graphic-canvas">
+                        <div class="map-road-line line-1"></div>
+                        <div class="map-road-line line-2"></div>
+                        <span class="map-label-text lemba">Lembang</span>
+                        <span class="map-label-text bando">Bandung</span>
+
+                        <!-- Pin Lokasi -->
+                        <div class="map-pin-marker pos-tangkuban pin-green">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="pin-name">Tangkuban Perahu</span>
+                        </div>
+                        <div class="map-pin-marker pos-sate pin-purple">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="pin-name">Gedung Sate</span>
+                        </div>
+                        <div class="map-pin-marker pos-braga pin-orange">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="pin-name">Jalan Braga</span>
+                        </div>
+                        <div class="map-pin-marker pos-floating pin-orange">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="pin-name">Floating Market</span>
+                        </div>
+                        <div class="map-pin-marker pos-geologi pin-blue">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="pin-name">Museum Geologi</span>
+                        </div>
+                        <div class="map-pin-marker pos-kawah pin-green active">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span class="pin-name">Kawah Putih</span>
+                        </div>
+
+                        <!-- Jendela Pop-up Detail Informasi Aktif -->
+                        <div class="map-popup-detail-card">
+                            <img src="image/kawah.png" alt="Kawah Putih Pop" onerror="this.src='https://unsplash.com'">
+                            <div class="popup-card-content">
+                                <h4>Kawah Putih</h4>
+                                <span class="popup-sub-tag">Wisata Alam</span>
+                                <p>Danau eksotis dengan air berwarna putih kehijauan yang memukau.</p>
+                                <button class="btn-popup-action"><i class="fa-solid fa-location-arrow"></i> Lihat Detail</button>
+                            </div>
+                        </div>
+
+                        <!-- Tombol Navigasi Zoom Peta -->
+                        <div class="map-zoom-controls">
+                            <button class="zoom-btn"><i class="fa-solid fa-expand"></i></button>
+                            <button class="zoom-btn"><i class="fa-solid fa-plus"></i></button>
+                            <button class="zoom-btn"><i class="fa-solid fa-minus"></i></button>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="event-card">
-                    <span class="event-tag">Budaya</span>
-                    <h4>Art & Culture Night</h4>
-                    <p>📅 05 Aug 2026</p>
+
+            </div>
+        </section>
+
+        <!-- PREMIUM DARK BLUE FOOTER -->
+        <footer class="main-footer-section">
+            <div class="container footer-grid-layout">
+
+                <!-- Kolom 1: Profil Brand -->
+                <div class="footer-column-brand">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-city logo-icon"></i>
+                        <div class="logo-txt">
+                            <strong>BANDUNG</strong>
+                            <small>Creative Smart City</small>
+                        </div>
+                    </div>
+                    <p class="brand-desc-text">Platform informasi wisata dan budaya Kota Bandung yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
+                    <div class="footer-social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
                 </div>
-                <div class="event-card">
-                    <span class="event-tag">Teknologi</span>
-                    <h4>Smart City Expo</h4>
-                    <p>📅 12 Sep 2026</p>
+
+                <!-- Kolom Navigasi Menu -->
+                <div class="footer-column-links">
+                    <h4>Jelajahi</h4>
+                    <ul>
+                        <li><a href="#about">Tentang Bandung</a></li>
+                        <li><a href="#destinations">Destinasi</a></li>
+                        <li><a href="#events">Event</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#quiz-section">Kuis Interaktif</a></li>
+                    </ul>
                 </div>
-            </div>
-            <div class="slider-controls">
-                <button id="eventsPrev">‹</button>
-                <button id="eventsNext">›</button>
-            </div>
-        </div>
-    </section>
 
-    <!-- Quiz banner -->
-    <section class="section quiz">
-        <div class="container">
-            <div class="quiz-banner">
-                <h2>Test Your Knowledge About Bandung!</h2>
-                <p>Ikuti kuis interaktif untuk menguji pengetahuan Anda tentang sejarah, budaya, dan destinasi wisata di Bandung.</p>
-                <a class="btn-primary" href="#quiz">Take the Quiz</a>
-            </div>
-        </div>
-    </section>
+                <div class="footer-column-links">
+                    <h4>Informasi</h4>
+                    <ul>
+                        <li><a href="#">Panduan Wisata</a></li>
+                        <li><a href="#">Transportasi</a></li>
+                        <li><a href="#">Kuliner</a></li>
+                        <li><a href="#">Akomodasi</a></li>
+                        <li><a href="#">Berita & Update</a></li>
+                    </ul>
 
-    <!-- Maps Section -->
-    <section id="maps" class="section maps">
-        <div class="container">
-            <div class="section-header">
-                <h2>Explore Bandung on the Map</h2>
-                <p>Temukan lokasi destinasi wisata, kuliner, dan landmark penting di kota ini.</p>
-            </div>
-            <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.1234567890123!2d107.619123456789!3d-6.917123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6c123456789%3A0xabcdef1234567890!2sBandung%2C%20West%20Java%2C%20Indonesia!5e0!3m2!1sen!2sid!4v1234567890123"
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Bandung Creative Smart City. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+                    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+                    <script src="script.js"></script>
 </body>
 
 </html>
