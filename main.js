@@ -1,9 +1,8 @@
 // main interactions: sticky navbar, scroll reveal, counters, sliders
 document.addEventListener('DOMContentLoaded', () => {
+
     // sticky navbar blur
     const navbar = document.getElementById('navbar');
-    const hero = document.querySelector('.hero');
-
     function onScroll() {
         if (window.scrollY > 40) navbar.classList.add('scrolled');
         else navbar.classList.remove('scrolled');
@@ -11,17 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    const navbar = document.getElementById("navbar");
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-        } else {
-            navbar.classList.remove("scrolled");
-        }
-
-    });
     // smooth internal links
     document.querySelectorAll('a[href^="#"]').forEach(a => {
         a.addEventListener('click', e => {
@@ -50,28 +38,42 @@ document.addEventListener('DOMContentLoaded', () => {
         revealObserver.observe(i);
     });
 
-    // counters
-    const counters = document.querySelectorAll('.counter');
-    const counterObserver = new IntersectionObserver((entries) => {
+    // ===== ANIMASI ANGKA (scramble random dulu, baru settle) =====
+    function animateStatNumber(el) {
+        const target = parseInt(el.getAttribute('data-target'), 10) || 0;
+        const duration = 2000;
+        const scrambleDuration = 800;
+        const startTime = performance.now();
+
+        function frame(now) {
+            const elapsed = now - startTime;
+            if (elapsed < scrambleDuration) {
+                const randomNum = Math.floor(Math.random() * (target * 2)) + 1;
+                el.textContent = randomNum + '+';
+                requestAnimationFrame(frame);
+            } else if (elapsed < duration) {
+                const progress = (elapsed - scrambleDuration) / (duration - scrambleDuration);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(eased * target);
+                el.textContent = current + '+';
+                requestAnimationFrame(frame);
+            } else {
+                el.textContent = target + '+';
+            }
+        }
+        requestAnimationFrame(frame);
+    }
+
+    const statNumbers = document.querySelectorAll('.stat-number');
+    const statObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const el = entry.target;
-                const target = parseInt(el.dataset.target, 10) || 0;
-                let start = 0;
-                const dur = 1500;
-                const startTime = performance.now();
-
-                function step(now) {
-                    const p = Math.min((now - startTime) / dur, 1);
-                    el.textContent = Math.floor(p * target);
-                    if (p < 1) requestAnimationFrame(step);
-                }
-                requestAnimationFrame(step);
-                counterObserver.unobserve(el);
+                animateStatNumber(entry.target);
+                statObserver.unobserve(entry.target);
             }
         });
-    }, { threshold: .5 });
-    counters.forEach(c => counterObserver.observe(c));
+    }, { threshold: 0.3 });
+    statNumbers.forEach(el => statObserver.observe(el));
 
     // events slider
     const eventsSlider = document.getElementById('eventsSlider');
@@ -79,8 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('eventsNext');
     if (eventsSlider && prevBtn && nextBtn) {
         let idx = 0;
-
-        function show(i) { eventsSlider.style.transform = `translateX(${-i*(eventsSlider.children[0].offsetWidth+12)}px)` }
+        function show(i) { eventsSlider.style.transform = `translateX(${-i * (eventsSlider.children[0].offsetWidth + 12)}px)` }
         nextBtn.addEventListener('click', () => {
             idx = Math.min(idx + 1, eventsSlider.children.length - 1);
             show(idx);
@@ -123,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let tIdx = 0;
         setInterval(() => {
             tIdx = (tIdx + 1) % testi.children.length;
-            testi.style.transform = `translateX(${-tIdx*(testi.children[0].offsetWidth+16)}px)`
+            testi.style.transform = `translateX(${-tIdx * (testi.children[0].offsetWidth + 16)}px)`
         }, 4000);
     }
 
@@ -135,69 +136,5 @@ document.addEventListener('DOMContentLoaded', () => {
             timeline.scrollLeft += e.deltaY;
         });
     }
-    const slides = document.querySelectorAll(".hero-bg");
 
-    let current = 0;
-
-    setInterval(() => {
-
-        slides[current].classList.remove("active");
-
-        current++;
-
-        if (current >= slides.length) {
-
-            current = 0;
-
-        }
-
-        slides[current].classList.add("active");
-
-    }, 3000);
-
-    const counters = document.querySelectorAll(".counter");
-
-    const observer = new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                const counter = entry.target;
-
-                const target = +counter.dataset.target;
-
-                let count = 0;
-
-                const speed = target / 80;
-
-                const update = () => {
-
-                    count += speed;
-
-                    if (count < target) {
-
-                        counter.innerHTML = Math.floor(count) + "+";
-
-                        requestAnimationFrame(update);
-
-                    } else {
-
-                        counter.innerHTML = target + "+";
-
-                    }
-
-                }
-
-                update();
-
-                observer.unobserve(counter);
-
-            }
-
-        });
-
-    });
-
-    counters.forEach(counter => observer.observe(counter));
 });
