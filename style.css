@@ -39,15 +39,11 @@
 body {
     height: 100%;
     width: 100%;
-<<<<<<< HEAD
-    scroll behavior: smooth;
 }
 
 body {
     font-family: Poppins, system-ui, Segoe UI, Helvetica, Arial;
-=======
     font-family: var(--font-body);
->>>>>>> d794b5b93245a2c6c561dbf4e56380e771a9c068
     line-height: 1.6;
     color: #123;
     background: var(--bg);
