@@ -1,0 +1,451 @@
+ 2. Lembar CSS (`style.css`) ```css
+ /* ==========================================
+   PREFIX KHUSUS: DESTINATIONS PAGE CONTENT
+   ========================================== */
+ 
+ .dest-page-section {
+     background-color: #f8faff;
+     width: 100%;
+ }
+ 
+ .dest-container {
+     width: 100%;
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 0 24px;
+ }
+ /* --- DET DETAIL HERO BANNER --- */
+ 
+ .dest-hero-banner {
+     background-size: cover;
+     background-position: center;
+     padding: 60px 0 80px 0;
+     color: #ffffff;
+ }
+ 
+ .dest-breadcrumb {
+     font-size: 12px;
+     opacity: 0.7;
+     margin-bottom: 16px;
+ }
+ 
+ .dest-hero-banner h1 {
+     font-size: clamp(2.2rem, 5vw, 3.5rem);
+     font-weight: 700;
+     margin-bottom: 12px;
+     line-height: 1.2;
+ }
+ 
+ .dest-hero-banner h1 span {
+     color: #4EA8FF;
+ }
+ 
+ .dest-hero-subtitle {
+     font-size: 14px;
+     color: rgba(255, 255, 255, 0.8);
+     max-width: 550px;
+     line-height: 1.6;
+     margin-bottom: 35px;
+ }
+ /* Kolom input pencarian melengkung */
+ 
+ .dest-search-container {
+     display: flex;
+     gap: 12px;
+     max-width: 600px;
+ }
+ 
+ .dest-search-input-wrap {
+     position: relative;
+     flex-grow: 1;
+ }
+ 
+ .dest-search-icon {
+     position: absolute;
+     left: 18px;
+     top: 50%;
+     transform: translateY(-50%);
+     color: #A0AEC0;
+ }
+ 
+ .dest-search-input-wrap input {
+     width: 100%;
+     padding: 14px 16px 14px 48px;
+     border-radius: 30px;
+     border: none;
+     font-size: 13px;
+     outline: none;
+     color: #031828;
+ }
+ 
+ .dest-btn-filter {
+     background: #ffffff;
+     color: #031828;
+     border: none;
+     padding: 0 24px;
+     border-radius: 30px;
+     font-size: 13px;
+     font-weight: 600;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+ }
+ /* --- TAB SELEKSI KATEGORI --- */
+ 
+ .dest-categories-tabs {
+     background: #ffffff;
+     border-bottom: 1px solid #edf2f9;
+     padding: 16px 0;
+ }
+ 
+ .dest-tabs-flex {
+     display: flex;
+     justify-content: space-between;
+     overflow-x: auto;
+     gap: 16px;
+ }
+ 
+ .dest-tabs-flex::-webkit-scrollbar {
+     height: 0px;
+ }
+ 
+ .dest-tab-item {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+     padding: 8px 16px;
+     border-radius: 12px;
+     cursor: pointer;
+     transition: all 0.2s ease;
+     border: 1px solid transparent;
+ }
+ 
+ .dest-tab-icon {
+     width: 36px;
+     height: 36px;
+     border-radius: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 14px;
+ }
+ 
+ .tc-blue {
+     background: #EBF3FF;
+     color: #2F80ED;
+ }
+ 
+ .tc-green {
+     background: #EAF7EE;
+     color: #27AE60;
+ }
+ 
+ .tc-purple {
+     background: #EEF2FA;
+     color: #9B51E0;
+ }
+ 
+ .tc-orange {
+     background: #FFF3EB;
+     color: #E67E22;
+ }
+ 
+ .tc-red {
+     background: #FDF0F2;
+     color: #EB5757;
+ }
+ 
+ .tc-cyan {
+     background: #E0F7FA;
+     color: #00ACC1;
+ }
+ 
+ .tc-yellow {
+     background: #FEF9E7;
+     color: #F1C40F;
+ }
+ 
+ .dest-tab-txt strong {
+     display: block;
+     font-size: 13px;
+     color: #4A5568;
+ }
+ 
+ .dest-tab-txt small {
+     font-size: 11px;
+     color: #A0AEC0;
+ }
+ 
+ .dest-tab-item.active,
+ .dest-tab-item:hover {
+     background: #f8fafc;
+     border-color: #E2E8F0;
+ }
+ 
+ .dest-tab-item.active .dest-tab-txt strong {
+     color: #0056fb;
+ }
+ /* --- TOOLBAR URUTKAN --- */
+ 
+ .dest-toolbar-section {
+     padding: 24px 0;
+ }
+ 
+ .dest-toolbar-flex {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ .dest-sort-left {
+     font-size: 13px;
+     color: #718096;
+     display: flex;
+     align-items: center;
+     gap: 8px;
+ }
+ 
+ .dest-select-sort {
+     border: 1px solid #E2E8F0;
+     padding: 6px 14px;
+     border-radius: 8px;
+     font-size: 13px;
+     color: #031828;
+     background: #ffffff;
+     outline: none;
+     font-weight: 500;
+ }
+ 
+ .dest-view-right {
+     display: flex;
+     gap: 6px;
+ }
+ 
+ .dest-view-btn {
+     width: 32px;
+     height: 32px;
+     border-radius: 6px;
+     border: 1px solid #E2E8F0;
+     background: #ffffff;
+     color: #A0AEC0;
+     cursor: pointer;
+     font-size: 12px;
+ }
+ 
+ .dest-view-btn.active {
+     color: #0056fb;
+     border-color: #0056fb;
+ }
+ /* --- CORE GRIDS KARTU PRODUK --- */
+ 
+ .dest-grid-layout {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 24px;
+ }
+ 
+ .dest-product-card {
+     background: #ffffff;
+     border-radius: 20px;
+     overflow: hidden;
+     border: 1px solid #edf2f9;
+     display: flex;
+     flex-direction: column;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ .dest-product-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 12px 30px rgba(3, 24, 40, 0.05);
+ }
+ 
+ .dest-card-media {
+     position: relative;
+     height: 170px;
+     overflow: hidden;
+ }
+ 
+ .dest-card-media img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+ }
+ 
+ .dest-badge-tag {
+     position: absolute;
+     top: 14px;
+     left: 14px;
+     font-size: 10px;
+     font-weight: 700;
+     padding: 3px 10px;
+     border-radius: 6px;
+     color: #ffffff;
+ }
+ 
+ .b-green {
+     background: #27AE60;
+ }
+ 
+ .b-purple {
+     background: #9B51E0;
+ }
+ 
+ .b-orange {
+     background: #E67E22;
+ }
+ 
+ .b-red {
+     background: #EB5757;
+ }
+ 
+ .b-cyan {
+     background: #00ACC1;
+ }
+ 
+ .b-yellow {
+     background: #F1C40F;
+ }
+ 
+ .dest-heart-btn {
+     position: absolute;
+     top: 14px;
+     right: 14px;
+     width: 28px;
+     height: 28px;
+     border-radius: 50%;
+     border: none;
+     background: rgba(255, 255, 255, 0.25);
+     backdrop-filter: blur(8px);
+     color: #ffffff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     font-size: 12px;
+ }
+ 
+ .dest-card-info {
+     padding: 16px;
+     display: flex;
+     flex-direction: column;
+     flex-grow: 1;
+ }
+ 
+ .dest-card-info h3 {
+     font-size: 14px;
+     color: #031828;
+     font-weight: 700;
+     margin-bottom: 4px;
+     line-height: 1.4;
+ }
+ 
+ .dest-loc {
+     font-size: 11px;
+     color: #7F8C8D;
+     margin-bottom: 10px;
+ }
+ 
+ .dest-loc i {
+     color: #A0AEC0;
+     margin-right: 2px;
+ }
+ 
+ .dest-rating-row {
+     margin-top: auto;
+     display: flex;
+     align-items: center;
+     gap: 4px;
+ }
+ 
+ .dest-star {
+     font-size: 12px;
+     font-weight: 700;
+     color: #031828;
+ }
+ 
+ .dest-reviews {
+     font-size: 11px;
+     color: #A0AEC0;
+ }
+ /* --- BAR NAVIGATION PAGINATION BAWAH --- */
+ 
+ .dest-pagination-section {
+     padding: 50px 0 60px 0;
+ }
+ 
+ .dest-pagination-flex {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ .dest-pages-buttons {
+     display: flex;
+     gap: 6px;
+     align-items: center;
+ }
+ 
+ .dest-page-num,
+ .dest-page-arrow {
+     width: 32px;
+     height: 32px;
+     border-radius: 50%;
+     border: 1px solid #E2E8F0;
+     background: #ffffff;
+     color: #4A5568;
+     font-size: 12px;
+     font-weight: 600;
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .dest-page-num.active {
+     background: #0056fb;
+     color: #ffffff;
+     border-color: #0056fb;
+ }
+ 
+ .dest-page-dots {
+     font-size: 12px;
+     color: #A0AEC0;
+     padding: 0 4px;
+ }
+ 
+ .dest-pagination-meta {
+     font-size: 12px;
+     color: #718096;
+ }
+ /* --- RESPONSIVITAS GRID ADAPTIF --- */
+ 
+ @media (max-width: 1200px) {
+     .dest-grid-layout {
+         grid-template-columns: repeat(3, 1fr);
+     }
+ }
+ 
+ @media (max-width: 850px) {
+     .dest-grid-layout {
+         grid-template-columns: repeat(2, 1fr);
+     }
+     .dest-pagination-flex {
+         flex-direction: column;
+         gap: 20px;
+         text-align: center;
+     }
+ }
+ 
+ @media (max-width: 520px) {
+     .dest-grid-layout {
+         grid-template-columns: 1fr;
+     }
+     .dest-search-container {
+         flex-direction: column;
+     }
+     .dest-btn-filter {
+         padding: 12px 0;
+         justify-content: center;
+     }
+ }

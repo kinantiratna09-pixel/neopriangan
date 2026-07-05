@@ -1,0 +1,194 @@
+<!-- DESTINATIONS PAGE SECTION -->
+<section class="dest-page-section">
+
+    <!-- ==========================================
+       HERO BANNER ATAS (DENGAN BACKGROUND GAMBAR)
+       ========================================== -->
+    <div class="dest-hero-banner" style="background-image: linear-gradient(rgba(3,24,40,0.5), rgba(3,24,40,0.4)), url('image/gedungsate.png');">
+        <div class="dest-container">
+            <div class="dest-breadcrumb">Home &gt; Destinations</div>
+            <h1>Jelajahi <span>Destinasi</span> Bandung</h1>
+            <p class="dest-hero-subtitle">Temukan berbagai tempat wisata terbaik di Bandung, mulai dari alam, budaya, sejarah, hingga wisata keluarga.</p>
+
+            <!-- Bar Pencarian Besar di Hero -->
+            <div class="dest-search-container">
+                <div class="dest-search-input-wrap">
+                    <i class="fa-solid fa-magnifying-glass dest-search-icon"></i>
+                    <input type="text" placeholder="Cari destinasi, kuliner, atau aktivitas...">
+                </div>
+                <button class="dest-btn-filter"><i class="fa-solid fa-sliders"></i> Filter</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       TAB BAR KATEGORI UTAMA (DENGAN IKON UNIK)
+       ========================================== -->
+    <div class="dest-categories-tabs">
+        <div class="dest-container dest-tabs-flex">
+
+            <div class="dest-tab-item active">
+                <div class="dest-tab-icon tc-blue"><i class="fa-solid fa-grid-2"></i></div>
+                <div class="dest-tab-txt"><strong>Semua</strong><small>150+</small></div>
+            </div>
+
+            <div class="dest-tab-item">
+                <div class="dest-tab-icon tc-green"><i class="fa-solid fa-tree"></i></div>
+                <div class="dest-tab-txt"><strong>Alam</strong><small>45+</small></div>
+            </div>
+
+            <div class="dest-tab-item">
+                <div class="dest-tab-icon tc-purple"><i class="fa-solid fa-landmark"></i></div>
+                <div class="dest-tab-txt"><strong>Sejarah</strong><small>25+</small></div>
+            </div>
+
+            <div class="dest-tab-item">
+                <div class="dest-tab-icon tc-orange"><i class="fa-solid fa-masks-theater"></i></div>
+                <div class="dest-tab-txt"><strong>Budaya</strong><small>30+</small></div>
+            </div>
+
+            <div class="dest-tab-item">
+                <div class="dest-tab-icon tc-red"><i class="fa-solid fa-utensils"></i></div>
+                <div class="dest-tab-txt"><strong>Kuliner</strong><small>55+</small></div>
+            </div>
+
+            <div class="dest-tab-item">
+                <div class="dest-tab-icon tc-cyan"><i class="fa-solid fa-children"></i></div>
+                <div class="dest-tab-txt"><strong>Wisata Keluarga</strong><small>20+</small></div>
+            </div>
+
+            <div class="dest-tab-item">
+                <div class="dest-tab-icon tc-yellow"><i class="fa-solid fa-gem"></i></div>
+                <div class="dest-tab-txt"><strong>Hidden Gem</strong><small>15+</small></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ==========================================
+       TOOLBAR FILTER & PENGURUTAN (SORT BY)
+       ========================================== -->
+    <div class="dest-toolbar-section">
+        <div class="dest-container dest-toolbar-flex">
+            <div class="dest-sort-left">
+                <span>Urutkan:</span>
+                <select class="dest-select-sort">
+                    <option>Populer</option>
+                    <option>Rating Tertinggi</option>
+                    <option>Terbaru</option>
+                </select>
+            </div>
+            <div class="dest-view-right">
+                <button class="dest-view-btn active"><i class="fa-solid fa-table-cells-large"></i></button>
+                <button class="dest-view-btn"><i class="fa-solid fa-list"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       CORE GRID: 8 KARTU DESTINASI (BARIS 1 & 2)
+       ========================================== -->
+    <div class="dest-cards-main-grid">
+        <div class="dest-container dest-grid-layout">
+
+            <!-- Kartu 1: Kawah Putih -->
+            <article class="dest-product-card">
+                <div class="dest-card-media">
+                    <img src="image/kawah.png" alt="Kawah Putih" onerror="this.src='https://unsplash.com'">
+                    <span class="dest-badge-tag b-green">Alam</span>
+                    <button class="dest-heart-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="dest-card-info">
+                    <h3>Kawah Putih</h3>
+                    <p class="dest-loc"><i class="fa-solid fa-location-dot"></i> Ciwidey</p>
+                    <div class="dest-rating-row">
+                        <span class="dest-star">⭐ 4.9</span>
+                        <span class="dest-reviews">(2.3K)</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Kartu 2: Gedung Sate -->
+            <article class="dest-product-card">
+                <div class="dest-card-media">
+                    <img src="image/gedungsate.png" alt="Gedung Sate" onerror="this.src='https://unsplash.com'">
+                    <span class="dest-badge-tag b-purple">Sejarah</span>
+                    <button class="dest-heart-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="dest-card-info">
+                    <h3>Gedung Sate</h3>
+                    <p class="dest-loc"><i class="fa-solid fa-location-dot"></i> Cibeunying</p>
+                    <div class="dest-rating-row">
+                        <span class="dest-star">⭐ 4.8</span>
+                        <span class="dest-reviews">(1.8K)</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Kartu 3: Jalan Braga -->
+            <article class="dest-product-card">
+                <div class="dest-card-media">
+                    <img src="image/braga.png" alt="Jalan Braga" onerror="this.src='https://unsplash.com'">
+                    <span class="dest-badge-tag b-orange">Budaya</span>
+                    <button class="dest-heart-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="dest-card-info">
+                    <h3>Jalan Braga</h3>
+                    <p class="dest-loc"><i class="fa-solid fa-location-dot"></i> Sumur Bandung</p>
+                    <div class="dest-rating-row">
+                        <span class="dest-star">⭐ 4.7</span>
+                        <span class="dest-reviews">(2.1K)</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Kartu 4: Floating Market -->
+            <article class="dest-product-card">
+                <div class="dest-card-media">
+                    <img src="image/wisata.png" alt="Floating Market" onerror="this.src='https://unsplash.com'">
+                    <span class="dest-badge-tag b-red">Kuliner</span>
+                    <button class="dest-heart-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="dest-card-info">
+                    <h3>Floating Market</h3>
+                    <p class="dest-loc"><i class="fa-solid fa-location-dot"></i> Lembang</p>
+                    <div class="dest-rating-row">
+                        <span class="dest-star">⭐ 4.6</span>
+                        <span class="dest-reviews">(1.5K)</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Kartu 5: Dusun Bambu -->
+            <article class="dest-product-card">
+                <div class="dest-card-media">
+                    <img src="image/lembang.png" alt="Dusun Bambu" onerror="this.src='https://unsplash.com'">
+                    <span class="dest-badge-tag b-cyan">Wisata Keluarga</span>
+                    <button class="dest-heart-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="dest-card-info">
+                    <h3>Dusun Bambu</h3>
+                    <p class="dest-loc"><i class="fa-solid fa-location-dot"></i> Lembang</p>
+                    <div class="dest-rating-row">
+                        <span class="dest-star">⭐ 4.7</span>
+                        <span class="dest-reviews">(1.9K)</span>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Kartu 6: Orchid Forest Cikole -->
+            <article class="dest-product-card">
+                <div class="dest-card-media">
+                    <img src="image/wisata.png" alt="Orchid Forest" onerror="this.src='https://unsplash.com'">
+                    <span class="dest-badge-tag b-green">Alam</span>
+                    <button class="dest-heart-btn"><i class="fa-regular fa-heart"></i></button>
+                </div>
+                <div class="dest-card-info">
+                    <h3>Orchid Forest Cikole</h3>
+                    <p class="dest-loc"><i class="fa-solid fa-location-dot"></i> Lembang</p>
+                    <div class="dest-rating-row">
+                        <span class="dest-star">⭐ 4.8</span>
+                        <span class="dest-reviews">(1.6K)</span>
+                    </div>
+                </div>
+            </article>

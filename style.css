@@ -1,6 +1,4 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
-
 :root {
     --primary: #0D47A1;
     --secondary: #42A5F5;
@@ -10,21 +8,19 @@
     --bg: #F5F9FF;
     --dark: #031828;
     --transition: 300ms cubic-bezier(.2, .9, .2, 1);
-     /* new Colors */
-      --color-dark-blue: #002443;
-     --color-gold: #D4A574;
-     --color-gold-dark: #6E563C;
-     --color-white: #FFFFFF;
-     --color-black: #000000;
-      /* Button Colors */
-      --color-btn-start: #008AEA;
-      --color-btn-end: #80C5F5;
-  
-     /* Backgrounds */
+    /* new Colors */
+    --color-dark-blue: #002443;
+    --color-gold: #D4A574;
+    --color-gold-dark: #6E563C;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    /* Button Colors */
+    --color-btn-start: #008AEA;
+    --color-btn-end: #80C5F5;
+    /* Backgrounds */
     --bg-primary: #FFFFFF;
     --bg-section-blue: #1e4d7b;
     --bg-light-blue: #EBF2F7;
-    
     /* Fonts */
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Poppins', sans-serif;
@@ -39,6 +35,8 @@
 body {
     height: 100%;
     width: 100%;
+<<<<<<< HEAD
+    scroll behavior: smooth;
 }
 
 body {
@@ -52,17 +50,28 @@ body {
     animation: fadeIn 0.8s ease forwards;
 }
 
+
 /* Global Heading Fonts */
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-heading);
 }
 
+
 /* Global Paragraph Font */
+
 p {
     font-family: var(--font-body);
 }
 
+
 /* Bandung Text Gradient - Hero Title */
+
 .title {
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
     -webkit-background-clip: text;
@@ -70,7 +79,9 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
+
 /* Bandung Text Gradient - Span in headings */
+
 .content h1 span {
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
     -webkit-background-clip: text;
@@ -78,7 +89,9 @@ p {
     -webkit-text-fill-color: transparent;
 }
 
+
 /* Bandung Text Gradient - Universal class */
+
 .gradient-bandung {
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
     -webkit-background-clip: text;
@@ -375,7 +388,7 @@ p {
     background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
     border: 1px solid rgba(0, 138, 234, 0.3);
     color: #fff;
-    padding:  8px 16px;
+    padding: 8px 16px;
     min-width: 170px;
     border-radius: 999px;
     font-weight: 700;
