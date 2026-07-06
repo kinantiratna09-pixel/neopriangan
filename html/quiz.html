@@ -1,0 +1,177 @@
+<!-- INTERACTIVE QUIZ PLAYPAGE SECTION -->
+<section class="quiz-p-section">
+    <div class="quiz-p-container quiz-p-main-layout">
+
+        <!-- ==========================================
+           SISI KIRI: PANEL PERTANYAAN UTAMA KUIS
+           ========================================== -->
+        <div class="quiz-p-content-left">
+
+            <!-- Tombol Kembali ke Kuis -->
+            <a href="#" class="quiz-p-btn-back">➔ Kembali ke Kuis</a>
+
+            <!-- Header Judul Kuis & Foto Gedung Sate Sejajar -->
+            <div class="quiz-p-header-row">
+                <div class="quiz-p-header-text">
+                    <span class="quiz-p-badge"><i class="fa-solid fa-graduation-cap"></i> Pengetahuan Bandung</span>
+                    <h1>Uji Pengetahuanmu <br>Tentang <span>Bandung!</span></h1>
+                    <p class="quiz-p-subtitle">Jawab pertanyaan berikut dan buktikan seberapa baik kamu mengenal Kota Bandung.</p>
+                </div>
+                <!-- Gambar Sisi Kanan Atas -->
+                <div class="quiz-p-image-wrap">
+                    <img src="image/gedungsate.png" alt="Gedung Sate" onerror="this.src='https://unsplash.com'">
+                    <div class="quiz-p-img-decor"><i class="fa-solid fa-question"></i></div>
+                </div>
+            </div>
+
+            <!-- Progress Indikator & Timer Batas Waktu Soal -->
+            <div class="quiz-p-progress-container">
+                <div class="quiz-p-meta-info">
+                    <span class="quiz-p-q-count">Pertanyaan <strong>1</strong> dari 10</span>
+                    <span class="quiz-p-timer"><i class="fa-regular fa-clock"></i> 00:18</span>
+                </div>
+                <!-- Progress Line Track -->
+                <div class="quiz-p-progress-line-track">
+                    <div class="quiz-p-progress-line-fill" style="width: 10%;"></div>
+                </div>
+            </div>
+
+            <!-- Inti Papan Lembar Pertanyaan Kuis -->
+            <div class="quiz-p-question-card">
+                <h3>Kota Bandung dijuluki sebagai kota apa?</h3>
+
+                <div class="quiz-p-options-list">
+                    <!-- Opsi A (Status Aktif Terpilih Benar) -->
+                    <div class="quiz-p-option-row active-correct">
+                        <span class="quiz-p-opt-idx">A</span>
+                        <p>Kota Kembang</p>
+                        <i class="fa-solid fa-circle-check quiz-p-check-icon"></i>
+                    </div>
+
+                    <!-- Opsi B -->
+                    <div class="quiz-p-option-row">
+                        <span class="quiz-p-opt-idx">B</span>
+                        <p>Kota Hujan</p>
+                    </div>
+
+                    <!-- Opsi C -->
+                    <div class="quiz-p-option-row">
+                        <span class="quiz-p-opt-idx">C</span>
+                        <p>Kota Sejuta Bunga</p>
+                    </div>
+
+                    <!-- Opsi D -->
+                    <div class="quiz-p-option-row">
+                        <span class="quiz-p-opt-idx">D</span>
+                        <p>Kota Kreatif</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aksi Navigasi Kontrol Kuis Paling Bawah -->
+            <div class="quiz-p-footer-actions">
+                <button class="quiz-p-btn-skip">⏭️ Lewati</button>
+                <button class="quiz-p-btn-next">Pertanyaan Selanjutnya ➔</button>
+            </div>
+
+        </div>
+
+        <!-- ==========================================
+           SISI KANAN: SIDEBAR LEVEL PROGRESS & PAPAN PERINGKAT
+           ========================================== -->
+        <aside class="quiz-p-sidebar-right">
+
+            <!-- KARTU WIDGET 1: LEVEL & PROGRESS EXP -->
+            <div class="quiz-p-widget quiz-p-level-card">
+                <div class="quiz-p-widget-header">
+                    <h4>Level & Progress</h4>
+                    <a href="#" class="quiz-p-widget-link">Lihat Semua Level</a>
+                </div>
+
+                <!-- Status Peringkat Level Saat Ini -->
+                <div class="quiz-p-current-level-box">
+                    <div class="quiz-p-level-medal">🏅</div>
+                    <div class="quiz-p-level-info">
+                        <strong>Lv. 2</strong>
+                        <p>Explorer Bandung</p>
+                    </div>
+                    <!-- XP Score Point -->
+                    <div class="quiz-p-xp-score">
+                        <span>⭐ 350 / 500</span>
+                        <div class="quiz-p-xp-bar-track">
+                            <div class="quiz-p-xp-bar-fill" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Deretan Tingkatan Level / Level Track List -->
+                <div class="quiz-p-level-track-list">
+                    <p class="quiz-p-track-title">Tingkatkan Levelmu!</p>
+
+                    <!-- Level 1 (Selesai/Checked) -->
+                    <div class="quiz-p-track-item done">
+                        <span class="track-icon">🟢</span>
+                        <div class="track-text"><strong>Lv. 1 Pemula</strong><small>0 - 100 XP</small></div>
+                        <i class="fa-solid fa-circle-check track-check"></i>
+                    </div>
+
+                    <!-- Level 2 (Aktif Terpilih) -->
+                    <div class="quiz-p-track-item active">
+                        <span class="track-icon">🏅</span>
+                        <div class="track-text"><strong>Lv. 2 Explorer Bandung</strong><small>101 - 500 XP</small></div>
+                    </div>
+
+                    <!-- Level 3 (Terkunci) -->
+                    <div class="quiz-p-track-item locked">
+                        <span class="track-icon">🔒</span>
+                        <div class="track-text"><strong>Lv. 3 Penjelajah Daerah</strong><small>501 - 1000 XP</small></div>
+                    </div>
+
+                    <!-- Level 4 (Terkunci) -->
+                    <div class="quiz-p-track-item locked">
+                        <span class="track-icon">🔒</span>
+                        <div class="track-text"><strong>Lv. 4 Ahli Sejarah</strong><small>1001 - 2000 XP</small></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KARTU WIDGET 2: PAPAN PERINGKAT (LEADERBOARD MINI) -->
+            <div class="quiz-p-widget quiz-p-leaderboard-card">
+                <div class="quiz-p-widget-header">
+                    <h4>Papan Peringkat</h4>
+                    <a href="#" class="quiz-p-widget-link">Lihat Peringkat</a>
+                </div>
+
+                <!-- Deretan 3 Besar Avatar Horizontal -->
+                <div class="quiz-p-top-three-row">
+                    <div class="top-three-avatar rank-2">
+                        <img src="https://pravatar.cc" alt="Andi">
+                        <strong>Andi Wijaya</strong>
+                        <small>2.450 XP</small>
+                    </div>
+                    <div class="top-three-avatar rank-1">
+                        <span class="crown-icon">👑</span>
+                        <img src="https://pravatar.cc" alt="Siti">
+                        <strong>Siti Nurhaliza</strong>
+                        <small>2.820 XP</small>
+                    </div>
+                    <div class="top-three-avatar rank-3">
+                        <img src="https://pravatar.cc" alt="Dimas">
+                        <strong>Dimas Pratama</strong>
+                        <small>1.950 XP</small>
+                    </div>
+                </div>
+
+                <!-- Kartu Skor Pengguna Saat Ini di Bagian Paling Bawah -->
+                <div class="quiz-p-user-own-rank">
+                    <span class="user-rank-num">12</span>
+                    <img src="https://pravatar.cc" alt="Own Avatar" class="user-avatar-mini">
+                    <span class="user-name-txt">Kamu</span>
+                    <strong class="user-score-txt">320 XP</strong>
+                </div>
+            </div>
+
+        </aside>
+
+    </div>
+</section>

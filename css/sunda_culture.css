@@ -1,0 +1,595 @@
+```css
+/* ==========================================
+   PREFIX KHUSUS: EXPLORE SUNDA CULTURE INTERFACE
+   ========================================== */
+
+.culture-p-section {
+    background-color: #f8faff;
+    width: 100%;
+}
+
+.culture-p-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+/* --- HERO COVER BANNER ATAS --- */
+
+.culture-p-hero {
+    background-size: cover;
+    background-position: center;
+    padding: 60px 0 80px 0;
+    color: #ffffff;
+}
+
+.culture-p-breadcrumb {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 16px;
+}
+
+.culture-p-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.culture-p-hero h1 span {
+    color: #d4af37;
+    /* Warna emas/coklat pastel khas Sunda Culture */
+}
+
+.culture-p-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 520px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.culture-p-search-box {
+    display: flex;
+    gap: 12px;
+    max-width: 550px;
+}
+
+.culture-p-input-wrap {
+    position: relative;
+    flex-grow: 1;
+}
+
+.culture-p-search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #A0AEC0;
+}
+
+.culture-p-input-wrap input {
+    width: 100%;
+    padding: 14px 16px 14px 48px;
+    border-radius: 30px;
+    border: none;
+    font-size: 13px;
+    outline: none;
+    color: #031828;
+}
+
+.culture-p-btn-filter-top {
+    background: #ffffff;
+    color: #031828;
+    border: none;
+    padding: 0 24px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* --- TAB BAR KATEGORI HORIZONTAL --- */
+
+.culture-p-tabs-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #edf2f9;
+    padding: 14px 0;
+}
+
+.culture-p-tabs-flex {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+    gap: 16px;
+}
+
+.culture-p-tabs-flex::-webkit-scrollbar {
+    height: 0px;
+}
+
+.culture-p-tab {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 14px;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.culture-p-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.c-blue {
+    background: #EBF3FF;
+    color: #2F80ED;
+}
+
+.c-purple {
+    background: #EEF2FA;
+    color: #9B51E0;
+}
+
+.c-green {
+    background: #EAF7EE;
+    color: #27AE60;
+}
+
+.c-orange {
+    background: #FFF3EB;
+    color: #E67E22;
+}
+
+.c-cyan {
+    background: #E0F7FA;
+    color: #00ACC1;
+}
+
+.c-red {
+    background: #FDF0F2;
+    color: #EB5757;
+}
+
+.c-yellow {
+    background: #FEF9E7;
+    color: #F1C40F;
+}
+
+.c-pink {
+    background: #FCE4EC;
+    color: #EC407A;
+}
+
+.c-indigo {
+    background: #E8EAF6;
+    color: #3F51B5;
+}
+
+.culture-p-tab-txt strong {
+    display: block;
+    font-size: 12px;
+    color: #4A5568;
+    white-space: nowrap;
+}
+
+.culture-p-tab-txt small {
+    font-size: 10px;
+    color: #A0AEC0;
+}
+
+.culture-p-tab.active,
+.culture-p-tab:hover {
+    background: #f8fafc;
+    border-color: #E2E8F0;
+}
+
+.culture-p-tab.active .culture-p-tab-txt strong {
+    color: #0056fb;
+}
+
+
+/* --- GRID LAYOUT BELAH DUA (SIDEBAR + CONTENT) --- */
+
+.culture-p-main-layout {
+    padding: 40px 0;
+}
+
+.culture-p-grid-split {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+
+/* ==========================================
+   SIDEBAR COMPONENT (KIRI)
+   ========================================== */
+
+.culture-p-sidebar {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #edf2f9;
+    box-shadow: 0 4px 20px rgba(3, 24, 40, 0.01);
+}
+
+.culture-p-side-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 12px;
+}
+
+.culture-p-side-header h3 {
+    font-size: 15px;
+    color: #031828;
+    font-weight: 700;
+}
+
+.culture-p-reset {
+    background: none;
+    border: none;
+    color: #0056fb;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.culture-p-filter-group {
+    margin-bottom: 24px;
+}
+
+.culture-p-filter-group h4 {
+    font-size: 13px;
+    color: #031828;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.culture-p-check-label,
+.culture-p-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: #4A5568;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.culture-p-check-label input,
+.culture-p-radio-label input {
+    accent-color: #0056fb;
+}
+
+.culture-p-select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    font-size: 12px;
+    color: #031828;
+    background: #ffffff;
+    outline: none;
+}
+
+.c-stars {
+    color: #F1C40F;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.c-stars-text {
+    color: #7F8C8D;
+    margin-left: 4px;
+}
+
+
+/* ==========================================
+   GRID CONTENT COMPONENT (KANAN)
+   ========================================== */
+
+.culture-p-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.culture-p-meta-info strong {
+    font-size: 15px;
+    color: #031828;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.culture-p-meta-info span {
+    font-size: 12px;
+    color: #718096;
+}
+
+.culture-p-sort-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.culture-p-sort-actions span {
+    font-size: 12px;
+    color: #718096;
+}
+
+.culture-p-sort-select {
+    border: 1px solid #E2E8F0;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #031828;
+    background: #ffffff;
+    font-weight: 500;
+    outline: none;
+}
+
+.culture-p-view-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid #E2E8F0;
+    background: #ffffff;
+    color: #A0AEC0;
+    cursor: pointer;
+    font-size: 11px;
+}
+
+.culture-p-view-btn.active {
+    color: #0056fb;
+    border-color: #0056fb;
+}
+
+
+/* Grid 4 Kolom Kartu Budaya Sejajar */
+
+.culture-p-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.culture-p-card-item {
+    background: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #edf2f9;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 50px;
+    /* Ruang kosong untuk letak tombol panah di bawah */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.culture-p-card-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(3, 24, 40, 0.04);
+}
+
+.culture-p-card-media {
+    position: relative;
+    height: 140px;
+    overflow: hidden;
+}
+
+.culture-p-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.culture-p-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 9px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    color: #ffffff;
+}
+
+.b-blue {
+    background: #2F80ED;
+}
+
+.b-red {
+    background: #EB5757;
+}
+
+.b-green {
+    background: #27AE60;
+}
+
+.b-orange {
+    background: #E67E22;
+}
+
+.b-cyan {
+    background: #00ACC1;
+}
+
+.b-yellow {
+    background: #F1C40F;
+}
+
+.b-pink {
+    background: #EC407A;
+}
+
+.b-indigo {
+    background: #3F51B5;
+}
+
+.culture-p-card-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.culture-p-card-info h3 {
+    font-size: 13px;
+    color: #031828;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.culture-p-card-info p {
+    font-size: 11px;
+    color: #7F8C8D;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.culture-p-rating-row {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+
+.c-star-rating {
+    font-size: 11px;
+    font-weight: 700;
+    color: #031828;
+}
+
+
+/* Tombol Panah Aksi Kanan Bawah Kartu */
+
+.culture-p-arrow-btn {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: #A0AEC0;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.culture-p-card-item:hover .culture-p-arrow-btn {
+    color: #0056fb;
+    transform: translateX(3px);
+}
+
+
+/* Pagination Halaman */
+
+.culture-p-pagination {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.c-pag-btn,
+.c-pag-arrow,
+.c-pag-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 1px solid #E2E8F0;
+    background: #ffffff;
+    color: #4A5568;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.c-pag-num.active {
+    background: #0056fb;
+    color: #ffffff;
+    border-color: #0056fb;
+}
+
+.c-pag-dots {
+    font-size: 12px;
+    color: #A0AEC0;
+    align-self: center;
+    padding: 0 4px;
+}
+
+
+/* --- RESPONSIVITAS GRID ADAPTIF (ANTI-PECAH) --- */
+
+@media (max-width: 1200px) {
+    .culture-p-grid-split {
+        grid-template-columns: 240px 1fr;
+        gap: 20px;
+    }
+    .culture-p-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .culture-p-grid-split {
+        grid-template-columns: 1fr;
+    }
+    /* Menumpuk vertikal di tablet, sidebar pindah ke atas */
+    .culture-p-sidebar {
+        width: 100%;
+    }
+    .culture-p-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .culture-p-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .culture-p-toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .culture-p-sort-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 520px) {
+    .culture-p-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .culture-p-search-box {
+        flex-direction: column;
+    }
+    .culture-p-btn-filter-top {
+        padding: 12px 0;
+        justify-content: center;
+    }
+}

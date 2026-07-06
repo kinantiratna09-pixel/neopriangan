@@ -1,0 +1,180 @@
+<!-- PLAN MY TRIP PAGE SECTION -->
+<section class="pmt-page-section">
+
+    <!-- ==========================================
+       HERO COVER UTAMA (ATAS)
+       ========================================== -->
+    <div class="pmt-hero-banner">
+        <div class="pmt-container pmt-hero-grid">
+            <div class="pmt-hero-left">
+                <span class="pmt-eyebrow">PLAN MY TRIP</span>
+                <h1>Jelajahi Bandung dengan <br>Rencana <span>Perjalanan Terbaik!</span></h1>
+                <p class="pmt-subtitle">Dapatkan rekomendasi itinerary dari AI atau buat rencana perjalananmu sendiri sesuai keinginanmu.</p>
+
+                <!-- Opsi Pemilihan Metode Trip -->
+                <div class="pmt-method-row">
+                    <div class="pmt-method-card active">
+                        <div class="method-icon m-blue"><i class="fa-solid fa-robot"></i></div>
+                        <div class="method-txt">
+                            <strong>Rekomendasi AI</strong>
+                            <p>Buat rencana instan berbasis AI</p>
+                        </div>
+                    </div>
+                    <div class="pmt-method-card">
+                        <div class="method-icon m-orange"><i class="fa-solid fa-calendar-plus"></i></div>
+                        <div class="method-txt">
+                            <strong>Buat Sendiri</strong>
+                            <p>Atur jadwal perjalanan manual</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pmt-hero-right">
+                <img src="image/gedungsate-fade.png" alt="Bandung Background" class="pmt-hero-illustration" onerror="this.src='https://placehold.co'">
+            </div>
+        </div>
+    </div>
+
+    <!-- ==========================================
+       MAIN LAYOUT (FORM KIRI + ITINERARY TENGAH + MAPS KANAN)
+       ========================================== -->
+    <div class="pmt-main-content">
+        <div class="pmt-container pmt-core-grid">
+
+            <!-- PANEL 1: PENGATURAN PERJALANAN (SISI KIRI) -->
+            <aside class="pmt-sidebar-form">
+                <div class="form-widget shadow-card">
+                    <h4>Pengaturan Perjalanan</h4>
+
+                    <div class="form-group">
+                        <label>Tipe Perjalanan</label>
+                        <div class="pmt-radio-toggle">
+                            <button class="toggle-btn active">Jalan-Jalan</button>
+                            <button class="toggle-btn">Dinas / Bisnis</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-regular fa-calendar"></i> Tanggal Perjalanan</label>
+                        <input type="date" value="2026-07-06" class="pmt-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Durasi (Hari)</label>
+                        <div class="pmt-counter-row">
+                            <button class="count-btn">-</button>
+                            <span class="count-num">1</span>
+                            <button class="count-btn">+</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Minat & Preference</label>
+                        <div class="pmt-tag-cloud">
+                            <span class="pmt-tag active">Alam x</span>
+                            <span class="pmt-tag active">Kuliner x</span>
+                            <span class="pmt-tag">Sejarah</span>
+                            <span class="pmt-tag">Belanja</span>
+                            <span class="pmt-tag">+ Tambah Minat</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Budget (Per Orang)</label>
+                        <select class="pmt-select">
+                            <option>Ekonomis (Rp0 - Rp500rb)</option>
+                            <option selected>Menengah (Rp500rb - Rp2jt)</option>
+                            <option>Premium (Rp2jt+)</option>
+                        </select>
+                    </div>
+
+                    <button class="pmt-btn-generate"><i class="fa-solid fa-wand-magic-sparkles"></i> Buat Itinerary</button>
+                </div>
+
+                <!-- Ringkasan Trip Kecil Di Bawah Form -->
+                <div class="form-widget summary-info-box">
+                    <h4>Ringkasan Trip</h4>
+                    <div class="summary-list">
+                        <div class="sum-row"><span>Durasi:</span><strong>1 Hari</strong></div>
+                        <div class="sum-row"><span>Destinasi:</span><strong>5 Tempat</strong></div>
+                        <div class="sum-row"><span>Transport:</span><strong>Mobil</strong></div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- PANEL 2: TIMELINE ITINERARY (BAGIAN TENGAH) -->
+            <div class="pmt-timeline-area">
+                <div class="itinerary-card-box shadow-card">
+
+                    <div class="itinerary-header">
+                        <div class="itinerary-title">
+                            <h3>Itinerary Sehari di Bandung</h3>
+                            <span class="badge-ai"><i class="fa-solid fa-robot"></i> Rekomendasi AI</span>
+                        </div>
+                        <div class="itinerary-actions">
+                            <button class="action-link"><i class="fa-regular fa-bookmark"></i> Simpan</button>
+                            <button class="action-link"><i class="fa-regular fa-share-from-square"></i> Bagikan</button>
+                        </div>
+                    </div>
+
+                    <!-- Jalur Alur Waktu / Kegiatan Itinerary -->
+                    <div class="pmt-itinerary-stream">
+
+                        <!-- Tempat 1: Gedung Sate -->
+                        <div class="stream-item">
+                            <div class="stream-time">08.00<small>Pagi</small></div>
+                            <div class="stream-dot dot-purple"></div>
+                            <div class="stream-content-card">
+                                <div class="stream-card-media">
+                                    <img src="image/gedungsate.png" alt="Gedung Sate" onerror="this.src='https://unsplash.com'">
+                                </div>
+                                <div class="stream-card-body">
+                                    <span class="stream-tag bg-soft-purple">SEJARAH</span>
+                                    <h4>Gedung Sate</h4>
+                                    <p>Memulai perjalanan di ikon arsitektur bersejarah kota Bandung yang megah.</p>
+                                    <small class="meta-duration"><i class="fa-regular fa-clock"></i> 1.5 Jam</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tempat 2: Jalan Braga -->
+                        <div class="stream-item">
+                            <div class="stream-time">10.30<small>Pagi</small></div>
+                            <div class="stream-dot dot-orange"></div>
+                            <div class="stream-content-card">
+                                <div class="stream-card-media">
+                                    <img src="image/braga.png" alt="Jalan Braga" onerror="this.src='https://unsplash.com'">
+                                </div>
+                                <div class="stream-card-body">
+                                    <span class="stream-tag bg-soft-orange">KULINER & KREATIF</span>
+                                    <h4>Jalan Braga</h4>
+                                    <p>Menikmati suasana kolonial Eropa sambil bersantai di kafe estetis sepanjang jalan.</p>
+                                    <small class="meta-duration"><i class="fa-regular fa-clock"></i> 2 Jam</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tempat 3: Dusun Bambu -->
+                        <div class="stream-item">
+                            <div class="stream-time">13.00<small>Siang</small></div>
+                            <div class="stream-dot dot-green"></div>
+                            <div class="stream-content-card">
+                                <div class="stream-card-media">
+                                    <img src="image/lembang.png" alt="Dusun Bambu" onerror="this.src='https://unsplash.com'">
+                                </div>
+                                <div class="stream-card-body">
+                                    <span class="stream-tag bg-soft-green">WISATA ALAM</span>
+                                    <h4>Dusun Bambu</h4>
+                                    <p>Makan siang di tepi danau yang asri dengan panorama alam pegunungan Lembang.</p>
+                                    <small class="meta-duration"><i class="fa-regular fa-clock"></i> 2.5 Jam</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tempat 4: Kawah Putih -->
+                        <div class="stream-item">
+                            <div class="stream-time">16.00<small>Sore</small></div>
+                            <div class="stream-dot dot-blue"></div>
+                            <div class="stream-content-card">
+                                <div class="stream-card-media">

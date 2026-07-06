@@ -1,0 +1,771 @@
+/* ==========================================
+   PREFIX KHUSUS: PLAN MY TRIP PAGE INTERFACE
+   ========================================== */
+
+.pmt-page-section {
+    background-color: #f8faff;
+    width: 100%;
+}
+
+.pmt-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.shadow-card {
+    background: #ffffff;
+    border-radius: 24px;
+    border: 1px solid #edf2f9;
+    box-shadow: 0 10px 30px rgba(3, 24, 40, 0.02);
+}
+
+
+/* --- BANNER COVER ATAS --- */
+
+.pmt-hero-banner {
+    background: linear-gradient(135deg, #ffffff 0%, #edf4fe 100%);
+    padding: 40px 0 20px 0;
+    overflow: hidden;
+}
+
+.pmt-hero-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.pmt-eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    color: #0056fb;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.pmt-hero-left h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: #031828;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.pmt-hero-left h1 span {
+    color: #0056fb;
+}
+
+.pmt-subtitle {
+    font-size: 14px;
+    color: #5A738E;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+
+/* Kotak Pilihan Cara Menyusun Trip */
+
+.pmt-method-row {
+    display: flex;
+    gap: 16px;
+}
+
+.pmt-method-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    border: 1px solid #edf2f9;
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.2s ease;
+}
+
+.method-icon {
+    width: 38px;
+    height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.method-icon.m-blue {
+    background: #EBF3FF;
+    color: #0056fb;
+}
+
+.method-icon.m-orange {
+    background: #FFF3EB;
+    color: #E67E22;
+}
+
+.method-txt strong {
+    display: block;
+    font-size: 13px;
+    color: #031828;
+}
+
+.method-txt p {
+    font-size: 11px;
+    color: #7F8C8D;
+    margin-top: 2px;
+}
+
+.pmt-method-card.active,
+.pmt-method-card:hover {
+    border-color: #0056fb;
+    box-shadow: 0 8px 20px rgba(0, 86, 251, 0.04);
+}
+
+.pmt-hero-illustration {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* --- CORE INTERFACE GRID BELAH TIGA --- */
+
+.pmt-main-content {
+    padding: 40px 0;
+}
+
+.pmt-core-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr 280px;
+    /* Membagi ruang form kiri, itinerary tengah, peta kanan */
+    gap: 24px;
+    align-items: start;
+}
+
+
+/* ==========================================
+   PANEL SELEKSI FORMULIR FILTER (KIRI)
+   ========================================== */
+
+.pmt-sidebar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-widget {
+    padding: 24px 20px;
+}
+
+.form-widget h4 {
+    font-size: 14px;
+    color: #031828;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #4A5568;
+    margin-bottom: 8px;
+}
+
+.pmt-radio-toggle {
+    display: flex;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: 8px;
+}
+
+.toggle-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 8px 0;
+    font-size: 11px;
+    font-weight: 600;
+    color: #718096;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.toggle-btn.active {
+    background: #ffffff;
+    color: #031828;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pmt-input,
+.pmt-select {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #E2E8F0;
+    font-size: 12px;
+    outline: none;
+    background: #ffffff;
+    color: #031828;
+    font-weight: 500;
+}
+
+.pmt-counter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #E2E8F0;
+    border-radius: 10px;
+    padding: 4px;
+}
+
+.count-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: #f1f5f9;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.count-num {
+    font-size: 13px;
+    font-weight: 600;
+    color: #031828;
+}
+
+.pmt-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.pmt-tag {
+    font-size: 11px;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    padding: 6px 12px;
+    border-radius: 20px;
+    color: #4A5568;
+    cursor: pointer;
+}
+
+.pmt-tag.active {
+    background: #EBF3FF;
+    color: #0056fb;
+    border-color: #0056fb;
+    font-weight: 600;
+}
+
+.pmt-btn-generate {
+    width: 100%;
+    background: #0056fb;
+    color: #ffffff;
+    border: none;
+    padding: 12px 0;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 86, 251, 0.15);
+    margin-top: 10px;
+}
+
+
+/* Box Ringkasan Kecil */
+
+.summary-info-box {
+    background: #ffffff;
+}
+
+.summary-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sum-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.sum-row span {
+    color: #7F8C8D;
+}
+
+.sum-row strong {
+    color: #031828;
+}
+
+
+/* ==========================================
+   PANEL TIMELINE ITINERARY STREAM (TENGAH)
+   ========================================== */
+
+.itinerary-card-box {
+    padding: 30px;
+}
+
+.itinerary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.itinerary-title h3 {
+    font-size: 18px;
+    color: #031828;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.badge-ai {
+    font-size: 10px;
+    font-weight: 700;
+    background: #EBF3FF;
+    color: #0056fb;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.itinerary-actions {
+    display: flex;
+    gap: 14px;
+}
+
+.action-link {
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: #718096;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-link:hover {
+    color: #0056fb;
+}
+
+
+/* Struktur Alur Kegiatan / Stream Line */
+
+.pmt-itinerary-stream {
+    position: relative;
+    padding-left: 20px;
+}
+
+
+/* Garis Vertikal Utama Timeline */
+
+.pmt-itinerary-stream::before {
+    content: '';
+    position: absolute;
+    left: 82px;
+    top: 15px;
+    bottom: 15px;
+    width: 2px;
+    background: #E2E8F0;
+    border-left: 2px dashed #CBD5E1;
+}
+
+.stream-item {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.stream-time {
+    width: 55px;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 700;
+    color: #031828;
+    line-height: 1.1;
+    padding-top: 14px;
+    flex-shrink: 0;
+}
+
+.stream-time small {
+    display: block;
+    font-size: 9px;
+    color: #A0AEC0;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+
+/* Bulatan Titik Penghubung Jalur */
+
+.stream-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    position: absolute;
+    left: 77px;
+    top: 18px;
+    z-index: 5;
+    box-shadow: 0 0 0 3px #ffffff, 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dot-purple {
+    background-color: #9B51E0;
+}
+
+.dot-orange {
+    background-color: #E67E22;
+}
+
+.dot-green {
+    background-color: #27AE60;
+}
+
+.dot-blue {
+    background-color: #2F80ED;
+}
+
+
+/* Kartu Detail Kegiatan */
+
+.stream-content-card {
+    background: #f8fafc;
+    border: 1px solid #f1f5f9;
+    border-radius: 16px;
+    padding: 14px;
+    display: flex;
+    gap: 16px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.stream-card-media {
+    width: 100px;
+    height: 80px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.stream-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stream-card-body {
+    flex-grow: 1;
+}
+
+.stream-tag {
+    font-size: 8px;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.bg-soft-purple {
+    background: #F5EBFB;
+    color: #9B51E0;
+}
+
+.bg-soft-orange {
+    background: #FFF3EB;
+    color: #E67E22;
+}
+
+.bg-soft-green {
+    background: #EAF7EE;
+    color: #27AE60;
+}
+
+.bg-soft-blue {
+    background: #EBF3FF;
+    color: #2F80ED;
+}
+
+.stream-card-body h4 {
+    font-size: 14px;
+    color: #031828;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.stream-card-body p {
+    font-size: 11px;
+    color: #657786;
+    line-height: 1.4;
+    margin-bottom: 6px;
+}
+
+.meta-duration {
+    font-size: 10px;
+    color: #A0AEC0;
+    font-weight: 500;
+}
+
+
+/* Baris Estimasi Akumulasi Di Paling Bawah Card */
+
+.itinerary-footer-bar {
+    border-top: 1px solid #edf2f9;
+    padding-top: 18px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-stat {
+    font-size: 12px;
+    color: #4A5568;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.footer-stat i {
+    color: #0056fb;
+}
+
+.footer-stat span {
+    color: #7F8C8D;
+}
+
+
+/* ==========================================
+   PANEL DISPLAY PETA GRAFIS RUTE (KANAN)
+   ========================================== */
+
+.map-widget-box {
+    padding: 20px;
+}
+
+.map-widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.map-widget-header h4 {
+    font-size: 14px;
+    color: #031828;
+    font-weight: 700;
+}
+
+.btn-expand-map {
+    background: none;
+    border: none;
+    color: #A0AEC0;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+/* Simulasi Kanvas Peta */
+
+.map-mock-canvas {
+    width: 100%;
+    height: 260px;
+    background-color: #EAF4EC;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #d4ebdd;
+}
+
+.road-path-line {
+    position: absolute;
+    width: 4px;
+    height: 180px;
+    background: transparent;
+    border: 3px dashed #ffffff;
+    top: 40px;
+    left: 30%;
+    border-width: 0 0 3px 3px;
+    border-radius: 0 0 0 40px;
+    opacity: 0.8;
+}
+
+.map-pin {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #0056fb;
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-pin.p-1 {
+    top: 40px;
+    left: 60%;
+    background: #9B51E0;
+}
+
+.map-pin.p-2 {
+    top: 100px;
+    left: 45%;
+    background: #E67E22;
+}
+
+.map-pin.p-3 {
+    top: 160px;
+    left: 25%;
+    background: #27AE60;
+}
+
+.map-pin.p-4 {
+    top: 210px;
+    left: 55%;
+    background: #2F80ED;
+}
+
+.city-bdg {
+    top: 120px;
+    left: 55%;
+    font-size: 12px;
+    color: #7CA486;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: absolute;
+}
+
+
+/* List Angka Meta Data Rute */
+
+.map-route-meta-list {
+    margin: 18px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 14px;
+}
+
+.map-route-meta-list h5 {
+    font-size: 12px;
+    color: #031828;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.route-meta-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+}
+
+.route-meta-row span {
+    color: #7F8C8D;
+}
+
+.route-meta-row strong {
+    color: #031828;
+}
+
+.btn-open-google-maps {
+    width: 100%;
+    border: 1px solid #E2E8F0;
+    background: #ffffff;
+    color: #031828;
+    padding: 10px 0;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn-open-google-maps:hover {
+    background: #0056fb;
+    color: #ffffff;
+    border-color: #0056fb;
+}
+
+
+/* --- RESPONSIVITAS SEIMBANG (BREAKPOINTS LAYAR MOBILE) --- /@media (max-width: 1200px) {.pmt-hero-grid { grid-template-columns: 1fr; text-align: center; }.pmt-hero-right { display: none; } / Sembunyikan hiasan gambar di tablet /.pmt-method-row { justify-content: center; }.pmt-core-grid { grid-template-columns: 1fr; gap: 32px; } / Menumpuk vertikal menjadi 1 baris penuh di HP & Tablet /.pmt-sidebar-form { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; } / Widget bersisian di tablet */
+
+.summary-info-box {
+    height: fit-content;
+}
+
+
+}
+@media (max-width: 768px) {
+    .pmt-sidebar-form {
+        grid-template-columns: 1fr;
+    }
+    /* Menjadi 1 kolom murni di HP /.pmt-itinerary-stream::before { left: 72px; } / Geser koordinat sumbu garis di layar sempit */
+    
+    .stream-item {
+        gap: 16px;
+    }
+    
+    .stream-dot {
+        left: 67px;
+    }
+    
+    .stream-content-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .stream-card-media {
+        width: 100%;
+        height: 130px;
+    }
+    
+    .itinerary-footer-bar {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .itinerary-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+@media (max-width： 480px) {
+    .pmt-method-row {
+        flex-direction: column;
+    }
+    
+    .pmt-hero-left h1 {
+        font-size： 1.8rem;
+    }
+    
+    .itinerary-card-box {
+        padding： 16px;
+    }
+}

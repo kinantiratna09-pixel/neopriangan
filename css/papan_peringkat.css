@@ -1,0 +1,556 @@
+/* ==========================================
+   PREFIX KHUSUS: LEADERBOARD CONTENT STYLING
+   ========================================== */
+
+.lb-page-section {
+    background-color: #f8faff;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.lb-page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+
+/* --- BANNER HEADER ATAS (JUDUL & PROFILE USER BOX) --- */
+
+.lb-page-header-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    /* Membagi porsi ruang judul kiri dan user-box kanan */
+    gap: 40px;
+    align-items: end;
+    margin-bottom: 35px;
+}
+
+.lb-page-breadcrumb {
+    font-size: 12px;
+    color: #7F8C8D;
+    margin-bottom: 12px;
+}
+
+.lb-page-title-side h1 {
+    font-size: 2.2rem;
+    color: #031828;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.lb-page-subtitle {
+    font-size: 13px;
+    color: #718096;
+    margin-bottom: 24px;
+}
+
+
+/* Baris Tab Filter Atas */
+
+.lb-page-tab-row {
+    display: flex;
+    gap: 10px;
+}
+
+.lb-tab-btn {
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #4A5568;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.lb-tab-btn i {
+    opacity: 0.7;
+}
+
+.lb-tab-btn.active,
+.lb-tab-btn:hover {
+    background: #0056fb;
+    color: #ffffff;
+    border-color: #0056fb;
+}
+
+
+/* WIDGET KARTU USER PERINGKAT KANAN ATAS */
+
+.lb-page-user-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #edf2f9;
+    box-shadow: 0 8px 25px rgba(3, 24, 40, 0.01);
+}
+
+.user-card-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #A0AEC0;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.user-card-body {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.user-avatar-wrap {
+    position: relative;
+}
+
+.user-avatar-wrap img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-badge-num {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    background: #0056fb;
+    color: #ffffff;
+    font-size: 9px;
+    font-weight: 700;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ffffff;
+}
+
+.user-meta-txt strong {
+    display: block;
+    font-size: 14px;
+    color: #031828;
+}
+
+.user-meta-txt p {
+    font-size: 11px;
+    color: #718096;
+}
+
+.user-score-block {
+    margin-left: auto;
+    text-align: right;
+}
+
+.user-score-block small {
+    display: block;
+    font-size: 11px;
+    color: #A0AEC0;
+    margin-bottom: 2px;
+}
+
+.user-score-block strong {
+    font-size: 15px;
+    color: #0056fb;
+    font-weight: 700;
+}
+
+
+/* --- CORE MAIN LAYOUT GRID (TABEL KIRI + SIDEBAR KANAN) --- */
+
+.lb-page-main-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+
+/* ==========================================
+   SISI TABEL DAFTAR KLASEMEN (KIRI)
+   ========================================== */
+
+.lb-table-wrapper-box {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 24px;
+    border: 1px solid #edf2f9;
+    box-shadow: 0 4px 20px rgba(3, 24, 40, 0.01);
+}
+
+.lb-table-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.lb-select-wrap select {
+    border: 1px solid #E2E8F0;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #031828;
+    background: #ffffff;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* Desain Tabel Utama */
+
+.lb-responsive-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.lb-main-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.lb-main-table th {
+    font-size: 12px;
+    font-weight: 600;
+    color: #718096;
+    padding: 12px 16px;
+    border-bottom: 1px solid #edf2f9;
+}
+
+.lb-main-table td {
+    padding: 14px 16px;
+    font-size: 13px;
+    vertical-align: center;
+    border-bottom: 1px solid #f8fafc;
+}
+
+.text-right {
+    text-right: right;
+    text-align: right;
+}
+
+
+/* Komponen Kolom Profil User Tabel */
+
+.user-table-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-table-profile img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.u-name strong {
+    display: block;
+    font-size: 13px;
+    color: #031828;
+}
+
+.u-name calm,
+.u-name small {
+    font-size: 10px;
+    color: #A0AEC0;
+    display: block;
+    margin-top: 1px;
+}
+
+
+/* Komponen Kolom Level Lencana */
+
+.lvl-table-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lvl-icon {
+    font-size: 14px;
+}
+
+.lvl-table-badge strong {
+    font-size: 12px;
+    color: #4A5568;
+}
+
+.lvl-table-badge small {
+    font-size: 11px;
+    color: #CBD5E1;
+    font-weight: 500;
+    padding-left: 4px;
+    border-left: 1px solid #E2E8F0;
+}
+
+.rank-number-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #718096;
+    padding-left: 6px;
+}
+
+.rank-medal {
+    font-size: 18px;
+}
+
+.xp-text {
+    font-size: 13px;
+    font-weight: 700;
+    color: #4A5568;
+}
+
+
+/* Custom Row Warna Khusus Tiga Besar Podium */
+
+.gold-bg {
+    background-color: #FFFDF5;
+}
+
+.gold-color {
+    color: #D4AC0D;
+}
+
+.silver-bg {
+    background-color: #F8F9F9;
+}
+
+.silver-color {
+    color: #7F8C8D;
+}
+
+.bronze-bg {
+    background-color: #FEF9E7;
+}
+
+.bronze-color {
+    color: #CA6F1E;
+}
+
+
+/* Sorotan Garis Biru Tipis untuk Baris User Sendiri (Peringkat 12) */
+
+.rank-row-own-user {
+    background-color: #EBF3FF !important;
+}
+
+.text-blue {
+    color: #0056fb !important;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   SIDEBAR COMPONENT (SISI KANAN)
+   ========================================== */
+
+.lb-page-sidebar-right {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.lb-sidebar-widget {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #edf2f9;
+}
+
+.lb-sidebar-widget h4 {
+    font-size: 14px;
+    color: #031828;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.lb-stat-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.lb-stat-item-row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.lb-stat-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.lb-stat-icon.b-blue {
+    background: #EBF3FF;
+    color: #0056fb;
+}
+
+.lb-stat-icon.b-purple {
+    background: #F5EBFB;
+    color: #9B51E0;
+}
+
+.lb-stat-icon.b-orange {
+    background: #FFF3EB;
+    color: #E67E22;
+}
+
+.lb-stat-txt strong {
+    display: block;
+    font-size: 14px;
+    color: #031828;
+    font-weight: 700;
+}
+
+.lb-stat-txt p {
+    font-size: 11px;
+    color: #718096;
+}
+
+
+/* Widget Banner Kampanye Trofi */
+
+.lb-sidebar-widget-banner {
+    background: linear-gradient(135deg, #0056fb 0%, #003da3 100%);
+    border-radius: 24px;
+    padding: 30px 24px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0, 86, 251, 0.15);
+}
+
+.lb-banner-trophy-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.lb-sidebar-widget-banner h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.lb-sidebar-widget-banner p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.lb-btn-action-play {
+    background: #ffffff;
+    color: #0056fb;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* Informasi Kapsul Bantuan Bawah */
+
+.lb-sidebar-about-info {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 0 4px;
+}
+
+.lb-sidebar-about-info .info-icon {
+    color: #0056fb;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.lb-sidebar-about-info .info-text strong {
+    display: block;
+    font-size: 12px;
+    color: #031828;
+    margin-bottom: 2px;
+}
+
+.lb-sidebar-about-info .info-text p {
+    font-size: 11px;
+    color: #7F8C8D;
+    line-height: 1.4;
+}
+
+
+/* --- RESPONSIVITAS SEIMBANG (BREAKPOINTS LAYAR MOBILE) --- */
+
+@media (max-width: 1200px) {
+    .lb-page-header-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    .lb-page-user-card {
+        max-width: 400px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .lb-page-tab-row {
+        justify-content: center;
+    }
+    .lb-page-main-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .lb-page-sidebar-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+    .lb-sidebar-about-info {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 540px) {
+    .lb-page-tab-row {
+        flex-direction: column;
+        width: 100%;
+    }
+    .lb-tab-btn {
+        justify-content: center;
+    }
+    .lb-page-sidebar-right {
+        grid-template-columns: 1fr;
+    }
+    .lb-sidebar-about-info {
+        grid-column: span 1;
+    }
+    .lb-page-title-side h1 {
+        font-size: 1.8rem;
+    }
+    .lb-table-wrapper-box {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,165 @@
+<!-- LEADERBOARD PAGE SECTION -->
+<section class="lb-page-section">
+    <div class="lb-page-container">
+
+        <!-- ==========================================
+           BAGIAN ATAS: HERO TITLE & CARD PERINGKATMU
+           ========================================== -->
+        <div class="lb-page-header-grid">
+            <!-- Sisi Kiri: Judul Halaman & Tab Filter Global -->
+            <div class="lb-page-title-side">
+                <div class="lb-page-breadcrumb">Home &gt; Quiz &gt; Leaderboard</div>
+                <h1>Papan Peringkat</h1>
+                <p class="lb-page-subtitle">Berkompetisilah dan jadilah ahli pengetahuan tentang Bandung!</p>
+
+                <!-- Tab Menu Atas -->
+                <div class="lb-page-tab-row">
+                    <button class="lb-tab-btn active"><i class="fa-solid fa-earth-americas"></i> Peringkat Global</button>
+                    <button class="lb-tab-btn"><i class="fa-solid fa-user-group"></i> Peringkat Teman</button>
+                    <button class="lb-tab-btn"><i class="fa-solid fa-location-dot"></i> Peringkat Kota</button>
+                </div>
+            </div>
+
+            <!-- Sisi Kanan: Kartu Profil Skor Pengguna Sendiri -->
+            <div class="lb-page-user-card" style="background-image: linear-gradient(to right, rgba(255,255,255,0.95), rgba(235,243,255,0.9)), url('image/gedungsate-fade.png'); background-size: contain; background-position: right; background-repeat: no-repeat;">
+                <span class="user-card-title">Peringkatmu</span>
+                <div class="user-card-body">
+                    <div class="user-avatar-wrap">
+                        <img src="https://pravatar.cc" alt="Avatar Kamu">
+                        <span class="user-badge-num">12</span>
+                    </div>
+                    <div class="user-meta-txt">
+                        <strong>Kamu</strong>
+                        <p>Explorer Bandung</p>
+                    </div>
+                    <div class="user-score-block">
+                        <small>Total XP</small>
+                        <strong>320 XP</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==========================================
+           BAGIAN UTAMA: TABEL PERINGKAT + SIDEBAR STATISTIK
+           ========================================== -->
+        <div class="lb-page-main-layout">
+
+            <!-- SISI KIRI: TABEL DAFTAR PAPAN PERINGKAT -->
+            <div class="lb-page-content-left">
+                <div class="lb-table-wrapper-box">
+
+                    <!-- Toolbar Filter Dropdown Dropdown -->
+                    <div class="lb-table-toolbar">
+                        <div class="lb-select-wrap">
+                            <select>
+                                <option>Semua Level</option>
+                                <option>Lv. 1 - Pemula</option>
+                                <option>Lv. 2 - Explorer</option>
+                            </select>
+                        </div>
+                        <div class="lb-select-wrap">
+                            <select>
+                                <option>📅 Mingguan</option>
+                                <option>Bulanan</option>
+                                <option>Sepanjang Masa</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Layout Utama Tabel Komponen -->
+                    <div class="lb-responsive-table">
+                        <table class="lb-main-table">
+                            <thead>
+                                <tr>
+                                    <th>Peringkat</th>
+                                    <th>Pengguna</th>
+                                    <th>Level</th>
+                                    <th class="text-right">Total XP</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Juara 1 (Gold) -->
+                                <tr class="rank-row-top gold-bg">
+                                    <td><span class="rank-medal gold">🥇</span></td>
+                                    <td>
+                                        <div class="user-table-profile">
+                                            <img src="https://pravatar.cc" alt="Andi">
+                                            <div class="u-name"><strong>Andi Wijaya</strong><small>Master Bandung</small></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="lvl-table-badge"><span class="lvl-icon purple">👑</span> <strong>Lv. 5</strong><small>Legenda Bandung</small></div>
+                                    </td>
+                                    <td class="text-right"><strong class="xp-text gold-color">2.450 XP</strong></td>
+                                </tr>
+
+                                <!-- Juara 2 (Silver) -->
+                                <tr class="rank-row-top silver-bg">
+                                    <td><span class="rank-medal silver">🥈</span></td>
+                                    <td>
+                                        <div class="user-table-profile">
+                                            <img src="https://pravatar.cc" alt="Siti">
+                                            <div class="u-name"><strong>Siti Nurhaliza</strong><small>Master Bandung</small></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="lvl-table-badge"><span class="lvl-icon purple">👑</span> <strong>Lv. 5</strong><small>Legenda Bandung</small></div>
+                                    </td>
+                                    <td class="text-right"><strong class="xp-text silver-color">2.320 XP</strong></td>
+                                </tr>
+
+                                <!-- Juara 3 (Bronze) -->
+                                <tr class="rank-row-top bronze-bg">
+                                    <td><span class="rank-medal bronze">🥉</span></td>
+                                    <td>
+                                        <div class="user-table-profile">
+                                            <img src="https://pravatar.cc" alt="Dimas">
+                                            <div class="u-name"><strong>Dimas Pratama</strong><small>Explorer Bandung</small></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="lvl-table-badge"><span class="lvl-icon yellow">🏅</span> <strong>Lv. 2</strong><small>Explorer Bandung</small></div>
+                                    </td>
+                                    <td class="text-right"><strong class="xp-text bronze-color">1.950 XP</strong></td>
+                                </tr>
+
+                                <!-- Peringkat 4 -->
+                                <tr>
+                                    <td><span class="rank-number-label">4</span></td>
+                                    <td>
+                                        <div class="user-table-profile">
+                                            <img src="https://pravatar.cc" alt="Gina">
+                                            <div class="u-name"><strong>Gina Kartika</strong><small>Explorer Bandung</small></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="lvl-table-badge"><span class="lvl-icon yellow">🏅</span> <strong>Lv. 2</strong><small>Explorer Bandung</small></div>
+                                    </td>
+                                    <td class="text-right"><strong class="xp-text">1.650 XP</strong></td>
+                                </tr>
+
+                                <!-- Peringkat 5 -->
+                                <tr>
+                                    <td><span class="rank-number-label">5</span></td>
+                                    <td>
+                                        <div class="user-table-profile">
+                                            <img src="https://pravatar.cc" alt="Fadil">
+                                            <div class="u-name"><strong>Fadil Rahman</strong><small>Penjelajah Daerah</small></div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="lvl-table-badge"><span class="lvl-icon blue">📘</span> <strong>Lv. 3</strong><small>Penjelajah Sejarah</small></div>
+                                    </td>
+                                    <td class="text-right"><strong class="xp-text">1.420 XP</strong></td>
+                                </tr>
+
+                                <!-- Baris Sorot Nilai Sendiri (Peringkat 12) -->
+                                <tr class="rank-row-own-user">
+                                    <td><span class="rank-number-label text-blue">12</span></td>
+                                    <td>
+                                        <div class="user-table-profile">
+                                            <img src="https://pravatar.cc" alt="Kamu">
+                                            <div class="u-name"><strong class="text-blue">Kamu</strong><small>Explorer Bandung</small></div>
+                                        </div>
+                                    </td>
