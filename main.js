@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // sticky navbar blur
     const navbar = document.getElementById('navbar');
+
     function onScroll() {
         if (window.scrollY > 40) navbar.classList.add('scrolled');
         else navbar.classList.remove('scrolled');
@@ -20,6 +21,155 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // language switcher and translation
+    const translations = {
+        id: {
+            navHome: 'Home',
+            navAbout: 'About',
+            navCategories: 'Categories',
+            navTimeline: 'Timeline',
+            navEvents: 'Events',
+            navMaps: 'Maps',
+            btnExplore: 'Explore',
+            heroEyebrow: 'WELCOME TO',
+            heroTitle: 'Bandung',
+            heroSubtitle: 'Creative Smart City',
+            heroLead: 'Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota Bandung dalam satu platform.',
+            btnPlan: 'Plan My Trip',
+            btnWatch: 'Watch Video',
+            aboutSubtitle: 'TENTANG BANDUNG',
+            aboutHeading: 'Discover the Soul of Bandung',
+            aboutDescription: 'Bandung merupakan kota yang memadukan kreativitas, budaya, alam, kuliner, sejarah, dan teknologi dalam satu pengalaman wisata yang modern, nyaman, dan berkelanjutan.',
+            aboutQuote: '“Aku kembali ke Bandung kepada cintaku yang sesungguhnya” <br> -Ir.Soekarno',
+            btnExploreDestinations: 'Jelajahi Destinasi',
+            btnSeeAllTourism: 'Lihat Semua Wisata',
+            btnExploreCulture: 'Jelajahi Budaya Sunda ➔',
+            btnSeeAllEvents: 'Lihat Semua Event ➔',
+            btnStartQuiz: 'Mulai Kuis Sekarang ➔',
+            footerInfoTitle: 'Informasi',
+            footerGuide: 'Panduan Wisata',
+            footerTransport: 'Transportasi',
+            footerFood: 'Kuliner',
+            footerStay: 'Akomodasi',
+            footerNews: 'Berita & Update'
+        },
+        en: {
+            navHome: 'Home',
+            navAbout: 'About',
+            navCategories: 'Categories',
+            navTimeline: 'Timeline',
+            navEvents: 'Events',
+            navMaps: 'Maps',
+            btnExplore: 'Explore',
+            heroEyebrow: 'WELCOME TO',
+            heroTitle: 'Bandung',
+            heroSubtitle: 'Creative Smart City',
+            heroLead: 'Explore Bandung tourist destinations, culinary spots, history, culture, and exciting experiences in one platform.',
+            btnPlan: 'Plan My Trip',
+            btnWatch: 'Watch Video',
+            aboutSubtitle: 'ABOUT BANDUNG',
+            aboutHeading: 'Discover the Soul of Bandung',
+            aboutDescription: 'Bandung is a city that blends creativity, culture, nature, culinary delights, history, and technology into a modern, comfortable, and sustainable travel experience.',
+            aboutQuote: '“I return to Bandung to my truest love” <br> -Ir.Soekarno',
+            btnExploreDestinations: 'Explore Destinations',
+            btnSeeAllTourism: 'See All Tourism',
+            btnExploreCulture: 'Explore Sundanese Culture ➔',
+            btnSeeAllEvents: 'See All Events ➔',
+            btnStartQuiz: 'Start Quiz Now ➔',
+            footerInfoTitle: 'Information',
+            footerGuide: 'Travel Guide',
+            footerTransport: 'Transportation',
+            footerFood: 'Culinary',
+            footerStay: 'Accommodation',
+            footerNews: 'News & Updates'
+        }
+    };
+
+    const i18nElements = document.querySelectorAll('[data-i18n-key]');
+    const navLinks = Array.from(document.querySelectorAll('.nav-menu a'));
+    const langBtns = Array.from(document.querySelectorAll('.lang-btn'));
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    function setTextWithIcon(el, text) {
+        const icon = el.querySelector('i');
+        if (icon) {
+            const iconHTML = icon.outerHTML;
+            if (el.firstElementChild === icon) {
+                el.innerHTML = iconHTML + ' ' + text;
+            } else {
+                el.innerHTML = text + ' ' + iconHTML;
+            }
+        } else {
+            el.textContent = text;
+        }
+    }
+
+    function setLanguage(lang) {
+        const current = translations[lang] ? lang : 'id';
+        i18nElements.forEach(el => {
+            const key = el.dataset.i18nKey;
+            const value = translations[current][key];
+            if (!value) return;
+            if (key === 'aboutQuote' || key === 'aboutHeading') {
+                el.innerHTML = value;
+            } else {
+                setTextWithIcon(el, value);
+            }
+        });
+        langBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === current));
+        document.documentElement.lang = current === 'en' ? 'en' : 'id';
+        localStorage.setItem('siteLang', current);
+    }
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+    });
+
+    function closeMobileMenu() {
+        if (navMenu && navMenu.classList.contains('open')) {
+            navMenu.classList.remove('open');
+            if (navToggle) navToggle.classList.remove('active');
+        }
+    }
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            if (navMenu) navMenu.classList.toggle('open');
+            navToggle.classList.toggle('active');
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    function updateActiveNav() {
+        const sections = document.querySelectorAll('header[id], section[id]');
+        let currentSectionId = 'home';
+        sections.forEach(sec => {
+            const rect = sec.getBoundingClientRect();
+            if (rect.top <= 120) {
+                currentSectionId = sec.id;
+            }
+        });
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            link.classList.toggle('active', href === '#' + currentSectionId);
+        });
+    }
+
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+    setLanguage(localStorage.getItem('siteLang') || 'id');
+
+    const watchVideoBtn = document.getElementById('watchVideo');
+    if (watchVideoBtn) {
+        watchVideoBtn.addEventListener('click', () => {
+            window.location.href = 'html/video.html';
+        });
+    }
 
     // scroll reveal
     const revealItems = document.querySelectorAll('.glass-card, .destination-card, .cat-card, .timeline-item, .event-card, .testi');
@@ -81,6 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = document.getElementById('eventsNext');
     if (eventsSlider && prevBtn && nextBtn) {
         let idx = 0;
+
         function show(i) { eventsSlider.style.transform = `translateX(${-i * (eventsSlider.children[0].offsetWidth + 12)}px)` }
         nextBtn.addEventListener('click', () => {
             idx = Math.min(idx + 1, eventsSlider.children.length - 1);
@@ -108,13 +259,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const exploreBtn = document.getElementById('exploreBtn');
     if (exploreBtn) {
         exploreBtn.addEventListener('click', (event) => {
-            exploreBtn.classList.toggle('active');
-            if (!exploreBtn.classList.contains('active')) {
-                exploreBtn.textContent = 'Explore';
+            const href = exploreBtn.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                event.preventDefault();
+                exploreBtn.classList.toggle('active');
+                if (!exploreBtn.classList.contains('active')) {
+                    exploreBtn.textContent = 'Explore';
+                }
+                const target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                exploreBtn.classList.add('active');
             }
-            event.preventDefault();
-            const target = document.querySelector(exploreBtn.getAttribute('href'));
-            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     }
 
@@ -139,17 +295,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-    //======fade in animasi timeline sejarah========
+//======fade in animasi timeline sejarah========
 
-    const revealEls = document.querySelectorAll('.reveal');
-    const io = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('is-visible');
             io.unobserve(entry.target);
         }
-        });
-    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' 
     });
+}, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -60px 0px'
+});
 
-    revealEls.forEach(el => io.observe(el));
+revealEls.forEach(el => io.observe(el));

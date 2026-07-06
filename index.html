@@ -25,20 +25,21 @@
                     </div>
                 </a>
                 <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#categories">Categories</a></li>
-                    <li><a href="#timeline">Timeline</a></li>
-                    <li><a href="#events">Events</a></li>
-                    <li><a href="#maps">Maps</a></li>
+                    <li><a href="#home" data-i18n-key="navHome">Home</a></li>
+                    <li><a href="#about" data-i18n-key="navAbout">About</a></li>
+                    <li><a href="#categories" data-i18n-key="navCategories">Categories</a></li>
+                    <li><a href="#timeline" data-i18n-key="navTimeline">Timeline</a></li>
+                    <li><a href="#events" data-i18n-key="navEvents">Events</a></li>
+                    <li><a href="html/maps.html" data-i18n-key="navMaps">Maps</a></li>
                 </ul>
                 <div class="nav-actions">
                     <div class="language-switcher">
                         <button class="lang-btn active" data-lang="id">ID</button>
                         <button class="lang-btn" data-lang="en">EN</button>
                     </div>
-                    <a class="btn-outline" id="exploreBtn" href="destination.html">Explore</a>
+                    <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">Explore</a>
                 </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
             </div>
         </nav>
 
@@ -52,19 +53,18 @@
 
         <div class="container hero-inner">
             <div class="hero-text">
-                <p class="eyebrow">WELCOME TO</p>
-                <h1 class="title">Bandung</h1>
-                <h2 class="subtitle">Creative Smart City</h2>
-                <p class="lead">Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota Bandung dalam satu platform.</p>
+                <p class="eyebrow" data-i18n-key="heroEyebrow">WELCOME TO</p>
+                <h1 class="title" data-i18n-key="heroTitle">Bandung</h1>
+                <h2 class="subtitle" data-i18n-key="heroSubtitle">Creative Smart City</h2>
+                <p class="lead" data-i18n-key="heroLead">Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota Bandung dalam satu platform.</p>
                 <div class="hero-ctas">
-                    <a class="btn-primary" href="plan-trip.html">Plan My Trip</a>
-                    <button class="btn-secondary" id="watchVideo"><i class="fa-solid fa-play"></i> Watch Video</button>
+                    <a class="btn-primary" id="planTripBtn" href="html/rancangan_trip.html" data-i18n-key="btnPlan">Plan My Trip</a>
+                    <button class="btn-secondary" id="watchVideo" data-i18n-key="btnWatch"><i class="fa-solid fa-play"></i> Watch Video</button>
                 </div>
             </div>
 
             <a class="scroll" href="#about">
                 <span>Scroll Down</span>
-                <span>↓</span>
                 <i class="fa-solid fa-angle-down"></i>
             </a>
         </div>
@@ -101,13 +101,13 @@
 
             <!-- Bagian Konten Teks & Statistik Premium (Kanan) -->
             <div class="content">
-                <p class="subtitle">TENTANG BANDUNG</p>
-                <h1>Discover the Soul of <br><span class="gradient-bandung">Bandung</span></h1>
-                <p class="description">Bandung merupakan kota yang memadukan kreativitas, budaya, alam, kuliner, sejarah, dan teknologi dalam satu pengalaman wisata yang modern, nyaman, dan berkelanjutan.</p>
+                <p class="subtitle" data-i18n-key="aboutSubtitle">TENTANG BANDUNG</p>
+                <h1 data-i18n-key="aboutHeading">Discover the Soul of <br><span class="gradient-bandung">Bandung</span></h1>
+                <p class="description" data-i18n-key="aboutDescription">Bandung merupakan kota yang memadukan kreativitas, budaya, alam, kuliner, sejarah, dan teknologi dalam satu pengalaman wisata yang modern, nyaman, dan berkelanjutan.</p>
 
                 <!-- Elemen Blok Kutipan/Quote -->
                 <blockquote class="quote-box">
-                    <p>“Aku kembali ke Bandung kepada cintaku yang sesungguhnya” <br> -Ir.Soekarno</p>
+                    <p data-i18n-key="aboutQuote">“Aku kembali ke Bandung kepada cintaku yang sesungguhnya” <br> -Ir.Soekarno</p>
                 </blockquote>
 
                 <!-- Bar Statistik dengan Ikon Unik Berwarna -->
@@ -223,7 +223,7 @@
                             <p>Dengan kolaborasi masyarakat, teknologi, dan pemerintah, <span class="gradient-bandung">Bandung</span> terus berinovasi menjadi kota yang lebih baik.</p>
                         </div>
                     </div>
-                    <a href="../html/destinasion.html" class="btn-jelajahi">Jelajahi Destinasi <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="html/destinasion.html" class="btn-jelajahi" data-i18n-key="btnExploreDestinations">Jelajahi Destinasi <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
             </div>
@@ -317,7 +317,7 @@
                             <img src="image/wisata.png" alt="Mini 4" class="collage-pic p4">
                         </div>
 
-                        <a href="../html/rekomen_wisata.html" class="blue-action-block">
+                        <a href="html/rekomen_wisata.html" class="blue-action-block" data-i18n-key="btnSeeAllTourism">
                             <span>Lihat Semua Wisata</span>
                             <div class="circle-white-arrow"><i class="fa-solid fa-arrow-right"></i></div>
                         </a>
@@ -442,7 +442,7 @@
                             <p>Mari lestarikan budaya Sunda dan terus berkarya untuk Bandung yang lebih baik, kreatif, dan membanggakan dunia.</p>
                         </div>
                     </div>
-                    <a href="../html/sunda_culture.html" class="btn-jelajahi-budaya">Jelajahi Budaya Sunda ➔</a>
+                    <a href="html/sunda_culture.html" class="btn-jelajahi-budaya" data-i18n-key="btnExploreCulture">Jelajahi Budaya Sunda ➔</a>
                 </div>
 
             </div>
@@ -576,7 +576,7 @@
                         <p class="section-eyebrow">UPCOMING EVENTS</p>
                         <h2>Event Seru yang <br><span>Akan Datang</span></h2>
                         <p class="section-desc">Agenda perayaan kreativitas, budaya, dan inovasi terdekat di Kota Bandung.</p>
-                        <a href="#all-events" class="btn-all-events">Lihat Semua Event ➔</a>
+                        <a href="html/event.html" class="btn-all-events" data-i18n-key="btnSeeAllEvents">Lihat Semua Event ➔</a>
                     </div>
 
                     <div class="events-hero-right">
@@ -737,7 +737,7 @@
                             </div>
                         </div>
 
-                        <a href="quiz.html" class="btn-v2-start"><i class="fa-solid fa-rocket"></i> Mulai Kuis Sekarang ➔</a>
+                        <a href="html/quiz.html" class="btn-v2-start" data-i18n-key="btnStartQuiz"><i class="fa-solid fa-rocket"></i> Mulai Kuis Sekarang ➔</a>
                     </div>
 
                     <!-- Sisi Kanan: Ilustrasi Gedung Sate & Mockup Gadget Kuis Melayang -->
@@ -844,13 +844,6 @@
 
                 </div>
 
-                <!-- Banner Strip Ajakan Paling Bawah -->
-                <div class="container">
-                    <div class="quiz-v2-footer-strip">
-                        <p><i class="fa-solid fa-user-ninja"></i> Tantang <span>dirimu</span> dan buktikan seberapa besar kamu mengenal Bandung!</p>
-                        <button class="btn-strip-action">Mulai Kuis Sekarang ➔</button>
-                    </div>
-                </div>
 
             </div>
 
@@ -858,161 +851,7 @@
 
 
         <!-- MAPS & EXPLORE + FOOTER SECTION -->
-        <section id="maps" class="maps-explore-section">
-            <div class="container maps-main-grid">
 
-                <!-- SISI KIRI: PANEL PENCARIAN & LIST DESTINASI -->
-                <div class="maps-sidebar-panel">
-                    <p class="section-eyebrow">MAPS & EXPLORE</p>
-                    <h2>Jelajahi <span class="gradient-bandung">Bandung</span> <br>Tanpa <span>Batas</span></h2>
-                    <p class="section-desc">Temukan destinasi menarik di setiap sudut kota. Klik pada lokasi untuk melihat detail lebih lanjut.</p>
-
-                    <!-- Bar Pencarian & Tombol Filter -->
-                    <div class="search-filter-row">
-                        <div class="search-input-wrap">
-                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                            <input type="text" placeholder="Cari destinasi di <span>Bandung</span>...">
-                        </div>
-                        <button class="btn-filter"><i class="fa-solid fa-sliders"></i> Filter</button>
-                    </div>
-
-                    <!-- Kategori Filter Mini -->
-                    <div class="mini-category-filters">
-                        <button class="mini-filter-btn active">Semua</button>
-                        <button class="mini-filter-btn">🌲 Wisata Alam</button>
-                        <button class="mini-filter-btn">🏛️ Sejarah & Budaya</button>
-                        <button class="mini-filter-btn">🍴 Kuliner</button>
-                        <button class="mini-filter-btn">🎓 Edukasi</button>
-                    </div>
-
-                    <!-- Daftar Kartu Destinasi Mini -->
-                    <div class="sidebar-destinations-list">
-
-                        <div class="mini-destination-card">
-                            <img src="image/gedungsate.png" alt="Gedung Sate" onerror="this.src='https://placehold.co'">
-                            <div class="mini-card-info">
-                                <div class="mini-card-header">
-                                    <h4>Gedung Sate</h4>
-                                    <span class="mini-rating"><i class="fa-solid fa-star"></i> 4.9</span>
-                                </div>
-                                <span class="mini-tag text-purple">Sejarah & Budaya</span>
-                                <p>Ikon arsitektur bersejarah kebanggaan kota Bandung.</p>
-                            </div>
-                        </div>
-
-                        <div class="mini-destination-card active">
-                            <img src="image/kawah.png" alt="Kawah Putih" onerror="this.src='https://placehold.co'">
-                            <div class="mini-card-info">
-                                <div class="mini-card-header">
-                                    <h4>Kawah Putih</h4>
-                                    <span class="mini-rating"><i class="fa-solid fa-star"></i> 4.8</span>
-                                </div>
-                                <span class="mini-tag text-green">Wisata Alam</span>
-                                <p>Keindahan danau kawah dengan asap belerang yang memukau.</p>
-                            </div>
-                        </div>
-
-                        <div class="mini-destination-card">
-                            <img src="image/wisata.png" alt="Floating Market" onerror="this.src='https://placehold.co'">
-                            <div class="mini-card-info">
-                                <div class="mini-card-header">
-                                    <h4>Floating Market</h4>
-                                    <span class="mini-rating"><i class="fa-solid fa-star"></i> 4.6</span>
-                                </div>
-                                <span class="mini-tag text-orange">Kuliner</span>
-                                <p>Wisata belanja kuliner di atas perahu yang unik.</p>
-                            </div>
-                        </div>
-
-                        <div class="mini-destination-card">
-                            <img src="image/image.png" alt="Museum Geologi" onerror="this.src='https://placehold.co'">
-                            <div class="mini-card-info">
-                                <div class="mini-card-header">
-                                    <h4>Museum Geologi</h4>
-                                    <span class="mini-rating"><i class="fa-solid fa-star"></i> 4.7</span>
-                                </div>
-                                <span class="mini-tag text-blue">Edukasi</span>
-                                <p>Edukasi sejarah bumi dan koleksi fosil purbakala Indonesia.</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <!-- Tautan Lihat Semua Destinasi -->
-                    <a href="#destinations" class="link-see-all-maps">
-                        <span><i class="fa-regular fa-compass"></i> Lihat Semua Destinasi di Bandung</span>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </a>
-                </div>
-
-                <!-- SISI KANAN: VISUALISASI PETA & POPUP DETAIL -->
-                <div class="maps-visualization-container">
-
-                    <!-- Filter Kategori di Atas Peta -->
-                    <div class="map-top-filters">
-                        <span class="map-f-item active"><i class="fa-solid fa-landmark"></i> Sejarah</span>
-                        <span class="map-f-item"><i class="fa-solid fa-leaf"></i> Alam</span>
-                        <span class="map-f-item"><i class="fa-solid fa-masks-theater"></i> Budaya</span>
-                        <span class="map-f-item"><i class="fa-solid fa-utensils"></i> Kuliner</span>
-                        <span class="map-f-item"><i class="fa-solid fa-graduation-cap"></i> Edukasi</span>
-                    </div>
-
-                    <!-- Area Canvas Peta Grafis -->
-                    <div class="map-graphic-canvas">
-                        <div class="map-road-line line-1"></div>
-                        <div class="map-road-line line-2"></div>
-                        <span class="map-label-text lemba">Lembang</span>
-                        <span class="map-label-text bando">Bandung</span>
-
-                        <!-- Pin Lokasi -->
-                        <div class="map-pin-marker pos-tangkuban pin-green">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span class="pin-name">Tangkuban Perahu</span>
-                        </div>
-                        <div class="map-pin-marker pos-sate pin-purple">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span class="pin-name">Gedung Sate</span>
-                        </div>
-                        <div class="map-pin-marker pos-braga pin-orange">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span class="pin-name">Jalan Braga</span>
-                        </div>
-                        <div class="map-pin-marker pos-floating pin-orange">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span class="pin-name">Floating Market</span>
-                        </div>
-                        <div class="map-pin-marker pos-geologi pin-blue">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span class="pin-name">Museum Geologi</span>
-                        </div>
-                        <div class="map-pin-marker pos-kawah pin-green active">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span class="pin-name">Kawah Putih</span>
-                        </div>
-
-                        <!-- Jendela Pop-up Detail Informasi Aktif -->
-                        <div class="map-popup-detail-card">
-                            <img src="image/kawah.png" alt="Kawah Putih Pop" onerror="this.src='https://unsplash.com'">
-                            <div class="popup-card-content">
-                                <h4>Kawah Putih</h4>
-                                <span class="popup-sub-tag">Wisata Alam</span>
-                                <p>Danau eksotis dengan air berwarna putih kehijauan yang memukau.</p>
-                                <button class="btn-popup-action"><i class="fa-solid fa-location-arrow"></i> Lihat Detail</button>
-                            </div>
-                        </div>
-
-                        <!-- Tombol Navigasi Zoom Peta -->
-                        <div class="map-zoom-controls">
-                            <button class="zoom-btn"><i class="fa-solid fa-expand"></i></button>
-                            <button class="zoom-btn"><i class="fa-solid fa-plus"></i></button>
-                            <button class="zoom-btn"><i class="fa-solid fa-minus"></i></button>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
 
         <!-- PREMIUM DARK BLUE FOOTER -->
         <footer class="main-footer-section">
@@ -1049,18 +888,20 @@
                 </div>
 
                 <div class="footer-column-links">
-                    <h4>Informasi</h4>
+                    <h4 data-i18n-key="footerInfoTitle">Informasi</h4>
                     <ul>
-                        <li><a href="#">Panduan Wisata</a></li>
-                        <li><a href="#">Transportasi</a></li>
-                        <li><a href="#">Kuliner</a></li>
-                        <li><a href="#">Akomodasi</a></li>
-                        <li><a href="#">Berita & Update</a></li>
+                        <li><a href="#" data-i18n-key="footerGuide">Panduan Wisata</a></li>
+                        <li><a href="#" data-i18n-key="footerTransport">Transportasi</a></li>
+                        <li><a href="#" data-i18n-key="footerFood">Kuliner</a></li>
+                        <li><a href="#" data-i18n-key="footerStay">Akomodasi</a></li>
+                        <li><a href="#" data-i18n-key="footerNews">Berita & Update</a></li>
                     </ul>
+                </div>
+            </div>
+        </footer>
 
-
-                    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-                    <script src="main.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
 </body>
 
 </html>
