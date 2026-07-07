@@ -296,7 +296,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //======fade in animasi timeline sejarah========
-
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
