@@ -42,128 +42,200 @@
         <section class="tl-section">
 
   <!-- Ornamen batik pojok — sekarang di sini, LUAR .tl-page -->
-  <div class="tl-corner tl">
-    <img src="../image/batik-corner.png" alt="hiasan batik"
-         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-    <div class="placeholder" style="display:none;">taruh gambar batik di sini<br>(image/batik-corner.png)</div>
-  </div>
-  <div class="tl-corner tr">
-    <img src="../image/batik-corner.png" alt="hiasan batik"
-         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-    <div class="placeholder" style="display:none;">taruh gambar batik di sini<br>(image/batik-corner.png)</div>
-  </div>
-  <div class="tl-corner bl">
-    <img src="../image/batik-corner.png" alt="hiasan batik"
-         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-    <div class="placeholder" style="display:none;">taruh gambar batik di sini<br>(image/batik-corner.png)</div>
-  </div>
-  <div class="tl-corner br">
-    <img src="../image/batik-corner.png" alt="hiasan batik"
-         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-    <div class="placeholder" style="display:none;">taruh gambar batik di sini<br>(image/batik-corner.png)</div>
-  </div>
 
-  <div class="tl-page">
-    <!-- Judul -->
-    <div class="tl-hero reveal">
+<div class="tl-wrap">
+  <div class="page">
+ 
+    <div class="tm reveal">
       <h1>Perjalanan Waktu <span class="gradient-bandung">Bandung</span></h1>
       <p>Melihat Alur Sederhana Perkembangan dari <span class="gradient-bandung">Bandung</span> Tempo Dulu hingga Bandung Era Smart City</p>
     </div>
-
-   <div class="tl-timeline">
-
-    <!-- Item 1 -->
-    <div class="tl-item">
-        <div class="tl-media reveal">
-        <img src="../image/bandung-2025.png" alt="Bandung Tempo Dulu - Jalan Braga"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="ph" style="display:none;">Foto Bandung Tempo Dulu<br>(Jalan Braga)</div>
-        </div>
-        <div class="tl-num reveal">1</div>
-        <div class="tl-text reveal">
-        <span class="tl-tag"><span class="gradient-bandung">Bandung</span> Tempo Dulu</span>
-        <p><span class="gradient-bandung">Bandung</span> awalnya merupakan daerah pedalaman. Titik baliknya terjadi ketika Gubernur Jenderal Daendels membangun Jalan Raya Pos (Groote Postweg). Bupati <span class="gradient-bandung">Bandung</span> saat itu, R.A. Wiranatakusumah II, memindahkan ibu kota kabupaten dari Krapyak (Dayeuhkolot) ke situs kota <span class="gradient-bandung">Bandung</span> yang sekarang pada tahun 1810 agar lebih dekat dengan jalur transportasi utama tersebut.</p>
-        </div>
+ 
+    <!-- Toggle -->
+    <div class="view-toggle reveal">
+      <div class="toggle-pill">
+        <button class="toggle-btn active" data-view="vertical">Vertikal</button>
+        <button class="toggle-btn" data-view="horizontal">Horizontal</button>
+      </div>
     </div>
+ 
+    <!-- ============ VERTICAL VIEW ============ -->
+    <div class="tl-vertical" id="viewVertical">
+ 
+        <!-- TIMELINE 1 ||  BANDUNG TEMPO DULU-->
+      <div class="v-item">
+        <div class="v-media reveal"><div class="ph">Foto Bandung Tempo Dulu<br>(Jalan Braga)</div></div>
+        <div class="v-num reveal">1</div>
+        <div class="v-text reveal">
+          <span class="v-tag"><span class="gradient-bandung">Bandung</span> Tempo Dulu</span>
+          <div class="v-rectanggel">
+            <p><span class="gradient-bandung">Bandung</span> awalnya merupakan daerah pedalaman. Titik baliknya terjadi ketika Gubernur Jenderal Daendels membangun Jalan Raya Pos (Groote Postweg). Bupati <span class="gradient-bandung">Bandung</span> saat itu, R.A. Wiranatakusumah II, memindahkan ibu kota kabupaten dari Krapyak (Dayeuhkolot) ke situs kota <span class="gradient-bandung">Bandung</span> yang sekarang pada tahun 1810 agar lebih dekat dengan jalur transportasi utama tersebut.</p>
+          </div>
+        </div>
+      </div>
 
-    <!-- Item 2 -->
-    <div class="tl-item reverse">
-        <div class="tl-text reveal">
-        <span class="tl-tag">Modernisasi dan <span class="gradient-bandung">Asia Afrika</span></span>
-        <p>Jalan Raya Pos bertransformasi menjadi pusat modernisasi dengan arsitektur bergaya Art Deco yang megah, seperti Hotel Savoy Homann dan Gedung Merdeka, hingga dijuluki Parijs van Java. Puncaknya, kawasan ini mencetak sejarah dunia saat menjadi tempat berlangsungnya Konferensi Asia Afrika (KAA) pada April 1955 yang mempersatukan bangsa-bangsa di Asia dan Afrika.</p>
+      <!-- TIMELINE 2 ||  MODERNISASI DAN KAA -->
+      <div class="v-item reverse">
+        <div class="v-text reveal">
+          <span class="v-tag">Modernisasi dan <span class="gradient-bandung">Asia Afrika</span></span>
+          <div class="v-rectanggel">
+                <p>Jalan Raya Pos bertransformasi menjadi pusat modernisasi dengan arsitektur bergaya Art Deco yang megah, seperti Hotel Savoy Homann dan Gedung Merdeka, hingga dijuluki Parijs van Java. Puncaknya, kawasan ini mencetak sejarah dunia saat menjadi tempat berlangsungnya Konferensi Asia Afrika (KAA) pada April 1955 yang mempersatukan bangsa-bangsa di Asia dan Afrika.</p>
+          </div>
         </div>
-        <div class="tl-num reveal">2</div>
-        <div class="tl-media reveal">
-        <img src="../image/timeline/02-asia-afrika.jpg" alt="Konferensi Asia Afrika 1955"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="ph" style="display:none;">Foto Konferensi Asia Afrika<br>1955</div>
+        <div class="v-num reveal">2</div>
+        <div class="v-media reveal"><div class="ph">Foto Konferensi Asia Afrika<br>1955</div></div>
+      </div>
+ 
+      <!-- TIMELINE 3 ||  BANDUNG LAUTAN API -->
+      <div class="v-item">
+        <div class="v-media reveal"><div class="ph">Monumen Bandung Lautan Api<br>24 Maret 1946</div></div>
+        <div class="v-num reveal">3</div>
+        <div class="v-text reveal">
+          <span class="v-tag"><span class="gradient-bandung">Bandung</span> Lautan Api</span>
+          <div class="v-rectanggel">
+            <p>Menolak menyerahkan kota kepada Sekutu dan NICA untuk dijadikan markas militer, sekitar 200.000 penduduk <span class="gradient-bandung">Bandung</span> Selatan membakar rumah mereka sendiri dalam waktu tujuh jam sebelum mengungsi. Peristiwa heroik ini juga menandai gugurnya Mohammad Toha saat meledakkan gudang mesiu sekutu di Dayeuhkolot.</p>
+          </div>
         </div>
-    </div>
+      </div>
+ 
+    <!-- TIMELINE 4 ||  KOTA PENDIDIKAN -->
+      <div class="v-item reverse">
+        <div class="v-text reveal">
+          <span class="v-tag"><span class="gradient-bandung">Bandung</span> Kota Pendidikan</span>
+          <div class="v-rectanggel">
+            <p>Identitas <span class="gradient-bandung">Bandung</span> sebagai kota pendidikan berakar dari dibukanya Technische Hoogeschool te <span class="gradient-bandung">Bandoeng</span> (sekarang ITB) pada 3 Juli 1920 sebagai sekolah tinggi teknik pertama di Hindia Belanda. Kehadiran institusi ini menarik kaum intelektual dari berbagai daerah dan memicu lahirnya berbagai perguruan tinggi besar lainnya yang membentuk karakter akademis kota ini.</p>
+          </div>
+        </div>
+        <div class="v-num reveal">4</div>
+        <div class="v-media reveal"><div class="ph">Technische Hoogeschool te Bandoeng<br>(ITB) 1920</div></div>
+      </div>
+ 
+      <!-- TIMELINE 5 ||  KOTA KREATIF -->
+      <div class="v-item">
+        <div class="v-media reveal"><div class="ph">Bandung Creative Hub</div></div>
+        <div class="v-num reveal">5</div>
+        <div class="v-text reveal">
+          <span class="v-tag"><span class="gradient-bandung">Bandung</span> Kota Kreatif</span>
+          <div class="v-rectanggel">
+            <div class="v-rectanggel">
+                <p><span class="gradient-bandung">Bandung</span> resmi dinobatkan sebagai bagian dari UNESCO Creative Cities Network (UCCN) dalam bidang Design pada Desember 2015. Pengakuan internasional ini didasarkan pada kuatnya ekonomi kreatif yang digerakkan oleh komunitas anak muda, mulai dari industri fashion lokal (distro), musik independen, hingga desain grafis dan arsitektur.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Item 3 -->
-    <div class="tl-item">
-        <div class="tl-media reveal">
-        <img src="../image/timeline/03-lautan-api.jpg" alt="Monumen Bandung Lautan Api"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="ph" style="display:none;">Monumen Bandung Lautan Api<br>24 Maret 1946</div>
+      <!-- TIMELINE 6 ||  KOTA PINTAR -->
+      <div class="v-item reverse">
+        <div class="v-text reveal">
+          <span class="v-tag"><span class="gradient-bandung">Bandung</span> Kota Pintar</span>
+          <div class="v-rectanggel">
+            <p>Transformasi <span class="gradient-bandung">Bandung</span> menuju kota pintar diwujudkan melalui integrasi teknologi informasi dalam tata kelola pemerintahan dan pelayanan publik. Langkah besarnya ditandai dengan peresmian <span class="gradient-bandung">Bandung</span> Command Center (BCC) untuk memantau kondisi kota secara real-time, mengintegrasikan data internal, serta mempercepat penanganan pengaduan warga melalui aplikasi digital.</p>
+          </div>
         </div>
-        <div class="tl-num reveal">3</div>
-        <div class="tl-text reveal">
-        <span class="tl-tag"><span class="gradient-bandung">Bandung</span> Lautan Api</span>
-        <p>Menolak menyerahkan kota kepada Sekutu dan NICA untuk dijadikan markas militer, sekitar 200.000 penduduk <span class="gradient-bandung">Bandung</span> Selatan membakar rumah mereka sendiri dalam waktu tujuh jam sebelum mengungsi. Peristiwa heroik ini juga menandai gugurnya Mohammad Toha saat meledakkan gudang mesiu sekutu di Dayeuhkolot.</p>
-        </div>
+        <div class="v-num reveal">6</div>
+        <div class="v-media reveal"><div class="ph">Bandung Command Center</div></div>
+      </div>
+ 
     </div>
-
-    <!-- Item 4 -->
-    <div class="tl-item reverse">
-        <div class="tl-text reveal">
-        <span class="tl-tag"><span class="gradient-bandung">Bandung</span> Kota Pendidikan</span>
-        <p>Identitas <span class="gradient-bandung">Bandung</span> sebagai kota pendidikan berakar dari dibukanya Technische Hoogeschool te <span class="gradient-bandung">Bandoeng</span> (sekarang ITB) pada 3 Juli 1920 sebagai sekolah tinggi teknik pertama di Hindia Belanda. Kehadiran institusi ini menarik kaum intelektual dari berbagai daerah dan memicu lahirnya berbagai perguruan tinggi besar lainnya yang membentuk karakter akademis kota ini.</p>
+ 
+    <!-- ============ HORIZONTAL VIEW ============ -->
+    
+ 
+<div id="viewHorizontal">
+  <p class="h-hint">geser atau pakai tombol panah untuk melihat lebih banyak</p>
+ 
+  <div class="h-wrap">
+    <button class="h-nav-btn prev" id="hPrev">&#8592;</button>
+    <button class="h-nav-btn next" id="hNext">&#8594;</button>
+ 
+    <div class="h-scroll" id="hScroll">
+      <div class="h-track">
+ 
+        <!-- 1: gambar atas, teks bawah -->
+        <div class="h-item up">
+          <div class="h-media"><div class="ph">Foto Bandung Tempo Dulu<br>(Jalan Braga)</div></div>
+          <div class="h-num">1</div>
+          <div class="h-info">
+            <span class="h-tag"><span class="gradient-bandung">Bandung</span> Tempo Dulu</span>
+            <div class="v-rectanggel">
+            <p><span class="gradient-bandung">Bandung</span> awalnya merupakan daerah pedalaman. Titik baliknya terjadi ketika Gubernur Jenderal Daendels membangun Jalan Raya Pos (Groote Postweg). Bupati <span class="gradient-bandung">Bandung</span> saat itu, R.A. Wiranatakusumah II, memindahkan ibu kota kabupaten dari Krapyak (Dayeuhkolot) ke situs kota <span class="gradient-bandung">Bandung</span> yang sekarang pada tahun 1810 agar lebih dekat dengan jalur transportasi utama tersebut.</p>
+          </div>
+          </div>
         </div>
-        <div class="tl-num reveal">4</div>
-        <div class="tl-media reveal">
-        <img src="../image/timeline/04-itb.jpg" alt="Technische Hoogeschool te Bandoeng (ITB) 1920"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="ph" style="display:none;">Technische Hoogeschool te Bandoeng<br>(ITB) 1920</div>
+ 
+        <!-- 2: teks atas, gambar bawah -->
+        <div class="h-item down">
+          <div class="h-info">
+            <span class="h-tag">Modernisasi dan <span class="gradient-bandung">Asia Afrika</span></span>
+            <div class="v-rectanggel">
+                <p>Jalan Raya Pos bertransformasi menjadi pusat modernisasi dengan arsitektur bergaya Art Deco yang megah, seperti Hotel Savoy Homann dan Gedung Merdeka, hingga dijuluki Parijs van Java. Puncaknya, kawasan ini mencetak sejarah dunia saat menjadi tempat berlangsungnya Konferensi Asia Afrika (KAA) pada April 1955 yang mempersatukan bangsa-bangsa di Asia dan Afrika.</p>
+          </div>
+          </div>
+          <div class="h-num">2</div>
+          <div class="h-media"><div class="ph">Foto Konferensi Asia Afrika<br>1955</div></div>
         </div>
-    </div>
-
-    <!-- Item 5 -->
-    <div class="tl-item">
-        <div class="tl-media reveal">
-        <img src="../image/timeline/05-kota-kreatif.jpg" alt="Bandung Creative Hub"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="ph" style="display:none;">Bandung Creative Hub</div>
+ 
+        <!-- 3: gambar atas, teks bawah -->
+        <div class="h-item up">
+          <div class="h-media"><div class="ph">Monumen Bandung Lautan Api<br>24 Maret 1946</div></div>
+          <div class="h-num">3</div>
+          <div class="h-info">
+            <span class="h-tag"><span class="gradient-bandung">Bandung</span> Lautan Api</span>
+            <div class="v-rectanggel">
+            <p>Menolak menyerahkan kota kepada Sekutu dan NICA untuk dijadikan markas militer, sekitar 200.000 penduduk <span class="gradient-bandung">Bandung</span> Selatan membakar rumah mereka sendiri dalam waktu tujuh jam sebelum mengungsi. Peristiwa heroik ini juga menandai gugurnya Mohammad Toha saat meledakkan gudang mesiu sekutu di Dayeuhkolot.</p>
+          </div>          
         </div>
-        <div class="tl-num reveal">5</div>
-        <div class="tl-text reveal">
-        <span class="tl-tag"><span class="gradient-bandung">Bandung</span> Kota Kreatif</span>
-        <p><span class="gradient-bandung">Bandung</span> resmi dinobatkan sebagai bagian dari UNESCO Creative Cities Network (UCCN) dalam bidang Design pada Desember 2015. Pengakuan internasional ini didasarkan pada kuatnya ekonomi kreatif yang digerakkan oleh komunitas anak muda, mulai dari industri fashion lokal (distro), musik independen, hingga desain grafis dan arsitektur.</p>
         </div>
-    </div>
-
-    <!-- Item 6 -->
-    <div class="tl-item reverse">
-        <div class="tl-text reveal">
-        <span class="tl-tag"><span class="gradient-bandung">Bandung</span> Kota Pintar</span>
-        <p>Transformasi <span class="gradient-bandung">Bandung</span> menuju kota pintar diwujudkan melalui integrasi teknologi informasi dalam tata kelola pemerintahan dan pelayanan publik. Langkah besarnya ditandai dengan peresmian <span class="gradient-bandung">Bandung</span> Command Center (BCC) untuk memantau kondisi kota secara real-time, mengintegrasikan data internal, serta mempercepat penanganan pengaduan warga melalui aplikasi digital.</p>
+ 
+        <!-- 4: teks atas, gambar bawah -->
+        <div class="h-item down">
+          <div class="h-info">
+            <span class="h-tag"><span class="gradient-bandung">Bandung</span> Kota Pendidikan</span>
+            <div class="v-rectanggel">
+            <p>Identitas <span class="gradient-bandung">Bandung</span> sebagai kota pendidikan berakar dari dibukanya Technische Hoogeschool te <span class="gradient-bandung">Bandoeng</span> (sekarang ITB) pada 3 Juli 1920 sebagai sekolah tinggi teknik pertama di Hindia Belanda. Kehadiran institusi ini menarik kaum intelektual dari berbagai daerah dan memicu lahirnya berbagai perguruan tinggi besar lainnya yang membentuk karakter akademis kota ini.</p>
+          </div>     
+          </div>
+          <div class="h-num">4</div>
+          <div class="h-media"><div class="ph">Technische Hoogeschool te Bandoeng<br>(ITB) 1920</div></div>
         </div>
-        <div class="tl-num reveal">6</div>
-        <div class="tl-media reveal">
-        <img src="../image/timeline/06-kota-pintar.jpg" alt="Bandung Command Center"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-        <div class="ph" style="display:none;">Bandung Command Center</div>
+ 
+        <!-- 5: gambar atas, teks bawah -->
+        <div class="h-item up">
+          <div class="h-media"><div class="ph">Bandung Creative Hub</div></div>
+          <div class="h-num">5</div>
+          <div class="h-info">
+            <span class="h-tag"><span class="gradient-bandung">Bandung</span> Kota Kreatif</span>
+              <div class="v-rectanggel">
+                <p><span class="gradient-bandung">Bandung</span> resmi dinobatkan sebagai bagian dari UNESCO Creative Cities Network (UCCN) dalam bidang Design pada Desember 2015. Pengakuan internasional ini didasarkan pada kuatnya ekonomi kreatif yang digerakkan oleh komunitas anak muda, mulai dari industri fashion lokal (distro), musik independen, hingga desain grafis dan arsitektur.</p>
+            </div>
+            </div>
         </div>
+ 
+        <!-- 6: teks atas, gambar bawah -->
+        <div class="h-item down">
+          <div class="h-info">
+            <span class="h-tag"><span class="gradient-bandung">Bandung</span> Kota Pintar</span>
+            <div class="v-rectanggel">
+            <p>Transformasi <span class="gradient-bandung">Bandung</span> menuju kota pintar diwujudkan melalui integrasi teknologi informasi dalam tata kelola pemerintahan dan pelayanan publik. Langkah besarnya ditandai dengan peresmian <span class="gradient-bandung">Bandung</span> Command Center (BCC) untuk memantau kondisi kota secara real-time, mengintegrasikan data internal, serta mempercepat penanganan pengaduan warga melalui aplikasi digital.</p>
+          </div>          </div>
+          <div class="h-num">6</div>
+          <div class="h-media"><div class="ph">Bandung Command Center</div></div>
+        </div>
+ 
+      </div>
     </div>
-
+  </div>
+</div>
+ 
+ 
+    <div class="footer-nav reveal">
+      <span class="arrow">→</span>
+      <div class="line"></div>
+      <span class="arrow">←</span>
     </div>
-
-    <div class="tl-footer-nav reveal">
-        <span class="arrow">→</span>
-        <div class="line"></div>
-        <span class="arrow">←</span>
-    </div>
-    </div>
+ 
+  </div>
+</div>
 
 <footer class="main-footer-section">
     <div class="container footer-grid-layout">
@@ -208,9 +280,7 @@
 
 
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <script src="../main.js">
-        document.body.classList.add('js-ready');
-    </script>
+    <script src="../main.js"></script>
 </body>
 
 </html>

@@ -22,6 +22,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    //buwat kondisi navbar
+    function isIndexPage() {
+        const path = window.location.pathname;
+        const file = path.substring(path.lastIndexOf("/") + 1);
+        return file === "" || file === "index.html";
+    }
+
     // language switcher and translation
     const translations = {
         id: {
@@ -296,6 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 //======fade in animasi timeline sejarah========
+
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -310,3 +318,34 @@ const io = new IntersectionObserver((entries) => {
 });
 
 revealEls.forEach(el => io.observe(el));
+
+// Toggle Vertikal / Horizontal
+const btns = document.querySelectorAll('.toggle-btn');
+const vView = document.getElementById('viewVertical');
+const hView = document.getElementById('viewHorizontal');
+
+if (btns.length && vView && hView) {
+    btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if (btn.dataset.view === 'vertical') {
+                vView.style.display = 'block';
+                hView.style.display = 'none';
+            } else {
+                vView.style.display = 'none';
+                hView.style.display = 'block';
+            }
+        });
+    });
+}
+
+// Tombol panah geser horizontal
+  const hScroll = document.getElementById('hScroll');
+  const hPrev = document.getElementById('hPrev');
+  const hNext = document.getElementById('hNext');
+  if (hScroll && hPrev && hNext) {
+    const scrollAmount = 320;
+    hPrev.addEventListener('click', () => hScroll.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+    hNext.addEventListener('click', () => hScroll.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+  }
