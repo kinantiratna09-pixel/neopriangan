@@ -1,7 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bandung — Creative Smart City</title>
+    <link rel="icon" href="image/logo-gedung-sate.png" type="image/png">
+    <link rel="apple-touch-icon" href="image/logo-gedung-sate.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Pustaka Ikon FontAwesome untuk memunculkan ikon panah scroll dan play -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
 <body>
 
     <header class="hero" id="home">
+        <nav class="navbar scrolled" id="navbar">
+            <div class="container nav-inner">
+                <a class="brand" href="#home">
+                    <img src="image/logo-gedung-sate.png" alt="Bandung icon">
+                    <div class="brand-text">
+                        <small>Creative Smart City</small>
+                    </div>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#home" data-i18n-key="navHome">Home</a></li>
+                    <li><a href="#about" data-i18n-key="navAbout">About</a></li>
+                    <li><a href="#categories" data-i18n-key="navCategories">Categories</a></li>
+                    <li><a href="#timeline" data-i18n-key="navTimeline">Timeline</a></li>
+                    <li><a href="#events" data-i18n-key="navEvents">Events</a></li>
+                    <li><a href="html/maps.html" data-i18n-key="navMaps">Maps</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="language-switcher">
+                        <button class="lang-btn active" data-lang="id">ID</button>
+                        <button class="lang-btn" data-lang="en">EN</button>
+                    </div>
+                    <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">Explore</a>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
 
         <div class="hero-media">
             <div class="hero-bg active"></div>
@@ -14,7 +53,7 @@
         <div class="container hero-inner">
             <div class="hero-text">
                 <p class="eyebrow" data-i18n-key="heroEyebrow">WELCOME TO</p>
-                <h1 class="gradient-bandung">Bandung</h1>
+                <h1 class="title" data-i18n-key="heroTitle">Bandung</h1>
                 <h2 class="subtitle" data-i18n-key="heroSubtitle">Creative Smart City</h2>
                 <p class="lead" data-i18n-key="heroLead">Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota Bandung dalam satu platform.</p>
                 <div class="hero-ctas">
@@ -422,7 +461,7 @@
                     </div>
                     <div class="timeline-hero-image-fade">
                         <!-- Gunakan foto Gedung Sate dengan efek gradasi memudar di sisi kiri -->
-                        <img src="../image/gedungsate-fade.png" alt="Gedung Sate History Layout" class="timeline-fade-img" onerror="this.src='https://placehold.co'">
+                        <img src="../image/gedungsate.png" alt="Gedung Sate History Layout" class="timeline-fade-img" onerror="this.src='https://placehold.co'">
                     </div>
                 </div>
 
@@ -549,7 +588,7 @@
                             </div>
                         </div>
                         <!-- Gambar Gedung Sate Transparan Latar Belakang -->
-                        <img src="image/gedungsate-fade.png" alt="Gedung Sate Background" class="events-bg-illustration" onerror="this.src='https://placehold.co'">
+                        <img src="image/gedungsate.png" alt="Gedung Sate Background" class="events-bg-illustration" onerror="this.src='https://placehold.co'">
                     </div>
                 </div>
 
@@ -813,7 +852,54 @@
         <!-- MAPS & EXPLORE + FOOTER SECTION -->
 
 
+        <!-- PREMIUM DARK BLUE FOOTER -->
+        <footer class="main-footer-section">
+            <div class="container footer-grid-layout">
 
+                <!-- Kolom 1: Profil Brand -->
+                <div class="footer-column-brand">
+                    <div class="footer-logo">
+                        <i class="fa-solid fa-city logo-icon"></i>
+                        <div class="logo-txt">
+                            <strong>BANDUNG</strong>
+                            <small>Creative Smart City</small>
+                        </div>
+                    </div>
+                    <p class="brand-desc-text">Platform informasi wisata dan budaya Kota Bandung yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
+                    <div class="footer-social-links">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Kolom Navigasi Menu -->
+                <div class="footer-column-links">
+                    <h4>Jelajahi</h4>
+                    <ul>
+                        <li><a href="#about">Tentang Bandung</a></li>
+                        <li><a href="#destinations">Destinasi</a></li>
+                        <li><a href="#events">Event</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#quiz-section">Kuis Interaktif</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column-links">
+                    <h4 data-i18n-key="footerInfoTitle">Informasi</h4>
+                    <ul>
+                        <li><a href="#" data-i18n-key="footerGuide">Panduan Wisata</a></li>
+                        <li><a href="#" data-i18n-key="footerTransport">Transportasi</a></li>
+                        <li><a href="#" data-i18n-key="footerFood">Kuliner</a></li>
+                        <li><a href="#" data-i18n-key="footerStay">Akomodasi</a></li>
+                        <li><a href="#" data-i18n-key="footerNews">Berita & Update</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script src="main.js"></script>
 </body>
 
 </html>
