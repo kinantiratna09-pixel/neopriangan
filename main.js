@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
+
     //buwat kondisi navbar
     function isIndexPage() {
         const path = window.location.pathname;
@@ -341,11 +343,44 @@ if (btns.length && vView && hView) {
 }
 
 // Tombol panah geser horizontal
-  const hScroll = document.getElementById('hScroll');
-  const hPrev = document.getElementById('hPrev');
-  const hNext = document.getElementById('hNext');
-  if (hScroll && hPrev && hNext) {
+const hScroll = document.getElementById('hScroll');
+const hPrev = document.getElementById('hPrev');
+const hNext = document.getElementById('hNext');
+if (hScroll && hPrev && hNext) {
     const scrollAmount = 320;
     hPrev.addEventListener('click', () => hScroll.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
     hNext.addEventListener('click', () => hScroll.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
-  }
+}
+/* ===========================
+   ACTIVE NAVBAR ON SCROLL
+=========================== */
+
+const sections = document.querySelectorAll("section[id]");
+const menuLinks = document.querySelectorAll(".nav-menu a[href^='#']");
+
+function setActiveMenu() {
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.offsetHeight;
+
+        if (
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
+        ) {
+            current = section.id;
+        }
+    });
+
+    menuLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", setActiveMenu);
+window.addEventListener("load", setActiveMenu);
