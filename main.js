@@ -322,7 +322,7 @@ const io = new IntersectionObserver((entries) => {
 revealEls.forEach(el => io.observe(el));
 
 // Toggle Vertikal / Horizontal
-const btns = document.querySelectorAll('.toggle-btn');
+const btns = document.querySelectorAll('.toggle-btn[data-view]');
 const vView = document.getElementById('viewVertical');
 const hView = document.getElementById('viewHorizontal');
 

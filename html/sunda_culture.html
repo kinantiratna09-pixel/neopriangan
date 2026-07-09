@@ -1,3 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bandung — Creative Smart City</title>
+    <link rel="icon" href="image/logo-gedung-sate.png" type="image/png">
+    <link rel="apple-touch-icon" href="image/logo-gedung-sate.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Pustaka Ikon FontAwesome untuk memunculkan ikon panah scroll dan play -->
+    <link rel="stylesheet" href="../style.css" !important>
+    <link rel="stylesheet" href="../css/sunda_culture.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="hero" id="home">
+        <nav class="navbar scrolled" id="navbar">
+            <div class="container nav-inner">
+                <a class="brand" href="#home">
+                    <img src="image/logo-gedung-sate.png" alt="Bandung icon">
+                    <div class="brand-text">
+                        <small>Creative Smart City</small>
+                    </div>
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#home" data-i18n-key="navHome">Home</a></li>
+                    <li><a href="#about" data-i18n-key="navAbout">About</a></li>
+                    <li><a href="#categories" data-i18n-key="navCategories">Categories</a></li>
+                    <li><a href="#timeline" data-i18n-key="navTimeline">Timeline</a></li>
+                    <li><a href="#events" data-i18n-key="navEvents">Events</a></li>
+                    <li><a href="html/maps.html" data-i18n-key="navMaps">Maps</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="language-switcher view-toggle">
+                        <div class="toggle-pill">
+                            <button class="toggle-btn lang-btn active" data-lang="id">ID</button>
+                            <button class="toggle-btn lang-btn" data-lang="en">EN</button>
+                        </div>
+                    </div>
+                    <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">Explore</a>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
 <!-- EXPLORE SUNDA CULTURE PAGE SECTION -->
 <section class="culture-p-section">
 
@@ -5,7 +52,7 @@
     <div class="culture-p-hero" style="background-image: linear-gradient(rgba(3,24,40,0.45), rgba(3,24,40,0.3)), url('image/rumah-adat-sunda.png');">
         <div class="culture-p-container">
             <div class="culture-p-breadcrumb">Home &gt; Culture</div>
-            <h1>Jelajahi <br>Budaya <span>Sunda</span></h1>
+            <h1>Jelajahi <br>Budaya Sunda</h1>
             <p class="culture-p-subtitle">Kenali lebih dalam tentang warisan budaya Sunda yang kaya akan nilai, tradisi, dan kearifan lokal.</p>
 
             <!-- Pencarian & Tombol Filter Atas -->
@@ -63,83 +110,11 @@
         </div>
     </div>
 
-    <!-- MAIN INTERFACE LAYOUT (SIDEBAR FILTER KIRI + GRID KANAN) -->
+    <!-- MAIN INTERFACE LAYOUT (GRID KARTU KANAN) -->
     <div class="culture-p-main-layout">
         <div class="culture-p-container culture-p-grid-split">
 
-            <!-- ==========================================
-               SIDEBAR FILTER UTAMA (SISI KIRI)
-               ========================================== -->
-            <aside class="culture-p-sidebar">
-                <div class="culture-p-side-header">
-                    <h3>Filter Budaya</h3>
-                    <button class="culture-p-reset">Reset</button>
-                </div>
-
-                <!-- Kategori Checkbox -->
-                <div class="culture-p-filter-group">
-                    <h4>Kategori</h4>
-                    <label class="culture-p-check-label">
-                        <input type="checkbox" checked> <span>Semua Kategori</span>
-                    </label>
-                    <label class="culture-p-check-label">
-                        <input type="checkbox"> <span>Bahasa</span>
-                    </label>
-                    <label class="culture-p-check-label">
-                        <input type="checkbox"> <span>Seni Pertunjukan</span>
-                    </label>
-                    <label class="culture-p-check-label">
-                        <input type="checkbox"> <span>Pakaian Adat</span>
-                    </label>
-                    <label class="culture-p-check-label">
-                        <input type="checkbox"> <span>Tradisi & Upacara</span>
-                    </label>
-                    <label class="culture-p-check-label">
-                        <input type="checkbox"> <span>Musik</span>
-                    </label>
-                    <label class="culture-p-check-label">
-                        <input type="checkbox"> <span>Kerajinan</span>
-                    </label>
-                    <label class="culture-p-check-label">
-                        <input type="checkbox"> <span>Kuliner Tradisional</span>
-                    </label>
-                    <label class="culture-p-check-label">
-                        <input type="checkbox"> <span>Nilai & Filosofi</span>
-                    </label>
-                </div>
-
-                <!-- Popularitas Radio Bintang -->
-                <div class="culture-p-filter-group">
-                    <h4>Popularitas</h4>
-                    <label class="culture-p-radio-label">
-                        <input type="radio" name="pop-filter"> 
-                        <span class="c-stars">⭐⭐⭐⭐⭐</span> <span class="c-stars-text">4.5 ke atas</span>
-                    </label>
-                    <label class="culture-p-radio-label">
-                        <input type="radio" name="pop-filter"> 
-                        <span class="c-stars">⭐⭐⭐⭐</span> <span class="c-stars-text">4.0 ke atas</span>
-                    </label>
-                    <label class="culture-p-radio-label">
-                        <input type="radio" name="pop-filter"> 
-                        <span class="c-stars">⭐⭐⭐</span> <span class="c-stars-text">3.0 ke atas</span>
-                    </label>
-                </div>
-
-                <!-- Lokasi Wilayah Dropdown -->
-                <div class="culture-p-filter-group">
-                    <h4>Lokasi</h4>
-                    <select class="culture-p-select">
-                        <option>Semua Lokasi</option>
-                        <option>Bandung Kota</option>
-                        <option>Bandung Barat</option>
-                        <option>Bandung Selatan</option>
-                    </select>
-                </div>
-            </aside>
-
-            <!-- ==========================================
-               GRID KARTU BUDAYA (SISI KANAN)
-               ========================================== -->
+            <!-- GRID KARTU BUDAYA (PENUH, TANPA SIDEBAR) -->
             <div class="culture-p-content-right">
 
                 <!-- Toolbar Atas Grid Konten -->
@@ -290,3 +265,11 @@
                             </div>
                         </div>
                     </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
