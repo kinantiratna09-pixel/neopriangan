@@ -1,225 +1,208 @@
-<link rel="stylesheet" href="../css/event.css">
+<!DOCTYPE html>
+<html lang="id">
 
-<!-- EXPLORE EVENTS PAGE SECTION -->
-<section class="ev-page-section">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semua Event di Bandung</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/event.css">
+</head>
 
-    <!-- ==========================================
-       HERO BANNER ATAS (DENGAN BACKGROUND ILUSTRASI)
-       ========================================== -->
-    <div class="ev-page-hero">
-        <div class="ev-page-container ev-page-hero-grid">
-            <div class="ev-page-hero-left">
-                <div class="ev-page-breadcrumb">Home &gt; Events</div>
-                <h1>Event Menarik <br>di <span>Bandung</span></h1>
-                <p class="ev-page-hero-subtitle">Temukan berbagai event seru di Bandung. Jangan lewatkan pengalaman terbaiknya!</p>
+<body>
 
-                <!-- Bar Pencarian & Tombol Filter Mobile -->
-                <div class="ev-page-search-container">
-                    <div class="ev-page-search-input-wrap">
-                        <i class="fa-solid fa-magnifying-glass ev-page-search-icon"></i>
-                        <input type="text" placeholder="Cari event, lokasi, atau kategori...">
-                    </div>
-                    <button class="ev-page-btn-filter-top"><i class="fa-solid fa-sliders"></i> Filter</button>
-                </div>
-            </div>
+    <div class="lantern-field" aria-hidden="true"></div>
 
-            <!-- Sisi Kanan: Ilustrasi Landmark Kota Bandung Memudar -->
-            <div class="ev-page-hero-right">
-                <img src="image/gedungsate-fade.png" alt="Bandung Landmark" class="ev-page-hero-img" onerror="this.src='https://placehold.co'">
+    <header class="topbar">
+        <div class="topbar__inner">
+            <div class="crumbs">
+                <span>Beranda</span>
+                <span class="crumbs__sep">/</span>
+                <span class="crumbs__current">Semua Event</span>
             </div>
         </div>
-    </div>
+    </header>
 
-    <!-- ==========================================
-       TAB BAR KATEGORI HORIZONTAL (IKON KECIL)
-       ========================================== -->
-    <div class="ev-page-categories-tabs">
-        <div class="ev-page-container ev-page-tabs-flex">
-            <div class="ev-page-tab-item active"><i class="fa-solid fa-calendar-days"></i> Semua Event</div>
-            <div class="ev-page-tab-item"><i class="fa-solid fa-masks-theater"></i> Budaya</div>
-            <div class="ev-page-tab-item"><i class="fa-solid fa-music"></i> Musik</div>
-            <div class="ev-page-tab-item"><i class="fa-solid fa-champagne-glasses"></i> Festival</div>
-            <div class="ev-page-tab-item"><i class="fa-solid fa-utensils"></i> Kuliner</div>
-            <div class="ev-page-tab-item"><i class="fa-solid fa-dumbbell"></i> Olahraga</div>
-            <div class="ev-page-tab-item"><i class="fa-solid fa-images"></i> Pameran</div>
-            <div class="ev-page-tab-item"><i class="fa-solid fa-laptop-code"></i> Workshop</div>
-        </div>
-    </div>
+    <section class="hero">
+        <svg class="hero__skyline" viewBox="0 0 1400 260" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="skyfade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#0b1330" stop-opacity="0"/>
+        <stop offset="100%" stop-color="#0b1330" stop-opacity="1"/>
+      </linearGradient>
+    </defs>
+    <g fill="#182253">
+      <rect x="20" y="120" width="60" height="140"/>
+      <rect x="95" y="80" width="45" height="180"/>
+      <rect x="150" y="150" width="70" height="110"/>
+      <rect x="235" y="60" width="40" height="200"/>
+      <rect x="290" y="110" width="55" height="150"/>
+      <rect x="360" y="40" width="34" height="220"/>
+      <rect x="410" y="130" width="80" height="130"/>
+      <rect x="510" y="90" width="46" height="170"/>
+      <rect x="570" y="20" width="30" height="240"/>
+      <rect x="615" y="140" width="65" height="120"/>
+      <rect x="700" y="70" width="50" height="190"/>
+      <rect x="765" y="115" width="70" height="145"/>
+      <rect x="850" y="45" width="36" height="215"/>
+      <rect x="900" y="150" width="60" height="110"/>
+      <rect x="975" y="95" width="46" height="165"/>
+      <rect x="1035" y="15" width="30" height="245"/>
+      <rect x="1080" y="135" width="75" height="125"/>
+      <rect x="1170" y="75" width="48" height="185"/>
+      <rect x="1235" y="120" width="60" height="140"/>
+      <rect x="1310" y="55" width="40" height="205"/>
+    </g>
+    <path d="M0 190 L120 150 L220 195 L340 130 L460 200 L600 145 L740 195 L880 155 L1020 205 L1160 150 L1280 190 L1400 160 L1400 260 L0 260 Z" fill="#101a42"/>
+    <rect x="0" y="0" width="1400" height="260" fill="url(#skyfade)"/>
+  </svg>
+        <div class="hero__lights" id="heroLights" aria-hidden="true"></div>
 
-    <!-- ==========================================
-       MAIN CONTENT LAYOUT (GRID KARTU + SIDEBAR KANAN)
-       ========================================== -->
-    <div class="ev-page-main-content">
-        <div class="ev-page-container ev-page-main-layout">
+        <div class="hero__content">
+            <h1 class="hero__title">Semua Event di <span>Bandung</span></h1>
+            <p class="hero__subtitle">Temukan berbagai event menarik di Bandung, dari budaya, musik, kuliner, hingga teknologi.</p>
 
-            <!-- SISI KIRI: GRID KARTU EVENT & TOOLBAR -->
-            <div class="ev-page-content-left">
-
-                <!-- Toolbar Atas Grid -->
-                <div class="ev-page-toolbar-flex">
-                    <div class="ev-page-meta-left">
-                        <h3>Semua Event</h3>
-                        <span>Menampilkan 1 - 6 dari 50+ event</span>
-                    </div>
-                    <div class="ev-page-sort-right">
-                        <span>Urutkan:</span>
-                        <select class="ev-page-select-sort">
-                            <option>Terbaru</option>
-                            <option>Populer</option>
-                            <option>Terdekat</option>
-                        </select>
-                        <button class="ev-page-view-btn active"><i class="fa-solid fa-table-cells-large"></i></button>
-                        <button class="ev-page-view-btn"><i class="fa-solid fa-list"></i></button>
-                    </div>
+            <div class="searchbar">
+                <div class="searchbar__field">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <input type="text" id="searchInput" placeholder="Cari event, nama acara, atau lokasi...">
                 </div>
 
-                <!-- Grid Kartu Event 3 Kolom -->
-                <div class="ev-page-cards-grid">
+                <div class="sortbox" id="sortbox">
+                    <button class="sortbox__trigger" id="sortTrigger" aria-haspopup="listbox" aria-expanded="false">
+          <span id="sortLabel">Tanggal Terdekat</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+                    <ul class="sortbox__menu" id="sortMenu" role="listbox">
+                        <li role="option" data-value="terdekat">Tanggal Terdekat</li>
+                        <li role="option" data-value="terjauh">Tanggal Terjauh</li>
+                        <li role="option" data-value="populer">Event Populer</li>
+                        <li role="option" data-value="rating">Rating Tertinggi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <!-- Kartu 1: Bandung Music Festival -->
-                    <article class="ev-page-card">
-                        <div class="ev-page-card-media">
-                            <img src="image/wisata.png" alt="Bandung Music Festival" onerror="this.src='https://unsplash.com'">
-                            <button class="ev-page-heart-btn"><i class="fa-regular fa-heart"></i></button>
-                            <!-- Blok Kalender Melayang Kiri Atas -->
-                            <div class="ev-page-date-badge">
-                                <span class="ev-date-num">21</span>
-                                <span class="ev-date-month">JUN</span>
-                                <span class="ev-date-year">2026</span>
-                            </div>
-                            <span class="ev-page-type-tag b-blue">Musik</span>
-                        </div>
-                        <div class="ev-page-card-info">
-                            <h3>Bandung Music Festival 2026</h3>
-                            <p class="ev-page-meta"><i class="fa-solid fa-location-dot"></i> Lapangan Gasibu</p>
-                            <p class="ev-page-meta"><i class="fa-regular fa-clock"></i> 15.00 - 22.00 WIB</p>
-                            <p class="ev-page-desc">Festival musik tahunan dengan berbagai pertunjukan dari musisi lokal dan nasional.</p>
-                            <a href="#" class="ev-page-link-detail">Lihat Detail ➔</a>
-                        </div>
-                    </article>
+    <main class="layout">
+        <div class="layout__inner">
 
-                    <!-- Kartu 2: Pasar Seni ITB -->
-                    <article class="ev-page-card">
-                        <div class="ev-page-card-media">
-                            <img src="image/asiaafrica.jpg" alt="Pasar Seni ITB" onerror="this.src='https://unsplash.com'">
-                            <button class="ev-page-heart-btn"><i class="fa-regular fa-heart"></i></button>
-                            <div class="ev-page-date-badge">
-                                <span class="ev-date-num">28</span>
-                                <span class="ev-date-month">JUN</span>
-                                <span class="ev-date-year">2026</span>
-                            </div>
-                            <span class="ev-page-type-tag b-purple">Budaya</span>
-                        </div>
-                        <div class="ev-page-card-info">
-                            <h3>Pasar Seni ITB 2026</h3>
-                            <p class="ev-page-meta"><i class="fa-solid fa-location-dot"></i> ITB Kampus Ganesha</p>
-                            <p class="ev-page-meta"><i class="fa-regular fa-clock"></i> 08.00 - 18.00 WIB</p>
-                            <p class="ev-page-desc">Pameran seni dan budaya terbesar di Bandung dengan berbagai pertunjukan menarik.</p>
-                            <a href="#" class="ev-page-link-detail">Lihat Detail ➔</a>
-                        </div>
-                    </article>
+            <aside class="sidebar">
+                <div class="panel">
+                    <div class="panel__head">
+                        <h2>Filter Event</h2>
+                        <button class="reset-btn" id="resetFilters">Reset</button>
+                    </div>
 
-                    <!-- Kartu 3: Bandung Kuliner Festival -->
-                    <article class="ev-page-card">
-                        <div class="ev-page-card-media">
-                            <img src="image/image.png" alt="Bandung Kuliner Festival" onerror="this.src='https://unsplash.com'">
-                            <button class="ev-page-heart-btn"><i class="fa-regular fa-heart"></i></button>
-                            <div class="ev-page-date-badge">
-                                <span class="ev-date-num">05</span>
-                                <span class="ev-date-month">JUL</span>
-                                <span class="ev-date-year">2026</span>
-                            </div>
-                            <span class="ev-page-type-tag b-orange">Kuliner</span>
-                        </div>
-                        <div class="ev-page-card-info">
-                            <h3>Bandung Kuliner Festival</h3>
-                            <p class="ev-page-meta"><i class="fa-solid fa-location-dot"></i> Trans Studio Mall</p>
-                            <p class="ev-page-meta"><i class="fa-regular fa-clock"></i> 10.00 - 21.00 WIB</p>
-                            <p class="ev-page-desc">Festival kuliner dengan berbagai jajanan khas Bandung dan nusantara yang menggugah selera.</p>
-                            <a href="#" class="ev-page-link-detail">Lihat Detail ➔</a>
-                        </div>
-                    </article>
+                    <div class="filter-group">
+                        <h3 class="filter-group__title">Kategori</h3>
+                        <label class="check-row">
+            <input type="checkbox" data-cat="semua" checked>
+            <span class="check-box"></span>
+            <span>Semua Kategori</span>
+          </label>
+                        <label class="check-row">
+            <input type="checkbox" data-cat="budaya">
+            <span class="check-box"></span>
+            <span class="check-icon">🎭</span><span>Budaya</span>
+          </label>
+                        <label class="check-row">
+            <input type="checkbox" data-cat="musik">
+            <span class="check-box"></span>
+            <span class="check-icon">🎵</span><span>Musik</span>
+          </label>
+                        <label class="check-row">
+            <input type="checkbox" data-cat="kuliner">
+            <span class="check-box"></span>
+            <span class="check-icon">🍜</span><span>Kuliner</span>
+          </label>
+                        <label class="check-row">
+            <input type="checkbox" data-cat="teknologi">
+            <span class="check-box"></span>
+            <span class="check-icon">💻</span><span>Teknologi</span>
+          </label>
+                        <label class="check-row">
+            <input type="checkbox" data-cat="olahraga">
+            <span class="check-box"></span>
+            <span class="check-icon">🏃</span><span>Olahraga</span>
+          </label>
+                        <label class="check-row">
+            <input type="checkbox" data-cat="edukasi">
+            <span class="check-box"></span>
+            <span class="check-icon">📚</span><span>Edukasi</span>
+          </label>
+                        <label class="check-row">
+            <input type="checkbox" data-cat="seni">
+            <span class="check-box"></span>
+            <span class="check-icon">🖼️</span><span>Seni &amp; Kreatif</span>
+          </label>
+                        <label class="check-row">
+            <input type="checkbox" data-cat="komunitas">
+            <span class="check-box"></span>
+            <span class="check-icon">🤝</span><span>Komunitas</span>
+          </label>
+                    </div>
 
-                    <!-- Kartu 4: Bandung Marathon -->
-                    <article class="ev-page-card">
-                        <div class="ev-page-card-media">
-                            <img src="image/lembang.png" alt="Bandung Marathon" onerror="this.src='https://unsplash.com'">
-                            <button class="ev-page-heart-btn"><i class="fa-regular fa-heart"></i></button>
-                            <div class="ev-page-date-badge">
-                                <span class="ev-date-num">12</span>
-                                <span class="ev-date-month">JUL</span>
-                                <span class="ev-date-year">2026</span>
-                            </div>
-                            <span class="ev-page-type-tag b-green">Olahraga</span>
-                        </div>
-                        <div class="ev-page-card-info">
-                            <h3>Bandung Marathon 2026</h3>
-                            <p class="ev-page-meta"><i class="fa-solid fa-location-dot"></i> Gedung Sate (Start)</p>
-                            <p class="ev-page-meta"><i class="fa-regular fa-clock"></i> 05.00 - 11.00 WIB</p>
-                            <p class="ev-page-desc">Lomba lari tahunan dengan rute menantang di sekitar kota Bandung dan sekitarnya.</p>
-                            <a href="#" class="ev-page-link-detail">Lihat Detail ➔</a>
-                        </div>
-                    </article>
+                    <div class="filter-group">
+                        <h3 class="filter-group__title">Tanggal</h3>
+                        <input type="date" class="text-input" id="dateFrom">
+                    </div>
 
-                    <!-- PREMIUM DARK BLUE FOOTER -->
-                    <footer class="main-footer-section">
-                        <div class="container footer-grid-layout">
-                            <!-- Kolom 1: Profil Brand -->
-                            <div class="footer-column-brand">
-                                <div class="footer-logo">
-                                    <a class="brand" href="#home">
-                                        <img src="image/logo-gedung-sate.png" alt="Bandung icon">
-                                        <div class="brand-text">
-                                            <div class="logo-txt">
-                                                <strong class="gradient-bandung">BANDUNG</strong>
-                                                <small>Creative Smart City</small>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <p class="brand-desc-text">Platform informasi wisata dan budaya Kota Bandung yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
-                            </div>
-                            <!-- Kolom 2: Navigasi Menu -->
-                            <div class="footer-column-links">
-                                <h4>Jelajahi</h4>
-                                <ul>
-                                    <li><a href="#about"><i class="fa-solid fa-info-circle"></i><span>Tentang Bandung</span></a></li>
-                                    <li><a href="#destinations"><i class="fa-solid fa-location-dot"></i><span>Destinasi</span></a></li>
-                                    <li><a href="#events"><i class="fa-solid fa-calendar-days"></i><span>Event</span></a></li>
-                                    <li><a href="#timeline"><i class="fa-solid fa-clock"></i><span>Timeline</span></a></li>
-                                    <li><a href="#quiz-section"><i class="fa-solid fa-question-circle"></i><span>Kuis Interaktif</span></a></li>
-                                </ul>
-                            </div>
-                            <!-- Kolom 3: Informasi -->
-                            <div class="footer-column-links">
-                                <h4 data-i18n-key="footerInfoTitle">Informasi</h4>
-                                <ul>
-                                    <li><a href="#" data-i18n-key="footerGuide"><i class="fa-solid fa-book"></i><span>Panduan Wisata</span></a></li>
-                                    <li><a href="#" data-i18n-key="footerTransport"><i class="fa-solid fa-bus"></i><span>Transportasi</span></a></li>
-                                    <li><a href="#" data-i18n-key="footerFood"><i class="fa-solid fa-utensils"></i><span>Kuliner</span></a></li>
-                                    <li><a href="#" data-i18n-key="footerStay"><i class="fa-solid fa-bed"></i><span>Akomodasi</span></a></li>
-                                    <li><a href="#" data-i18n-key="footerNews"><i class="fa-solid fa-newspaper"></i><span>Berita & Update</span></a></li>
-                                </ul>
-                            </div>
-                            <!-- Kolom 4: Sosial dan Kontak -->
-                            <div class="footer-social-links">
-                                <h4 data-i18n-key="footerInfoTittle">Sosial Media</h4>
-                                <ul>
-                                    <li><a href="#"><i class="fa-brands fa-instagram"></i><span>@kota_bandung</span></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i><span>@bandung_kota</span></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-tiktok"></i><span>@cinta_bandung</span></a></li>
-                                    <li><a href="#"><i class="fa-brands fa-youtube"></i><span>seputar bandung</span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="container">
-                            <div class="footer-bottom-copyright">
-                                <span>&copy; 2025 Bandung Smart City. All Rights Reserved.</span>
-                                <div class="footer-links-row">
-                                    <a href="#">Privacy Policy</a>
-                                    <a href="#">Terms of Service</a>
-                                    <a href="#">Support</a>
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
+                    <div class="filter-group">
+                        <h3 class="filter-group__title">Lokasi</h3>
+                        <select class="text-input" id="locationSelect">
+            <option value="">Pilih lokasi</option>
+            <option value="Bandung Kota">Bandung Kota</option>
+            <option value="Bandung Barat">Bandung Barat</option>
+            <option value="Bandung Timur">Bandung Timur</option>
+            <option value="Kabupaten Bandung">Kabupaten Bandung</option>
+          </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3 class="filter-group__title">Harga Tiket</h3>
+                        <label class="radio-row">
+            <input type="radio" name="harga" value="gratis">
+            <span class="radio-box"></span>
+            <span>Gratis</span>
+          </label>
+                        <label class="radio-row">
+            <input type="radio" name="harga" value="berbayar">
+            <span class="radio-box"></span>
+            <span>Berbayar</span>
+          </label>
+                    </div>
+
+                    <button class="apply-btn" id="applyFilters">Terapkan Filter</button>
+                </div>
+            </aside>
+
+            <section class="results">
+                <div class="tabs" id="tabs">
+                    <button class="tab tab--active" data-cat="semua">Semua</button>
+                    <button class="tab" data-cat="budaya">🎭 Budaya</button>
+                    <button class="tab" data-cat="musik">🎵 Musik</button>
+                    <button class="tab" data-cat="kuliner">🍜 Kuliner</button>
+                    <button class="tab" data-cat="teknologi">💻 Teknologi</button>
+                    <button class="tab" data-cat="olahraga">🏃 Olahraga</button>
+                    <button class="tab" data-cat="edukasi">📚 Edukasi</button>
+                    <button class="tab" data-cat="seni">🖼️ Seni</button>
+                    <button class="tab" data-cat="komunitas">🤝 Komunitas</button>
+                </div>
+
+                <div class="results__count" id="resultsCount">Menampilkan 0 event</div>
+
+                <div class="cards" id="cardsContainer"></div>
+
+                <nav class="pagination" id="pagination" aria-label="Navigasi halaman"></nav>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

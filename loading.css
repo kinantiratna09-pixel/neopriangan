@@ -1,174 +1,197 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<title>Loading...</title>
-<style>
-
-
-  body {
+<!DOCTYPE html><html lang="id"><head><meta charset="UTF-8"><title>Loading...</title><style>.body {
     margin: 0;
-    background-color:#0d2340;
-    background-image:url("../image/batik-bg.png");
-    background-repeat:repeat;
-    background-size:260px;
-    background-position: center ;
+    background-color: #0d2340;
+    background-image: url("../image/batik-bg.png");
+    background-repeat: repeat;
+    background-size: 260px;
+    background-position: center;
     background-blend-mode: soft-light;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: "Playfair Display", serif;
-  }
- 
-  .loading-wrap {
+}
+
+.loading-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 28px;
-  }
- 
-  .loading-text {
+}
+
+.loading-text {
     font-size: 22px;
     color: #ffffffff;
     font-weight: 500;
     animation: pulse 1s ease-in-out infinite;
-  }
- 
-  @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
-  }
- 
-  .pagoda-stage {
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.pagoda-stage {
     position: relative;
     width: 220px;
     height: 180px;
     display: flex;
-    align-items: flex-end;  
+    align-items: flex-end;
     justify-content: center;
-    }
- 
-  .pagoda-stage img {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%) translateY(10px) scale(0.92);
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;     
-  opacity: 0;
-  transition: opacity 0.45s ease, transform 0.45s ease;
 }
- 
-  .pagoda-stage img.active {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0) scale(1);
- }
- 
-  .bar-track {
+
+.pagoda-stage img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px) scale(0.92);
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.pagoda-stage img.active {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+}
+
+.bar-track {
     width: 300px;
     height: 22px;
     border: 2px solid #0d2340;
     border-radius: 999px;
     overflow: hidden;
     background: transparent;
-  }
- 
-  .bar-fill {
+}
+
+.bar-fill {
     height: 100%;
     width: 0%;
     background: #b9884a;
     border-radius: 999px;
     transition: width 0.2ms step-end;
-  }
-</style>
-</head>
-<body>
- 
-<div class="loading-wrap">
+}
 
-  <div class="pagoda-stage" id="pagodaStage">
-    <img src="../image/pagoda1.png" id="stage1">
-    <img src="../image/pagoda2.png" id="stage2">
-    <img src="../image/pagoda3.png" id="stage3">
-    <img src="../image/pagoda4.png" id="stage4">
-  </div>
-
-  <div class="loading-text">Memuat...</div>
-
-  <div class="bar-track">
-    <div class="bar-fill" id="barFill"></div>
-  </div>
-
-</div>  
- 
-<script>
-  const AMBER = "#F0997B";
-  const AMBER_DARK = "#D85A30";
- 
-  function base(x, w) {
+</style></head><body><div class="loading-wrap"><div class="pagoda-stage" id="pagodaStage"><img src="../image/pagoda1.png" id="stage1"><img src="../image/pagoda2.png" id="stage2"><img src="../image/pagoda3.png" id="stage3"><img src="../image/pagoda4.png" id="stage4"></div><div class="loading-text">Memuat...</div><div class="bar-track"><div class="bar-fill" id="barFill"></div></div></div><script>const AMBER="#F0997B";
+const AMBER_DARK="#D85A30";
+function base(x,
+w) {
     return `<rect x="${x}" y="130" width="${w}" height="18" rx="3" fill="${AMBER}"/>`;
-  }
- 
-  function level(cx, y, roofW, roofH, bodyW, bodyH) {
-    const bx = cx - bodyW / 2, by = y - bodyH;
-    const rx = cx - roofW / 2, ry = by - roofH;
-    return `
-      <polygon points="${cx},${ry} ${rx},${by} ${rx + roofW},${by}" fill="${AMBER}"/>
-      <rect x="${bx}" y="${by}" width="${bodyW}" height="${bodyH}" fill="${AMBER_DARK}"/>
-      <line x1="${bx + bodyW * 0.3}" y1="${by}" x2="${bx + bodyW * 0.3}" y2="${by + bodyH}" stroke="${AMBER}" stroke-width="3"/>
-      <line x1="${bx + bodyW * 0.7}" y1="${by}" x2="${bx + bodyW * 0.7}" y2="${by + bodyH}" stroke="${AMBER}" stroke-width="3"/>
-    `;
-  }
- 
-  // Tahap 1: 1 lantai
-  document.getElementById('stage1').innerHTML =
-    base(60, 80) + level(100, 130, 90, 22, 60, 26);
- 
-  // Tahap 2: 2 lantai
-  document.getElementById('stage2').innerHTML =
-    base(50, 100) + level(100, 130, 100, 26, 70, 30) + level(100, 100, 70, 22, 50, 4);
- 
-  // Tahap 3: 3 lantai
-  document.getElementById('stage3').innerHTML =
-    base(40, 120) + level(100, 130, 110, 30, 80, 34) + level(100, 96, 80, 26, 60, 4) + level(100, 66, 55, 20, 40, 4);
- 
-  // Tahap 4: 4 lantai (paling tinggi)
-  document.getElementById('stage4').innerHTML =
-    base(30, 140) + level(100, 130, 120, 32, 90, 36) + level(100, 94, 90, 28, 65, 4) + level(100, 62, 60, 22, 45, 4) + level(100, 40, 25, 16, 15, 4);
- 
-  const stages = ['stage1', 'stage2', 'stage3', 'stage4'];
-  const bar = document.getElementById('barFill');
-  let current = 0;
- 
-  function showStage(i) {
-    stages.forEach((id, idx) => {
-      document.getElementById(id).classList.toggle('active', idx === i);
-    });
-    bar.style.width = ((i + 1) / stages.length * 100) + '%';
-  }
- 
-  function loop() {
-    current = (current + 1) % stages.length;
- 
-    if (current === 0) {
-      // reset bar tanpa transisi biar gak "loncat mundur" kelihatan
-      bar.style.transition = 'none';
-      bar.style.width = '0%';
-      // paksa reflow supaya transition kembali aktif di frame berikutnya
-      void bar.offsetWidth;
-      bar.style.transition = 'width 0.5s linear';
+}
+
+function level(cx,
+y,
+roofW,
+roofH,
+bodyW,
+bodyH) {
+    const bx=cx - bodyW / 2,
+    by=y - bodyH;
+    const rx=cx - roofW / 2,
+    ry=by - roofH;
+    return ` <polygon points="${cx},${ry} ${rx},${by} ${rx + roofW},${by}" fill="${AMBER}"/><rect x="${bx}" y="${by}" width="${bodyW}" height="${bodyH}" fill="${AMBER_DARK}"/><line x1="${bx + bodyW * 0.3}" y1="${by}" x2="${bx + bodyW * 0.3}" y2="${by + bodyH}" stroke="${AMBER}" stroke-width="3"/><line x1="${bx + bodyW * 0.7}" y1="${by}" x2="${bx + bodyW * 0.7}" y2="${by + bodyH}" stroke="${AMBER}" stroke-width="3"/>`;
+}
+
+// Tahap 1: 1 lantai
+document.getElementById('stage1').innerHTML=base(60,
+80)+level(100,
+130,
+90,
+22,
+60,
+26);
+// Tahap 2: 2 lantai
+document.getElementById('stage2').innerHTML=base(50,
+100)+level(100,
+130,
+100,
+26,
+70,
+30)+level(100,
+100,
+70,
+22,
+50,
+4);
+// Tahap 3: 3 lantai
+document.getElementById('stage3').innerHTML=base(40,
+120)+level(100,
+130,
+110,
+30,
+80,
+34)+level(100,
+96,
+80,
+26,
+60,
+4)+level(100,
+66,
+55,
+20,
+40,
+4);
+// Tahap 4: 4 lantai (paling tinggi)
+document.getElementById('stage4').innerHTML=base(30,
+140)+level(100,
+130,
+120,
+32,
+90,
+36)+level(100,
+94,
+90,
+28,
+65,
+4)+level(100,
+62,
+60,
+22,
+45,
+4)+level(100,
+40,
+25,
+16,
+15,
+4);
+const stages=['stage1',
+'stage2',
+'stage3',
+'stage4'];
+const bar=document.getElementById('barFill');
+let current=0;
+function showStage(i) {
+    stages.forEach((id, idx)=> {
+        document.getElementById(id).classList.toggle('active', idx===i);
     }
- 
+    );
+    bar.style.width=((i + 1) / stages.length * 100)+'%';
+}
+
+function loop() {
+    current=(current+1) % stages.length;
+    if (current===0) {
+        // reset bar tanpa transisi biar gak "loncat mundur" kelihatan
+        bar.style.transition='none';
+        bar.style.width='0%';
+        // paksa reflow supaya transition kembali aktif di frame berikutnya
+        void bar.offsetWidth;
+        bar.style.transition='width 0.5s linear';
+    }
     showStage(current);
-  }
- 
-  showStage(0);
-  setInterval(loop, 700);
-</script>
- 
-</body>
-</html>
+}
+
+showStage(0);
+setInterval(loop,
+700);
+</script></body></html>
