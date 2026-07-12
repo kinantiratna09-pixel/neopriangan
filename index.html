@@ -4,13 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Bandung — Creative Smart City</title>
+    <title>Neopriangan | Bandung </title>
     <link rel="icon" href="image/logo-gedung-sate.png" type="image/png">
     <link rel="apple-touch-icon" href="image/logo-gedung-sate.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Pustaka Ikon FontAwesome untuk memunculkan ikon panah scroll dan play -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/sunda_culture.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -26,12 +24,12 @@
                     </div>
                 </a>
                 <ul class="nav-menu">
-                    <li><a href="#home" data-i18n-key="navHome">Home</a></li>
-                    <li><a href="#about" data-i18n-key="navAbout">About</a></li>
-                    <li><a href="#categories" data-i18n-key="navCategories">Categories</a></li>
-                    <li><a href="#timeline" data-i18n-key="navTimeline">Timeline</a></li>
-                    <li><a href="#events" data-i18n-key="navEvents">Events</a></li>
-                    <li><a href="html/maps.html" data-i18n-key="navMaps">Maps</a></li>
+                    <li><a href="#home" data-i18n-key="navHome">Beranda</a></li>
+                    <li><a href="#about" data-i18n-key="navAbout">Hub</a></li>
+                    <li><a href="#timeline" data-i18n-key="navCategories">Sejarah</a></li>
+                    <li><a href="#timeline" data-i18n-key="navTimeline">Sejarah</a></li>
+                    <li><a href="#events" data-i18n-key="navEvents">Acara</a></li>
+                    <li><a href="interactive-quiz" data-i18n-key="navMaps">Kuis</a></li>
                 </ul>
                 <div class="nav-actions">
                     <div class="language-switcher view-toggle">
@@ -40,7 +38,7 @@
                             <button class="toggle-btn lang-btn" data-lang="en">EN</button>
                         </div>
                     </div>
-                    <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">Explore</a>
+                    <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">#</a>
                 </div>
                 <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
             </div>
@@ -57,9 +55,9 @@
         <div class="container hero-inner">
             <div class="hero-text">
                 <p class="eyebrow" data-i18n-key="heroEyebrow">WELCOME TO</p>
-                <h1 class="title" data-i18n-key="heroTitle">Bandung</h1>
+                <h1 class="title" data-i18n-key="heroTitle"><span class="gradient-bandung">Bandung</span></h1>
                 <h2 class="subtitle" data-i18n-key="heroSubtitle">Creative Smart City</h2>
-                <p class="lead" data-i18n-key="heroLead">Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota Bandung dalam satu platform.</p>
+                <p class="lead" data-i18n-key="heroLead">Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota <span class="gradient-bandung">Bandung</span> dalam satu platform.</p>
                 <div class="hero-ctas">
                     <a class="btn-primary" id="planTripBtn" href="html/rancangan_trip.html" data-i18n-key="btnPlan">Plan My Trip</a>
                     <button class="btn-secondary" id="watchVideo" data-i18n-key="btnWatch"><i class="fa-solid fa-play"></i> Watch Video</button>
@@ -96,7 +94,7 @@
                 <div class="card kawahputih">
                     <img src="image/kawah.png" alt="Kawah Putih">
                     <div class="info">
-                        <span class="location">Kawah Putih</span>
+                        <span class="location"><i class="fa-solid fa-location-dot"></i> Kawah Putih</span>
                         <span class="rating"><i class="fa-solid fa-star"></i> 4.7 (1.5K)</span>
                     </div>
                 </div>
@@ -104,13 +102,13 @@
 
             <!-- Bagian Konten Teks & Statistik Premium (Kanan) -->
             <div class="content">
-                <p class="subtitle" data-i18n-key="aboutSubtitle">TENTANG BANDUNG</p>
+                <p class="subtitle" data-i18n-key="aboutSubtitle">TENTANG <span class="gradient-bandung">Bandung</span></p>
                 <h1 data-i18n-key="aboutHeading">Discover the Soul of <br><span class="gradient-bandung">Bandung</span></h1>
-                <p class="description" data-i18n-key="aboutDescription">Bandung merupakan kota yang memadukan kreativitas, budaya, alam, kuliner, sejarah, dan teknologi dalam satu pengalaman wisata yang modern, nyaman, dan berkelanjutan.</p>
+                <p class="description" data-i18n-key="aboutDescription"><span class="gradient-bandung">Bandung</span> merupakan kota yang memadukan kreativitas, budaya, alam, kuliner, sejarah, dan teknologi dalam satu pengalaman wisata yang modern, nyaman, dan berkelanjutan.</p>
 
                 <!-- Elemen Blok Kutipan/Quote -->
                 <blockquote class="quote-box">
-                    <p data-i18n-key="aboutQuote">“Aku kembali ke Bandung kepada cintaku yang sesungguhnya” <br> -Ir.Soekarno</p>
+                    <p data-i18n-key="aboutQuote">“Aku kembali ke <span class="gradient-bandung">Bandung</span> kepada cintaku yang sesungguhnya” <br> -Ir.Soekarno</p>
                 </blockquote>
 
                 <!-- Bar Statistik dengan Ikon Unik Berwarna -->
@@ -125,7 +123,7 @@
                         <div class="icon-wrap"><i class="fa-solid fa-bowl-food"></i></div>
                         <h3 class="stat-number" data-target="250">0+</h3>
                         <strong>Kuliner</strong>
-                        <p>Cita rasa khas Bandung</p>
+                        <p>Cita rasa khas <span class="gradient-bandung">Bandung</span></p>
                     </div>
                     <div class="stat-item event">
                         <div class="icon-wrap"><i class="fa-solid fa-calendar-days"></i></div>
@@ -181,7 +179,7 @@
                             <div class="cat-icon-circle"><i class="fa-solid fa-bowl-food"></i></div>
                             <div class="cat-text">
                                 <h4>Culinary</h4>
-                                <p>Ragam kuliner khas Bandung yang lezat dan menggugah selera.</p>
+                                <p>Ragam kuliner khas <span class="gradient-bandung">Bandung</span> yang lezat dan menggugah selera.</p>
                             </div>
                         </div>
                         <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
@@ -262,7 +260,7 @@
                             <div class="card-bottom-info">
                                 <span class="category-tag nature">WISATA ALAM</span>
                                 <h3>Kawah Putih</h3>
-                                <p class="location-text"><i class="fa-solid fa-location-dot"></i> Ciwidey, Bandung Selatan</p>
+                                <p class="location-text"><i class="fa-solid fa-location-dot"></i> Ciwidey, Bandung Selatan</span></p>
                             </div>
                             <button class="arrow-action-btn"><i class="fa-solid fa-arrow-right"></i></button>
                         </div>
@@ -290,7 +288,7 @@
                             <div class="card-bottom-info">
                                 <span class="category-tag history">SEJARAH</span>
                                 <h3>Gedung Sate</h3>
-                                <p class="location-text"><i class="fa-solid fa-location-dot"></i> Cibeunying, Bandung Wetan</p>
+                                <p class="location-text"><i class="fa-solid fa-location-dot"></i> Cibeunying, Bandung Wetan</span></p>
                             </div>
                             <button class="arrow-action-btn"><i class="fa-solid fa-arrow-right"></i></button>
                         </div>
@@ -307,7 +305,7 @@
                         </div>
                         <div class="banner-info-text">
                             <h3>Masih banyak destinasi menarik lainnya!</h3>
-                            <p>Temukan lebih dari 150+ destinasi wisata Bandung lengkap dengan rating, lokasi, dan informasi menarik.</p>
+                            <p>Temukan lebih dari 150+ destinasi wisata <span class="gradient-bandung">Bandung</span> lengkap dengan rating, lokasi, dan informasi menarik.</p>
                         </div>
                     </div>
 
@@ -343,7 +341,7 @@
                     <div class="culture-hero-text">
                         <p class="section-eyebrow">SUNDA CULTURE HUB</p>
                         <h2>Kenali Budaya Sunda, <br>Jiwa <span class="gradient-bandung">Bandung</span></h2>
-                        <p class="section-desc">Budaya Sunda adalah bagian tak terpisahkan dari identitas masyarakat Bandung yang ramah, kreatif, dan penuh makna.</p>
+                        <p class="section-desc">Budaya Sunda adalah bagian tak terpisahkan dari identitas masyarakat <span class="gradient-bandung">Bandung</span> yang ramah, kreatif, dan penuh makna.</p>
 
                         <!-- Kotak Kutipan Filosofi Sunda -->
                         <div class="culture-quote-box">
@@ -428,7 +426,7 @@
                         <div class="culture-thumb-wrap">
                             <img src="image/budaya-sunda.png" alt="Nilai Budaya">
                         </div>
-                        <p>Keramahan dan kreativitas masyarakat Bandung menjadi jiwa dari setiap karya dan inovasi.</p>
+                        <p>Keramahan dan kreativitas masyarakat <span class="gradient-bandung">Bandung</span> menjadi jiwa dari setiap karya dan inovasi.</p>
                         <a href="#" class="btn-learn-more text-pink">Pelajari lebih lanjut ➔</a>
                     </div>
 
@@ -442,7 +440,7 @@
                         </div>
                         <div class="banner-message">
                             <h3>Budaya adalah jembatan masa lalu dan masa depan</h3>
-                            <p>Mari lestarikan budaya Sunda dan terus berkarya untuk Bandung yang lebih baik, kreatif, dan membanggakan dunia.</p>
+                            <p>Mari lestarikan budaya Sunda dan terus berkarya untuk <span class="gradient-bandung">Bandung</span> yang lebih baik, kreatif, dan membanggakan dunia.</p>
                         </div>
                     </div>
                     <a href="./html/sunda_culture.html" class="btn-jelajahi-budaya" data-i18n-key="btnExploreCulture">Jelajahi Budaya Sunda ➔</a>
@@ -459,9 +457,9 @@
                 <!-- Bagian Atas: Judul Kiri & Ilustrasi Gedung Sate Memudar (Kanan) -->
                 <div class="timeline-hero-wrapper">
                     <div class="timeline-hero-text">
-                        <p class="section-eyebrow">BANDUNG TIMELINE</p>
+                        <p class="section-eyebrow">Bandung TIMELINE</p>
                         <h2>Perjalanan Sejarah <br>Kota Kembang</h2>
-                        <p class="section-desc">Dari masa ke masa, Bandung terus tumbuh menjadi kota yang kreatif, inovatif, dan selalu beradaptasi dengan perubahan zaman.</p>
+                        <p class="section-desc">Dari masa ke masa, <span class="gradient-bandung">Bandung</span> terus tumbuh menjadi kota yang kreatif, inovatif, dan selalu beradaptasi dengan perubahan zaman.</p>
                     </div>
                     <div class="timeline-hero-image-fade">
                         <!-- Gunakan foto Gedung Sate dengan efek gradasi memudar di sisi kiri -->
@@ -479,7 +477,7 @@
                             <span class="year-number text-blue">1900</span>
                         </div>
                         <h4>Pendirian landmark kota bersejarah</h4>
-                        <p>Bandung mulai berkembang sebagai kota modern dengan dibangunnya berbagai bangunan ikonik peninggalan masa kolonial.</p>
+                        <p><span class="gradient-bandung">Bandung</span> mulai berkembang sebagai kota modern dengan dibangunnya berbagai bangunan ikonik peninggalan masa kolonial.</p>
                         <div class="history-thumb-wrap">
                             <img src="image/bandung-1900.png" alt="Bandung 1900" onerror="this.src='https://placehold.co'">
                         </div>
@@ -492,7 +490,7 @@
                             <span class="year-number text-purple">1950</span>
                         </div>
                         <h4>Perkembangan seni dan pusat budaya</h4>
-                        <p>Bandung dikenal sebagai pusat kreativitas, seni, dan pendidikan yang melahirkan banyak tokoh serta karya inspiratif.</p>
+                        <p><span class="gradient-bandung">Bandung</span> dikenal sebagai pusat kreativitas, seni, dan pendidikan yang melahirkan banyak tokoh serta karya inspiratif.</p>
                         <div class="history-thumb-wrap">
                             <img src="image/bandung-1950.png" alt="Bandung 1950" onerror="this.src='https://placehold.co'">
                         </div>
@@ -505,7 +503,7 @@
                             <span class="year-number text-green">2000</span>
                         </div>
                         <h4>Modernisasi infrastruktur dan tata kota</h4>
-                        <p>Transformasi besar-besaran di bidang infrastruktur, transportasi, dan teknologi menjadikan Bandung kota yang semakin maju dan nyaman.</p>
+                        <p>Transformasi besar-besaran di bidang infrastruktur, transportasi, dan teknologi menjadikan <span class="gradient-bandung">Bandung</span> kota yang semakin maju dan nyaman.</p>
                         <div class="history-thumb-wrap">
                             <img src="image/bandung-2000.png" alt="Bandung 2000" onerror="this.src='https://placehold.co'">
                         </div>
@@ -518,7 +516,7 @@
                             <span class="year-number text-orange">2025</span>
                         </div>
                         <h4>Inisiasi global integrasi Smart City</h4>
-                        <p>Bandung melangkah menuju kota cerdas yang terintegrasi, berkelanjutan, dan berdaya saing global.</p>
+                        <p><span class="gradient-bandung">Bandung</span> melangkah menuju kota cerdas yang terintegrasi, berkelanjutan, dan berdaya saing global.</p>
                         <div class="history-thumb-wrap">
                             <img src="image/bandung-2025.png" alt="Bandung 2025" onerror="this.src='https://placehold.co'">
                         </div>
@@ -559,7 +557,7 @@
                         </div>
                         <div class="banner-message">
                             <h3>Sejarah membentuk masa depan</h3>
-                            <p>Dari warisan sejarah hingga inovasi modern, Bandung terus bergerak menjadi kota yang lebih baik untuk semua.</p>
+                            <p>Dari warisan sejarah hingga inovasi modern, <span class="gradient-bandung">Bandung</span> terus bergerak menjadi kota yang lebih baik untuk semua.</p>
                         </div>
                     </div>
                     <a href="../html/timeline.html" class="btn-history-more">Pelajari Lebih Lanjut <i class="fa-solid fa-arrow-right"></i></a>
@@ -579,10 +577,10 @@
                 <div class="ev-top-layout">
                     <!-- Sisi Kiri: Informasi Judul & Tombol Hijau -->
                     <div class="ev-info-side">
-                        <span class="ev-eyebrow">UPCOMING EVENTS</span>
-                        <h2>Event Seru yang <br><span>Akan Datang</span></h2>
-                        <p class="ev-description">Agenda perayaan kreativitas, budaya, dan inovasi terdekat di Kota Bandung.</p>
-                        <a href="../html/event.html" class="ev-btn-all">Lihat Semua Event <i class="fa-solid fa-arrow-right"></i></a>
+                        <p class="ev-eyebrow">ACARA YANG AKAN DATANG</p>
+                        <h2>Acara Seru yang <br>Akan Datang</h2>
+                        <p class="ev-description">Agenda perayaan kreativitas, budaya, dan inovasi terdekat di Kota <span class="gradient-bandung">Bandung</span>.</p>
+                        <a href="../html/event.html" class="ev-btn-all">Lihat Semua Acara <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
 
                     <!-- Sisi Kanan: Gambar Gedung Sate & Kartu Reminder Melayang -->
@@ -592,7 +590,7 @@
                             <div class="ev-reminder-icon"><i class="fa-regular fa-calendar-check"></i></div>
                             <div class="ev-reminder-text">
                                 <strong>Jangan sampai ketinggalan!</strong>
-                                <p>Catat tanggalnya dan ikut ramaikan event di Bandung.</p>
+                                <p>Catat tanggalnya dan ikut ramaikan Acara di <span class="gradient-bandung">Bandung</span>.</p>
                             </div>
                         </div>
                         <!-- Frame Foto Utama -->
@@ -629,13 +627,13 @@
                                         <span class="ev-date-year">2026</span>
                                     </div>
                                     <div class="ev-text-block">
-                                        <h3>Bandung Food Fest</h3>
-                                        <p>Festival kuliner terbesar di Bandung dengan berbagai hidangan khas dan kreatif dari lokal hingga internasional.</p>
+                                        <h3><span class="gradient-bandung">Bandung</span> Food Fest</h3>
+                                        <p>Festival kuliner terbesar di <span class="gradient-bandung">Bandung</span> dengan berbagai hidangan khas dan kreatif dari lokal hingga internasional.</p>
                                     </div>
                                 </div>
                                 <!-- Meta Info: Lokasi & Jam -->
                                 <div class="ev-meta-footer">
-                                    <span class="ev-meta-item"><i class="fa-solid fa-location-dot"></i> Lap. Gasibu, Bandung</span>
+                                    <span class="ev-meta-item"><i class="fa-solid fa-location-dot"></i> Lap. Gasibu, <span class="gradient-bandung">Bandung</span></span>
                                     <span class="ev-meta-item"><i class="fa-regular fa-clock"></i> 10.00 - 22.00 WIB</span>
                                 </div>
                                 <a href="#" class="ev-link-more text-green">Selengkapnya <i class="fa-solid fa-arrow-right"></i></a>
@@ -685,7 +683,7 @@
                                     </div>
                                     <div class="ev-text-block">
                                         <h3>Smart City Expo</h3>
-                                        <p>Pameran teknologi dan inovasi kota pintar untuk masa depan Bandung yang lebih maju dan berkelanjutan.</p>
+                                        <p>Pameran teknologi dan inovasi kota pintar untuk masa depan <span class="gradient-bandung">Bandung</span> yang lebih maju dan berkelanjutan.</p>
                                     </div>
                                 </div>
                                 <div class="ev-meta-footer">
@@ -726,7 +724,7 @@
                     <div class="quiz-v2-left">
                         <div class="quiz-v2-badge"><i class="fa-solid fa-gamepad"></i> INTERACTIVE QUIZ</div>
                         <h2>Test Your Knowledge <br>About <span class="gradient-bandung">Bandung!</span></h2>
-                        <p class="quiz-v2-desc">Uji pengetahuanmu tentang sejarah, budaya, dan destinasi wisata di Bandung melalui kuis interaktif ini.</p>
+                        <p class="quiz-v2-desc">Uji pengetahuanmu tentang sejarah, budaya, dan destinasi wisata di <span class="gradient-bandung">Bandung</span> melalui kuis interaktif ini.</p>
 
                         <!-- 3 Indikator Fitur Samping -->
                         <div class="quiz-v2-indicators">
@@ -749,14 +747,12 @@
                                 </div>
                             </div>
                         </div>
-
-                        <a href="html/quiz.html" class="btn-v2-start" data-i18n-key="btnStartQuiz"><i class="fa-solid fa-rocket"></i> Mulai Kuis Sekarang ➔</a>
                     </div>
 
-                    <!-- Sisi Kanan: Ilustrasi Gedung Sate & Mockup Gadget Kuis Melayang -->
+                    <!-- Sisi Kanan: Ilustrasi Gedung Sate & Mockup Gadget Kuis Melayang 
                     <div class="quiz-v2-right">
                         <div class="glow-sphere-bg"></div>
-                        <img src="image/gedungsate.png" alt="Gedung Sate Hero" class="sate-illustration" onerror="this.src='https://placehold.co'">
+                        <img src="image/gedungsate.png" alt="Gedung Sate Hero" class="sate-illustration" onerror="this.src='https://placehold.co'">-->
 
                         <!-- Mockup Tampilan Kuis di Gadget -->
                         <div class="quiz-mockup-phone">
@@ -767,19 +763,15 @@
                                 </div>
                                 <span class="mockup-percent">10%</span>
                             </div>
-                            <h4 class="mockup-question">Kota Bandung dijuluki sebagai kota apa?</h4>
+                            <h4 class="mockup-question">Kota Bandung dijuluki sebagai kota apa ?</h4>
                             <div class="mockup-options">
-                                <div class="m-option active"><span>A</span> Kota Kembang</div>
+                                <div class="m-option"><span>A</span> Kota Kembang</div>
                                 <div class="m-option"><span>B</span> Kota Hujan</div>
                                 <div class="m-option"><span>C</span> Kota Sejuta Bunga</div>
                                 <div class="m-option"><span>D</span> Kota Kreatif</div>
                             </div>
+                            <a href="html/quiz.html" class="btn-v2-start" data-i18n-key="btnStartQuiz"><i class="fa-solid fa-rocket"></i> Mulai Kuis Sekarang ➔</a>
                         </div>
-
-                        <!-- Ikon-Ikon Lingkaran Dekoratif Melayang Sesuai Gambar -->
-                        <div class="float-circle icon-question"><i class="fa-solid fa-question"></i></div>
-                        <div class="float-circle icon-check"><i class="fa-solid fa-check"></i></div>
-                        <div class="float-circle icon-cup"><i class="fa-solid fa-trophy"></i></div>
                     </div>
 
                 </div>
@@ -800,7 +792,7 @@
                                 <div class="b-icon-wrap ic-purple"><i class="fa-solid fa-brain"></i></div>
                                 <div class="b-text-wrap">
                                     <h4>Tambah Wawasan</h4>
-                                    <p>Kenali lebih dalam tentang Bandung dengan cara yang menyenangkan.</p>
+                                    <p>Kenali lebih dalam tentang <span class="gradient-bandung">Bandung</span> dengan cara yang menyenangkan.</p>
                                 </div>
                             </div>
 
@@ -834,21 +826,21 @@
                             <!-- Rank 1 -->
                             <div class="leader-row-item">
                                 <span class="rank-badge gold">1</span>
-                                <img src="https://pravatar.cc" alt="Aulia Rahman" class="leader-avatar">
+                                <img src="./image/profil1.jpg" alt="Aulia Rahman" class="leader-avatar">
                                 <span class="leader-name">Aulia Rahman</span>
                                 <div class="leader-score">950 <i class="fa-solid fa-star"></i></div>
                             </div>
                             <!-- Rank 2 -->
                             <div class="leader-row-item">
                                 <span class="rank-badge silver">2</span>
-                                <img src="https://pravatar.cc" alt="Dinda Putri" class="leader-avatar">
+                                <img src="./image/profil2.jpg" alt="Dinda Putri" class="leader-avatar">
                                 <span class="leader-name">Dinda Putri</span>
                                 <div class="leader-score">870 <i class="fa-solid fa-star"></i></div>
                             </div>
                             <!-- Rank 3 -->
                             <div class="leader-row-item">
                                 <span class="rank-badge bronze">3</span>
-                                <img src="https://pravatar.cc" alt="Rizky Maulana" class="leader-avatar">
+                                <img src="./image/profil3.jpg" alt="Rizky Maulana" class="leader-avatar">
                                 <span class="leader-name">Rizky Maulana</span>
                                 <div class="leader-score">820 <i class="fa-solid fa-star"></i></div>
                             </div>
@@ -882,7 +874,7 @@
                             </div>
                         </a>
                     </div>
-                    <p class="brand-desc-text">Platform informasi wisata dan budaya Kota Bandung yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
+                    <p class="brand-desc-text">Platform informasi wisata dan budaya Kota <span class="gradient-bandung">Bandung</span> yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
                 </div>
                 <!-- Kolom 2: Navigasi Menu -->
                 <div class="footer-column-links">
@@ -892,7 +884,7 @@
                         <li><a href="#destinations"><i class="fa-solid fa-location-dot"></i><span>Destinasi</span></a></li>
                         <li><a href="#events"><i class="fa-solid fa-calendar-days"></i><span>Event</span></a></li>
                         <li><a href="#timeline"><i class="fa-solid fa-clock"></i><span>Timeline</span></a></li>
-                        <li><a href="#quiz-section"><i class="fa-solid fa-question-circle"></i><span>Kuis Interaktif</span></a></li>
+                        <li><a href="#interactive-quiz"><i class="fa-solid fa-question-circle"></i><span>Kuis Interaktif</span></a></li>
                     </ul>
                 </div>
                 <!-- Kolom 3: Informasi -->
@@ -919,12 +911,8 @@
             </div>
             <div class="container">
                 <div class="footer-bottom-copyright">
-                    <span>&copy; 2025 Bandung Smart City. All Rights Reserved.</span>
-                    <div class="footer-links-row">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Support</a>
-                    </div>
+                    <span>&copy; 2026 <span class="gradient-bandung">Bandung</span> Smart City. All Rights Reserved.</span>
+
                 </div>
             </div>
         </footer>

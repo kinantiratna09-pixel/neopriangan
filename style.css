@@ -1,15 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 :root {
-    --primary: #0D47A1;
-    --secondary: #42A5F5;
-    --accent: #64B5F6;
-    --glass: rgba(255, 255, 255, 0.06);
-    --muted: rgba(255, 255, 255, 0.7);
-    --bg: #F5F9FF;
-    --dark: #031828;
-    --transition: 300ms cubic-bezier(.2, .9, .2, 1);
-    /* new Colors */
-    --color-dark-blue: #002443;
+    --color-blue: #2F80ED;
+    --color-dark-blue: #002443; 
     --color-gold: #D4A574;
     --color-gold-dark: #6E563C;
     --color-white: #FFFFFF;
@@ -18,7 +10,6 @@
     --color-btn-start: #008AEA;
     --color-btn-end: #80C5F5;
     /* Backgrounds */
-    --bg-primary: #FFFFFF;
     --bg-section-blue: #1e4d7b;
     --bg-light-blue: #EBF2F7;
     /* Fonts */
@@ -42,15 +33,12 @@ body {
     font-family: Poppins, system-ui, Segoe UI, Helvetica, Arial;
     font-family: var(--font-body);
     line-height: 1.6;
-    color: #123;
+    color: var(--dark);
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
     opacity: 0;
     animation: fadeIn 0.8s ease forwards;
 }
-
-
-/* Global Heading Fonts */
 
 h1,
 h2,
@@ -61,15 +49,9 @@ h6 {
     font-family: var(--font-heading);
 }
 
-
-/* Global Paragraph Font */
-
 p {
     font-family: var(--font-body);
 }
-
-
-/* Bandung Text Gradient - Hero Title */
 
 .title {
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
@@ -77,15 +59,9 @@ p {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     line-height: 1.8;
-    /* tambahin ruang, jangan 1 atau di bawahnya */
     padding-top: 0.1em;
-    /* extra buffer buat ascender */
     display: inline-block;
-    /* biar bounding box ngikutin konten, bukan parent */
 }
-
-
-/* Bandung Text Gradient - Span in headings */
 
 .content h1 span {
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
@@ -93,9 +69,6 @@ p {
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
-/* Bandung Text Gradient - Universal class */
 
 .gradient-bandung {
     background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
@@ -119,14 +92,11 @@ p {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 20px 0 20px 0;
     z-index: 999;
     background: transparent;
     transition: background .4s ease, backdrop-filter .4s ease, padding .4s ease, box-shadow .4s ease;
 }
-
-
-/* Saat user scroll */
 
 .navbar.scrolled {
     background: rgba(8, 25, 60, 0.55);
@@ -134,7 +104,6 @@ p {
     -webkit-backdrop-filter: blur(18px);
     box-shadow: 0 8px 30px rgba(0, 0, 0, .2);
     border-bottom: 1px solid rgba(255, 255, 255, .1);
-    padding: 15px 0;
 }
 
 .navbar .nav-inner {
@@ -159,7 +128,7 @@ p {
 
 .brand-text small {
     margin: 5px;
-    color: #fff;
+    color: var(--color-white);
     font-size: 13px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -190,63 +159,72 @@ p {
     flex-shrink: 0;
 }
 
-.lang-btn {
-    background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
-    border-radius: 10px;
-    padding: 8px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    color: #fff;
-    font-weight: 700;
-    transition: all var(--transition);
+.toggle-pill {
+    display: inline-flex;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(232, 195, 145, 0.25);
+    border-radius: 999px;
+    padding: 4px;
+    gap: 4px;
 }
 
-.lang-btn.active {
-    background: linear-gradient(135deg, var(--color-btn-end), var(--color-btn-start));
-    color: #fff;
-    border-color: rgba(255, 255, 255, 0.9);
+.toggle-btn {
+    border: none;
+    background: transparent;
+    color: var(--color-white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 9px 22px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+       
+.toggle-btn.active {
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--navy-deep);
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(185, 136, 74, 0.35);
 }
 
 .btn-outline {
-    padding: 12px 24px;
+    padding: 12px;
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.22);
-    background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
-    color: #fff;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-white);
     text-decoration: none;
     transition: all var(--transition);
 }
 
 .btn-outline.active {
-    background: linear-gradient(135deg, var(--color-btn-end), var(--color-btn-start));
-    color: #fff;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-white);
     box-shadow: 0 16px 40px rgba(0, 138, 234, 0.2);
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.08));
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    color: var(--color-white);
     min-width: 190px;
-    padding: 16px 32px;
-    border-radius: 999px;
+    padding: 16px 24px;
     text-decoration: none;
     font-weight: 700;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
-    transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+    box-shadow: 0 10px 25px rgba(0, 138, 234, 0.25);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-.btn-secondary:hover,
-.btn-secondary.active {
-    background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
-    transform: translateY(-3px);
-    box-shadow: 0 14px 36px rgba(0, 138, 234, 0.18);
+.btn-secondary:hover {
+    transform: translateY(-6px) !important;
 }
 
 .nav-toggle {
     display: none;
     border: none;
     background: transparent;
-    color: #fff;
+    color: var(--color-white);
     font-size: 1.5rem;
     cursor: pointer;
     padding: 10px;
@@ -284,7 +262,7 @@ p {
 .nav-menu a {
     position: relative;
     display: inline-block;
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
     padding-bottom: 4px;
 }
@@ -398,7 +376,7 @@ p {
 }
 
 .hero-inner .hero-text {
-    color: #fff;
+    color: var(--color-white);
     max-width: 760px;
     margin-left: 24px;
     animation: slideIn 0.8s ease-out both;
@@ -454,7 +432,7 @@ p {
 .subtitle {
     font-size: 3.4rem;
     font-weight: 700;
-    color: var(--secondary);
+    color: var(--color-white);
 }
 
 .lead {
@@ -473,27 +451,25 @@ p {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
-    color: #fff;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-white);
     padding: 16px 32px;
     min-width: 190px;
-    border-radius: 999px;
+    border-radius: 20px;
     text-decoration: none;
     font-weight: 700;
-    box-shadow: 0 14px 40px rgba(0, 138, 234, 0.2);
-    transition: transform var(--transition), box-shadow var(--transition);
+    box-shadow: 0 10px 25px rgba(0, 138, 234, 0.25);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, var(--color-btn-end), var(--color-btn-start));
-    transform: translateY(-4px);
-    box-shadow: 0 18px 50px rgba(0, 138, 234, 0.3);
+    transform: translateY(-6px);
 }
 
 .btn-secondary {
-    background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
     border: 1px solid rgba(0, 138, 234, 0.3);
-    color: #fff;
+    color: var(--color-white);
     padding: 8px 16px;
     min-width: 170px;
     border-radius: 999px;
@@ -502,7 +478,7 @@ p {
 }
 
 .btn-secondary:hover {
-    background: linear-gradient(135deg, var(--color-btn-end), var(--color-btn-start));
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
     transform: translateY(-2px);
     box-shadow: 0 12px 30px rgba(0, 138, 234, 0.2);
 }
@@ -515,7 +491,7 @@ p {
     display: inline-flex;
     flex-direction: column;
     align-items: center;
-    color: #fff;
+    color: var(--color-white);
     text-decoration: none;
     animation: float 2.8s ease-in-out infinite;
 }
@@ -565,7 +541,7 @@ p {
     bottom: 35px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: var(--color-white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -769,10 +745,6 @@ p {
     color: rgba(17, 59, 164, 0.88)
 }
 
-
-/* ABOUT */
-
-
 /* ==========================================
    SECTION UTAMA: ABOUT & CATEGORIES
    ========================================== */
@@ -805,7 +777,7 @@ p {
 
 .image-gallery .card {
     position: relative;
-    background: #ffffff;
+    background: var(--color-white);
     border-radius: 20px;
     box-shadow: 0 25px 50px rgba(3, 24, 40, 0.07);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -902,14 +874,14 @@ p {
 /* Desain Box Quote / Kutipan */
 
 .quote-box {
-    border-left: 3px solid #2F80ED;
+    border-left: 3px solid var(--color-btn-start);
     padding-left: 20px;
     margin-bottom: 40px;
 }
 
 .quote-box p {
     font-style: italic;
-    color: #5A738E;
+    color: var(--dark);
     font-size: 1rem;
     line-height: 1.7;
 }
@@ -1001,7 +973,7 @@ p {
 }
 
 .category-card {
-    background: #ffffff;
+    background: var(--color-white);
     padding: 30px 24px;
     border-radius: 24px;
     display: flex;
@@ -1023,7 +995,6 @@ p {
     margin-bottom: 20px;
 }
 
-
 /* ==========================================
    KATEGORI KARTU GAMBAR & BANNER (BARU)
    ========================================== */
@@ -1033,9 +1004,6 @@ p {
     background-color: #f8faff;
 }
 
-
-/* Grid layout untuk membagi 5 kolom sama rata */
-
 .category-image-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -1043,11 +1011,8 @@ p {
     margin-bottom: 30px;
 }
 
-
-/* Base styling untuk setiap kartu kategori */
-
 .cat-image-card {
-    background: #ffffff;
+    background: var(--color-white);
     border-radius: 20px;
     height: 380px;
     position: relative;
@@ -1061,9 +1026,6 @@ p {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-
-/* Gambar latar belakang diatur di setengah bagian bawah */
-
 .card-bg-img {
     position: absolute;
     bottom: 0;
@@ -1076,18 +1038,12 @@ p {
     transition: transform 0.5s ease;
 }
 
-
-/* Efek gradasi memudar putih-ke-transparan agar tulisan di atas terbaca jelas */
-
 .card-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, #ffffff 45%, rgba(255, 255, 255, 0.7) 65%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to bottom, var(--color-white) 45%, rgba(255, 255, 255, 0.7) 65%, rgba(255, 255, 255, 0) 100%);
     z-index: 2;
 }
-
-
-/* Konten teks bagian atas kartu */
 
 .card-top-content {
     position: relative;
@@ -1156,8 +1112,8 @@ p {
     height: 32px;
     border-radius: 50%;
     border: none;
-    background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-white) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1167,12 +1123,8 @@ p {
     transition: all 0.3s ease;
 }
 
-
-/* Efek Hover Animasi Premium */
-
 .cat-image-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(13, 71, 161, 0.08);
+    transform: translateY(-20px);
 }
 
 .cat-image-card:hover .card-bg-img {
@@ -1180,9 +1132,9 @@ p {
 }
 
 .cat-image-card:hover .cat-circle-arrow {
-    background: linear-gradient(135deg, var(--color-btn-end), var(--color-btn-start));
-    color: #ffffff;
-    box-shadow: 0 6px 15px rgba(0, 138, 234, 0.3);
+    transform: translateX(10px);
+    background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold));
+    color: var(--color-white);
 }
 
 
@@ -1230,12 +1182,9 @@ p {
     color: #657786;
 }
 
-
-/* Tombol Biru Jelajahi Destinasi */
-
 .btn-jelajahi {
-    background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-white);
     padding: 12px 28px;
     border-radius: 50px;
     text-decoration: none;
@@ -1249,9 +1198,8 @@ p {
 }
 
 .btn-jelajahi:hover {
-    background: linear-gradient(135deg, var(--color-btn-end), var(--color-btn-start));
+    background: linear-gradient(135deg, var(--color-btn-end), var(--color-btn-start));/*$*/
 }
-
 
 /* RESPONSIVITAS MOBILE & TABLET */
 
@@ -1281,9 +1229,6 @@ p {
         font-size: 14px;
     }
 }
-
-
-/* Warna Kartu Kategori Unik */
 
 .category-card.nature .cat-icon {
     background: #EAF7EE;
@@ -1319,9 +1264,6 @@ p {
     margin-bottom: 20px;
 }
 
-
-/* Tombol Bulat Panah Kecil */
-
 .category-card .cat-arrow {
     width: 32px;
     height: 32px;
@@ -1348,9 +1290,6 @@ p {
     color: #ffffff;
 }
 
-
-/* Tombol Explore More Paling Bawah */
-
 .explore-more-container {
     display: flex;
     justify-content: flex-end;
@@ -1358,8 +1297,8 @@ p {
 }
 
 .btn-explore-more {
-    background: #0D47A1;
-    color: #ffffff;
+    background: var(--color-blue);
+    color: var(--color-white);
     padding: 14px 28px;
     border-radius: 50px;
     text-decoration: none;
@@ -1525,7 +1464,7 @@ p {
     height: 380px;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(3, 24, 40, 0.06);
+    box-shadow: 0 15px 35px rgba(5, 27, 43, 0.322.06);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1550,7 +1489,7 @@ p {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(3, 24, 40, 0.85) 0%, rgba(3, 24, 40, 0.3) 50%, rgba(3, 24, 40, 0) 100%);
+    background: linear-gradient(to top, rgba(91, 97, 97, 0.527) 0%, rgba(3, 24, 40, 0.3) 50%, rgba(186, 189, 189, 0.822) 100%);
     z-index: 2;
 }
 
@@ -1582,9 +1521,6 @@ p {
     color: #F1C40F;
 }
 
-
-/* Konten Teks Bawah Kartu Wisata */
-
 .card-bottom-info {
     position: relative;
     z-index: 3;
@@ -1600,9 +1536,6 @@ p {
     margin-bottom: 10px;
     letter-spacing: 0.5px;
 }
-
-
-/* Variasi Warna Tag Kategori Wisata */
 
 .category-tag.nature {
     background: #27AE60;
@@ -1633,9 +1566,6 @@ p {
     gap: 4px;
 }
 
-
-/* Tombol Panah Bulat Putih Kanan Bawah */
-
 .arrow-action-btn {
     position: absolute;
     bottom: 24px;
@@ -1645,8 +1575,8 @@ p {
     height: 36px;
     border-radius: 50%;
     border: none;
-    background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-white) !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1655,9 +1585,6 @@ p {
     box-shadow: 0 4px 10px rgba(0, 138, 234, 0.2);
     transition: all 0.3s ease;
 }
-
-
-/* Efek Gerakan Interaktif Hover */
 
 .destination-premium-card:hover {
     transform: translateY(-8px);
@@ -1669,16 +1596,12 @@ p {
 }
 
 .destination-premium-card:hover .arrow-action-btn {
-    background: linear-gradient(135deg, var(--color-btn-end), var(--color-btn-start));
-    color: #ffffff;
-    box-shadow: 0 6px 15px rgba(0, 138, 234, 0.3);
+    transform: translateX(10px);
+    background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold));
 }
 
-
-/* --- BANNER BAWAH: MASIH BANYAK DESTINASI --- */
-
 .more-destinations-banner {
-    background: #ffffff;
+    background: var(--color-white);
     border-radius: 24px;
     padding: 30px;
     display: flex;
@@ -1784,8 +1707,8 @@ p {
 /* Blok Tombol Biru Kanan */
 
 .blue-action-block {
-    background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-white);
     padding: 16px 28px;
     border-radius: 20px;
     text-decoration: none;
@@ -1802,7 +1725,7 @@ p {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: #ffffff;
+    background: var(--color-white);
     color: var(--color-btn-start);
     display: flex;
     align-items: center;
@@ -1811,7 +1734,7 @@ p {
 }
 
 .blue-action-block:hover {
-    transform: translateX(4px);
+    transform: translateX(6px);
 }
 
 
@@ -1948,14 +1871,14 @@ p {
 .quote-content p {
     font-style: italic;
     font-size: 13px;
-    color: #4F5E74;
+    color: var(--color-black);
     line-height: 1.6;
     margin-bottom: 4px;
 }
 
 .quote-content span {
     font-size: 11px;
-    color: #7F8C8D;
+    color: var(--color-dark-blue);
     font-weight: 600;
 }
 
@@ -2097,9 +2020,6 @@ p {
     margin-bottom: 16px;
 }
 
-
-/* Teks Tombol Link di Bawah Kartu */
-
 .btn-learn-more {
     font-size: 12px;
     font-weight: 600;
@@ -2173,23 +2093,21 @@ p {
     color: #657786;
 }
 
-
-/* Tombol Akselerasi Biru Utama */
-
 .btn-jelajahi-budaya {
-    background: linear-gradient(135deg, var(--color-btn-start), var(--color-btn-end));
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-white);
     padding: 12px 26px;
-    border-radius: 50px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
     font-size: 13px;
     white-space: nowrap;
-    transition: background 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 138, 234, 0.25);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .btn-jelajahi-budaya:hover {
-    background: linear-gradient(135deg, var(--color-btn-end), var(--color-btn-start));
+    transform: translateX(6px);
 }
 
 
@@ -2594,11 +2512,10 @@ p {
 /* Tombol Biru Outline/Solid Premium di Kanan */
 
 .btn-history-more {
-    border: 1px solid #CBD5E1;
-    background: #ffffff;
-    color: #031828;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)) !important;
+    color: var(--color-white) !important;
     padding: 12px 24px;
-    border-radius: 50px;
+    border-radius: 3px;
     text-decoration: none;
     font-weight: 600;
     font-size: 13px;
@@ -2606,18 +2523,18 @@ p {
     align-items: center;
     gap: 8px;
     white-space: nowrap;
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 138, 234, 0.25);
+    transition: transform 0.3s ease, background 0.3s ease;
+
 }
 
 .btn-history-more:hover {
-    background: #0056fb;
-    color: #ffffff;
-    border-color: #0056fb;
-    box-shadow: 0 8px 20px rgba(0, 86, 251, 0.2);
+    transform: translateX(6px) !important;
+
 }
 
 
-/* --- RESPONSIVITAS ADAPTIF LAYAR (BREAKPOINTS) --- */
+/* --- RESPONSIVITAS--- */
 
 @media (max-width: 1200px) {
     .timeline-hero-wrapper {
@@ -2675,9 +2592,6 @@ p {
     overflow: hidden;
 }
 
-
-/* Penyelarasan Atas: Judul Kiri & Banner Pemandangan Kanan */
-
 .timeline-hero-wrapper {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -2688,7 +2602,7 @@ p {
 }
 
 .timeline-hero-text .section-eyebrow {
-    color: #2F80ED;
+    color: var(--color-btn-start);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -2780,16 +2694,13 @@ p {
     font-size: 14px;
 }
 
-
-/* Varian Pewarnaan Ikon & Angka Tahun */
-
 .icon-blue {
     background: #EBF3FF;
-    color: #2F80ED;
+    color: var(--color-btn-start);
 }
 
 .text-blue {
-    color: #2F80ED;
+    color: var(--color-btn-start);
 }
 
 .icon-purple {
@@ -2914,32 +2825,29 @@ p {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    border: 3px solid #ffffff;
+    border: 3px solid var(--color-white);
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 1), 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .bg-blue {
-    background-color: #2F80ED;
-    box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px rgba(47, 128, 237, 0.2);
+    background-color: var(--color-btn-start);
+    box-shadow: 0 0 0 3px var(--color-white), 0 0 0 5px rgba(47, 128, 237, 0.2);
 }
 
 .bg-purple {
     background-color: #9B51E0;
-    box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px rgba(155, 81, 224, 0.2);
+    box-shadow: 0 0 0 3px var(--color-white), 0 0 0 5px rgba(155, 81, 224, 0.2);
 }
 
 .bg-green {
     background-color: #27AE60;
-    box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px rgba(39, 174, 96, 0.2);
+    box-shadow: 0 0 0 3px var(--color-white), 0 0 0 5px rgba(39, 174, 96, 0.2);
 }
 
 .bg-orange {
     background-color: #E67E22;
-    box-shadow: 0 0 0 3px #ffffff, 0 0 0 5px rgba(230, 126, 34, 0.2);
+    box-shadow: 0 0 0 3px var(--color-white), 0 0 0 5px rgba(230, 126, 34, 0.2);
 }
-
-
-/* Label Teks Oval Kapsul di Bawah Titik Lintasan */
 
 .node-label {
     font-size: 11px;
@@ -2950,8 +2858,8 @@ p {
 }
 
 .label-blue {
-    background-color: #EBF3FF;
-    color: #2F80ED;
+    background-color: var(--color-white);
+    color: var(--color-btn-start);
 }
 
 .label-purple {
@@ -2994,7 +2902,7 @@ p {
     height: 52px;
     border-radius: 50%;
     background: #EBF3FF;
-    color: #2F80ED;
+    color: var(--color-btn-start);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3014,12 +2922,9 @@ p {
     color: #657786;
 }
 
-
-/* Tombol Biru Outline/Solid Premium di Kanan */
-
 .btn-history-more {
     border: 1px solid #CBD5E1;
-    background: #ffffff;
+    background: var(--color-white);
     color: #031828;
     padding: 12px 24px;
     border-radius: 50px;
@@ -3034,9 +2939,9 @@ p {
 }
 
 .btn-history-more:hover {
-    background: #0056fb;
-    color: #ffffff;
-    border-color: #0056fb;
+    background: var(--color-blue);
+    color: var(--color-white);
+    border-color: var(--color-btn-start);
     box-shadow: 0 8px 20px rgba(0, 86, 251, 0.2);
 }
 
@@ -3099,9 +3004,6 @@ p {
     overflow: hidden;
 }
 
-
-/* Penataan Header Atas Atas */
-
 .events-hero-wrapper {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -3112,7 +3014,7 @@ p {
 }
 
 .events-header-text .section-eyebrow {
-    color: #2F80ED;
+    color: var(--color-btn-start);
     font-size: 11px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -3128,7 +3030,7 @@ p {
 }
 
 .events-header-text h2 span {
-    color: #0056fb;
+    color: var(--color-blue);
 }
 
 .events-header-text .section-desc {
@@ -3139,12 +3041,10 @@ p {
 }
 
 
-/* Tombol Outline Lihat Semua Event */
-
 .btn-all-events {
     display: inline-block;
     border: 1px solid #CBD5E1;
-    background: #ffffff;
+    background: var(--color-white);
     color: #031828;
     padding: 10px 24px;
     border-radius: 50px;
@@ -3155,13 +3055,10 @@ p {
 }
 
 .btn-all-events:hover {
-    border-color: #0056fb;
-    color: #0056fb;
+    border-color: var(--color-btn-start);
+    color: var(--color-btn-start);
     background: rgba(0, 86, 251, 0.02);
 }
-
-
-/* Sisi Kanan: Box Pengingat & Gedung Sate Ilustrasi */
 
 .events-hero-right {
     position: relative;
@@ -3245,7 +3142,6 @@ p {
 .ev-top-layout {
     display: grid;
     grid-template-columns: 1.1fr 1.9fr;
-    /* Membagi proporsi ruang teks kiri dan gambar kanan */
     gap: 50px;
     align-items: center;
     margin-bottom: 50px;
@@ -3255,13 +3151,11 @@ p {
 /* Sisi Teks Kiri */
 
 .ev-info-side .ev-eyebrow {
-    color: #3746cb;
-    /* Sesuai warna hijau aksen di atas judul gambar */
+    color: var(--color-btn-start);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
-    display: block;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .ev-info-side h2 {
@@ -3273,8 +3167,7 @@ p {
 }
 
 .ev-info-side h2 span {
-    color: #2632b7;
-    /* Teks "Akan Datang" berwarna hijau solid */
+    color: var(--color-dark-blue);
 }
 
 .ev-info-side .ev-description {
@@ -3285,31 +3178,24 @@ p {
     max-width: 420px;
 }
 
-
-/* Tombol Hijau Utama */
-
 .ev-btn-all {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #2b27ae;
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark)) !important;
+    color: var(--color-white);
     padding: 12px 24px;
-    border-radius: 30px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
     font-size: 13px;
-    box-shadow: 0 8px 20px rgba(39, 174, 96, 0.25);
-    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 138, 234, 0.25);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .ev-btn-all:hover {
-    background: #1e8449;
-    transform: translateY(-2px);
+    transform: translateY(-6px);
 }
-
-
-/* Sisi Kanan: Kontainer Gambar & Kartu Melayang */
 
 .ev-banner-side {
     position: relative;
@@ -3380,7 +3266,6 @@ p {
     line-height: 1.4;
 }
 
-
 /* --- TATA LETAK BAWAH: COMPONENT SLIDER KARTU EVENT --- */
 
 .ev-slider-wrapper {
@@ -3390,18 +3275,14 @@ p {
     width: 100%;
 }
 
-
-/* Tombol Panah Slider Melayang */
-
 .ev-arrow-btn {
     position: absolute;
     width: 36px;
     height: 36px;
     border-radius: 50%;
     border: 1px solid #E2E8F0;
-    background: #ffffff;
-    color: #27AE60;
-    /* Sesuai warna panah hijau di desain */
+    background: var(--color-white);
+    color: var(--color-gold);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -3414,8 +3295,8 @@ p {
 
 .ev-arrow-btn:hover {
     background: #a596e4;
-    color: #ffffff;
-    border-color: #163ed0;
+    color: var(--color-white);
+    border-color: var(--color-blue);
 }
 
 .ev-arrow-btn.prev-arrow {
@@ -3426,9 +3307,6 @@ p {
     right: -18px;
 }
 
-
-/* Grid Pembagi 3 Kolom Kartu */
-
 .ev-cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -3436,11 +3314,8 @@ p {
     width: 100%;
 }
 
-
-/* Struktur Inti Kartu Event */
-
 .ev-premium-card {
-    background: #ffffff;
+    background: var(--color-white);
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(3, 24, 40, 0.01);
@@ -3495,9 +3370,8 @@ p {
 }
 
 .ev-card-badge.b-blue {
-    background-color: #2F80ED;
+    background-color: var(--color-btn-start);
 }
-
 
 /* Tombol Love Kanan Atas Gambar */
 
@@ -3509,7 +3383,7 @@ p {
     height: 30px;
     border-radius: 50%;
     border: none;
-    background: #ffffff;
+    background: var(--color-white);
     color: #4A5568;
     display: flex;
     align-items: center;
@@ -3710,7 +3584,6 @@ p {
     }
 }
 
-
 /* --- WRAPPER SLIDER DENGAN PANAH KANAN KIRI --- */
 
 .slider-container-wrapper {
@@ -3720,16 +3593,13 @@ p {
     width: 100%;
 }
 
-
-/* Tombol Panah Slider Bulat Transparan */
-
 .slider-arrow-btn {
     position: absolute;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 1px solid #E2E8F0;
-    background: #ffffff;
+    background: var(--color-white);
     color: #4A5568;
     display: flex;
     align-items: center;
@@ -3741,9 +3611,9 @@ p {
 }
 
 .slider-arrow-btn:hover {
-    background: #0056fb;
-    color: #ffffff;
-    border-color: #0056fb;
+    background: var(--color-blue);
+    color: var(--color-white);
+    border-color: var(--color-blue);
 }
 
 .slider-arrow-btn.prev-btn {
@@ -3837,7 +3707,7 @@ p {
     height: 32px;
     border-radius: 50%;
     border: none;
-    background: #ffffff;
+    background: var(--color-white);
     color: #4A5568;
     display: flex;
     align-items: center;
@@ -4047,16 +3917,13 @@ p {
    ========================================== */
 
 .quiz-v2-section {
-    background-color: #f8faff;
+    background-color: var(--bg-light-blue);
     width: 100%;
 }
 
-
-/* --- BANNER ATAS (DARK STYLING) --- */
-
 .quiz-v2-hero {
     background: radial-gradient(circle at 75% 30%, #0d285c 0%, #031326 100%);
-    color: #ffffff;
+    color: var(--color-white, var(--color-white));
     padding: 80px 0 90px 0;
     overflow: hidden;
 }
@@ -4066,20 +3933,23 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
     align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .quiz-v2-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(47, 128, 237, 0.15);
-    color: #4EA8FF;
+    background: rgba(255, 255, 255, 0.1); 
+    color: var(--color-white); 
     padding: 6px 14px;
     border-radius: 30px;
     font-size: 11px;
     font-weight: 700;
     margin-bottom: 20px;
-    border: 1px solid rgba(47, 128, 237, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2); 
 }
 
 .quiz-v2-left h2 {
@@ -4090,7 +3960,7 @@ p {
 }
 
 .quiz-v2-left h2 span {
-    color: #4EA8FF;
+    color: var(--bg-section-blue, var(--color-blue));
 }
 
 .quiz-v2-desc {
@@ -4100,9 +3970,6 @@ p {
     margin-bottom: 35px;
     max-width: 480px;
 }
-
-
-/* 3 Indikator Sejajar Horizontal */
 
 .quiz-v2-indicators {
     display: flex;
@@ -4129,7 +3996,7 @@ p {
 
 .ind-icon.blue {
     background: rgba(47, 128, 237, 0.2);
-    color: #4EA8FF;
+    color: var(--bg-section-blue, #2F80ED);
 }
 
 .ind-icon.yellow {
@@ -4145,7 +4012,7 @@ p {
 .ind-text strong {
     display: block;
     font-size: 12px;
-    color: #ffffff;
+    color: var(--color-white);
 }
 
 .ind-text p {
@@ -4154,9 +4021,9 @@ p {
 }
 
 .btn-v2-start {
-    background: #0056fb;
-    color: #ffffff;
-    padding: 14px 28px;
+    background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
+    color: var(--color-white);
+    padding: 12px 32px;
     border-radius: 50px;
     border: none;
     font-weight: 600;
@@ -4165,45 +4032,23 @@ p {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: 0 10px 25px rgba(0, 86, 251, 0.3);
-    transition: background 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0, 138, 234, 0.25);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .btn-v2-start:hover {
-    background: #0043c7;
+    transform: translateY(-6px);
 }
 
-
-/* SISI KANAN HERO: STRUKTUR MOCKUP GADGET */
+/* --- RIGHT SIDE MOCKUP --- */
 
 .quiz-v2-right {
     position: relative;
-    height: 420px;
     display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: flex-start;
+    width: 100%;
 }
-
-.glow-sphere-bg {
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    background: radial-gradient(circle, rgba(47, 148, 255, 0.18) 0%, rgba(3, 19, 38, 0) 70%);
-    border-radius: 50%;
-    left: -20px;
-}
-
-.sate-illustration {
-    position: absolute;
-    left: -40px;
-    bottom: 20px;
-    max-width: 65%;
-    z-index: 1;
-    object-fit: contain;
-}
-
-
-/* Kotak Antarmuka Mockup Handphone Kuis */
 
 .quiz-mockup-phone {
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.04) 100%);
@@ -4212,8 +4057,7 @@ p {
     border-radius: 24px;
     width: 270px;
     padding: 24px 20px;
-    position: absolute;
-    right: 30px;
+    position: relative; 
     z-index: 2;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
 }
@@ -4252,6 +4096,7 @@ p {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 24px;
 }
 
 .m-option {
@@ -4263,6 +4108,7 @@ p {
     display: flex;
     align-items: center;
     gap: 10px;
+    cursor: not-allowed;
 }
 
 .m-option span {
@@ -4272,43 +4118,40 @@ p {
 
 .m-option.active {
     background: rgba(47, 128, 237, 0.2);
-    border-color: #2F80ED;
+    border-color: var(--color-btn-start);
 }
 
 .m-option.active span {
     opacity: 1;
-    color: #4EA8FF;
+    color: var(--color-btn-start);
 }
 
-
-/* Lingkaran Ikon Bulat Melayang Mengitari Mockup */
-
-.float-circle {
+/*.icon-floating {
     position: absolute;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 50%;
+    color: var(--color-white);
     z-index: 3;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .icon-question {
     width: 44px;
     height: 44px;
-    background: #0056fb;
-    right: 0;
-    top: 100px;
+    background: var(--color-btn-start);
+    right: -15px; 
+    top: 60px;
     font-size: 16px;
 }
 
 .icon-check {
     width: 34px;
     height: 34px;
-    background: #2ECC71;
-    left: 160px;
-    bottom: 120px;
+    background: var(--color-btn-start);
+    left: -15px; 
+    bottom: 80px;
     font-size: 13px;
 }
 
@@ -4316,11 +4159,10 @@ p {
     width: 38px;
     height: 38px;
     background: #F1C40F;
-    left: 140px;
-    bottom: 40px;
+    right: 40px;
+    bottom: -15px; 
     font-size: 14px;
 }
-
 
 /* --- DASHBOARD BAWAH (MANFAAT & LEADERBOARD) --- */
 
@@ -4584,9 +4426,9 @@ p {
     font-weight: 600;
 }
 
-.btn-strip-action {
+/*.btn-strip-action {
     background: #0056fb;
-    color: #ffffff;
+    color: var(--color-white);
     padding: 10px 22px;
     border-radius: 50px;
     border: none;
@@ -4748,7 +4590,7 @@ p {
     outline: none;
 }
 
-.btn-filter {
+/*.btn-filter {
     background: #0056fb;
     color: #ffffff;
     border: none;
@@ -4770,10 +4612,10 @@ p {
     margin-bottom: 20px;
 }
 
-.mini-filter-btn {
+/*.mini-filter-btn {
     white-space: nowrap;
-    background: #ffffff;
-    border: 1px solid #E2E8F0;
+    background: var(--color-white);
+    border: 1px solid var(--color-btn-end);
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 11px;
@@ -4785,9 +4627,9 @@ p {
 
 .mini-filter-btn.active,
 .mini-filter-btn:hover {
-    background: #0056fb;
-    color: #ffffff;
-    border-color: #0056fb;
+    background: var(--color-btn-start);
+    color: var(--color-white);
+    border-color: var(--color-btn-start);
 }
 
 
@@ -5129,8 +4971,8 @@ p {
 }
 
 .btn-popup-action {
-    background: #0056fb;
-    color: #ffffff;
+    background: #0056fb; /*$*/
+    color: var(--color-white);
     border: none;
     width: 100%;
     padding: 8px;
@@ -5158,8 +5000,8 @@ p {
     height: 32px;
     border-radius: 8px;
     border: 1px solid #edf2f9;
-    background: #ffffff;
-    color: #7F8C8D;
+    background: var(--color-white);
+    color: #7F8C8D; /*$*/
     display: flex;
     align-items: center;
     justify-content: center;
@@ -5206,14 +5048,6 @@ SECTION: FOOTER UTAMA (DARK BLUE)==========================================*/
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding-bottom: 46px;
     margin-bottom: 26px;
-}
-
-.footer-grid-layout>div {
-    padding: 28px 24px;
-    background: rgba(255, 255, 255, 0.035);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 28px;
-    backdrop-filter: blur(12px);
 }
 
 .footer-logo {
@@ -5321,22 +5155,6 @@ SECTION: FOOTER UTAMA (DARK BLUE)==========================================*/
     margin-bottom: 20px;
 }
 
-.newsletter-form-row {
-    position: relative;
-    width: 100%;
-}
-
-.newsletter-form-row input {
-    width: 100%;
-    padding: 12px 54px 12px 18px;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(255, 255, 255, 0.04);
-    color: #ffffff;
-    font-size: 12px;
-    outline: none;
-}
-
 .footer-social-links h4 {
     font-size: 14px;
     font-weight: 700;
@@ -5349,9 +5167,6 @@ SECTION: FOOTER UTAMA (DARK BLUE)==========================================*/
     flex-direction: column;
     gap: 10px;
 }
-
-
-/* Make social links show icon + label inline and avoid overflow */
 
 .footer-social-links li {
     display: block;
@@ -5392,9 +5207,6 @@ SECTION: FOOTER UTAMA (DARK BLUE)==========================================*/
     transform-origin: left;
 }
 
-
-/* Hover: change text color to gold (replace with blue if you prefer) */
-
 .footer-social-links a:hover {
     background: rgba(255, 255, 255, 0.04);
     color: var(--color-gold);
@@ -5407,8 +5219,8 @@ SECTION: FOOTER UTAMA (DARK BLUE)==========================================*/
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: #0056fb;
-    color: #ffffff;
+    background: #0056fb; /*$*/
+    color: var(--color-white);
     border: none;
     cursor: pointer;
 }
@@ -5420,29 +5232,7 @@ SECTION: FOOTER UTAMA (DARK BLUE)==========================================*/
     gap: 18px;
     font-size: 12px;
     color: rgba(255, 255, 255, 0.52);
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    padding-top: 24px;
-    margin-top: 20px;
 }
-
-.footer-bottom-copyright a {
-    color: rgba(255, 255, 255, 0.6);
-    text-decoration: none;
-    margin: 0 8px;
-    transition: color 220ms ease;
-}
-
-.footer-bottom-copyright a:hover {
-    color: #8ac7ff;
-}
-
-.footer-bottom-copyright .footer-links-row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
 
 /* RESPONSIVITAS MOBILE & TABLET */
 

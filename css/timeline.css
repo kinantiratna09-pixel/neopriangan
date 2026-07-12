@@ -1,10 +1,10 @@
-        :root {
-           --navy-deep: #0d2340;
-           --navy: #123258;
-           --gold: #D4A574;
-           --gold-light: #6E563C;
-           --cream: #f6efe3;
-           --ink: #1a2f4a;
+:root {
+    --navy-deep: #0d2340;
+    --navy: #123258;
+    --gold: #D4A574;
+    --gold-light: #6E563C;
+    --cream: #f6efe3;
+    --ink: #1a2f4a;
        }
        
        body {
@@ -12,9 +12,6 @@
            background: var(--navy-deep);
            color: var(--cream);
        }
-       /* ===== Background pattern batik (tile berulang) =====
-     Ganti url() di bawah dengan file pattern kamu dari Canva.
-     Kalau belum ada file, tetap terlihat rapi karena warna dasar sudah navy. */
        
        .tl-wrap {
            position: relative;
@@ -26,7 +23,6 @@
        }
        
        .tl-wrap::before {
-           /* vignette biar pattern tidak terlalu ramai & teks tetap kebaca */
            content: '';
            position: absolute;
            inset: 0;
@@ -39,16 +35,9 @@
            margin: 0 auto;
            position: relative;
            z-index: 1;
-           padding: 60px 40px 80px;
+           padding: 200px 40px 80px;
        }
        
-       .gradient-bandung {
-           background: linear-gradient(135deg, var(--gold-light), var(--gold));
-           -webkit-background-clip: text;
-           background-clip: text;
-           -webkit-text-fill-color: transparent;
-           font-weight: 600;
-       }
        /* Hero */
        
        .tm {
@@ -82,40 +71,11 @@
        }
        /* ===== Toggle switch Vertikal/Horizontal ===== */
        
-       .view-toggle {
+        .view-toggle {
            display: flex;
            justify-content: center;
            margin: 10px 0 40px;
            margin-top: 40px;
-       }
-       
-       .toggle-pill {
-           display: inline-flex;
-           background: rgba(255, 255, 255, 0.08);
-           border: 1px solid rgba(232, 195, 145, 0.25);
-           border-radius: 999px;
-           padding: 4px;
-           gap: 4px;
-       }
-       
-       .toggle-btn {
-           border: none;
-           background: transparent;
-           color: #cfd9e6;
-           font-family: 'Poppins', sans-serif;
-           font-size: 0.9rem;
-           font-weight: 500;
-           padding: 9px 22px;
-           border-radius: 999px;
-           cursor: pointer;
-           transition: all 0.25s ease;
-       }
-       
-       .toggle-btn.active {
-           background: linear-gradient(135deg, var(--gold-light), var(--gold));
-           color: var(--navy-deep);
-           font-weight: 700;
-           box-shadow: 0 4px 14px rgba(185, 136, 74, 0.35);
        }
        /* ================= VERTICAL VIEW ================= */
        
@@ -168,7 +128,7 @@
            width: 74px;
            height: 74px;
            border-radius: 50%;
-           background: radial-gradient(circle at 35% 30%, var(--gold-light), var(--gold) 60%, #8a6132 100%);
+           background: linear-gradient(var(--gold-light), var(--gold));
            display: flex;
            align-items: center;
            justify-content: center;
@@ -315,7 +275,6 @@
            row-gap: 16px;
            height: 100%;
        }
-       /* posisi nomor SELALU di baris tengah -> otomatis sejajar semua item */
        
        .h-num {
            grid-row: 2;
@@ -323,7 +282,7 @@
            width: 56px;
            height: 56px;
            border-radius: 50%;
-           background: radial-gradient(circle at 35% 30%, var(--gold-light), var(--gold) 60%, #8a6132 100%);
+           background: linear-gradient(var(--gold-light), var(--gold));
            display: flex;
            align-items: center;
            justify-content: center;
@@ -461,33 +420,33 @@
        }
        /* Reveal on scroll */
        
-       .reveal {
-           opacity: 1;
-           transform: none;
-           transition: opacity .9s cubic-bezier(.2, .7, .2, 1), transform .9s cubic-bezier(.2, .7, .2, 1);
-       }
+.reveal {
+    opacity: 1;
+    transform: none;
+    transition: opacity .9s cubic-bezier(.2, .7, .2, 1), transform .9s cubic-bezier(.2, .7, .2, 1);
+}
        
-       .reveal.is-visible {
-           opacity: 1;
-           transform: none;
-       }
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
        
-       .footer-nav {
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           margin-top: 40px;
-           padding: 0 10px;
-           color: var(--gold-light);
-       }
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding: 0 10px;
+    color: var(--gold-light);
+}
        
-       .footer-nav .arrow {
-           font-size: 1.4rem;
-       }
+.footer-nav .arrow {
+    font-size: 1.4rem;
+}
        
-       .footer-nav .line {
-           flex: 1;
-           height: 1px;
-           background: rgba(232, 195, 145, 0.4);
-           margin: 0 20px;
-       }
+.footer-nav .line {
+    flex: 1;
+    height: 1px;
+    background: rgba(232, 195, 145, 0.4);
+    margin: 0 20px;
+}
