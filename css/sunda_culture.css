@@ -14,7 +14,6 @@
     padding: 0 24px;
 }
 
-
 /* --- HERO COVER BANNER ATAS --- */
 
 .culture-p-hero {
@@ -89,7 +88,7 @@
 }
 
 
-/* --- TAB BAR KATEGORI HORIZONTAL --- */
+/* --- TAB BAR KATEGORI HORIZONTAL 
 
 .culture-p-tabs-bar {
     background: #ffffff;
@@ -214,7 +213,7 @@
    GRID CONTENT COMPONENT (KANAN)
    ========================================== */
 
-.culture-p-toolbar {
+/*.culture-p-toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -276,6 +275,7 @@
 /* Grid 4 Kolom Kartu Budaya Sejajar */
 
 .culture-p-cards-grid {
+    padding-top: 32px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;

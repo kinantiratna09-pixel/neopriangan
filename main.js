@@ -34,21 +34,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // language switcher and translation
     const translations = {
         id: {
-            navHome: 'Home',
-            navAbout: 'About',
-            navCategories: 'Categories',
-            navTimeline: 'Timeline',
+            navHome: 'Beranda',
+            navAbout: 'Tentang',
+            navCategories: 'Kategori',
+            navTimeline: 'Waktu',
             navEvents: 'Events',
             navMaps: 'Maps',
-            btnExplore: 'Explore',
-            heroEyebrow: 'WELCOME TO',
+            heroEyebrow: 'Selamat Datang',
             heroTitle: 'Bandung',
             heroSubtitle: 'Creative Smart City',
             heroLead: 'Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota Bandung dalam satu platform.',
-            btnPlan: 'Plan My Trip',
-            btnWatch: 'Watch Video',
+            btnPlan: 'rencanakan Perjalanan',
+            btnWatch: 'Tonton Video',
             aboutSubtitle: 'TENTANG BANDUNG',
-            aboutHeading: 'Discover the Soul of Bandung',
+            aboutHeading: 'Tampilan Jiwa Kota Bandung',
             aboutDescription: 'Bandung merupakan kota yang memadukan kreativitas, budaya, alam, kuliner, sejarah, dan teknologi dalam satu pengalaman wisata yang modern, nyaman, dan berkelanjutan.',
             aboutQuote: '“Aku kembali ke Bandung kepada cintaku yang sesungguhnya” <br> -Ir.Soekarno',
             btnExploreDestinations: 'Jelajahi Destinasi',
@@ -61,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             footerTransport: 'Transportasi',
             footerFood: 'Kuliner',
             footerStay: 'Akomodasi',
-            footerNews: 'Berita & Update'
+            footerNews: 'Berita & Pembaruan'
         },
         en: {
             navHome: 'Home',
