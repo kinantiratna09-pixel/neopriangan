@@ -34,140 +34,208 @@ document.addEventListener('DOMContentLoaded', () => {
     // language switcher and translation
     const translations = {
         id: {
+            pageTitle: 'Neopriangan | Bandung',
+            brandText: 'Kota Pintar Kreatif',
             navHome: 'Beranda',
-            navAbout: 'Tentang',
-            navCategories: 'Kategori',
+            navAbout: 'Hub',
+            navCategories: 'Sejarah',
             navTimeline: 'Sejarah',
             navEvents: 'Acara',
-            navMaps: 'Peta',
+            navMaps: 'Kuis',
             heroEyebrow: 'Selamat Datang',
-            heroTitle: 'Bandung',
+            heroTitle: '<span class="gradient-bandung">Bandung</span>',
             heroSubtitle: 'Creative Smart City',
-            heroLead: 'Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota Bandung dalam satu platform.',
-            btnPlan: 'rencanakan Perjalanan',
+            heroLead: 'Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota <span class="gradient-bandung">Bandung</span> dalam satu platform.',
+            btnPlan: 'Rencanakan Perjalanan',
             btnWatch: 'Tonton Video',
             scrollDown: 'Gulir ke bawah',
+            btnExplore: 'Jelajahi',
 
-            //about section
-            bragaStreet: 'Jalan Braga',
-            gedungSate: 'Gedung Sate',
-            kawahPutih: 'Kawah Putih',
-            aboutSubtitle: 'TENTANG BANDUNG',
-            aboutHeading: 'Tampilan Jiwa Kota Bandung',
+            aboutSubtitle: 'TENTANG <span class="gradient-bandung">Bandung</span>',
+            aboutHeading: 'Discover the Soul of <br><span class="gradient-bandung">Bandung</span>',
             aboutDescription: 'Bandung merupakan kota yang memadukan kreativitas, budaya, alam, kuliner, sejarah, dan teknologi dalam satu pengalaman wisata yang modern, nyaman, dan berkelanjutan.',
-            aboutQuote: '“Aku kembali ke Bandung kepada cintaku yang sesungguhnya” <br> -Ir.Soekarno',
-            destinationTitle: 'Destinasi',
-            tempatwisatamenakjubkan: 'Tempat Wisata Menakjubkan',
-            kuliner: 'Kuliner',
-            citarasakhasbandung: 'Cita Rasa Khas Bandung',
-            event: 'Acara',
-            eventmenariksetiaptahun: 'Acara Menarik Setiap Tahun',
-            creative: 'Kreatif',
-            kotakreatifdenganomunitasdanindustrikreatifyangberkembangpesat: 'Kota Kreatif dengan Komunitas dan Industri Kreatif yang Berkembang Pesat',
-            smartcity: 'Kota Pintar',
-            inovasiteknologiuntukpelayananpublikyangmoderndanterintegrasi: 'Inovasi Teknologi untuk Pelayanan Publik yang Modern dan Terintegrasi',
-            aboutbanner: 'Bandung bergerak menuju kota masa depan dengan kolaborasi masyarakat, teknologi, dan pemerintah',
-            bandungcity: 'Bandung terus berinovasi menjadi kota yang lebih baik',
-            btnExploreDestinations: 'Jelajahi Destinasi',
-            sectioneybrow: 'destinasi pilihan',
-            sectiontitle: 'Kunjungi destinasi ikonik pilihan pelancong dan temukan pengalaman tak terlupakan',
-            rekomendasi: 'Rekomendasi berdasarkan rating & popularitas',
-            nature: 'Wisata Alam kawah putih Ciwidey, Bandung Selatan',
-            heritagedanculture: 'Wisata Budaya & Heritage Jalan Braga sumur bandung ',
-            sejarah: 'SEJARAH Gedung Sate, Cibeunying, Bandung wetan',
-            infotext: 'Masih banyak destinasi menarik lainnya! Temukan lebih dari 150+ destinasi wisata Bandung lengkap dengan rating,lokasi,dan informasi menarik',
+            aboutQuote: '“Aku kembali ke <span class="gradient-bandung">Bandung</span> kepada cintaku yang sesungguhnya” <br> -Ir.Soekarno',
 
-            culture: 'SUNDA KULTURE HUB',
-            infotext1: 'Kenali Budaya Sunda, jiwa bandung',
-            infotext2: 'JelaBudaya Sunda adalah bagian tak terpisahkan dari identitas masyarakat bandung yang ramah, kreatif, dan penuh makna',
-            infotext3: '"Ngemban dina kaharmonisan, berkarya dengan kreativitas, menyapa dunia dengan keramahan."',
-            quote: '-Nilai Masyarakat Sunda',
+            sectionEyebrow: 'DESTINASI PILIHAN',
+            sectionTitle: 'Tempat Terfavorit <br>di <span class="gradient-bandung">Bandung</span>',
+            sectionDesc: 'Kunjungi destinasi ikonik pilihan pelancong dan temukan pengalaman tak terlupakan.',
+            rekomendasi: 'Rekomendasi berdasarkan rating & popularitas',
+            creative: 'Kreatif',
+            creativeDesc: 'Kota kreatif dengan komunitas dan industri kreatif yang berkembang pesat.',
+            heritage: 'Heritage',
+            heritageDesc: 'Jejak sejarah di setiap sudut kota, dari masa kolonial hingga kemerdekaan.',
+            culinary: 'Kuliner',
+            culinaryDesc: 'Ragam kuliner khas <span class="gradient-bandung">Bandung</span> yang lezat dan menggugah selera.',
+            nature: 'Alam',
+            natureDesc: 'Keindahan alam pegunungan, kawah, dan udara yang menyegarkan.',
+            smartcity: 'Smart City',
+            smartcityDesc: 'Inovasi teknologi untuk pelayanan publik yang modern dan terintegrasi.',
+            aboutbanner: '<span class="gradient-bandung">Bandung</span> bergerak menuju kota masa depan',
+            bandungcity: 'Dengan kolaborasi masyarakat, teknologi, dan pemerintah, <span class="gradient-bandung">Bandung</span> terus berinovasi menjadi kota yang lebih baik.',
+            btnExploreDestinations: 'Jelajahi Destinasi',
+            bannerHeading: 'Masih banyak destinasi menarik lainnya!',
+            bannerParagraph: 'Temukan lebih dari 150+ destinasi wisata <span class="gradient-bandung">Bandung</span> lengkap dengan rating, lokasi, dan informasi menarik.',
+            btnSeeAllTourism: 'Lihat Semua Wisata',
+
+            cultureHubTitle: 'SUNDA CULTURE HUB',
+            cultureHubHeading: 'Kenali Budaya Sunda, <br>Jiwa <span class="gradient-bandung">Bandung</span>',
+            cultureHubDescription: 'Budaya Sunda adalah bagian tak terpisahkan dari identitas masyarakat <span class="gradient-bandung">Bandung</span> yang ramah, kreatif, dan penuh makna.',
+            cultureQuote: '"Ngemban dina kaharmonisan, berkarya dengan kreativitas, menyapa dunia dengan keramahan."',
+            cultureQuoteAuthor: '- Nilai Masyarakat Sunda',
             cardculture: 'Bahasa Sunda Mini',
-            infotext4: 'Kenali kosakata dan frasa dasar Bahasa Sunda yang digunakan dalam kehidupan sehari-hari.',
-            btntextblue: 'Pelajari Budaya Sunda',
+            cardcultureDesc: 'Kenali kosakata dan frasa dasar Bahasa Sunda yang digunakan dalam kehidupan sehari-hari.',
             card2: 'Angklung',
             pAngklung: 'Alat musik tradisional yang telah diakui UNESCO sebagai warisan budaya dunia.',
-            btmtextgreen: 'Pelajari lebih lanjut',
             card3: 'Tari Jaipong',
             pJaipong: 'Tari khas Sunda yang energik, anggun, dan penuh ekspresi kegembiraan.',
-            btntextorange: 'Pelajari lebih lanjut',
-            card4: 'pakaian adat sunda',
+            card4: 'Pakaian Adat Sunda',
             pSunda: 'Keindahan busana tradisional Sunda yang sarat makna dan nilai budaya.',
-            btntextpurple: 'Pelajari lebih lanjut',
-            card5: 'nilai ramah dan kreatif',
-            pRamah: 'Keramahan dan kreativitas masyarakat bandung menjadi jiwa dari setiap karya dan inovasi.',
-            btntextblue: 'Pelajari lebih lanjut',
-            bannertext: 'Budaya adalah jembatan masa lalu dan masa depan, Mari lestarikan budaya Sunda dan terus berkarya untuk bandung yang lebih baik, kreatif, dan membanggakan dunia. ',
-            btnSeeAllTourism: 'Lihat Semua Wisata',
+            card5: 'Nilai Ramah & Kreatif',
+            pRamah: 'Keramahan dan kreativitas masyarakat <span class="gradient-bandung">Bandung</span> menjadi jiwa dari setiap karya dan inovasi.',
+            btnLearnMoreBlue: 'Pelajari lebih lanjut ➔',
+            btnLearnMoreGreen: 'Pelajari lebih lanjut ➔',
+            btnLearnMoreOrange: 'Pelajari lebih lanjut ➔',
+            btnLearnMorePurple: 'Pelajari lebih lanjut ➔',
+            btnLearnMorePink: 'Pelajari lebih lanjut ➔',
             btnExploreCulture: 'Jelajahi Budaya Sunda ➔',
-            timelinebandung: 'sejarah bandung',
-            textbandung: 'Perjalanan ejarah kota kembang dari masa kemasa, Bandung terus tumbuh menjadi kota yang kreatif,inovatif, dan selalu beradaptasi dengan perubahan zaman.',
-            tahun1: '1900 Pendirian landmark kota bersejarah bandung mulai berkembang sebagai kota modern dengan dibangunnya berbagai bangunan ikonik peninggalan masa kolonial.',
-            tahun2: '1950 Perkembangan seni dan pusat budaya bandung dikenal sebagai pusat kreativitas, seni, dan pendidikan yang melahirkan banyak tokoh serta karya inspiratif.',
-            tahun3: '2000 Modernisasi infrastruktur dan tata kota Transformasi besar-besaran di bidang infrastruktur, transportasi, dan teknologi menjadikan bandung kota yang semakin maju dan nyaman.',
-            tahun4: '2025 Inisiasi global integrasi Smart City bandung  melangkah menuju kota cerdas yang terintegrasi, berkelanjutan, dan berdaya saing global.',
+
+            timelineTitle: 'Bandung TIMELINE',
+            timelineHeading: 'Perjalanan Sejarah <br>Kota Kembang',
+            timelineDesc: 'Dari masa ke masa, <span class="gradient-bandung">Bandung</span> terus tumbuh menjadi kota yang kreatif, inovatif, dan selalu beradaptasi dengan perubahan zaman.',
+            tahun1: '1900 Pendirian landmark kota bersejarah Bandung mulai berkembang sebagai kota modern dengan dibangunnya berbagai bangunan ikonik peninggalan masa kolonial.',
+            tahun2: '1950 Perkembangan seni dan pusat budaya Bandung dikenal sebagai pusat kreativitas, seni, dan pendidikan yang melahirkan banyak tokoh serta karya inspiratif.',
+            tahun3: '2000 Modernisasi infrastruktur dan tata kota. Transformasi besar-besaran di bidang infrastruktur, transportasi, dan teknologi menjadikan Bandung kota yang semakin maju dan nyaman.',
+            tahun4: '2025 Inisiasi global integrasi Smart City. Bandung melangkah menuju kota cerdas yang terintegrasi, berkelanjutan, dan berdaya saing global.',
             labelblue: 'Awal Kota',
             labelgreen: 'Masa Berkembang',
             labelorange: 'Masa Modern',
             labelpurple: 'Masa Depan',
-            textbenner: 'ejarah membentuk masa depan Dari warisan sejarah hingga inovasi modern, Bandung terus bergerak menjadi kota yang lebih baik untuk semua.',
-            btnhistory: 'pelajari lebih lanjut',
+            textbenner: 'Sejarah membentuk masa depan. Dari warisan sejarah hingga inovasi modern, Bandung terus bergerak menjadi kota yang lebih baik untuk semua.',
+            btnhistory: 'Pelajari Lebih Lanjut',
 
-            //event section
             eventtitle: 'ACARA YANG AKAN DATANG',
-            eventdes: 'Acara seru yang akan datang, Agenda perayaan kreativitas, budaya, dan inovasi terdekat di kota badung.',
-            eventdes2: 'Jangan sampai ketinggalan! Catat tanggalnya dan ikut ramaikan acara di Bandung',
-            vestifal: 'FESTIVAL',
-            ket: 'bandung food fest festival terbesar di bandung dengan berbagai hidangan khas dan kreatif dari lokal hingga internasional.',
-            card1: 'Lap. Gasibu, bandung 10.00-22.00',
-            btn: 'sselengkpnya',
-            card2: 'budaya 05 AGUSTUS 2026',
-            ketcard: 'lukisan dan budaya malam',
-            descard: 'Malam penuh seni dan budaya dengan pertunjukan musik, tari, pameran seni, dan workshop kreatif',
-            tempat: 'Taman Cikapundung 18.00-23.00',
-            btncard2: 'Selengkapnya',
-            card3: 'TEKNOOGI 12 SEPTEMBER 2026',
-            ketcard3: 'Smart City Expo Pameran teknologi dan inovasi kota pintar untuk masa depan bandudng yang lebih maju dan berkelanjutan. Trans Convention Center',
-            btncard3: 'Selengkapnya',
+            eventdes: 'Acara seru yang akan datang, agenda perayaan kreativitas, budaya, dan inovasi terdekat di Kota Bandung.',
+            eventdes2: 'Jangan sampai ketinggalan! Catat tanggalnya dan ikut ramaikan Acara di Bandung.',
             btnSeeAllEvents: 'Lihat Semua Event ➔',
             btnStartQuiz: 'Mulai Kuis Sekarang ➔',
+
             footerInfoTitle: 'Informasi',
             footerGuide: 'Panduan Wisata',
             footerTransport: 'Transportasi',
             footerFood: 'Kuliner',
             footerStay: 'Akomodasi',
-            footerNews: 'Berita & Pembaruan'
+            footerNews: 'Berita & Pembaruan',
+            footerBrandDesc: 'Platform informasi wisata dan budaya Kota <span class="gradient-bandung">Bandung</span> yang kreatif, inovatif, dan terintegrasi untuk semua.',
+            footerExplore: 'Jelajahi',
+            footerDestinations: 'Destinasi',
+            footerEvents: 'Acara',
+            footerTimeline: 'Timeline',
+            footerQuiz: 'Kuis Interaktif',
+            leaderboardTitle: 'Papan Peringkat',
+            leaderboardSeeAll: 'Lihat Semua'
         },
         en: {
+            pageTitle: 'Neopriangan | Bandung',
+            brandText: 'Creative Smart City',
             navHome: 'Home',
             navAbout: 'About',
             navCategories: 'Categories',
             navTimeline: 'Timeline',
             navEvents: 'Events',
             navMaps: 'Maps',
-            scrollDown: 'Scroll Down',
-            btnExplore: 'Explore',
             heroEyebrow: 'WELCOME TO',
-            heroTitle: 'Bandung',
+            heroTitle: '<span class="gradient-bandung">Bandung</span>',
             heroSubtitle: 'Creative Smart City',
             heroLead: 'Explore Bandung tourist destinations, culinary spots, history, culture, and exciting experiences in one platform.',
             btnPlan: 'Plan My Trip',
             btnWatch: 'Watch Video',
+            scrollDown: 'Scroll Down',
+            btnExplore: 'Explore',
+
             aboutSubtitle: 'ABOUT BANDUNG',
-            aboutHeading: 'Discover the Soul of Bandung',
+            aboutHeading: 'Discover the Soul of <br><span class="gradient-bandung">Bandung</span>',
             aboutDescription: 'Bandung is a city that blends creativity, culture, nature, culinary delights, history, and technology into a modern, comfortable, and sustainable travel experience.',
             aboutQuote: '“I return to Bandung to my truest love” <br> -Ir.Soekarno',
+
+            sectionEyebrow: 'FEATURED DESTINATIONS',
+            sectionTitle: 'Favorite Places <br>in <span class="gradient-bandung">Bandung</span>',
+            sectionDesc: 'Visit iconic traveler-favorite destinations and discover unforgettable experiences.',
+            rekomendasi: 'Recommendations based on ratings & popularity',
+            creative: 'Creative',
+            creativeDesc: 'A creative city with thriving creative communities and industries.',
+            heritage: 'Heritage',
+            heritageDesc: 'Historical traces across the city, from colonial times to independence.',
+            culinary: 'Culinary',
+            culinaryDesc: 'Bandung’s signature cuisine that is delicious and inspiring.',
+            nature: 'Nature',
+            natureDesc: 'The beauty of mountains, crater lakes, and refreshing air.',
+            smartcity: 'Smart City',
+            smartcityDesc: 'Technology innovation for modern, integrated public services.',
+            aboutbanner: '<span class="gradient-bandung">Bandung</span> moves toward a future city',
+            bandungcity: 'Through public, technology, and government collaboration, <span class="gradient-bandung">Bandung</span> keeps innovating to become a better city.',
             btnExploreDestinations: 'Explore Destinations',
+            bannerHeading: 'There are many more exciting destinations!',
+            bannerParagraph: 'Discover over 150+ Bandung tourism spots complete with ratings, locations, and interesting information.',
             btnSeeAllTourism: 'See All Tourism',
+
+            cultureHubTitle: 'SUNDA CULTURE HUB',
+            cultureHubHeading: 'Discover Sundanese Culture, <br>The Soul of <span class="gradient-bandung">Bandung</span>',
+            cultureHubDescription: 'Sundanese culture is an integral part of Bandung’s identity, warm, creative, and meaningful.',
+            cultureQuote: '"Embrace harmony, create with creativity, greet the world with hospitality."',
+            cultureQuoteAuthor: '- Sundanese Community Values',
+            cardculture: 'Sundanese Language Mini',
+            cardcultureDesc: 'Learn basic Sundanese words and phrases used in everyday life.',
+            card2: 'Angklung',
+            pAngklung: 'A traditional musical instrument recognized by UNESCO as a world cultural heritage.',
+            card3: 'Jaipong Dance',
+            pJaipong: 'A dynamic Sundanese dance that is elegant and full of joyful expression.',
+            card4: 'Sundanese Traditional Clothing',
+            pSunda: 'The beauty of traditional Sundanese attire rich with meaning and cultural value.',
+            card5: 'Friendly & Creative Values',
+            pRamah: 'Bandung people’s friendliness and creativity are the spirit behind every work and innovation.',
+            btnLearnMoreBlue: 'Learn More ➔',
+            btnLearnMoreGreen: 'Learn More ➔',
+            btnLearnMoreOrange: 'Learn More ➔',
+            btnLearnMorePurple: 'Learn More ➔',
+            btnLearnMorePink: 'Learn More ➔',
             btnExploreCulture: 'Explore Sundanese Culture ➔',
+
+            timelineTitle: 'Bandung TIMELINE',
+            timelineHeading: 'The Historical Journey<br>of Bandung',
+            timelineDesc: 'From era to era, <span class="gradient-bandung">Bandung</span> continues to grow into a creative, innovative city that always adapts to changing times.',
+            tahun1: '1900 The founding of historic city landmarks as Bandung began developing into a modern city with iconic colonial-era architecture.',
+            tahun2: '1950 The growth of arts and culture centers as Bandung became a hub of creativity, arts, and education producing many inspiring figures and works.',
+            tahun3: '2000 Modernization of infrastructure and city planning, transforming Bandung into a more advanced and comfortable city.',
+            tahun4: '2025 Global smart city integration initiatives, moving Bandung toward a sustainable and globally competitive smart city.',
+            labelblue: 'Early City',
+            labelgreen: 'Growth Era',
+            labelorange: 'Modern Era',
+            labelpurple: 'Future Era',
+            textbenner: 'History shapes the future. From heritage to modern innovation, Bandung continues moving toward a better city for everyone.',
+            btnhistory: 'Learn More',
+
+            eventtitle: 'UPCOMING EVENTS',
+            eventdes: 'Exciting upcoming events celebrating creativity, culture, and innovation in Bandung.',
+            eventdes2: 'Don'
+            t miss out!Save the dates and join Bandung’ s events.
+            ',
             btnSeeAllEvents: 'See All Events ➔',
             btnStartQuiz: 'Start Quiz Now ➔',
+
             footerInfoTitle: 'Information',
             footerGuide: 'Travel Guide',
             footerTransport: 'Transportation',
             footerFood: 'Culinary',
             footerStay: 'Accommodation',
-            footerNews: 'News & Updates'
+            footerNews: 'News & Updates',
+            footerBrandDesc: 'A tourism and culture information platform for Bandung that is creative, innovative, and integrated for everyone.',
+            footerExplore: 'Explore',
+            footerDestinations: 'Destinations',
+            footerEvents: 'Events',
+            footerTimeline: 'Timeline',
+            footerQuiz: 'Interactive Quiz',
+            leaderboardTitle: 'Leaderboard',
+            leaderboardSeeAll: 'See All'
         }
     };
 
@@ -179,15 +247,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function setTextWithIcon(el, text) {
         const icon = el.querySelector('i');
-        if (icon) {
-            const iconHTML = icon.outerHTML;
-            if (el.firstElementChild === icon) {
-                el.innerHTML = iconHTML + ' ' + text;
+        const containsHtml = /<[^>]+>/.test(text);
+
+        if (!icon) {
+            if (containsHtml) el.innerHTML = text;
+            else el.textContent = text;
+            return;
+        }
+
+        if (el.firstElementChild === icon) {
+            if (containsHtml) {
+                el.innerHTML = icon.outerHTML + ' ' + text;
             } else {
-                el.innerHTML = text + ' ' + iconHTML;
+                el.innerHTML = '';
+                el.append(icon);
+                el.append(' ');
+                el.append(document.createTextNode(text));
             }
         } else {
-            el.textContent = text;
+            if (containsHtml) {
+                el.innerHTML = text + ' ' + icon.outerHTML;
+            } else {
+                el.innerHTML = '';
+                el.append(document.createTextNode(text));
+                el.append(' ');
+                el.append(icon);
+            }
         }
     }
 
@@ -197,12 +282,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const key = el.dataset.i18nKey;
             const value = translations[current][key];
             if (!value) return;
-            if (key === 'aboutQuote' || key === 'aboutHeading') {
-                el.innerHTML = value;
-            } else {
-                setTextWithIcon(el, value);
-            }
+            setTextWithIcon(el, value);
         });
+        const pageTitle = translations[current].pageTitle;
+        if (pageTitle) document.title = pageTitle;
         langBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === current));
         document.documentElement.lang = current === 'en' ? 'en' : 'id';
         localStorage.setItem('siteLang', current);
