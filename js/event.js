@@ -2,14 +2,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             /* ============ Data ============ */
             const CATEGORY_META = {
-                budaya: { label: "Budaya", icon: "🎭", color: "#e08b4f" },
-                musik: { label: "Musik", icon: "🎵", color: "#9b7cf0" },
-                kuliner: { label: "Kuliner", icon: "🍜", color: "#ef7a6d" },
-                teknologi: { label: "Teknologi", icon: "💻", color: "#4fc3d1" },
-                olahraga: { label: "Olahraga", icon: "🏃", color: "#5fd196" },
-                edukasi: { label: "Edukasi", icon: "📚", color: "#f0c15a" },
-                seni: { label: "Seni & Kreatif", icon: "🖼️", color: "#e089c9" },
-                komunitas: { label: "Komunitas", icon: "🤝", color: "#8f9ef0" },
+                budaya: { labelKey: "eventCategoryBudaya", icon: "🎭", color: "#e08b4f" },
+                musik: { labelKey: "eventCategoryMusik", icon: "🎵", color: "#9b7cf0" },
+                kuliner: { labelKey: "eventCategoryKuliner", icon: "🍜", color: "#ef7a6d" },
+                teknologi: { labelKey: "eventCategoryTeknologi", icon: "💻", color: "#4fc3d1" },
+                olahraga: { labelKey: "eventCategoryOlahraga", icon: "🏃", color: "#5fd196" },
+                edukasi: { labelKey: "eventCategoryEdukasi", icon: "📚", color: "#f0c15a" },
+                seni: { labelKey: "eventCategorySeni", icon: "🖼️", color: "#e089c9" },
+                komunitas: { labelKey: "eventCategoryKomunitas", icon: "🤝", color: "#8f9ef0" },
             };
 
             const EVENTS = [
@@ -452,6 +452,89 @@ document.addEventListener('DOMContentLoaded', () => {
                 applyFilters: document.getElementById("applyFilters"),
             };
 
+            function translate(key, fallback = '') {
+                if (window.getSiteTranslation) {
+                    return window.getSiteTranslation(key, fallback);
+                }
+                return fallback;
+            }
+
+            function getCurrentLang() {
+                return window.currentSiteLang || localStorage.getItem('siteLang') || 'id';
+            }
+
+            function t(textId, fallback) {
+                return translate(textId, fallback);
+            }
+
+            function translateEventText(text, fallback = text) {
+                if (getCurrentLang() !== 'en' || !text) return text || fallback;
+
+                const replacements = [
+                    ['Budaya', 'Culture'],
+                    ['Sunda', 'Sundanese'],
+                    ['Musik', 'Music'],
+                    ['Kuliner', 'Culinary'],
+                    ['Teknologi', 'Technology'],
+                    ['Olahraga', 'Sports'],
+                    ['Edukasi', 'Education'],
+                    ['Seni', 'Arts'],
+                    ['Komunitas', 'Community'],
+                    ['Pameran', 'Exhibition'],
+                    ['Konser', 'Concert'],
+                    ['Lomba', 'Competition'],
+                    ['Pekan', 'Week'],
+                    ['Pagelaran', 'Performance'],
+                    ['Pertunjukan', 'Performance'],
+                    ['Aksi', 'Action'],
+                    ['Pasar', 'Market'],
+                    ['Malam', 'Night'],
+                    ['Menyajikan', 'Featuring'],
+                    ['Menikmati', 'Enjoying'],
+                    ['Berbagi', 'Sharing'],
+                    ['Workshop', 'Workshop'],
+                    ['Tradisional', 'Traditional'],
+                    ['Kreatif', 'Creative'],
+                    ['Kota', 'City'],
+                    ['Nusantara', 'Archipelago'],
+                    ['Ramah', 'Friendly'],
+                    ['Jalan', 'Street'],
+                    ['Taman', 'Park'],
+                    ['Festival', 'Festival'],
+                    ['Khusus', 'Special'],
+                    ['Sosial', 'Social'],
+                    ['Bersama', 'Together'],
+                    ['Desain', 'Design'],
+                    ['Kopi', 'Coffee'],
+                    ['Cokelat', 'Chocolate'],
+                    ['Bakso', 'Meatballs'],
+                    ['Sate', 'Satay'],
+                    ['Bandung', 'Bandung']
+                ];
+
+                let translated = String(text);
+                replacements.forEach(([from, to]) => {
+                    translated = translated.replace(new RegExp(`\\b${from}\\b`, 'g'), to);
+                });
+                return translated;
+            }
+
+            function formatDateLabel(dateValue, locale = getCurrentLang() === 'en' ? 'en-US' : 'id-ID') {
+                const opts = { day: '2-digit', month: 'short', year: 'numeric' };
+                const start = new Date(dateValue).toLocaleDateString(locale, opts);
+                return start;
+            }
+
+            function formatEventDate(ev) {
+                const locale = getCurrentLang() === 'en' ? 'en-US' : 'id-ID';
+                const start = formatDateLabel(ev.date, locale);
+                if (ev.dateEnd) {
+                    const end = formatDateLabel(ev.dateEnd, locale);
+                    return `${start} – ${end}`;
+                }
+                return start;
+            }
+
             // Guard: kalau halaman ini gak punya elemen inti event (cards + tabs), stop di sini.
             if (!els.cards || !els.tabs) return;
 
@@ -475,13 +558,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             /* ============ Rendering ============ */
             function fmtDate(ev) {
-                const opts = { day: "2-digit", month: "short", year: "numeric" };
-                const start = new Date(ev.date).toLocaleDateString("id-ID", opts);
-                if (ev.dateEnd) {
-                    const end = new Date(ev.dateEnd).toLocaleDateString("id-ID", opts);
-                    return `${start} – ${end}`;
-                }
-                return start;
+                return formatEventDate(ev);
             }
 
             function getFiltered() {
@@ -516,13 +593,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 const start = (state.page - 1) * state.perPage;
                 const pageItems = filtered.slice(start, start + state.perPage);
 
-                if (els.count) els.count.textContent = `Menampilkan ${filtered.length} event`;
+                if (els.count) {
+                    const countText = t('eventResultsCount', 'Showing {count} events').replace('{count}', filtered.length);
+                    els.count.textContent = countText;
+                }
 
                 if (pageItems.length === 0) {
                     els.cards.innerHTML = `
         <div class="empty-state">
-          <strong>Belum ada event yang cocok</strong>
-          Coba ubah kata kunci pencarian atau kategori filter kamu.
+          <strong>${t('eventNoResultsTitle', 'No matching events yet')}</strong>
+          ${t('eventNoResultsDesc', 'Try changing the search keywords or filter categories.')}
         </div>`;
                 } else {
                     els.cards.innerHTML = pageItems.map(cardHTML).join("");
@@ -535,20 +615,24 @@ document.addEventListener('DOMContentLoaded', () => {
             function cardHTML(ev) {
                 const meta = CATEGORY_META[ev.cat];
                 const isSaved = state.saved.has(ev.id);
+                const categoryLabel = t(meta.labelKey, meta.labelKey);
+                const translatedTitle = translateEventText(ev.title);
+                const translatedDesc = translateEventText(ev.desc);
+                const translatedLocation = translateEventText(ev.location);
                 return `
     <article class="card" data-id="${ev.id}">
       <div class="card__thumb">
         ${thumbSVG(ev.cat)}
-        <span class="card__badge">${meta.icon} ${meta.label}</span>
+        <span class="card__badge">${meta.icon} ${categoryLabel}</span>
       </div>
       <div class="card__body">
-        <h3 class="card__title">${ev.title}</h3>
-        <p class="card__desc">${ev.desc}</p>
+        <h3 class="card__title">${translatedTitle}</h3>
+        <p class="card__desc">${translatedDesc}</p>
         <div class="card__meta">
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><line x1="16" y1="3" x2="16" y2="7"/><line x1="8" y1="3" x2="8" y2="7"/><line x1="3" y1="10" x2="21" y2="10"/></svg>${fmtDate(ev)}</span>
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></svg>${ev.time}</span>
-          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>${ev.location}</span>
-          ${ev.free ? `<span style="color:var(--gold-bright); font-weight:600;">Gratis</span>` : ""}
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>${translatedLocation}</span>
+          ${ev.free ? `<span style="color:var(--gold-bright); font-weight:600;">${t('eventFree', 'Free')}</span>` : ""}
         </div>
       </div>
       <div class="card__side">
@@ -557,7 +641,7 @@ document.addEventListener('DOMContentLoaded', () => {
           ${ev.rating.toFixed(1)}
           <small>(${ev.reviews.toLocaleString("id-ID")})</small>
         </div>
-        <button class="card__save ${isSaved ? "saved" : ""}" aria-label="Simpan event" data-save="${ev.id}">
+        <button class="card__save ${isSaved ? "saved" : ""}" aria-label="${t('eventSaveAria', 'Save event')}" data-save="${ev.id}">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="${isSaved ? "currentColor" : "none"}" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
         </button>
       </div>
@@ -580,7 +664,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderPagination(totalPages) {
         if (!els.pagination) return;
         let html = "";
-        html += `<button class="page-btn" data-page="prev" ${state.page === 1 ? "disabled" : ""} aria-label="Halaman sebelumnya">‹</button>`;
+        html += `<button class="page-btn" data-page="prev" ${state.page === 1 ? "disabled" : ""} aria-label="${t('eventPaginationPrev', 'Previous page')}">‹</button>`;
  
         const pages = [];
         const p = state.page;
@@ -598,7 +682,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
  
-        html += `<button class="page-btn" data-page="next" ${state.page === totalPages ? "disabled" : ""} aria-label="Halaman berikutnya">›</button>`;
+        html += `<button class="page-btn" data-page="next" ${state.page === totalPages ? "disabled" : ""} aria-label="${t('eventPaginationNext', 'Next page')}">›</button>`;
         els.pagination.innerHTML = html;
  
         els.pagination.querySelectorAll(".page-btn").forEach(btn => {
@@ -711,11 +795,13 @@ document.addEventListener('DOMContentLoaded', () => {
         els.sortMenu.querySelectorAll("li").forEach(li => {
             li.addEventListener("click", () => {
                 state.sort = li.dataset.value;
-                if (els.sortLabel) els.sortLabel.textContent = li.textContent;
-                els.sortMenu.querySelectorAll("li").forEach(l => l.classList.remove("active"));
-                li.classList.add("active");
-                if (els.sortbox) els.sortbox.classList.remove("open");
-                render();
+                        const labelKey = {
+                            terdekat: 'eventSortNearest',
+                            terjauh: 'eventSortFarthest',
+                            populer: 'eventSortPopular',
+                            rating: 'eventSortRating'
+                        }[li.dataset.value];
+                        if (els.sortLabel) els.sortLabel.textContent = labelKey ? t(labelKey, li.textContent) : li.textContent;
             });
         });
     }
@@ -743,7 +829,81 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })();
  
+    function applyEventTranslations() {
+        const heroTitle = document.querySelector('.hero__title');
+        const heroSubtitle = document.querySelector('.hero__subtitle');
+        const searchInput = document.getElementById('searchInput');
+        const sortLabel = document.getElementById('sortLabel');
+        const filterHeading = document.querySelector('.panel__head h2');
+        const categoryTitle = document.querySelector('.filter-group__title');
+        const dateTitle = document.querySelectorAll('.filter-group__title')[1];
+        const locationTitle = document.querySelectorAll('.filter-group__title')[2];
+        const priceTitle = document.querySelectorAll('.filter-group__title')[3];
+        const applyButton = document.getElementById('applyFilters');
+        const resetButton = document.getElementById('resetFilters');
+        const allTab = document.querySelector('.tab[data-cat="semua"]');
+        const locationSelect = document.getElementById('locationSelect');
+        const locationPlaceholder = locationSelect?.querySelector('option[value=""]');
+        const allCategoryLabel = document.querySelector('.check-row input[data-cat="semua"]')?.closest('.check-row')?.querySelector('span:last-of-type');
+        const priceLabels = document.querySelectorAll('.radio-row span:last-of-type');
+
+        if (heroTitle) heroTitle.innerHTML = t('eventHeroTitle', 'All Events in <span>Bandung</span>');
+        if (heroSubtitle) heroSubtitle.textContent = t('eventHeroSubtitle', 'Discover exciting events in Bandung, from culture, music, culinary, to technology.');
+        if (searchInput) searchInput.placeholder = t('eventSearchPlaceholder', 'Search events, event names, or locations...');
+        if (sortLabel) sortLabel.textContent = t('eventSortNearest', 'Nearest Date');
+        if (filterHeading) filterHeading.textContent = t('eventFilterTitle', 'Filter Events');
+        if (categoryTitle) categoryTitle.textContent = t('eventCategoryTitle', 'Category');
+        if (dateTitle) dateTitle.textContent = t('eventDateTitle', 'Date');
+        if (locationTitle) locationTitle.textContent = t('eventLocationTitle', 'Location');
+        if (priceTitle) priceTitle.textContent = t('eventPriceTitle', 'Ticket Price');
+        if (applyButton) applyButton.textContent = t('eventApplyFilters', 'Apply Filters');
+        if (resetButton) resetButton.textContent = t('eventReset', 'Reset');
+        if (allTab) allTab.textContent = t('eventAllTab', 'All');
+        if (allCategoryLabel) allCategoryLabel.textContent = t('eventAllCategories', 'All Categories');
+        if (locationPlaceholder) locationPlaceholder.textContent = t('eventLocationPlaceholder', 'Select location');
+        if (priceLabels[0]) priceLabels[0].textContent = t('eventFree', 'Free');
+        if (priceLabels[1]) priceLabels[1].textContent = t('eventPaid', 'Paid');
+
+        document.querySelectorAll('.tab').forEach(tab => {
+            const cat = tab.dataset.cat;
+            if (!cat) return;
+            if (cat === 'semua') {
+                tab.textContent = t('eventAllTab', 'All');
+            } else {
+                const key = `eventCategory${cat.charAt(0).toUpperCase()}${cat.slice(1)}`;
+                tab.textContent = t(key, tab.textContent);
+            }
+        });
+
+        document.querySelectorAll('#sortMenu li').forEach(li => {
+            const key = {
+                terdekat: 'eventSortNearest',
+                terjauh: 'eventSortFarthest',
+                populer: 'eventSortPopular',
+                rating: 'eventSortRating'
+            }[li.dataset.value];
+            if (key) li.textContent = t(key, li.textContent);
+        });
+
+        document.querySelectorAll('.filter-group .check-row').forEach((row, index) => {
+            const label = row.querySelector('span:last-of-type');
+            if (!label) return;
+            const cat = row.querySelector('input[data-cat]')?.dataset.cat;
+            if (cat && cat !== 'semua') {
+                const key = `eventCategory${cat.charAt(0).toUpperCase()}${cat.slice(1)}`;
+                label.textContent = t(`eventCategory${cat.charAt(0).toUpperCase()}${cat.slice(1)}`, label.textContent);
+            }
+        });
+    }
+
+    function refreshEventView() {
+        applyEventTranslations();
+        render();
+    }
+
+    document.addEventListener('languagechange', refreshEventView);
+
     /* ============ Initial render ============ */
-    render();
+    refreshEventView();
  
 });

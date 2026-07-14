@@ -116,6 +116,39 @@ document.addEventListener('DOMContentLoaded', () => {
             eventtitle: 'ACARA YANG AKAN DATANG',
             eventdes: 'Acara seru yang akan datang, agenda perayaan kreativitas, budaya, dan inovasi terdekat di Kota Bandung.',
             eventdes2: 'Jangan sampai ketinggalan! Catat tanggalnya dan ikut ramaikan Acara di Bandung.',
+            eventHeroTitle: 'Semua Event di <span>Bandung</span>',
+            eventHeroSubtitle: 'Temukan berbagai event menarik di Bandung, dari budaya, musik, kuliner, hingga teknologi.',
+            eventSearchPlaceholder: 'Cari event, nama acara, atau lokasi...',
+            eventSortNearest: 'Tanggal Terdekat',
+            eventSortFarthest: 'Tanggal Terjauh',
+            eventSortPopular: 'Event Populer',
+            eventSortRating: 'Rating Tertinggi',
+            eventFilterTitle: 'Filter Event',
+            eventCategoryTitle: 'Kategori',
+            eventAllCategories: 'Semua Kategori',
+            eventDateTitle: 'Tanggal',
+            eventLocationTitle: 'Lokasi',
+            eventLocationPlaceholder: 'Pilih lokasi',
+            eventPriceTitle: 'Harga Tiket',
+            eventFree: 'Gratis',
+            eventPaid: 'Berbayar',
+            eventApplyFilters: 'Terapkan Filter',
+            eventReset: 'Reset',
+            eventAllTab: 'Semua',
+            eventResultsCount: 'Menampilkan {count} event',
+            eventNoResultsTitle: 'Belum ada event yang cocok',
+            eventNoResultsDesc: 'Coba ubah kata kunci pencarian atau kategori filter kamu.',
+            eventSaveAria: 'Simpan event',
+            eventPaginationPrev: 'Halaman sebelumnya',
+            eventPaginationNext: 'Halaman berikutnya',
+            eventCategoryBudaya: 'Budaya',
+            eventCategoryMusik: 'Musik',
+            eventCategoryKuliner: 'Kuliner',
+            eventCategoryTeknologi: 'Teknologi',
+            eventCategoryOlahraga: 'Olahraga',
+            eventCategoryEdukasi: 'Edukasi',
+            eventCategorySeni: 'Seni & Kreatif',
+            eventCategoryKomunitas: 'Komunitas',
             btnSeeAllEvents: 'Lihat Semua Event ➔',
             btnStartQuiz: 'Mulai Kuis Sekarang ➔',
 
@@ -132,7 +165,33 @@ document.addEventListener('DOMContentLoaded', () => {
             footerTimeline: 'Timeline',
             footerQuiz: 'Kuis Interaktif',
             leaderboardTitle: 'Papan Peringkat',
-            leaderboardSeeAll: 'Lihat Semua'
+            leaderboardSeeAll: 'Lihat Semua',
+
+            timelinePageTitle: '<span class="gradient-bandung">Perjalanan Waktu</span> Bandung',
+            timelinePageSubtitle: 'Melihat Alur Sederhana Perkembangan dari <span class="gradient-bandung">Bandung</span> Tempo Dulu hingga Bandung Era Smart City',
+            timelineViewVertical: 'Vertikal',
+            timelineViewHorizontal: 'Horizontal',
+            timelineHint: 'geser atau pakai tombol panah untuk melihat lebih banyak',
+            timelineNavPrev: 'Sebelumnya',
+            timelineNavNext: 'Berikutnya',
+            timelineItem1Tag: '<span class="gradient-bandung">Bandung</span> Tempo Dulu',
+            timelineItem1Desc: '<span class="gradient-bandung">Bandung</span> awalnya merupakan daerah pedalaman. Titik baliknya terjadi ketika Gubernur Jenderal Daendels membangun Jalan Raya Pos (Groote Postweg). Bupati <span class="gradient-bandung">Bandung</span> saat itu, R.A. Wiranatakusumah II, memindahkan ibu kota kabupaten dari Krapyak (Dayeuhkolot) ke situs kota <span class="gradient-bandung">Bandung</span> yang sekarang pada tahun 1810 agar lebih dekat dengan jalur transportasi utama tersebut.',
+            timelineItem1Media: 'Foto Bandung Tempo Dulu<br>(Jalan Braga)',
+            timelineItem2Tag: 'Modernisasi dan Asia Afrika',
+            timelineItem2Desc: 'Jalan Raya Pos bertransformasi menjadi pusat modernisasi dengan arsitektur bergaya Art Deco yang megah, seperti Hotel Savoy Homann dan Gedung Merdeka, hingga dijuluki Parijs van Java. Puncaknya, kawasan ini mencetak sejarah dunia saat menjadi tempat berlangsungnya Konferensi Asia Afrika (KAA) pada April 1955 yang mempersatukan bangsa-bangsa di Asia dan Afrika.',
+            timelineItem2Media: 'Foto Konferensi Asia Afrika<br>1955',
+            timelineItem3Tag: '<span class="gradient-bandung">Bandung</span> Lautan Api',
+            timelineItem3Desc: 'Menolak menyerahkan kota kepada Sekutu dan NICA untuk dijadikan markas militer, sekitar 200.000 penduduk <span class="gradient-bandung">Bandung</span> Selatan membakar rumah mereka sendiri dalam waktu tujuh jam sebelum mengungsi. Peristiwa heroik ini juga menandai gugurnya Mohammad Toha saat meledakkan gudang mesiu sekutu di Dayeuhkolot.',
+            timelineItem3Media: 'Monumen Bandung Lautan Api<br>24 Maret 1946',
+            timelineItem4Tag: '<span class="gradient-bandung">Bandung</span> Kota Pendidikan',
+            timelineItem4Desc: 'Identitas <span class="gradient-bandung">Bandung</span> sebagai kota pendidikan berakar dari dibukanya Technische Hoogeschool te <span class="gradient-bandung">Bandoeng</span> (sekarang ITB) pada 3 Juli 1920 sebagai sekolah tinggi teknik pertama di Hindia Belanda. Kehadiran institusi ini menarik kaum intelektual dari berbagai daerah dan memicu lahirnya berbagai perguruan tinggi besar lainnya yang membentuk karakter akademis kota ini.',
+            timelineItem4Media: 'Technische Hoogeschool te Bandoeng<br>(ITB) 1920',
+            timelineItem5Tag: '<span class="gradient-bandung">Bandung</span> Kota Kreatif',
+            timelineItem5Desc: '<span class="gradient-bandung">Bandung</span> resmi dinobatkan sebagai bagian dari UNESCO Creative Cities Network (UCCN) dalam bidang Design pada Desember 2015. Pengakuan internasional ini didasarkan pada kuatnya ekonomi kreatif yang digerakkan oleh komunitas anak muda, mulai dari industri fashion lokal (distro), musik independen, hingga desain grafis dan arsitektur.',
+            timelineItem5Media: 'Bandung Creative Hub',
+            timelineItem6Tag: '<span class="gradient-bandung">Bandung</span> Kota Pintar',
+            timelineItem6Desc: 'Transformasi <span class="gradient-bandung">Bandung</span> menuju kota pintar diwujudkan melalui integrasi teknologi informasi dalam tata kelola pemerintahan dan pelayanan publik. Langkah besarnya ditandai dengan peresmian <span class="gradient-bandung">Bandung</span> Command Center (BCC) untuk memantau kondisi kota secara real-time, mengintegrasikan data internal, serta mempercepat penanganan pengaduan warga melalui aplikasi digital.',
+            timelineItem6Media: 'Bandung Command Center'
         },
         en: {
             pageTitle: 'Neopriangan | Bandung',
@@ -216,9 +275,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
             eventtitle: 'UPCOMING EVENTS',
             eventdes: 'Exciting upcoming events celebrating creativity, culture, and innovation in Bandung.',
-            eventdes2: 'Don'
-            t miss out!Save the dates and join Bandung’ s events.
-            ',
+            eventdes2: 'Don\'t miss out! Save the dates and join Bandung\'s events.',
+            eventHeroTitle: 'All Events in <span>Bandung</span>',
+            eventHeroSubtitle: 'Discover exciting events in Bandung, from culture, music, culinary, to technology.',
+            eventSearchPlaceholder: 'Search events, event names, or locations...',
+            eventSortNearest: 'Nearest Date',
+            eventSortFarthest: 'Farthest Date',
+            eventSortPopular: 'Popular Events',
+            eventSortRating: 'Highest Rating',
+            eventFilterTitle: 'Filter Events',
+            eventCategoryTitle: 'Category',
+            eventAllCategories: 'All Categories',
+            eventDateTitle: 'Date',
+            eventLocationTitle: 'Location',
+            eventLocationPlaceholder: 'Select location',
+            eventPriceTitle: 'Ticket Price',
+            eventFree: 'Free',
+            eventPaid: 'Paid',
+            eventApplyFilters: 'Apply Filters',
+            eventReset: 'Reset',
+            eventAllTab: 'All',
+            eventResultsCount: 'Showing {count} events',
+            eventNoResultsTitle: 'No matching events yet',
+            eventNoResultsDesc: 'Try changing the search keywords or filter categories.',
+            eventSaveAria: 'Save event',
+            eventPaginationPrev: 'Previous page',
+            eventPaginationNext: 'Next page',
+            eventCategoryBudaya: 'Culture',
+            eventCategoryMusik: 'Music',
+            eventCategoryKuliner: 'Culinary',
+            eventCategoryTeknologi: 'Technology',
+            eventCategoryOlahraga: 'Sports',
+            eventCategoryEdukasi: 'Education',
+            eventCategorySeni: 'Arts & Creative',
+            eventCategoryKomunitas: 'Community',
             btnSeeAllEvents: 'See All Events ➔',
             btnStartQuiz: 'Start Quiz Now ➔',
 
@@ -235,9 +325,44 @@ document.addEventListener('DOMContentLoaded', () => {
             footerTimeline: 'Timeline',
             footerQuiz: 'Interactive Quiz',
             leaderboardTitle: 'Leaderboard',
-            leaderboardSeeAll: 'See All'
+            leaderboardSeeAll: 'See All',
+
+            timelinePageTitle: '<span class="gradient-bandung">Bandung</span> Timeline',
+            timelinePageSubtitle: 'A simple look at how <span class="gradient-bandung">Bandung</span> grew from its past into the Smart City era',
+            timelineViewVertical: 'Vertical',
+            timelineViewHorizontal: 'Horizontal',
+            timelineHint: 'drag or use arrow buttons to see more',
+            timelineNavPrev: 'Previous',
+            timelineNavNext: 'Next',
+            timelineItem1Tag: '<span class="gradient-bandung">Bandung</span> in the Old Days',
+            timelineItem1Desc: '<span class="gradient-bandung">Bandung</span> began as an inland region. The turning point came when Governor-General Daendels built the Jalan Raya Pos (Groote Postweg). The regent of <span class="gradient-bandung">Bandung</span> at the time, R.A. Wiranatakusumah II, moved the regency capital from Krapyak (Dayeuhkolot) to the current city site in 1810 to be closer to the main transport route.',
+            timelineItem1Media: 'Old Bandung Photo<br>(Braga Street)',
+            timelineItem2Tag: 'Modernization and Asia-Africa',
+            timelineItem2Desc: 'The Jalan Raya Pos transformed into a center of modernization with grand Art Deco architecture, such as Savoy Homann Hotel and Merdeka Building, earning it the nickname Parijs van Java. Its peak came when this area hosted the Asia-Africa Conference (AAC) in April 1955, uniting nations across Asia and Africa.',
+            timelineItem2Media: 'Asia-Africa Conference Photo<br>1955',
+            timelineItem3Tag: '<span class="gradient-bandung">Bandung</span> Lautan Api',
+            timelineItem3Desc: 'Rejecting surrender of the city to the Allies and NICA to serve as a military base, around 200,000 residents of South <span class="gradient-bandung">Bandung</span> burned their own homes within seven hours before evacuating. This heroic event also marked the death of Mohammad Toha when he detonated the Allied ammunition depot at Dayeuhkolot.',
+            timelineItem3Media: 'Bandung Lautan Api Monument<br>24 March 1946',
+            timelineItem4Tag: '<span class="gradient-bandung">Bandung</span> as an Education City',
+            timelineItem4Desc: 'Bandung’s identity as an education city began with the opening of Technische Hoogeschool te <span class="gradient-bandung">Bandoeng</span> (now ITB) on July 3, 1920, as the first technical college in the Dutch East Indies. Its presence attracted intellectuals from many regions and sparked the growth of several major universities that shaped the city’s academic character.',
+            timelineItem4Media: 'Technische Hoogeschool te Bandoeng<br>(ITB) 1920',
+            timelineItem5Tag: '<span class="gradient-bandung">Bandung</span> Creative City',
+            timelineItem5Desc: '<span class="gradient-bandung">Bandung</span> was officially recognized as part of the UNESCO Creative Cities Network (UCCN) in the Design field in December 2015. This international recognition was based on the strength of its creative economy driven by young communities, ranging from local fashion industries (distros) to independent music and graphic design and architecture.',
+            timelineItem5Media: 'Bandung Creative Hub',
+            timelineItem6Tag: '<span class="gradient-bandung">Bandung</span> Smart City',
+            timelineItem6Desc: 'Bandung’s transformation toward a smart city is being realized through the integration of information technology in government and public services. A major milestone was the inauguration of the <span class="gradient-bandung">Bandung</span> Command Center (BCC) to monitor the city in real time, integrate internal data, and accelerate citizen complaint handling through digital applications.',
+            timelineItem6Media: 'Bandung Command Center'
         }
     };
+
+    function getTranslationValue(key, fallback = '') {
+        const lang = window.currentSiteLang || localStorage.getItem('siteLang') || 'id';
+        const current = translations[lang] ? lang : 'id';
+        return translations[current][key] || fallback;
+    }
+
+    window.siteTranslations = translations;
+    window.getSiteTranslation = getTranslationValue;
 
     const i18nElements = document.querySelectorAll('[data-i18n-key]');
     const navLinks = Array.from(document.querySelectorAll('.nav-menu a'));
@@ -288,7 +413,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (pageTitle) document.title = pageTitle;
         langBtns.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === current));
         document.documentElement.lang = current === 'en' ? 'en' : 'id';
+        window.currentSiteLang = current;
         localStorage.setItem('siteLang', current);
+        document.dispatchEvent(new CustomEvent('languagechange', { detail: { lang: current } }));
     }
 
     langBtns.forEach(btn => {

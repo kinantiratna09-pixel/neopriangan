@@ -1,5 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    function translate(key, fallback = '') {
+        if (window.getSiteTranslation) {
+            return window.getSiteTranslation(key, fallback);
+        }
+        return fallback;
+    }
+
+    function applyTimelineTranslations() {
+        document.querySelectorAll('[data-i18n-key]').forEach(el => {
+            const key = el.dataset.i18nKey;
+            const value = translate(key, el.textContent || el.innerHTML);
+            if (!value) return;
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                el.value = value;
+            } else if (el.hasAttribute('placeholder')) {
+                el.setAttribute('placeholder', value);
+            } else if (el.querySelector('span')) {
+                el.innerHTML = value;
+            } else {
+                el.textContent = value;
+            }
+        });
+    }
+
     // timeline progress hover auto-scroll small (untuk elemen #timelineTrack kalau ada)
     const timeline = document.getElementById('timelineTrack');
     if (timeline) {
@@ -46,6 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    document.addEventListener('languagechange', applyTimelineTranslations);
+    applyTimelineTranslations();
 
     // Tombol panah geser horizontal
     const hScroll = document.getElementById('hScroll');
