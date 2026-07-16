@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="image/logo-gedung-sate.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="translation _"
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
@@ -53,9 +54,9 @@
         <div class="container hero-inner">
             <div class="hero-text">
                 <p class="eyebrow" data-i18n-key="heroEyebrow">WELCOME TO</p>
-                <h1 class="title" data-i18n-key="heroTitle"><span class="gradient-bandung">Bandung</span></h1>
+                <h1 class="title" data-i18n-key="heroTitle"><span class="bandung-gradient">Bandung</span></h1>
                 <h2 class="subtitle" data-i18n-key="heroSubtitle">Creative Smart City</h2>
-                <p class="lead" data-i18n-key="heroLead">Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik di Kota <span class="gradient-bandung">Bandung</span> dalam satu platform.</p>
+                <p class="lead" data-i18n-key="heroLead">Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik dalam satu platform.</p>
                 <div class="hero-ctas">
                     <a class="btn-primary" id="planTripBtn" href="html/rancangan_trip.html" data-i18n-key="btnPlan">Plan My Trip</a>
                     <button class="btn-secondary" id="watchVideo" data-i18n-key="btnWatch"><i class="fa-solid fa-play"></i> Watch Video</button>
@@ -99,6 +100,7 @@
                     </div>
                 </div>
 
+                <!--CREATIVE SMART CITY-->
                 <div class="about-mini-cards">
                     <div class="about-mini-card creative">
                         <img class="mini-card-thumb" src="image/braga.png" alt="Creative Bandung">
@@ -110,6 +112,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!--SMART CITY-->
                     <div class="about-mini-card smartcity">
                         <img class="mini-card-thumb" src="image/wisata.png" alt="Smart City Bandung">
                         <div class="mini-card-content">
@@ -158,100 +162,6 @@
             </div>
 
         </div>
-
-        <!-- TOURISM CATEGORIES & BANNER -->
-        <section id="categories" class="section categories-section">
-            <div class="container">
-
-                <!-- Grid 5 Kartu Kategori Sesuai Gambar -->
-                <div class="category-image-grid">
-
-                    <!-- 1. Creative -->
-                    <!--  <div class="cat-image-card creative">
-                        <div class="card-bg-img" style="background-image: url('image/braga.png');"></div>
-                        <div class="card-overlay"></div>
-                        <div class="card-top-content">
-                            <div class="cat-icon-circle"><i class="fa-solid fa-palette"></i></div>
-                            <div class="cat-text">
-                                <h4 data-i18n-key="creative">Creative</h4>
-                                <p data-i18n-key="creativeDesc">Kota kreatif dengan komunitas dan industri kreatif yang berkembang pesat.</p>
-                            </div>
-                        </div>
-                        <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-
-                    <!-- 2. Heritage 
-                    <div class="cat-image-card heritage">
-                        <div class="card-bg-img" style="background-image: url('image/gedungsate.png');"></div>
-                        <div class="card-overlay"></div>
-                        <div class="card-top-content">
-                            <div class="cat-icon-circle"><i class="fa-solid fa-building-columns"></i></div>
-                            <div class="cat-text">
-                                <h4>Heritage</h4>
-                                <p>Jejak sejarah di setiap sudut kota, dari masa kolonial hingga kemerdekaan.</p>
-                            </div>
-                        </div>
-                        <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-
-                    <!-- 3. Culinary 
-                    <div class="cat-image-card culinary">
-                        <div class="card-bg-img" style="background-image: url('image/asiaafrica.jpg');"></div>
-                        <div class="card-overlay"></div>
-                        <div class="card-top-content">
-                            <div class="cat-icon-circle"><i class="fa-solid fa-bowl-food"></i></div>
-                            <div class="cat-text">
-                                <h4>Culinary</h4>
-                                <p>Ragam kuliner khas <span class="gradient-bandung">Bandung</span> yang lezat dan menggugah selera.</p>
-                            </div>
-                        </div>
-                        <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-
-                    <!-- 4. Nature 
-                    <div class="cat-image-card nature">
-                        <div class="card-bg-img" style="background-image: url('image/kawah.png');"></div>
-                        <div class="card-overlay"></div>
-                        <div class="card-top-content">
-                            <div class="cat-icon-circle"><i class="fa-solid fa-leaf"></i></div>
-                            <div class="cat-text">
-                                <h4>Nature</h4>
-                                <p>Keindahan alam pegunungan, kawah, dan udara yang menyegarkan.</p>
-                            </div>
-                        </div>
-                        <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
-                    </div>
-
-                    <!-- 5. Smart City -->
-                    <!----<div class="cat-image-card smartcity">
-                        <div class="card-bg-img" style="background-image: url('image/wisata.png');"></div>
-                        <div class="card-overlay"></div>
-                        <div class="card-top-content">
-                            <div class="cat-icon-circle"><i class="fa-solid fa-network-wired"></i></div>
-                            <div class="cat-text">
-                                <h4>Smart City</h4>
-                                <p>Inovasi teknologi untuk pelayanan publik yang modern dan terintegrasi.</p>
-                            </div>
-                        </div>
-                        <button class="cat-circle-arrow"><i class="fa-solid fa-arrow-right"></i></button>
-                    </div>-->
-                </div>
-
-                <!-- Banner Gerak Menuju Kota Masa Depan (Bagian Bawah Gambar) -->
-                <!--  <div class="future-city-banner">
-                    <div class="banner-left">
-                        <div class="banner-icon"><i class="fa-solid fa-city"></i></div>
-                        <div class="banner-text">
-                            <h3 data-i18n-key="aboutbanner"><span class="gradient-bandung">Bandung</span> bergerak menuju kota masa depan</h3>
-                            <p data-i18n-key="bandungcity">Dengan kolaborasi masyarakat, teknologi, dan pemerintah, <span class="gradient-bandung">Bandung</span> terus berinovasi menjadi kota yang lebih baik.</p>
-                        </div>
-                    </div>
-                    <a href="html/destinasion.html" class="btn-jelajahi" data-i18n-key="btnExploreDestinations">Jelajahi Destinasi <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-
-            </div>
-        </section>
-
 
         <!-- FEATURED DESTINATIONS SECTION -->
                 <section id="destinations" class="section destinations-section">
@@ -355,58 +265,28 @@
 
 
                 <!-- SUNDA CULTURE HUB SECTION -->
-                <div class="card-container">
-
-                    <!-- Sisi Kiri: Informasi Teks -->
-                    <div class="content-left">
-                        <div class="tagline">Budaya Sunda</div>
-
-                        <h1 class="main-title">Kenali Budaya<br>Sunda,</h1>
-                        <span class="sub-title-script">Jiwa Bandung</span>
-
-                        <div class="divider"></div>
-
-                        <p class="description">
-                            Budaya Sunda adalah bagian tak terpisahkan dari identitas masyarakat <strong>Bandung</strong> yang ramah, kreatif, dan penuh makna.
-                        </p>
-
-                        <div class="quote-box">
-                            <p class="quote-text">
-                                Ngombong dina kaharmonisan, berkarya dengan kreativitas, menyapa dunia dengan keramahan.
-                            </p>
-                            <div class="quote-author">— Nilai Masyarakat Sunda</div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="culture-hero-image-side">
-                        <div class="curved-bg-decor"></div>
-
-                        <div class="culture-collage">
-                            <!-- Foto utama (besar, kiri-atas) -->
-                            <div class="collage-shape shape-main">
-                                <img src="image/sunda-culture-1.png" alt="Pasangan Adat Sunda">
-                            </div>
-
-                            <!-- Foto kedua (kanan-bawah, gambar angklung/tari) -->
-                            <div class="collage-shape shape-secondary">
-                                <img src="image/sunda-culture-2.png" alt="Angklung & Tari Jaipong">
-                            </div>
-
-                            <!-- Badge lingkaran dekoratif ala batik -->
-                            <div class="collage-badge">
-                                <i class="fa-solid fa-sun"></i>
-                            </div>
-
-                            <!-- Titik-titik dekoratif -->
-                            <span class="collage-leaf leaf-1"><i class="fa-solid fa-leaf"></i></span>
-                        </div>
-                    </div>
+            <div class="card-container">
+                <div class="content-left">
+                <div class="tagline">Budaya Sunda</div>
+                    <h1 class="main-title">Kenali Budaya<br>Sunda,</h1>
+                    <span class="sub-title-script">Jiwa Bandung</span>
+                <div class="divider"></div>
+                    <p class="description">
+                    Budaya Sunda adalah bagian tak terpisahkan dari identitas masyarakat <strong>Bandung</strong> yang ramah, kreatif, dan penuh makna.
+                    </p>
+                <div class="quote-box">
+                    <p class="quote-text">
+                    Ngombong dina kaharmonisan, berkarya dengan kreativitas, menyapa dunia dengan keramahan.
+                    </p>
+                <div class="quote-author">— Nilai Masyarakat Sunda</div>
                 </div>
             </div>
 
+            <div class="culture-hero-image-side">
+                <img src="image/culture_hero.png" alt="Budaya Sunda Collage" class="culture-hero-image">
             </div>
+        </div>
+
             <!-- Bagian Tengah: Grid 5 Kartu Unsur Kebudayaan -->
             <div class="culture-cards-grid">
 
@@ -708,7 +588,7 @@
                     </div>
 
                     <h1 class="quiz-hero-title">
-                        Test Your Knowledge <br> About <span class="text-gold">Bandung!</span>
+                        Test Your Knowledge <br> About <span class="gradient-bandung">Bandung!</span>
                     </h1>
 
                     <div class="quiz-hero-divider">
