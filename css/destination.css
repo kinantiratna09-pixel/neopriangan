@@ -11,7 +11,7 @@
  .dest-container {
      width: 100%;
      max-width: 1200px;
-     margin: 0 auto;
+     margin: 40px auto;
      padding: 0 24px;
  }
  /* --- DET DETAIL HERO BANNER --- */
@@ -196,25 +196,6 @@
      display: flex;
      justify-content: space-between;
      align-items: center;
- }
- 
- .dest-sort-left {
-     font-size: 13px;
-     color: #718096;
-     display: flex;
-     align-items: center;
-     gap: 8px;
- }
- 
- .dest-select-sort {
-     border: 1px solid #E2E8F0;
-     padding: 6px 14px;
-     border-radius: 8px;
-     font-size: 13px;
-     color: #031828;
-     background: #ffffff;
-     outline: none;
-     font-weight: 500;
  }
  
  .dest-view-right {

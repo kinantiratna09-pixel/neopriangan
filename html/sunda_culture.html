@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,7 +53,6 @@
         <!-- Hero Banner -->
         <div class="culture-p-hero" style="background-image: linear-gradient(rgba(3, 24, 40, 0.45), rgba(3, 24, 40, 0.3)), url('../image/rumah-adat-sunda.png');">
             <div class="culture-p-container">
-                <div class="culture-p-breadcrumb">Home &gt; Culture</div>
                 <h1>Jelajahi <br>Budaya Sunda</h1>
                 <p class="culture-p-subtitle">Kenali lebih dalam tentang warisan budaya Sunda yang kaya akan nilai, tradisi, dan kearifan lokal.</p>
 
@@ -126,10 +126,10 @@
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
-                    <!-- Card 5: ........ -->
+                    <!-- Card 5: tari jaipong -->
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/aksara-sunda.png" alt="Bahasa Sunda" onerror="this.src='https://unsplash.com/random'">
+                            <img src="../image/tari-jaipong.png" alt="Tari Jaipong" onerror="this.src='https://unsplash.com/random'">
                             <span class="culture-p-badge b-blue">Bahasa</span>
                         </div>
                         <div class="culture-p-card-info">
@@ -353,5 +353,65 @@
         </div>
     </footer>
 
+    <!-- Modal for expanded card -->
+    <div class="culture-modal" id="cultureModal" aria-hidden="true">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div class="modal-card" role="dialog" aria-modal="true">
+            <div class="modal-media"><img id="modalImg" src="" alt=""></div>
+            <div class="modal-body">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            const modal = document.getElementById('cultureModal');
+            const modalImg = document.getElementById('modalImg');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalDesc = document.getElementById('modalDesc');
+            const modalClose = document.getElementById('modalClose');
+
+            function openModal(imgSrc, title, desc) {
+                modalImg.src = imgSrc || '';
+                modalImg.alt = title || '';
+                modalTitle.textContent = title || '';
+                modalDesc.textContent = desc || '';
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+            }
+
+            function closeModal() {
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+                modalImg.src = '';
+            }
+
+            document.querySelectorAll('.culture-p-arrow-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const article = e.target.closest('.culture-p-card-item');
+                    if (!article) return;
+                    const img = article.querySelector('.culture-p-card-media img');
+                    const title = article.querySelector('.culture-p-card-info h3') ? .textContent || '';
+                    const desc = article.querySelector('.culture-p-card-info p') ? .textContent || '';
+                    const src = img ? img.getAttribute('src') : '';
+                    // if src is relative, normalize to absolute path relative to this file
+                    const normalized = src && src.startsWith('../') ? src : src;
+                    openModal(normalized, title, desc);
+                });
+            });
+
+            modalClose.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+        })();
+    </script>
+
 </body>
+
 </html>

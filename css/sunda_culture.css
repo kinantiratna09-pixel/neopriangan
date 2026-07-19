@@ -3,24 +3,37 @@
    ========================================== */
 
 .culture-p-section {
-    background-color: #f8faff;
+    /* align background with timeline theme */
+    --navy-deep: #0d2340;
+    --navy: #a1ac9e;
+    --gold: #D4A574;
+    --cream: #f6efe3;
+    background-color: var(--navy-deep);
+    background-repeat: repeat;
+    background-size: 260px;
+    color: var(--cream);
     width: 100%;
+    position: relative;
 }
 
 .culture-p-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding-top: 80px;
+    padding-right: 50px;
+    text-align: center;
 }
+
 
 /* --- HERO COVER BANNER ATAS --- */
 
 .culture-p-hero {
     background-size: cover;
     background-position: center;
-    padding: 60px 0 80px 0;
+    padding: 60px 0 40px 0;
     color: #ffffff;
+    box-shadow: inset 0 120px 160px rgba(13, 35, 64, 0.6);
 }
 
 .culture-p-breadcrumb {
@@ -37,9 +50,7 @@
 }
 
 .culture-p-subtitle {
-    font-size: 14px;
     color: rgba(255, 255, 255, 0.85);
-    max-width: 520px;
     line-height: 1.6;
     margin-bottom: 30px;
 }
@@ -48,6 +59,7 @@
     display: flex;
     gap: 12px;
     max-width: 550px;
+    margin: 0 auto;
 }
 
 .culture-p-input-wrap {
@@ -213,6 +225,7 @@
    GRID CONTENT COMPONENT (KANAN)
    ========================================== */
 
+
 /*.culture-p-toolbar {
     display: flex;
     justify-content: space-between;
@@ -279,6 +292,86 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+
+/* Featured quick links below hero to reduce visual emptiness */
+
+.culture-p-featured {
+    display: flex;
+    gap: 16px;
+    max-width: 980px;
+    margin: 18px auto 0;
+    padding: 0 24px;
+}
+
+.culture-p-featured .feat {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 12px 16px;
+    flex: 1;
+    color: #e6eef8;
+}
+
+.culture-p-featured .feat h4 {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.culture-p-featured .feat p {
+    font-size: 13px;
+    color: #cbdaf0;
+}
+
+
+/* Modal for expanded card */
+
+.culture-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(4, 11, 25, 0.6);
+    z-index: 9999;
+}
+
+.culture-modal.open {
+    display: flex;
+}
+
+.culture-modal .modal-card {
+    width: min(920px, 94%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.03));
+    border-radius: 14px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.culture-modal .modal-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.culture-modal .modal-body {
+    padding: 20px;
+    color: #e6eef8;
+}
+
+.culture-modal .modal-close {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 .culture-p-card-item {
@@ -375,6 +468,7 @@
     line-height: 1.5;
     margin-bottom: 12px;
 }
+
 
 /*.culture-p-rating-row {
     margin-top: auto;

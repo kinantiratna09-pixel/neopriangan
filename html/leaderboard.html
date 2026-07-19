@@ -14,270 +14,272 @@
 </head>
 
 <body>
-
-    <header class="hero" id="home">
-        <nav class="navbar scrolled" id="navbar">
-            <div class="container nav-inner">
-                <a class="brand" href="#home">
-                    <img src="image/logo-gedung-sate.png" alt="Bandung icon">
-                    <div class="brand-text">
-                        <small>Creative Smart City</small>
-                    </div>
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="#home" data-i18n-key="navHome">Home</a></li>
-                    <li><a href="#about" data-i18n-key="navAbout">About</a></li>
-                    <li><a href="#categories" data-i18n-key="navCategories">Categories</a></li>
-                    <li><a href="#timeline" data-i18n-key="navTimeline">Timeline</a></li>
-                    <li><a href="#events" data-i18n-key="navEvents">Events</a></li>
-                    <li><a href="html/maps.html" data-i18n-key="navMaps">Maps</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <div class="language-switcher view-toggle">
-                        <div class="toggle-pill">
-                            <button class="toggle-btn lang-btn active" data-lang="id">ID</button>
-                            <button class="toggle-btn lang-btn" data-lang="en">EN</button>
-                        </div>
-                    </div>
-                    <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">Explore</a>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="#home">
+                <img src="image/logo-gedung-sate.png" alt="Bandung icon">
+                <div class="brand-text">
+                    <small data-translate>Creative Smart City</small>
                 </div>
-                <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#home" data-i18n-key="navHome">Beranda</a></li>
+
+                <li class="has-dropdown">
+                    <a href="#about" data-i18n-key="navAbout">Pusat ⏷</a>
+                    <div class="dropdown-panel">
+                        <a href="#about">Tentang</a>
+                        <a href="#destinasi">Destinasi Favorit</a>
+                        <a href="#sunda-culture">Sunda Culture</a>
+                    </div>
+                </li>
+
+                <li><a href="#timeline" data-i18n-key="navTimeline">Sejarah</a></li>
+                <li><a href="#events" data-i18n-key="navEvents">Acara</a></li>
+                <li><a href="#quiz" data-i18n-key="navQuiz">Kuis</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="language-switcher view-toggle">
+                    <div class="toggle-pill">
+                        <button class="toggle-btn lang-btn active" data-lang="id">ID</button>
+                        <button class="toggle-btn lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">❤︎</a>
             </div>
-        </nav>
 
-<!-- LEADERBOARD PAGE SECTION -->
-<section class="lb-page-section">
-    <div class="lb-page-container">
+            <!-- Tombol Hamburger untuk Mobile -->
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        </div>
+    </nav>
 
-        <!-- ==========================================
+    <!-- LEADERBOARD PAGE SECTION -->
+    <section class="lb-page-section">
+        <div class="lb-page-container">
+
+            <!-- ==========================================
            BAGIAN ATAS: HERO TITLE & CARD PERINGKATMU
            ========================================== -->
-        <div class="lb-page-header-grid">
-            <!-- Sisi Kiri: Judul Halaman & Tab Filter Global -->
-            <div class="lb-page-title-side">
-                <div class="lb-page-breadcrumb">Home &gt; Quiz &gt; Leaderboard</div>
-                <h1>Papan Peringkat</h1>
-                <p class="lb-page-subtitle">Berkompetisilah dan jadilah ahli pengetahuan tentang Bandung!</p>
+            <div class="lb-page-header-grid">
+                <!-- Sisi Kiri: Judul Halaman & Tab Filter Global -->
+                <div class="lb-page-title-side">
+                    <div class="lb-page-breadcrumb">Home &gt; Quiz &gt; Leaderboard</div>
+                    <h1>Papan Peringkat</h1>
+                    <p class="lb-page-subtitle">Berkompetisilah dan jadilah ahli pengetahuan tentang Bandung!</p>
 
-                <!-- Tab Menu Atas -->
-                <div class="lb-page-tab-row">
-                    <button class="lb-tab-btn active"><i class="fa-solid fa-earth-americas"></i> Peringkat Global</button>
-                    <button class="lb-tab-btn"><i class="fa-solid fa-user-group"></i> Peringkat Teman</button>
-                    <button class="lb-tab-btn"><i class="fa-solid fa-location-dot"></i> Peringkat Kota</button>
+                    <!-- Tab Menu Atas -->
+                    <div class="lb-page-tab-row">
+                        <button class="lb-tab-btn active"><i class="fa-solid fa-earth-americas"></i> Peringkat Global</button>
+                        <button class="lb-tab-btn"><i class="fa-solid fa-user-group"></i> Peringkat Teman</button>
+                        <button class="lb-tab-btn"><i class="fa-solid fa-location-dot"></i> Peringkat Kota</button>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Kartu Profil Skor Pengguna Sendiri -->
+                <div class="lb-page-user-card" style="background-image: linear-gradient(to right, rgba(255,255,255,0.95), rgba(235,243,255,0.9)), url('image/gedungsate-fade.png'); background-size: contain; background-position: right; background-repeat: no-repeat;">
+                    <span class="user-card-title">Peringkatmu</span>
+                    <div class="user-card-body">
+                        <div class="user-avatar-wrap">
+                            <img src="https://pravatar.cc" alt="Avatar Kamu">
+                            <span class="user-badge-num">12</span>
+                        </div>
+                        <div class="user-meta-txt">
+                            <strong>Kamu</strong>
+                            <p>Explorer Bandung</p>
+                        </div>
+                        <div class="user-score-block">
+                            <small>Total XP</small>
+                            <strong>320 XP</strong>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Sisi Kanan: Kartu Profil Skor Pengguna Sendiri -->
-            <div class="lb-page-user-card" style="background-image: linear-gradient(to right, rgba(255,255,255,0.95), rgba(235,243,255,0.9)), url('image/gedungsate-fade.png'); background-size: contain; background-position: right; background-repeat: no-repeat;">
-                <span class="user-card-title">Peringkatmu</span>
-                <div class="user-card-body">
-                    <div class="user-avatar-wrap">
-                        <img src="https://pravatar.cc" alt="Avatar Kamu">
-                        <span class="user-badge-num">12</span>
-                    </div>
-                    <div class="user-meta-txt">
-                        <strong>Kamu</strong>
-                        <p>Explorer Bandung</p>
-                    </div>
-                    <div class="user-score-block">
-                        <small>Total XP</small>
-                        <strong>320 XP</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==========================================
+            <!-- ==========================================
            BAGIAN UTAMA: TABEL PERINGKAT + SIDEBAR STATISTIK
            ========================================== -->
-        <div class="lb-page-main-layout">
+            <div class="lb-page-main-layout">
 
-            <!-- SISI KIRI: TABEL DAFTAR PAPAN PERINGKAT -->
-            <div class="lb-page-content-left">
-                <div class="lb-table-wrapper-box">
+                <!-- SISI KIRI: TABEL DAFTAR PAPAN PERINGKAT -->
+                <div class="lb-page-content-left">
+                    <div class="lb-table-wrapper-box">
 
-                    <!-- Toolbar Filter Dropdown Dropdown -->
-                    <div class="lb-table-toolbar">
-                        <div class="lb-select-wrap">
-                            <select>
+                        <!-- Toolbar Filter Dropdown Dropdown -->
+                        <div class="lb-table-toolbar">
+                            <div class="lb-select-wrap">
+                                <select>
                                 <option>Semua Level</option>
                                 <option>Lv. 1 - Pemula</option>
                                 <option>Lv. 2 - Explorer</option>
                             </select>
-                        </div>
-                        <div class="lb-select-wrap">
-                            <select>
+                            </div>
+                            <div class="lb-select-wrap">
+                                <select>
                                 <option>📅 Mingguan</option>
                                 <option>Bulanan</option>
                                 <option>Sepanjang Masa</option>
                             </select>
-                        </div>
-                    </div>
-
-                    <!-- Layout Utama Tabel Komponen -->
-                    <div class="lb-responsive-table">
-                        <table class="lb-main-table">
-                            <thead>
-                                <tr>
-                                    <th>Peringkat</th>
-                                    <th>Pengguna</th>
-                                    <th>Level</th>
-                                    <th class="text-right">Total XP</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <!-- Juara 1 (Gold) -->
-                                <tr class="rank-row-top gold-bg">
-                                    <td><span class="rank-medal gold">🥇</span></td>
-                                    <td>
-                                        <div class="user-table-profile">
-                                            <img src="https://pravatar.cc" alt="Andi">
-                                            <div class="u-name"><strong>Andi Wijaya</strong><small>Master Bandung</small></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="lvl-table-badge"><span class="lvl-icon purple">👑</span> <strong>Lv. 5</strong><small>Legenda Bandung</small></div>
-                                    </td>
-                                    <td class="text-right"><strong class="xp-text gold-color">2.450 XP</strong></td>
-                                </tr>
-
-                                <!-- Juara 2 (Silver) -->
-                                <tr class="rank-row-top silver-bg">
-                                    <td><span class="rank-medal silver">🥈</span></td>
-                                    <td>
-                                        <div class="user-table-profile">
-                                            <img src="https://pravatar.cc" alt="Siti">
-                                            <div class="u-name"><strong>Siti Nurhaliza</strong><small>Master Bandung</small></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="lvl-table-badge"><span class="lvl-icon purple">👑</span> <strong>Lv. 5</strong><small>Legenda Bandung</small></div>
-                                    </td>
-                                    <td class="text-right"><strong class="xp-text silver-color">2.320 XP</strong></td>
-                                </tr>
-
-                                <!-- Juara 3 (Bronze) -->
-                                <tr class="rank-row-top bronze-bg">
-                                    <td><span class="rank-medal bronze">🥉</span></td>
-                                    <td>
-                                        <div class="user-table-profile">
-                                            <img src="https://pravatar.cc" alt="Dimas">
-                                            <div class="u-name"><strong>Dimas Pratama</strong><small>Explorer Bandung</small></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="lvl-table-badge"><span class="lvl-icon yellow">🏅</span> <strong>Lv. 2</strong><small>Explorer Bandung</small></div>
-                                    </td>
-                                    <td class="text-right"><strong class="xp-text bronze-color">1.950 XP</strong></td>
-                                </tr>
-
-                                <!-- Peringkat 4 -->
-                                <tr>
-                                    <td><span class="rank-number-label">4</span></td>
-                                    <td>
-                                        <div class="user-table-profile">
-                                            <img src="https://pravatar.cc" alt="Gina">
-                                            <div class="u-name"><strong>Gina Kartika</strong><small>Explorer Bandung</small></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="lvl-table-badge"><span class="lvl-icon yellow">🏅</span> <strong>Lv. 2</strong><small>Explorer Bandung</small></div>
-                                    </td>
-                                    <td class="text-right"><strong class="xp-text">1.650 XP</strong></td>
-                                </tr>
-
-                                <!-- Peringkat 5 -->
-                                <tr>
-                                    <td><span class="rank-number-label">5</span></td>
-                                    <td>
-                                        <div class="user-table-profile">
-                                            <img src="https://pravatar.cc" alt="Fadil">
-                                            <div class="u-name"><strong>Fadil Rahman</strong><small>Penjelajah Daerah</small></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="lvl-table-badge"><span class="lvl-icon blue">📘</span> <strong>Lv. 3</strong><small>Penjelajah Sejarah</small></div>
-                                    </td>
-                                    <td class="text-right"><strong class="xp-text">1.420 XP</strong></td>
-                                </tr>
-
-                                <!-- Baris Sorot Nilai Sendiri (Peringkat 12) -->
-                                <tr class="rank-row-own-user">
-                                    <td><span class="rank-number-label text-blue">12</span></td>
-                                    <td>
-                                        <div class="user-table-profile">
-                                            <img src="https://pravatar.cc" alt="Kamu">
-                                            <div class="u-name"><strong class="text-blue">Kamu</strong><small>Explorer Bandung</small></div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        <div class="lvl-table-badge"><span class="lvl-icon yellow">🏅</span> <strong>Lv. 2</strong><small>Explorer Bandung</small></div>
-                                    </td>
-                                    <td class="text-right"><strong class="xp-text">1.200 XP</strong></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <!-- PREMIUM DARK BLUE FOOTER -->
-                <footer class="main-footer-section">
-                    <div class="container footer-grid-layout">
-                        <!-- Kolom 1: Profil Brand -->
-                        <div class="footer-column-brand">
-                            <div class="footer-logo">
-                                <a class="brand" href="#home">
-                                    <img src="image/logo-gedung-sate.png" alt="Bandung icon">
-                                    <div class="brand-text">
-                                        <div class="logo-txt">
-                                            <strong class="gradient-bandung">BANDUNG</strong>
-                                            <small>Creative Smart City</small>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <p class="brand-desc-text">Platform informasi wisata dan budaya Kota Bandung yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
-                        </div>
-                        <!-- Kolom 2: Navigasi Menu -->
-                        <div class="footer-column-links">
-                            <h4>Jelajahi</h4>
-                            <ul>
-                                <li><a href="#about"><i class="fa-solid fa-info-circle"></i><span>Tentang Bandung</span></a></li>
-                                <li><a href="#destinations"><i class="fa-solid fa-location-dot"></i><span>Destinasi</span></a></li>
-                                <li><a href="#events"><i class="fa-solid fa-calendar-days"></i><span>Event</span></a></li>
-                                <li><a href="#timeline"><i class="fa-solid fa-clock"></i><span>Timeline</span></a></li>
-                                <li><a href="#quiz-section"><i class="fa-solid fa-question-circle"></i><span>Kuis Interaktif</span></a></li>
-                            </ul>
-                        </div>
-                        <!-- Kolom 3: Informasi -->
-                        <div class="footer-column-links">
-                            <h4 data-i18n-key="footerInfoTitle">Informasi</h4>
-                            <ul>
-                                <li><a href="#" data-i18n-key="footerGuide"><i class="fa-solid fa-book"></i><span>Panduan Wisata</span></a></li>
-                                <li><a href="#" data-i18n-key="footerTransport"><i class="fa-solid fa-bus"></i><span>Transportasi</span></a></li>
-                                <li><a href="#" data-i18n-key="footerFood"><i class="fa-solid fa-utensils"></i><span>Kuliner</span></a></li>
-                                <li><a href="#" data-i18n-key="footerStay"><i class="fa-solid fa-bed"></i><span>Akomodasi</span></a></li>
-                                <li><a href="#" data-i18n-key="footerNews"><i class="fa-solid fa-newspaper"></i><span>Berita & Update</span></a></li>
-                            </ul>
-                        </div>
-                        <!-- Kolom 4: Sosial dan Kontak -->
-                        <div class="footer-social-links">
-                            <h4 data-i18n-key="footerInfoTittle">Sosial Media</h4>
-                            <ul>
-                                <li><a href="#"><i class="fa-brands fa-instagram"></i><span>@kota_bandung</span></a></li>
-                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i><span>@bandung_kota</span></a></li>
-                                <li><a href="#"><i class="fa-brands fa-tiktok"></i><span>@cinta_bandung</span></a></li>
-                                <li><a href="#"><i class="fa-brands fa-youtube"></i><span>seputar bandung</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="footer-bottom-copyright">
-                            <span>&copy; 2025 Bandung Smart City. All Rights Reserved.</span>
-                            <div class="footer-links-row">
-                                <a href="#">Privacy Policy</a>
-                                <a href="#">Terms of Service</a>
-                                <a href="#">Support</a>
                             </div>
                         </div>
+
+                        <!-- Layout Utama Tabel Komponen -->
+                        <div class="lb-responsive-table">
+                            <table class="lb-main-table">
+                                <thead>
+                                    <tr>
+                                        <th>Peringkat</th>
+                                        <th>Pengguna</th>
+                                        <th>Level</th>
+                                        <th class="text-right">Total XP</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Juara 1 (Gold) -->
+                                    <tr class="rank-row-top gold-bg">
+                                        <td><span class="rank-medal gold">🥇</span></td>
+                                        <td>
+                                            <div class="user-table-profile">
+                                                <img src="https://pravatar.cc" alt="Andi">
+                                                <div class="u-name"><strong>Andi Wijaya</strong><small>Master Bandung</small></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="lvl-table-badge"><span class="lvl-icon purple">👑</span> <strong>Lv. 5</strong><small>Legenda Bandung</small></div>
+                                        </td>
+                                        <td class="text-right"><strong class="xp-text gold-color">2.450 XP</strong></td>
+                                    </tr>
+
+                                    <!-- Juara 2 (Silver) -->
+                                    <tr class="rank-row-top silver-bg">
+                                        <td><span class="rank-medal silver">🥈</span></td>
+                                        <td>
+                                            <div class="user-table-profile">
+                                                <img src="https://pravatar.cc" alt="Siti">
+                                                <div class="u-name"><strong>Siti Nurhaliza</strong><small>Master Bandung</small></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="lvl-table-badge"><span class="lvl-icon purple">👑</span> <strong>Lv. 5</strong><small>Legenda Bandung</small></div>
+                                        </td>
+                                        <td class="text-right"><strong class="xp-text silver-color">2.320 XP</strong></td>
+                                    </tr>
+
+                                    <!-- Juara 3 (Bronze) -->
+                                    <tr class="rank-row-top bronze-bg">
+                                        <td><span class="rank-medal bronze">🥉</span></td>
+                                        <td>
+                                            <div class="user-table-profile">
+                                                <img src="https://pravatar.cc" alt="Dimas">
+                                                <div class="u-name"><strong>Dimas Pratama</strong><small>Explorer Bandung</small></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="lvl-table-badge"><span class="lvl-icon yellow">🏅</span> <strong>Lv. 2</strong><small>Explorer Bandung</small></div>
+                                        </td>
+                                        <td class="text-right"><strong class="xp-text bronze-color">1.950 XP</strong></td>
+                                    </tr>
+
+                                    <!-- Peringkat 4 -->
+                                    <tr>
+                                        <td><span class="rank-number-label">4</span></td>
+                                        <td>
+                                            <div class="user-table-profile">
+                                                <img src="https://pravatar.cc" alt="Gina">
+                                                <div class="u-name"><strong>Gina Kartika</strong><small>Explorer Bandung</small></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="lvl-table-badge"><span class="lvl-icon yellow">🏅</span> <strong>Lv. 2</strong><small>Explorer Bandung</small></div>
+                                        </td>
+                                        <td class="text-right"><strong class="xp-text">1.650 XP</strong></td>
+                                    </tr>
+
+                                    <!-- Peringkat 5 -->
+                                    <tr>
+                                        <td><span class="rank-number-label">5</span></td>
+                                        <td>
+                                            <div class="user-table-profile">
+                                                <img src="https://pravatar.cc" alt="Fadil">
+                                                <div class="u-name"><strong>Fadil Rahman</strong><small>Penjelajah Daerah</small></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="lvl-table-badge"><span class="lvl-icon blue">📘</span> <strong>Lv. 3</strong><small>Penjelajah Sejarah</small></div>
+                                        </td>
+                                        <td class="text-right"><strong class="xp-text">1.420 XP</strong></td>
+                                    </tr>
+
+                                    <!-- Baris Sorot Nilai Sendiri (Peringkat 12) -->
+                                    <tr class="rank-row-own-user">
+                                        <td><span class="rank-number-label text-blue">12</span></td>
+                                        <td>
+                                            <div class="user-table-profile">
+                                                <img src="https://pravatar.cc" alt="Kamu">
+                                                <div class="u-name"><strong class="text-blue">Kamu</strong><small>Explorer Bandung</small></div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="lvl-table-badge"><span class="lvl-icon yellow">🏅</span> <strong>Lv. 2</strong><small>Explorer Bandung</small></div>
+                                        </td>
+                                        <td class="text-right"><strong class="xp-text">1.200 XP</strong></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </footer>
+
+                    <!-- PREMIUM DARK BLUE FOOTER -->
+                    <footer class="main-footer-section">
+                        <div class="container footer-grid-layout">
+                            <!-- Kolom 1: Profil Brand -->
+                            <div class="footer-column-brand">
+                                <div class="footer-logo">
+                                    <a class="brand" href="#home">
+                                        <img src="image/logo-gedung-sate.png" alt="Bandung icon">
+                                        <div class="brand-text">
+                                            <div class="logo-txt">
+                                                <strong class="gradient-bandung">BANDUNG</strong>
+                                                <small data-i18n-key="brandText">Creative Smart City</small>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <p class="brand-desc-text" data-i18n-key="footerBrandDesc">Platform informasi wisata dan budaya Kota <span class="gradient-bandung">Bandung</span> yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
+                            </div>
+                            <!-- Kolom 2: Navigasi Menu -->
+                            <div class="footer-column-links">
+                                <h4 data-i18n-key="footerExplore">Jelajahi</h4>
+                                <ul>
+                                    <li><a href="#about"><i class="fa-solid fa-info-circle"></i><span data-i18n-key="navAbout">Tentang Bandung</span></a></li>
+                                    <li><a href="#destinations"><i class="fa-solid fa-location-dot"></i><span data-i18n-key="footerDestinations">Destinasi</span></a></li>
+                                    <li><a href="#events"><i class="fa-solid fa-calendar-days"></i><span data-i18n-key="footerEvents">Event</span></a></li>
+                                    <li><a href="#timeline"><i class="fa-solid fa-clock"></i><span data-i18n-key="footerTimeline">Timeline</span></a></li>
+                                    <li><a href="#interactive-quiz"><i class="fa-solid fa-question-circle"></i><span data-i18n-key="footerQuiz">Kuis Interaktif</span></a></li>
+                                </ul>
+                            </div>
+                            <!-- Kolom 3: Sosial dan Kontak -->
+                            <div class="footer-social-links">
+                                <h4 data-i18n-key="footerInfoTittle">Sosial Media</h4>
+                                <ul>
+                                    <li><a href="https://www.instagram.com/infobandungkota/"><i class="fa-brands fa-instagram"></i><span>@infobdgcom</span></a></li>
+                                    <li><a href="https://www.facebook.com/humaskotabandung/?locale=id_ID"><i class="fa-brands fa-facebook-f"></i><span>@humaskotabandung</span></a></li>
+                                    <li><a href="https://www.tiktok.com/@humasbdg"><i class="fa-brands fa-tiktok"></i><span>@humasbdg</span></a></li>
+                                    <li><a href="https://www.youtube.com/c/thisisbandung"><i class="fa-brands fa-youtube"></i><span>@ThisisBadung</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="footer-bottom-copyright">
+                                <span>&copy; 2026 <span class="gradient-bandung">Bandung</span> Smart City. All Rights Reserved.</span>
+
+                            </div>
+                        </div>
+                    </footer>
+                    <script src="../main.js"></script>
+</body>
+
+</html>

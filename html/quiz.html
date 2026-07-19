@@ -12,276 +12,278 @@
     <link rel="stylesheet" href="../css/quiz.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+<nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+        <a class="brand" href="#home">
+            <img src="image/logo-gedung-sate.png" alt="Bandung icon">
+            <div class="brand-text">
+                <small data-translate>Creative Smart City</small>
+            </div>
+        </a>
+
+        <ul class="nav-menu">
+            <li><a href="#home" data-i18n-key="navHome">Beranda</a></li>
+
+            <li class="has-dropdown">
+                <a href="#about" data-i18n-key="navAbout">Pusat ⏷</a>
+                <div class="dropdown-panel">
+                    <a href="#about">Tentang</a>
+                    <a href="#destinasi">Destinasi Favorit</a>
+                    <a href="#sunda-culture">Sunda Culture</a>
+                </div>
+            </li>
+
+            <li><a href="#timeline" data-i18n-key="navTimeline">Sejarah</a></li>
+            <li><a href="#events" data-i18n-key="navEvents">Acara</a></li>
+            <li><a href="#quiz" data-i18n-key="navQuiz">Kuis</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="language-switcher view-toggle">
+                <div class="toggle-pill">
+                    <button class="toggle-btn lang-btn active" data-lang="id">ID</button>
+                    <button class="toggle-btn lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">❤︎</a>
+        </div>
+
+        <!-- Tombol Hamburger untuk Mobile -->
+        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</nav>
 
 <body>
 
-    <header class="hero" id="home">
-        <nav class="navbar scrolled" id="navbar">
-            <div class="container nav-inner">
-                <a class="brand" href="#home">
-                    <img src="image/logo-gedung-sate.png" alt="Bandung icon">
-                    <div class="brand-text">
-                        <small>Creative Smart City</small>
-                    </div>
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="#home" data-i18n-key="navHome">Home</a></li>
-                    <li><a href="#about" data-i18n-key="navAbout">About</a></li>
-                    <li><a href="#categories" data-i18n-key="navCategories">Categories</a></li>
-                    <li><a href="#timeline" data-i18n-key="navTimeline">Timeline</a></li>
-                    <li><a href="#events" data-i18n-key="navEvents">Events</a></li>
-                    <li><a href="html/maps.html" data-i18n-key="navMaps">Maps</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <div class="language-switcher view-toggle">
-                        <div class="toggle-pill">
-                            <button class="toggle-btn lang-btn active" data-lang="id">ID</button>
-                            <button class="toggle-btn lang-btn" data-lang="en">EN</button>
-                        </div>
-                    </div>
-                    <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">Explore</a>
-                </div>
-                <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
-            </div>
-        </nav>
 
-<!-- INTERACTIVE QUIZ PLAYPAGE SECTION -->
-<section class="quiz-p-section">
-    <div class="quiz-p-container quiz-p-main-layout">
+    <!-- INTERACTIVE QUIZ PLAYPAGE SECTION -->
+    <section class="quiz-p-section">
+        <div class="quiz-p-container quiz-p-main-layout">
 
-        <!-- ==========================================
+            <!-- ==========================================
            SISI KIRI: PANEL PERTANYAAN UTAMA KUIS
            ========================================== -->
-        <div class="quiz-p-content-left">
+            <div class="quiz-p-content-left">
 
-            <!-- Tombol Kembali ke Kuis -->
-            <a href="#" class="quiz-p-btn-back">➔ Kembali ke Kuis</a>
+                <!-- Tombol Kembali ke Kuis -->
+                <a href="#" class="quiz-p-btn-back">➔ Kembali ke Kuis</a>
 
-            <!-- Header Judul Kuis & Foto Gedung Sate Sejajar -->
-            <div class="quiz-p-header-row">
-                <div class="quiz-p-header-text">
-                    <span class="quiz-p-badge"><i class="fa-solid fa-graduation-cap"></i> Pengetahuan Bandung</span>
-                    <h1>Uji Pengetahuanmu <br>Tentang <span>Bandung!</span></h1>
-                    <p class="quiz-p-subtitle">Jawab pertanyaan berikut dan buktikan seberapa baik kamu mengenal Kota Bandung.</p>
-                </div>
-                <!-- Gambar Sisi Kanan Atas -->
-                <div class="quiz-p-image-wrap">
-                    <img src="image/gedungsate.png" alt="Gedung Sate" onerror="this.src='https://unsplash.com'">
-                    <div class="quiz-p-img-decor"><i class="fa-solid fa-question"></i></div>
-                </div>
-            </div>
-
-            <!-- Progress Indikator & Timer Batas Waktu Soal -->
-            <div class="quiz-p-progress-container">
-                <div class="quiz-p-meta-info">
-                    <span class="quiz-p-q-count">Pertanyaan <strong>1</strong> dari 10</span>
-                    <span class="quiz-p-timer"><i class="fa-regular fa-clock"></i> 00:18</span>
-                </div>
-                <!-- Progress Line Track -->
-                <div class="quiz-p-progress-line-track">
-                    <div class="quiz-p-progress-line-fill" style="width: 10%;"></div>
-                </div>
-            </div>
-
-            <!-- Inti Papan Lembar Pertanyaan Kuis -->
-            <div class="quiz-p-question-card">
-                <h3>Kota Bandung dijuluki sebagai kota apa?</h3>
-
-                <div class="quiz-p-options-list">
-                    <!-- Opsi A (Status Aktif Terpilih Benar) -->
-                    <div class="quiz-p-option-row active-correct">
-                        <span class="quiz-p-opt-idx">A</span>
-                        <p>Kota Kembang</p>
-                        <i class="fa-solid fa-circle-check quiz-p-check-icon"></i>
+                <!-- Header Judul Kuis & Foto Gedung Sate Sejajar -->
+                <div class="quiz-p-header-row">
+                    <div class="quiz-p-header-text">
+                        <span class="quiz-p-badge"><i class="fa-solid fa-graduation-cap"></i> Pengetahuan Bandung</span>
+                        <h1>Uji Pengetahuanmu <br>Tentang <span>Bandung!</span></h1>
+                        <p class="quiz-p-subtitle">Jawab pertanyaan berikut dan buktikan seberapa baik kamu mengenal Kota Bandung.</p>
                     </div>
-
-                    <!-- Opsi B -->
-                    <div class="quiz-p-option-row">
-                        <span class="quiz-p-opt-idx">B</span>
-                        <p>Kota Hujan</p>
-                    </div>
-
-                    <!-- Opsi C -->
-                    <div class="quiz-p-option-row">
-                        <span class="quiz-p-opt-idx">C</span>
-                        <p>Kota Sejuta Bunga</p>
-                    </div>
-
-                    <!-- Opsi D -->
-                    <div class="quiz-p-option-row">
-                        <span class="quiz-p-opt-idx">D</span>
-                        <p>Kota Kreatif</p>
+                    <!-- Gambar Sisi Kanan Atas -->
+                    <div class="quiz-p-image-wrap">
+                        <img src="image/gedungsate.png" alt="Gedung Sate" onerror="this.src='https://unsplash.com'">
+                        <div class="quiz-p-img-decor"><i class="fa-solid fa-question"></i></div>
                     </div>
                 </div>
+
+                <!-- Progress Indikator & Timer Batas Waktu Soal -->
+                <div class="quiz-p-progress-container">
+                    <div class="quiz-p-meta-info">
+                        <span class="quiz-p-q-count">Pertanyaan <strong>1</strong> dari 10</span>
+                        <span class="quiz-p-timer"><i class="fa-regular fa-clock"></i> 00:18</span>
+                    </div>
+                    <!-- Progress Line Track -->
+                    <div class="quiz-p-progress-line-track">
+                        <div class="quiz-p-progress-line-fill" style="width: 10%;"></div>
+                    </div>
+                </div>
+
+                <!-- Inti Papan Lembar Pertanyaan Kuis -->
+                <div class="quiz-p-question-card">
+                    <h3>Kota Bandung dijuluki sebagai kota apa?</h3>
+
+                    <div class="quiz-p-options-list">
+                        <!-- Opsi A (Status Aktif Terpilih Benar) -->
+                        <div class="quiz-p-option-row active-correct">
+                            <span class="quiz-p-opt-idx">A</span>
+                            <p>Kota Kembang</p>
+                            <i class="fa-solid fa-circle-check quiz-p-check-icon"></i>
+                        </div>
+
+                        <!-- Opsi B -->
+                        <div class="quiz-p-option-row">
+                            <span class="quiz-p-opt-idx">B</span>
+                            <p>Kota Hujan</p>
+                        </div>
+
+                        <!-- Opsi C -->
+                        <div class="quiz-p-option-row">
+                            <span class="quiz-p-opt-idx">C</span>
+                            <p>Kota Sejuta Bunga</p>
+                        </div>
+
+                        <!-- Opsi D -->
+                        <div class="quiz-p-option-row">
+                            <span class="quiz-p-opt-idx">D</span>
+                            <p>Kota Kreatif</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aksi Navigasi Kontrol Kuis Paling Bawah -->
+                <div class="quiz-p-footer-actions">
+                    <button class="quiz-p-btn-skip">⏭️ Lewati</button>
+                    <button class="quiz-p-btn-next">Pertanyaan Selanjutnya ➔</button>
+                </div>
+
             </div>
 
-            <!-- Aksi Navigasi Kontrol Kuis Paling Bawah -->
-            <div class="quiz-p-footer-actions">
-                <button class="quiz-p-btn-skip">⏭️ Lewati</button>
-                <button class="quiz-p-btn-next">Pertanyaan Selanjutnya ➔</button>
-            </div>
-
-        </div>
-
-        <!-- ==========================================
+            <!-- ==========================================
            SISI KANAN: SIDEBAR LEVEL PROGRESS & PAPAN PERINGKAT
            ========================================== -->
-        <aside class="quiz-p-sidebar-right">
+            <aside class="quiz-p-sidebar-right">
 
-            <!-- KARTU WIDGET 1: LEVEL & PROGRESS EXP -->
-            <div class="quiz-p-widget quiz-p-level-card">
-                <div class="quiz-p-widget-header">
-                    <h4>Level & Progress</h4>
-                    <a href="#" class="quiz-p-widget-link">Lihat Semua Level</a>
-                </div>
-
-                <!-- Status Peringkat Level Saat Ini -->
-                <div class="quiz-p-current-level-box">
-                    <div class="quiz-p-level-medal">🏅</div>
-                    <div class="quiz-p-level-info">
-                        <strong>Lv. 2</strong>
-                        <p>Explorer Bandung</p>
+                <!-- KARTU WIDGET 1: LEVEL & PROGRESS EXP -->
+                <div class="quiz-p-widget quiz-p-level-card">
+                    <div class="quiz-p-widget-header">
+                        <h4>Level & Progress</h4>
+                        <a href="#" class="quiz-p-widget-link">Lihat Semua Level</a>
                     </div>
-                    <!-- XP Score Point -->
-                    <div class="quiz-p-xp-score">
-                        <span>⭐ 350 / 500</span>
-                        <div class="quiz-p-xp-bar-track">
-                            <div class="quiz-p-xp-bar-fill" style="width: 70%;"></div>
+
+                    <!-- Status Peringkat Level Saat Ini -->
+                    <div class="quiz-p-current-level-box">
+                        <div class="quiz-p-level-medal">🏅</div>
+                        <div class="quiz-p-level-info">
+                            <strong>Lv. 2</strong>
+                            <p>Explorer Bandung</p>
+                        </div>
+                        <!-- XP Score Point -->
+                        <div class="quiz-p-xp-score">
+                            <span>⭐ 350 / 500</span>
+                            <div class="quiz-p-xp-bar-track">
+                                <div class="quiz-p-xp-bar-fill" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Deretan Tingkatan Level / Level Track List -->
+                    <div class="quiz-p-level-track-list">
+                        <p class="quiz-p-track-title">Tingkatkan Levelmu!</p>
+
+                        <!-- Level 1 (Selesai/Checked) -->
+                        <div class="quiz-p-track-item done">
+                            <span class="track-icon">🟢</span>
+                            <div class="track-text"><strong>Lv. 1 Pemula</strong><small>0 - 100 XP</small></div>
+                            <i class="fa-solid fa-circle-check track-check"></i>
+                        </div>
+
+                        <!-- Level 2 (Aktif Terpilih) -->
+                        <div class="quiz-p-track-item active">
+                            <span class="track-icon">🏅</span>
+                            <div class="track-text"><strong>Lv. 2 Explorer Bandung</strong><small>101 - 500 XP</small></div>
+                        </div>
+
+                        <!-- Level 3 (Terkunci) -->
+                        <div class="quiz-p-track-item locked">
+                            <span class="track-icon">🔒</span>
+                            <div class="track-text"><strong>Lv. 3 Penjelajah Daerah</strong><small>501 - 1000 XP</small></div>
+                        </div>
+
+                        <!-- Level 4 (Terkunci) -->
+                        <div class="quiz-p-track-item locked">
+                            <span class="track-icon">🔒</span>
+                            <div class="track-text"><strong>Lv. 4 Ahli Sejarah</strong><small>1001 - 2000 XP</small></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Deretan Tingkatan Level / Level Track List -->
-                <div class="quiz-p-level-track-list">
-                    <p class="quiz-p-track-title">Tingkatkan Levelmu!</p>
-
-                    <!-- Level 1 (Selesai/Checked) -->
-                    <div class="quiz-p-track-item done">
-                        <span class="track-icon">🟢</span>
-                        <div class="track-text"><strong>Lv. 1 Pemula</strong><small>0 - 100 XP</small></div>
-                        <i class="fa-solid fa-circle-check track-check"></i>
+                <!-- KARTU WIDGET 2: PAPAN PERINGKAT (LEADERBOARD MINI) -->
+                <div class="quiz-p-widget quiz-p-leaderboard-card">
+                    <div class="quiz-p-widget-header">
+                        <h4>Papan Peringkat</h4>
+                        <a href="#" class="quiz-p-widget-link">Lihat Peringkat</a>
                     </div>
 
-                    <!-- Level 2 (Aktif Terpilih) -->
-                    <div class="quiz-p-track-item active">
-                        <span class="track-icon">🏅</span>
-                        <div class="track-text"><strong>Lv. 2 Explorer Bandung</strong><small>101 - 500 XP</small></div>
-                    </div>
-
-                    <!-- Level 3 (Terkunci) -->
-                    <div class="quiz-p-track-item locked">
-                        <span class="track-icon">🔒</span>
-                        <div class="track-text"><strong>Lv. 3 Penjelajah Daerah</strong><small>501 - 1000 XP</small></div>
-                    </div>
-
-                    <!-- Level 4 (Terkunci) -->
-                    <div class="quiz-p-track-item locked">
-                        <span class="track-icon">🔒</span>
-                        <div class="track-text"><strong>Lv. 4 Ahli Sejarah</strong><small>1001 - 2000 XP</small></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- KARTU WIDGET 2: PAPAN PERINGKAT (LEADERBOARD MINI) -->
-            <div class="quiz-p-widget quiz-p-leaderboard-card">
-                <div class="quiz-p-widget-header">
-                    <h4>Papan Peringkat</h4>
-                    <a href="#" class="quiz-p-widget-link">Lihat Peringkat</a>
-                </div>
-
-                <!-- Deretan 3 Besar Avatar Horizontal -->
-                <div class="quiz-p-top-three-row">
-                    <div class="top-three-avatar rank-2">
-                        <img src="https://pravatar.cc" alt="Andi">
-                        <strong>Andi Wijaya</strong>
-                        <small>2.450 XP</small>
-                    </div>
-                    <div class="top-three-avatar rank-1">
-                        <span class="crown-icon">👑</span>
-                        <img src="https://pravatar.cc" alt="Siti">
-                        <strong>Siti Nurhaliza</strong>
-                        <small>2.820 XP</small>
-                    </div>
-                    <div class="top-three-avatar rank-3">
-                        <img src="https://pravatar.cc" alt="Dimas">
-                        <strong>Dimas Pratama</strong>
-                        <small>1.950 XP</small>
-                    </div>
-                </div>
-
-                <!-- Kartu Skor Pengguna Saat Ini di Bagian Paling Bawah -->
-                <div class="quiz-p-user-own-rank">
-                    <span class="user-rank-num">12</span>
-                    <img src="https://pravatar.cc" alt="Own Avatar" class="user-avatar-mini">
-                    <span class="user-name-txt">Kamu</span>
-                    <strong class="user-score-txt">320 XP</strong>
-                </div>
-            </div>
-
-        </aside>
-
-    </div>
-</section>
-
-<!-- PREMIUM DARK BLUE FOOTER -->
-<footer class="main-footer-section">
-    <div class="container footer-grid-layout">
-        <!-- Kolom 1: Profil Brand -->
-        <div class="footer-column-brand">
-            <div class="footer-logo">
-                <a class="brand" href="#home">
-                    <img src="image/logo-gedung-sate.png" alt="Bandung icon">
-                    <div class="brand-text">
-                        <div class="logo-txt">
-                            <strong class="gradient-bandung">BANDUNG</strong>
-                            <small>Creative Smart City</small>
+                    <!-- Deretan 3 Besar Avatar Horizontal -->
+                    <div class="quiz-p-top-three-row">
+                        <div class="top-three-avatar rank-2">
+                            <img src="https://pravatar.cc" alt="Andi">
+                            <strong>Andi Wijaya</strong>
+                            <small>2.450 XP</small>
+                        </div>
+                        <div class="top-three-avatar rank-1">
+                            <span class="crown-icon">👑</span>
+                            <img src="https://pravatar.cc" alt="Siti">
+                            <strong>Siti Nurhaliza</strong>
+                            <small>2.820 XP</small>
+                        </div>
+                        <div class="top-three-avatar rank-3">
+                            <img src="https://pravatar.cc" alt="Dimas">
+                            <strong>Dimas Pratama</strong>
+                            <small>1.950 XP</small>
                         </div>
                     </div>
-                </a>
+
+                    <!-- Kartu Skor Pengguna Saat Ini di Bagian Paling Bawah -->
+                    <div class="quiz-p-user-own-rank">
+                        <span class="user-rank-num">12</span>
+                        <img src="https://pravatar.cc" alt="Own Avatar" class="user-avatar-mini">
+                        <span class="user-name-txt">Kamu</span>
+                        <strong class="user-score-txt">320 XP</strong>
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+    </section>
+
+    <!-- PREMIUM DARK BLUE FOOTER -->
+    <footer class="main-footer-section">
+        <div class="container footer-grid-layout">
+            <!-- Kolom 1: Profil Brand -->
+            <div class="footer-column-brand">
+                <div class="footer-logo">
+                    <a class="brand" href="#home">
+                        <img src="image/logo-gedung-sate.png" alt="Bandung icon">
+                        <div class="brand-text">
+                            <div class="logo-txt">
+                                <strong class="gradient-bandung">BANDUNG</strong>
+                                <small data-i18n-key="brandText">Creative Smart City</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <p class="brand-desc-text" data-i18n-key="footerBrandDesc">Platform informasi wisata dan budaya Kota <span class="gradient-bandung">Bandung</span> yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
             </div>
-            <p class="brand-desc-text">Platform informasi wisata dan budaya Kota Bandung yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
-        </div>
-        <!-- Kolom 2: Navigasi Menu -->
-        <div class="footer-column-links">
-            <h4>Jelajahi</h4>
-            <ul>
-                <li><a href="#about"><i class="fa-solid fa-info-circle"></i><span>Tentang Bandung</span></a></li>
-                <li><a href="#destinations"><i class="fa-solid fa-location-dot"></i><span>Destinasi</span></a></li>
-                <li><a href="#events"><i class="fa-solid fa-calendar-days"></i><span>Event</span></a></li>
-                <li><a href="#timeline"><i class="fa-solid fa-clock"></i><span>Timeline</span></a></li>
-                <li><a href="#quiz-section"><i class="fa-solid fa-question-circle"></i><span>Kuis Interaktif</span></a></li>
-            </ul>
-        </div>
-        <!-- Kolom 3: Informasi -->
-        <div class="footer-column-links">
-            <h4 data-i18n-key="footerInfoTitle">Informasi</h4>
-            <ul>
-                <li><a href="#" data-i18n-key="footerGuide"><i class="fa-solid fa-book"></i><span>Panduan Wisata</span></a></li>
-                <li><a href="#" data-i18n-key="footerTransport"><i class="fa-solid fa-bus"></i><span>Transportasi</span></a></li>
-                <li><a href="#" data-i18n-key="footerFood"><i class="fa-solid fa-utensils"></i><span>Kuliner</span></a></li>
-                <li><a href="#" data-i18n-key="footerStay"><i class="fa-solid fa-bed"></i><span>Akomodasi</span></a></li>
-                <li><a href="#" data-i18n-key="footerNews"><i class="fa-solid fa-newspaper"></i><span>Berita & Update</span></a></li>
-            </ul>
-        </div>
-        <!-- Kolom 4: Sosial dan Kontak -->
-        <div class="footer-social-links">
-            <h4 data-i18n-key="footerInfoTittle">Sosial Media</h4>
-            <ul>
-                <li><a href="#"><i class="fa-brands fa-instagram"></i><span>@kota_bandung</span></a></li>
-                <li><a href="#"><i class="fa-brands fa-facebook-f"></i><span>@bandung_kota</span></a></li>
-                <li><a href="#"><i class="fa-brands fa-tiktok"></i><span>@cinta_bandung</span></a></li>
-                <li><a href="#"><i class="fa-brands fa-youtube"></i><span>seputar bandung</span></a></li>
-            </ul>
-        </div>
-    </div>
-    <div class="container">
-        <div class="footer-bottom-copyright">
-            <span>&copy; 2025 Bandung Smart City. All Rights Reserved.</span>
-            <div class="footer-links-row">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Support</a>
+            <!-- Kolom 2: Navigasi Menu -->
+            <div class="footer-column-links">
+                <h4 data-i18n-key="footerExplore">Jelajahi</h4>
+                <ul>
+                    <li><a href="#about"><i class="fa-solid fa-info-circle"></i><span data-i18n-key="navAbout">Tentang Bandung</span></a></li>
+                    <li><a href="#destinations"><i class="fa-solid fa-location-dot"></i><span data-i18n-key="footerDestinations">Destinasi</span></a></li>
+                    <li><a href="#events"><i class="fa-solid fa-calendar-days"></i><span data-i18n-key="footerEvents">Event</span></a></li>
+                    <li><a href="#timeline"><i class="fa-solid fa-clock"></i><span data-i18n-key="footerTimeline">Timeline</span></a></li>
+                    <li><a href="#interactive-quiz"><i class="fa-solid fa-question-circle"></i><span data-i18n-key="footerQuiz">Kuis Interaktif</span></a></li>
+                </ul>
+            </div>
+            <!-- Kolom 3: Sosial dan Kontak -->
+            <div class="footer-social-links">
+                <h4 data-i18n-key="footerInfoTittle">Sosial Media</h4>
+                <ul>
+                    <li><a href="https://www.instagram.com/infobandungkota/"><i class="fa-brands fa-instagram"></i><span>@infobdgcom</span></a></li>
+                    <li><a href="https://www.facebook.com/humaskotabandung/?locale=id_ID"><i class="fa-brands fa-facebook-f"></i><span>@humaskotabandung</span></a></li>
+                    <li><a href="https://www.tiktok.com/@humasbdg"><i class="fa-brands fa-tiktok"></i><span>@humasbdg</span></a></li>
+                    <li><a href="https://www.youtube.com/c/thisisbandung"><i class="fa-brands fa-youtube"></i><span>@ThisisBadung</span></a></li>
+                </ul>
             </div>
         </div>
-    </div>
-</footer>
+        <div class="container">
+            <div class="footer-bottom-copyright">
+                <span>&copy; 2026 <span class="gradient-bandung">Bandung</span> Smart City. All Rights Reserved.</span>
+
+            </div>
+        </div>
+    </footer>
+    <script src="../main.js"></script>
+</body>
+
+</html>
