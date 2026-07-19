@@ -20,8 +20,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 80px;
-    padding-right: 50px;
+    padding: 70px 50px 70px 50px;
     text-align: center;
 }
 
@@ -100,7 +99,7 @@
 }
 
 
-/* --- TAB BAR KATEGORI HORIZONTAL 
+/* --- TAB BAR KATEGORI HORIZONTAL */
 
 .culture-p-tabs-bar {
     background: #ffffff;
@@ -208,10 +207,6 @@
 
 
 /* --- GRID LAYOUT (TANPA SIDEBAR) --- */
-
-.culture-p-main-layout {
-    padding: 40px 0;
-}
 
 .culture-p-grid-split {
     display: grid;
