@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnPlan: 'Rencanakan Perjalanan',
             btnWatch: 'Tonton Video',
             scrollDown: 'Gulir ke bawah',
-            btnExplore: 'Jelajahi',
+            btnExplore: 'Itinerary',
 
             aboutSubtitle: 'TENTANG <span class="gradient-bandung">Bandung</span>',
             aboutHeading: 'Temukan Jiwa <br><span class="gradient-bandung">Bandung</span>',
@@ -230,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnPlan: 'Plan My Trip',
             btnWatch: 'Watch Video',
             scrollDown: 'Scroll Down',
-            btnExplore: 'Explore',
+            btnExplore: 'Save Itinerary',
 
             aboutSubtitle: 'ABOUT BANDUNG',
             aboutHeading: 'Discover the Soul of <br><span class="gradient-bandung">Bandung</span>',
@@ -1057,3 +1057,17 @@ document.querySelector(`.sortbox__menu li[data-value="terdekat"]`).classList.add
 
 /* ============ Initial render ============ */
 render();
+
+/* ============ Mobile Slider Arrows ============ */
+window.slideScroll = function(containerId, direction) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    // Asumsikan lebar satu card sekitar 80vw atau 300px + gap
+    const scrollAmount = container.clientWidth * 0.8;
+    
+    container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+};

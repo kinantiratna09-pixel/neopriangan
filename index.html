@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <a class="btn-outline" id="exploreBtn" href="html/destinasion.html"
-                        data-i18n-key="btnExplore">❤︎</a>
+                        data-i18n-key="btnExplore"><i class="fa-regular fa-bookmark"></i> Simpan Itinerary</a>
                 </div>
 
                 <!-- Tombol Hamburger untuk Mobile -->
@@ -94,14 +94,12 @@
             <div class="about-left">
                 <div class="vidio-box">
                     <iframe
-                        src="https://www.youtube.com/embed/QwuTTGibjIY?autoplay=1&mute=1&loop=1&playlist=QwuTTGibjIY&controls=1&playsinline=1&rel=0"
+                        src="https://www.youtube.com/embed/QwuTTGibjIY?autoplay=1&mute=1&loop=1&playlist=QwuTTGibjIY&controls=0&modestbranding=1&rel=0&playsinline=1&vq=hd720&iv_load_policy=3&disablekb=1"
                         width="100%"
                         height="100%"
                         frameborder="0"
                         allow="autoplay; encrypted-media; picture-in-picture"
-                        allowfullscreen
-                        title="Video Bandung - Nusantara"
-                        style="border-radius: inherit; display: block;"
+                        style="border-radius: inherit; display: block; pointer-events: none;"
                     ></iframe>
                 </div>
 
@@ -318,7 +316,7 @@
 
             <!-- Bagian Tengah: Grid 5 Kartu Unsur Kebudayaan -->
             <div class="container">
-                <div class="category-grid">
+                <div class="category-grid" id="categoryGridSlider">
                     <!-- 1. Bahasa Sunda Mini -->
                     <div class="culture-item-card ">
                         <div class="card-header-row ">
@@ -383,6 +381,16 @@
 
                 </div>
 
+                <!-- SLIDER ARROWS: category-grid -->
+                <div class="slider-arrow-nav" id="arrowNavCulture">
+                    <button class="slider-arrow-btn" id="culturePrev" aria-label="Sebelumnya" onclick="slideScroll('categoryGridSlider', -1)">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-arrow-btn" id="cultureNext" aria-label="Berikutnya" onclick="slideScroll('categoryGridSlider', 1)">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                </div>
+
                 <!-- Bagian Bawah: Banner Penutup Komunitas Budaya -->
                 <div class="culture-footer-banner ">
                     <div class="banner-left-content ">
@@ -425,7 +433,7 @@
             </div>
 
             <!-- Bagian Tengah: Grid 4 Kartu Linimasa Sejarah -->
-            <div class="timeline-cards-grid ">
+            <div class="timeline-cards-grid" id="timelineGridSlider">
 
                 <!-- 1. Tahun 1900 -->
                 <div class="timeline-history-card ">
@@ -488,6 +496,16 @@
                     </div>
                 </div>
 
+            </div>
+
+            <!-- SLIDER ARROWS: timeline-cards-grid -->
+            <div class="slider-arrow-nav" id="arrowNavTimeline">
+                <button class="slider-arrow-btn" id="timelinePrev" aria-label="Sebelumnya" onclick="slideScroll('timelineGridSlider', -1)">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="slider-arrow-btn" id="timelineNext" aria-label="Berikutnya" onclick="slideScroll('timelineGridSlider', 1)">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
             </div>
 
             <!-- Bagian Interaktif: Jalur Lintasan Titik Kemajuan Khas Gambar -->

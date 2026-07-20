@@ -2541,6 +2541,7 @@ p {
 @media (max-width: 1200px) {
     .culture-hero-wrapper {
         grid-template-columns: 1fr;
+        gap: 40px;
         text-align: center;
     }
     .culture-hero-text .section-desc,
@@ -5553,5 +5554,52 @@ SECTION: FOOTER UTAMA (DARK BLUE)==========================================*/
     }
     .maps-sidebar-panel .section-desc {
         font-size: 12px;
+    }
+}
+
+/* ==========================================
+   SLIDER ARROWS (MOBILE ONLY)
+   ========================================== */
+.slider-arrow-nav {
+    display: none; /* Sembunyikan di desktop */
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.slider-arrow-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    border: 1px solid #edf2f9;
+    color: #031828;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.slider-arrow-btn:active {
+    transform: scale(0.9);
+    background-color: #EBF3FF;
+    color: #2F80ED;
+}
+
+/* Tampilkan panah culture di bawah 768px */
+@media (max-width: 768px) {
+    #arrowNavCulture {
+        display: flex;
+    }
+}
+
+/* Tampilkan panah timeline di bawah 520px */
+@media (max-width: 520px) {
+    #arrowNavTimeline {
+        display: flex;
     }
 }
