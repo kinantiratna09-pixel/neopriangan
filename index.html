@@ -22,6 +22,9 @@
                         <small data-translate>Creative Smart City</small>
                     </div>
                 </a>
+
+                <div class="sejarah-container" id="sunda-culture">
+                </div>
                 <ul class="nav-menu">
                     <li><a href="#home" data-i18n-key="navHome">Beranda</a></li>
 
@@ -33,7 +36,6 @@
                             <a href="#culture">Sunda Culture</a>
                         </div>
                     </li>
-
 
                     <li><a href="#timeline" data-i18n-key="navTimeline">Sejarah</a></li>
                     <li><a href="#events" data-i18n-key="navEvents">Acara</a></li>
@@ -49,36 +51,36 @@
                     </div>
                     <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">❤︎</a>
                 </div>
+
                 <!-- Tombol Hamburger untuk Mobile -->
                 <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
             <i class="fa-solid fa-bars"></i>
         </button>
             </div>
         </nav>
-    </header>
 
-    <div class="hero-media">
-        <div class="hero-bg active"></div>
-        <div class="hero-bg"></div>
-        <div class="hero-bg"></div>
-    </div>
-
-    <div class="container hero-inner">
-        <div class="hero-text">
-            <p class="eyebrow" data-i18n-key="heroEyebrow">WELCOME TO</p>
-            <h1 class="title" data-i18n-key="heroTitle"><span class="bandung-gradient">Bandung</span></h1>
-            <h2 class="subtitle" data-i18n-key="heroSubtitle">Creative Smart City</h2>
-            <p class="lead" data-i18n-key="heroLead">Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik dalam satu platform.</p>
-            <div class="hero-ctas">
-                <a class="btn-primary" id="planTripBtn" href="html/rancangan_trip.html" data-i18n-key="btnPlan">Plan My Trip</a>
-            </div>
+        <div class="hero-media">
+            <div class="hero-bg active"></div>
+            <div class="hero-bg"></div>
+            <div class="hero-bg"></div>
         </div>
 
-        <a class="scroll" href="#about">
-            <span data-i18n-key="scrollDown">Scroll Down</span>
-            <i class="fa-solid fa-angle-down"></i>
-        </a>
-    </div>
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <p class="eyebrow" data-i18n-key="heroEyebrow">WELCOME TO</p>
+                <h1 class="title" data-i18n-key="heroTitle"><span class="bandung-gradient">Bandung</span></h1>
+                <h2 class="subtitle" data-i18n-key="heroSubtitle">Creative Smart City</h2>
+                <p class="lead" data-i18n-key="heroLead">Jelajahi destinasi wisata, kuliner, sejarah, budaya, serta berbagai pengalaman menarik dalam satu platform.</p>
+                <div class="hero-ctas">
+                    <a class="btn-primary" id="planTripBtn" href="html/rancangan_trip.html" data-i18n-key="btnPlan">Plan My Trip</a>
+                </div>
+            </div>
+
+            <a class="scroll" href="#about">
+                <span data-i18n-key="scrollDown">Scroll Down</span>
+                <i class="fa-solid fa-angle-down"></i>
+            </a>
+        </div>
     </header>
 
     <!-- ABOUT & CATEGORIES SECTION (MENGIKUTI GAMBAR REFERENSI) -->
@@ -290,90 +292,79 @@
             </div>
 
             <!-- Bagian Tengah: Grid 5 Kartu Unsur Kebudayaan -->
-            <div class="culture-cards-grid ">
+            <div class="container">
+                <div class="category-grid">
+                    <!-- 1. Bahasa Sunda Mini -->
+                    <div class="culture-item-card ">
+                        <div class="card-header-row ">
+                            <div class="badge-icon icon-blue "><i class="fa-solid fa-language "></i></div>
+                            <h4 data-i18n-key="cardculture ">Bahasa Sunda Mini</h4>
+                        </div>
+                        <div class="culture-thumb-wrap ">
+                            <img src="image/aksara-sunda.png " alt="Bahasa Sunda ">
+                        </div>
+                        <p data-i18n-key="cardcultureDesc ">Kenali kosakata dan frasa dasar Bahasa Sunda yang digunakan dalam kehidupan sehari-hari.</p>
+                        <a href="# " class="btn-learn-more text-blue " data-i18n-key="btnLearnMoreBlue ">Pelajari lebih lanjut ➔</a>
+                    </div>
 
-                <!-- 1. Bahasa Sunda Mini -->
-                <div class="culture-item-card ">
-                    <div class="card-header-row ">
-                        <div class="badge-icon icon-blue "><i class="fa-solid fa-language "></i></div>
-                        <h4 data-i18n-key="cardculture ">Bahasa Sunda Mini</h4>
+                    <!-- 2. Angklung -->
+                    <div class="culture-item-card ">
+                        <div class="card-header-row ">
+                            <div class="badge-icon icon-green "><i class="fa-solid fa-music "></i></div>
+                            <h4 data-i18n-key="card2 ">Angklung</h4>
+                        </div>
+                        <div class="culture-thumb-wrap ">
+                            <img src="image/angklung.png " alt="Angklung ">
+                        </div>
+                        <p data-i18n-key="pAngklung ">Alat musik tradisional yang telah diakui UNESCO sebagai warisan budaya dunia.</p>
+                        <a href="# " class="btn-learn-more text-green " data-i18n-key="btnLearnMoreGreen ">Pelajari lebih lanjut ➔</a>
                     </div>
-                    <div class="culture-thumb-wrap ">
-                        <img src="image/aksara-sunda.png " alt="Bahasa Sunda ">
+
+                    <!-- 3. Tari Jaipong -->
+                    <div class="culture-item-card ">
+                        <div class="card-header-row ">
+                            <div class="badge-icon icon-orange "><i class="fa-solid fa-masks-theater "></i></div>
+                            <h4 data-i18n-key="card3 ">Tari Jaipong</h4>
+                        </div>
+                        <div class="culture-thumb-wrap ">
+                            <img src="image/tari-jaipong.png " alt="Tari Jaipong ">
+                        </div>
+                        <p data-i18n-key="pJaipong ">Tari khas Sunda yang energik, anggun, dan penuh ekspresi kegembiraan.</p>
+                        <a href="# " class="btn-learn-more text-orange " data-i18n-key="btnLearnMoreOrange ">Pelajari lebih lanjut ➔</a>
                     </div>
-                    <p data-i18n-key="cardcultureDesc ">Kenali kosakata dan frasa dasar Bahasa Sunda yang digunakan dalam kehidupan sehari-hari.</p>
-                    <a href="# " class="btn-learn-more text-blue " data-i18n-key="btnLearnMoreBlue ">Pelajari lebih lanjut ➔</a>
+
+                    <!-- 4. Pakaian Adat Sunda -->
+                    <div class="culture-item-card ">
+                        <div class="card-header-row ">
+                            <div class="badge-icon icon-purple "><i class="fa-solid fa-shirt "></i></div>
+                            <h4 data-i18n-key="card4 ">Pakaian Adat Sunda</h4>
+                        </div>
+                        <div class="culture-thumb-wrap ">
+                            <img src="image/baju-adat.jpg " alt="Pakaian Adat ">
+                        </div>
+                        <p data-i18n-key="pSunda ">Keindahan busana tradisional Sunda yang sarat makna dan nilai budaya.</p>
+                        <a href="# " class="btn-learn-more text-purple " data-i18n-key="btnLearnMorePurple ">Pelajari lebih lanjut ➔</a>
+                    </div>
+
+
+
                 </div>
 
-                <!-- 2. Angklung -->
-                <div class="culture-item-card ">
-                    <div class="card-header-row ">
-                        <div class="badge-icon icon-green "><i class="fa-solid fa-music "></i></div>
-                        <h4 data-i18n-key="card2 ">Angklung</h4>
+                <!-- Bagian Bawah: Banner Penutup Komunitas Budaya -->
+                <div class="culture-footer-banner ">
+                    <div class="banner-left-content ">
+                        <div class="mini-building-icon ">
+                            <i class="fa-solid fa-landmark-dome "></i>
+                        </div>
+                        <div class="banner-message ">
+                            <h3>Budaya adalah jembatan masa lalu dan masa depan</h3>
+                            <p>Mari lestarikan budaya Sunda dan terus berkarya untuk <span class="gradient-bandung ">Bandung</span> yang lebih baik, kreatif, dan membanggakan dunia.</p>
+                        </div>
                     </div>
-                    <div class="culture-thumb-wrap ">
-                        <img src="image/angklung.png " alt="Angklung ">
-                    </div>
-                    <p data-i18n-key="pAngklung ">Alat musik tradisional yang telah diakui UNESCO sebagai warisan budaya dunia.</p>
-                    <a href="# " class="btn-learn-more text-green " data-i18n-key="btnLearnMoreGreen ">Pelajari lebih lanjut ➔</a>
-                </div>
-
-                <!-- 3. Tari Jaipong -->
-                <div class="culture-item-card ">
-                    <div class="card-header-row ">
-                        <div class="badge-icon icon-orange "><i class="fa-solid fa-masks-theater "></i></div>
-                        <h4 data-i18n-key="card3 ">Tari Jaipong</h4>
-                    </div>
-                    <div class="culture-thumb-wrap ">
-                        <img src="image/tari-jaipong.png " alt="Tari Jaipong ">
-                    </div>
-                    <p data-i18n-key="pJaipong ">Tari khas Sunda yang energik, anggun, dan penuh ekspresi kegembiraan.</p>
-                    <a href="# " class="btn-learn-more text-orange " data-i18n-key="btnLearnMoreOrange ">Pelajari lebih lanjut ➔</a>
-                </div>
-
-                <!-- 4. Pakaian Adat Sunda -->
-                <div class="culture-item-card ">
-                    <div class="card-header-row ">
-                        <div class="badge-icon icon-purple "><i class="fa-solid fa-shirt "></i></div>
-                        <h4 data-i18n-key="card4 ">Pakaian Adat Sunda</h4>
-                    </div>
-                    <div class="culture-thumb-wrap ">
-                        <img src="image/baju-adat.jpg " alt="Pakaian Adat ">
-                    </div>
-                    <p data-i18n-key="pSunda ">Keindahan busana tradisional Sunda yang sarat makna dan nilai budaya.</p>
-                    <a href="# " class="btn-learn-more text-purple " data-i18n-key="btnLearnMorePurple ">Pelajari lebih lanjut ➔</a>
-                </div>
-
-                <!-- 5. Nilai Ramah & Kreatif -->
-                <div class="culture-item-card ">
-                    <div class="card-header-row ">
-                        <div class="badge-icon icon-pink "><i class="fa-solid fa-user-group "></i></div>
-                        <h4 data-i18n-key="card5 ">Nilai Ramah & Kreatif</h4>
-                    </div>
-                    <div class="culture-thumb-wrap ">
-                        <img src="image/budaya-sunda.png " alt="Nilai Budaya ">
-                    </div>
-                    <p data-i18n-key="pRamah ">Keramahan dan kreativitas masyarakat <span class="gradient-bandung ">Bandung</span> menjadi jiwa dari setiap karya dan inovasi.</p>
-                    <a href="# " class="btn-learn-more text-pink " data-i18n-key="btnLearnMorePink ">Pelajari lebih lanjut ➔</a>
+                    <a href="./html/sunda_culture.html " class="btn-jelajahi-budaya " data-i18n-key="btnExploreCulture ">Jelajahi Budaya Sunda ➔</a>
                 </div>
 
             </div>
-
-            <!-- Bagian Bawah: Banner Penutup Komunitas Budaya -->
-            <div class="culture-footer-banner ">
-                <div class="banner-left-content ">
-                    <div class="mini-building-icon ">
-                        <i class="fa-solid fa-landmark-dome "></i>
-                    </div>
-                    <div class="banner-message ">
-                        <h3>Budaya adalah jembatan masa lalu dan masa depan</h3>
-                        <p>Mari lestarikan budaya Sunda dan terus berkarya untuk <span class="gradient-bandung ">Bandung</span> yang lebih baik, kreatif, dan membanggakan dunia.</p>
-                    </div>
-                </div>
-                <a href="./html/sunda_culture.html " class="btn-jelajahi-budaya " data-i18n-key="btnExploreCulture ">Jelajahi Budaya Sunda ➔</a>
-            </div>
-
-        </div>
     </section>
 
 

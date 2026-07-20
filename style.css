@@ -1075,7 +1075,9 @@ p {
 .category-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    margin-bottom: 70px !important;
+    gap: 24px;
+    width: 100%;
 }
 
 .category-card {
@@ -1312,6 +1314,7 @@ p {
     justify-content: space-between;
     box-shadow: 0 8px 25px rgba(3, 24, 40, 0.02);
     border: 1px solid #edf2f9;
+    margin-top: 80px !important;
 }
 
 .banner-left {
@@ -1495,18 +1498,15 @@ p {
 
 @media (max-width: 768px) {
     .about-section {
-        margin-bottom: 0 !important;
-        padding-top: 80px !important;
-        padding-bottom: 20px !important;
+        margin-top: 80px !important;
+        /* Jarak penyesuaian dari navbar atas */
+        margin-bottom: 20px !important;
+        padding: 24px 16px !important;
+        /* Diperkecil agar area putih pas membungkus konten */
         height: auto !important;
-        min-height: 0 !important;
     }
     .about-container {
-        display: flex !important;
-        flex-direction: column !important;
-        height: auto !important;
-        min-height: 0 !important;
-        gap: 20px !important;
+        padding: 0 16px;
     }
     .vidio-box {
         height: 400px;
@@ -1536,10 +1536,7 @@ p {
         font-size: 2rem;
     }
     .content .stats {
-        margin-top: 24px !important;
-        /* Memberi jarak wajar dari kutipan teks di atasnya */
-        margin-bottom: 0 !important;
-        padding-bottom: 0 !important;
+        flex-direction: column;
     }
 }
 
@@ -5472,10 +5469,4 @@ SECTION: FOOTER UTAMA (DARK BLUE)==========================================*/
     .maps-sidebar-panel .section-desc {
         font-size: 12px;
     }
-}
-
-font-size: 12px;
-
-}
-
 }

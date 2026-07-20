@@ -23,47 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
 
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-        a.addEventListener('click', e => {
-            const target = document.querySelector(a.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
-
-    // ===== POP UP CARD (index.html) =====
-    const infoCardData = {
-        creative: {
-            img: 'image/gedungsate.png',
-            title: 'Creative',
-            desc: 'Kota kreatif dengan komunitas dan industri kreatif yang berkembang pesat.'
-        },
-        smartcity: {
-            img: 'image/wisata.png',
-            title: 'Smart City',
-            desc: 'Inovasi teknologi untuk pelayanan publik yang modern dan terintegrasi.'
-        }
-    };
-
-    window.openInfoModal = function(key) {
-        const data = infoCardData[key];
-        if (!data) return;
-        document.getElementById('infoModalImg').src = data.img;
-        document.getElementById('infoModalTitle').textContent = data.title;
-        document.getElementById('infoModalDesc').textContent = data.desc;
-        document.getElementById('infoModalOverlay').classList.add('active');
-    };
-
-    const infoModalClose = document.getElementById('infoModalClose');
-    const infoModalOverlay = document.getElementById('infoModalOverlay');
-    if (infoModalClose && infoModalOverlay) {
-        infoModalClose.addEventListener('click', () => infoModalOverlay.classList.remove('active'));
-        infoModalOverlay.addEventListener('click', (e) => {
-            if (e.target.id === 'infoModalOverlay') infoModalOverlay.classList.remove('active');
-        });
-    }
 
     const translations = {
         id: {
@@ -1086,6 +1045,17 @@ document.querySelector(`.sortbox__menu li[data-value="terdekat"]`).classList.add
   const count = 26;
   for (let i = 0; i < count; i++){
     const dot = document.createElement("span");
+    dot.className = "lantern-dot";
+    dot.style.left = `${Math.random() * 100}%`;
+    dot.style.top = `${20 + Math.random() * 70}%`;
+    dot.style.animationDelay = `${Math.random() * 3.5}s`;
+    dot.style.animationDuration = `${2.8 + Math.random() * 2.4}s`;
+    container.appendChild(dot);
+  }
+})();
+
+/* ============ Initial render ============ */
+render(); dot = document.createElement("span");
     dot.className = "lantern-dot";
     dot.style.left = `${Math.random() * 100}%`;
     dot.style.top = `${20 + Math.random() * 70}%`;
