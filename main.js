@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btnPlan: 'Rencanakan Perjalanan',
             btnWatch: 'Tonton Video',
             scrollDown: 'Gulir ke bawah',
-            btnExplore: 'Itinerary',
 
             aboutSubtitle: 'TENTANG <span class="gradient-bandung">Bandung</span>',
             aboutHeading: 'Temukan Jiwa <br><span class="gradient-bandung">Bandung</span>',
@@ -230,7 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btnPlan: 'Plan My Trip',
             btnWatch: 'Watch Video',
             scrollDown: 'Scroll Down',
-            btnExplore: 'Save Itinerary',
 
             aboutSubtitle: 'ABOUT BANDUNG',
             aboutHeading: 'Discover the Soul of <br><span class="gradient-bandung">Bandung</span>',
@@ -645,53 +643,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-//======fade in animasi timeline sejarah========
-
-const revealEls = document.querySelectorAll('.reveal');
-const io = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            io.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -60px 0px'
-});
-
-revealEls.forEach(el => io.observe(el));
-
-// Toggle Vertikal / Horizontal
-const btns = document.querySelectorAll('.toggle-btn[data-view]');
-const vView = document.getElementById('viewVertical');
-const hView = document.getElementById('viewHorizontal');
-
-if (btns.length && vView && hView) {
-    btns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            btns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            if (btn.dataset.view === 'vertical') {
-                vView.style.display = 'block';
-                hView.style.display = 'none';
-            } else {
-                vView.style.display = 'none';
-                hView.style.display = 'block';
-            }
-        });
-    });
-}
-
-// Tombol panah geser horizontal
-const hScroll = document.getElementById('hScroll');
-const hPrev = document.getElementById('hPrev');
-const hNext = document.getElementById('hNext');
-if (hScroll && hPrev && hNext) {
-    const scrollAmount = 320;
-    hPrev.addEventListener('click', () => hScroll.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
-    hNext.addEventListener('click', () => hScroll.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
-}
 /* ===========================
     ACTIVE NAVBAR ON SCROLL
 =========================== */
@@ -725,6 +676,87 @@ function setActiveMenu() {
 
 window.addEventListener("scroll", setActiveMenu);
 window.addEventListener("load", setActiveMenu);
+
+/* ==========================================
+   POP UP MODAL KATEGORI (Creative & Smart City)
+   -- didefinisikan lebih awal & dibungkus try/catch
+   supaya TIDAK ikut mati kalau ada error di blok
+   filter event di bawah (elemen yang tidak ada
+   di halaman index.html).
+   ========================================== */
+const categoryModalData = {
+    creative: {
+        title: "Creative",
+        desc: "Bandung merupakan kota kreatif dengan komunitas dan industri yang berkembang pesat. Sebagai salah satu anggota UNESCO Creative Cities Network di bidang desain, kota ini menjadi pusat inovasi seni, fashion, musik, dan desain kontemporer.",
+        img: "image/gedungsate.png"
+    },
+    smartcity: {
+        title: "Smart City",
+        desc: "Bandung menerapkan inovasi teknologi untuk pelayanan publik yang modern dan terintegrasi. Lewat berbagai aplikasi dan command center, Bandung terus mengembangkan solusi cerdas untuk meningkatkan kenyamanan warganya.",
+        img: "image/wisata.png"
+    }
+};
+
+window.openInfoModal = function (type) {
+    const data = categoryModalData[type];
+    if (!data) return;
+
+    const titleEl = document.getElementById('infoModalTitle');
+    const descEl = document.getElementById('infoModalDesc');
+    const imgEl = document.getElementById('infoModalImg');
+    const overlayEl = document.getElementById('infoModalOverlay');
+
+    if (titleEl) titleEl.textContent = data.title;
+    if (descEl) descEl.textContent = data.desc;
+    if (imgEl) {
+        imgEl.src = data.img;
+        imgEl.alt = data.title;
+    }
+
+    if (overlayEl) overlayEl.classList.add('active');
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    const closeInfoModalBtn = document.getElementById('infoModalClose');
+    const infoModalOverlay = document.getElementById('infoModalOverlay');
+
+    if (closeInfoModalBtn && infoModalOverlay) {
+        closeInfoModalBtn.addEventListener('click', function () {
+            infoModalOverlay.classList.remove('active');
+        });
+    }
+
+    if (infoModalOverlay) {
+        infoModalOverlay.addEventListener('click', function (e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+            }
+        });
+    }
+
+    // ESC untuk menutup modal
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && infoModalOverlay) {
+            infoModalOverlay.classList.remove('active');
+        }
+    });
+});
+
+/* ==========================================
+   MOBILE SLIDER ARROWS (dipindah ke atas juga,
+   dipakai oleh tombol panah culture & timeline)
+   ========================================== */
+window.slideScroll = function (containerId, direction) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+
+    const scrollAmount = container.clientWidth * 0.8;
+
+    container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+};
 
 //event
 
@@ -892,180 +924,203 @@ function cardHTML(ev) {
   </article>`;
 }
 
-function bindCardEvents(){
-  els.cards.querySelectorAll("[data-save]").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const id = Number(btn.dataset.save);
-      if (state.saved.has(id)) state.saved.delete(id);
-      else state.saved.add(id);
-      btn.classList.toggle("saved");
-      btn.querySelector("svg").setAttribute("fill", state.saved.has(id) ? "currentColor" : "none");
+function bindCardEvents() {
+    els.cards.querySelectorAll("[data-save]").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const id = Number(btn.dataset.save);
+            if (state.saved.has(id)) state.saved.delete(id);
+            else state.saved.add(id);
+            btn.classList.toggle("saved");
+            btn.querySelector("svg").setAttribute("fill", state.saved.has(id) ? "currentColor" : "none");
+        });
     });
-  });
 }
 
 /* ============ Pagination ============ */
-function renderPagination(totalPages){
-  let html = "";
-  html += `<button class="page-btn" data-page="prev" ${state.page===1 ? "disabled" : ""} aria-label="Halaman sebelumnya">‹</button>`;
+function renderPagination(totalPages) {
+    let html = "";
+    html += `<button class="page-btn" data-page="prev" ${state.page === 1 ? "disabled" : ""} aria-label="Halaman sebelumnya">‹</button>`;
 
-  const pages = [];
-  const p = state.page;
-  pages.push(1);
-  if (p > 3) pages.push("dots");
-  for (let i = Math.max(2, p-1); i <= Math.min(totalPages-1, p+1); i++) pages.push(i);
-  if (p < totalPages - 2) pages.push("dots");
-  if (totalPages > 1) pages.push(totalPages);
+    const pages = [];
+    const p = state.page;
+    pages.push(1);
+    if (p > 3) pages.push("dots");
+    for (let i = Math.max(2, p - 1); i <= Math.min(totalPages - 1, p + 1); i++) pages.push(i);
+    if (p < totalPages - 2) pages.push("dots");
+    if (totalPages > 1) pages.push(totalPages);
 
-  pages.forEach(pg => {
-    if (pg === "dots"){
-      html += `<span class="page-dots">…</span>`;
-    } else {
-      html += `<button class="page-btn ${pg===p ? "page-btn--active" : ""}" data-page="${pg}">${pg}</button>`;
-    }
-  });
-
-  html += `<button class="page-btn" data-page="next" ${state.page===totalPages ? "disabled" : ""} aria-label="Halaman berikutnya">›</button>`;
-  els.pagination.innerHTML = html;
-
-  els.pagination.querySelectorAll(".page-btn").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const val = btn.dataset.page;
-      if (val === "prev") state.page = Math.max(1, state.page - 1);
-      else if (val === "next") state.page = Math.min(totalPages, state.page + 1);
-      else state.page = Number(val);
-      render();
-      document.querySelector(".results").scrollIntoView({ behavior: "smooth", block: "start" });
+    pages.forEach(pg => {
+        if (pg === "dots") {
+            html += `<span class="page-dots">…</span>`;
+        } else {
+            html += `<button class="page-btn ${pg === p ? "page-btn--active" : ""}" data-page="${pg}">${pg}</button>`;
+        }
     });
-  });
+
+    html += `<button class="page-btn" data-page="next" ${state.page === totalPages ? "disabled" : ""} aria-label="Halaman berikutnya">›</button>`;
+    els.pagination.innerHTML = html;
+
+    els.pagination.querySelectorAll(".page-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const val = btn.dataset.page;
+            if (val === "prev") state.page = Math.max(1, state.page - 1);
+            else if (val === "next") state.page = Math.min(totalPages, state.page + 1);
+            else state.page = Number(val);
+            render();
+            document.querySelector(".results").scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
 }
 
-/* ============ Filters: sidebar checkboxes ============ */
-const sidebarChecks = document.querySelectorAll('.check-row input[data-cat]');
-sidebarChecks.forEach(chk => {
-  chk.addEventListener("change", () => {
-    if (chk.dataset.cat === "semua"){
-      if (chk.checked){
-        state.categories.clear();
-        sidebarChecks.forEach(c => { if (c.dataset.cat !== "semua") c.checked = false; });
-      }
-    } else {
-      document.querySelector('.check-row input[data-cat="semua"]').checked = false;
-      if (chk.checked) state.categories.add(chk.dataset.cat);
-      else state.categories.delete(chk.dataset.cat);
-      if (state.categories.size === 0){
-        document.querySelector('.check-row input[data-cat="semua"]').checked = true;
-      }
+/* ==========================================
+   BLOK KHUSUS HALAMAN EVENT (event.html)
+   -- DIBUNGKUS GUARD supaya tidak menghentikan
+   eksekusi script di halaman lain (mis. index.html)
+   yang tidak punya elemen #tabs, #cardsContainer, dst.
+   Sebelumnya, kode ini langsung berjalan tanpa guard
+   dan melempar error saat els.tabs bernilai null,
+   sehingga SELURUH kode di bawahnya (termasuk modal
+   Creative/Smart City) ikut gagal dimuat.
+   ========================================== */
+if (els.tabs && els.cards) {
+
+    /* ============ Filters: sidebar checkboxes ============ */
+    const sidebarChecks = document.querySelectorAll('.check-row input[data-cat]');
+    sidebarChecks.forEach(chk => {
+        chk.addEventListener("change", () => {
+            if (chk.dataset.cat === "semua") {
+                if (chk.checked) {
+                    state.categories.clear();
+                    sidebarChecks.forEach(c => { if (c.dataset.cat !== "semua") c.checked = false; });
+                }
+            } else {
+                document.querySelector('.check-row input[data-cat="semua"]').checked = false;
+                if (chk.checked) state.categories.add(chk.dataset.cat);
+                else state.categories.delete(chk.dataset.cat);
+                if (state.categories.size === 0) {
+                    document.querySelector('.check-row input[data-cat="semua"]').checked = true;
+                }
+            }
+            syncTabs();
+        });
+    });
+
+    function syncTabs() {
+        els.tabs.querySelectorAll(".tab").forEach(tab => {
+            const cat = tab.dataset.cat;
+            const active = (cat === "semua" && state.categories.size === 0) || state.categories.has(cat);
+            tab.classList.toggle("tab--active", active);
+        });
     }
-    syncTabs();
-  });
-});
 
-function syncTabs(){
-  els.tabs.querySelectorAll(".tab").forEach(tab => {
-    const cat = tab.dataset.cat;
-    const active = (cat === "semua" && state.categories.size === 0) || state.categories.has(cat);
-    tab.classList.toggle("tab--active", active);
-  });
+    /* ============ Tabs ============ */
+    els.tabs.addEventListener("click", (e) => {
+        const tab = e.target.closest(".tab");
+        if (!tab) return;
+        const cat = tab.dataset.cat;
+        state.categories.clear();
+        if (cat !== "semua") state.categories.add(cat);
+
+        sidebarChecks.forEach(c => {
+            c.checked = (c.dataset.cat === "semua" && cat === "semua") || c.dataset.cat === cat;
+        });
+
+        syncTabs();
+        state.page = 1;
+        render();
+    });
+
+    /* ============ Apply / Reset ============ */
+    if (els.applyFilters) {
+        els.applyFilters.addEventListener("click", () => {
+            state.page = 1;
+            render();
+        });
+    }
+
+    if (els.resetFilters) {
+        els.resetFilters.addEventListener("click", () => {
+            state.categories.clear();
+            state.search = "";
+            if (els.search) els.search.value = "";
+            sidebarChecks.forEach(c => { c.checked = c.dataset.cat === "semua"; });
+            const dateFrom = document.getElementById("dateFrom");
+            const locationSelect = document.getElementById("locationSelect");
+            if (dateFrom) dateFrom.value = "";
+            if (locationSelect) locationSelect.value = "";
+            document.querySelectorAll('input[name="harga"]').forEach(r => r.checked = false);
+            syncTabs();
+            state.page = 1;
+            render();
+        });
+    }
+
+    /* ============ Search ============ */
+    if (els.search) {
+        let searchTimer;
+        els.search.addEventListener("input", (e) => {
+            clearTimeout(searchTimer);
+            searchTimer = setTimeout(() => {
+                state.search = e.target.value.trim();
+                state.page = 1;
+                render();
+            }, 200);
+        });
+    }
+
+    /* ============ Sort dropdown ============ */
+    if (els.sortTrigger && els.sortbox) {
+        els.sortTrigger.addEventListener("click", () => {
+            const open = els.sortbox.classList.toggle("open");
+            els.sortTrigger.setAttribute("aria-expanded", String(open));
+        });
+    }
+
+    if (els.sortMenu) {
+        els.sortMenu.querySelectorAll("li").forEach(li => {
+            li.addEventListener("click", () => {
+                state.sort = li.dataset.value;
+                if (els.sortLabel) els.sortLabel.textContent = li.textContent;
+                els.sortMenu.querySelectorAll("li").forEach(l => l.classList.remove("active"));
+                li.classList.add("active");
+                if (els.sortbox) els.sortbox.classList.remove("open");
+                render();
+            });
+        });
+    }
+
+    document.addEventListener("click", (e) => {
+        if (els.sortbox && !els.sortbox.contains(e.target)) els.sortbox.classList.remove("open");
+    });
+
+    const defaultSortItem = document.querySelector(`.sortbox__menu li[data-value="terdekat"]`);
+    if (defaultSortItem) defaultSortItem.classList.add("active");
+
+    /* ============ Initial render ============ */
+    render();
 }
-
-/* ============ Tabs ============ */
-els.tabs.addEventListener("click", (e) => {
-  const tab = e.target.closest(".tab");
-  if (!tab) return;
-  const cat = tab.dataset.cat;
-  state.categories.clear();
-  if (cat !== "semua") state.categories.add(cat);
-
-  sidebarChecks.forEach(c => {
-    c.checked = (c.dataset.cat === "semua" && cat === "semua") || c.dataset.cat === cat;
-  });
-
-  syncTabs();
-  state.page = 1;
-  render();
-});
-
-/* ============ Apply / Reset ============ */
-els.applyFilters.addEventListener("click", () => {
-  state.page = 1;
-  render();
-});
-
-els.resetFilters.addEventListener("click", () => {
-  state.categories.clear();
-  state.search = "";
-  els.search.value = "";
-  sidebarChecks.forEach(c => { c.checked = c.dataset.cat === "semua"; });
-  document.getElementById("dateFrom").value = "";
-  document.getElementById("locationSelect").value = "";
-  document.querySelectorAll('input[name="harga"]').forEach(r => r.checked = false);
-  syncTabs();
-  state.page = 1;
-  render();
-});
-
-/* ============ Search ============ */
-let searchTimer;
-els.search.addEventListener("input", (e) => {
-  clearTimeout(searchTimer);
-  searchTimer = setTimeout(() => {
-    state.search = e.target.value.trim();
-    state.page = 1;
-    render();
-  }, 200);
-});
-
-/* ============ Sort dropdown ============ */
-els.sortTrigger.addEventListener("click", () => {
-  const open = els.sortbox.classList.toggle("open");
-  els.sortTrigger.setAttribute("aria-expanded", String(open));
-});
-
-els.sortMenu.querySelectorAll("li").forEach(li => {
-  li.addEventListener("click", () => {
-    state.sort = li.dataset.value;
-    els.sortLabel.textContent = li.textContent;
-    els.sortMenu.querySelectorAll("li").forEach(l => l.classList.remove("active"));
-    li.classList.add("active");
-    els.sortbox.classList.remove("open");
-    render();
-  });
-});
-
-document.addEventListener("click", (e) => {
-  if (!els.sortbox.contains(e.target)) els.sortbox.classList.remove("open");
-});
-
-document.querySelector(`.sortbox__menu li[data-value="terdekat"]`).classList.add("active");
 
 /* ============ Hero lantern lights (signature ambient detail) ============ */
-(function initLanterns(){
-  const container = document.getElementById("heroLights");
-  const count = 26;
-  for (let i = 0; i < count; i++){
-    const dot = document.createElement("span");
-    dot.className = "lantern-dot";
-    dot.style.left = `${Math.random() * 100}%`;
-    dot.style.top = `${20 + Math.random() * 70}%`;
-    dot.style.animationDelay = `${Math.random() * 3.5}s`;
-    dot.style.animationDuration = `${2.8 + Math.random() * 2.4}s`;
-    container.appendChild(dot);
-  }
+(function initLanterns() {
+    const container = document.getElementById("heroLights");
+    if (!container) return; // guard: elemen ini tidak selalu ada di semua halaman
+    const count = 26;
+    for (let i = 0; i < count; i++) {
+        const dot = document.createElement("span");
+        dot.className = "lantern-dot";
+        dot.style.left = `${Math.random() * 100}%`;
+        dot.style.top = `${20 + Math.random() * 70}%`;
+        dot.style.animationDelay = `${Math.random() * 3.5}s`;
+        dot.style.animationDuration = `${2.8 + Math.random() * 2.4}s`;
+        container.appendChild(dot);
+    }
 })();
 
-
-/* ============ Initial render ============ */
-render();
-
-/* ============ Mobile Slider Arrows ============ */
-window.slideScroll = function(containerId, direction) {
+/* ============ Mobile Slider Arrows (alias, sudah didefinisikan di atas juga) ============ */
+window.slideScroll = window.slideScroll || function (containerId, direction) {
     const container = document.getElementById(containerId);
     if (!container) return;
-    
-    // Asumsikan lebar satu card sekitar 80vw atau 300px + gap
     const scrollAmount = container.clientWidth * 0.8;
-    
     container.scrollBy({
         left: direction * scrollAmount,
         behavior: 'smooth'

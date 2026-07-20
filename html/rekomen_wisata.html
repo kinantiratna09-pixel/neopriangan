@@ -16,34 +16,51 @@
 <body>
 
     <header class="hero" id="home">
-        <nav class="navbar scrolled" id="navbar">
-            <div class="container nav-inner">
-                <a class="brand" href="#home">
-                    <img src="image/logo-gedung-sate.png" alt="Bandung icon">
-                    <div class="brand-text">
-                        <small>Creative Smart City</small>
-                    </div>
-                </a>
-                <ul class="nav-menu">
-                    <li><a href="#home" data-i18n-key="navHome">Beranda</a></li>
-                    <li><a href="#about" data-i18n-key="navAbout">Tentang</a></li>
-                    <li><a href="#categories" data-i18n-key="navCategories">Kategori</a></li>
-                    <li><a href="#timeline" data-i18n-key="navTimeline">Waktu</a></li>
-                    <li><a href="#events" data-i18n-key="navEvents">Events</a></li>
-                    <li><a href="html/maps.html" data-i18n-key="navMaps">Maps</a></li>
-                </ul>
-                <div class="nav-actions">
-                    <div class="language-switcher view-toggle">
-                        <div class="toggle-pill">
-                            <button class="toggle-btn lang-btn active" data-lang="id">ID</button>
-                            <button class="toggle-btn lang-btn" data-lang="en">EN</button>
-                        </div>
-                    </div>
-                    <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">Explore</a>
+            <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="../index.html">
+                <img src="../image/logo-gedung-sate.png" alt="Bandung icon">
+                <div class="brand-text">
+                    <small data-translate>Creative Smart City</small>
                 </div>
-                <button class="nav-toggle" id="navToggle" aria-label="Buka menu"><i class="fa-solid fa-bars"></i></button>
+            </a>
+
+            <div class="sejarah-container" id="sunda-culture">
             </div>
-        </nav>
+            <ul class="nav-menu">
+                <li><a href="../index.html" data-i18n-key="navHome">Beranda</a></li>
+
+                <li class="has-dropdown">
+                    <a href="../index.html#about" data-i18n-key="navAbout">Pusat ⏷</a>
+                    <div class="dropdown-panel">
+                        <a href="../index.html#about">Tentang</a>
+                        <a href="../index.html#destinasi">Destinasi Favorit</a>
+                        <a href="../index.html#culture">Sunda Culture</a>
+                    </div>
+                </li>
+
+                <li><a href="../index.html#timeline" data-i18n-key="navTimeline">Sejarah</a></li>
+                <li><a href="../index.html#events" data-i18n-key="navEvents">Acara</a></li>
+                <li><a href="../index.html#quiz" data-i18n-key="navQuiz">Kuis</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="language-switcher view-toggle">
+                    <div class="toggle-pill">
+                        <button class="toggle-btn lang-btn active" data-lang="id">ID</button>
+                        <button class="toggle-btn lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <a class="btn-outline" id="exploreBtn" href="destinasion.html" data-i18n-key="btnExplore"><i
+                        class="fa-regular fa-bookmark"></i> Simpan Itinerary</a>
+            </div>
+
+            <!-- Tombol Hamburger untuk Mobile -->
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
 
 <!-- EXPLORE DESTINATIONS WITH FILTER SIDEBAR -->
 <section class="explore-page-section">

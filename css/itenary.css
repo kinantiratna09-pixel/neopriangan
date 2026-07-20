@@ -1,0 +1,36 @@
+/* =========================================
+   STYLE UNTUK HALAMAN ITINERARY (BOOKMARK)
+========================================= */
+
+.empty-state {
+    background: #f8fafc;
+    border: 2px dashed #e2e8f0;
+    border-radius: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.remove-bookmark-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #FF4757;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(255, 71, 87, 0.4);
+    z-index: 10;
+    transition: transform 0.2s, background 0.2s;
+    font-size: 14px;
+}
+
+.remove-bookmark-btn:hover {
+    transform: scale(1.1);
+    background: #ff3344;
+}

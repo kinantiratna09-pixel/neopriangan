@@ -7,7 +7,8 @@
     <title>Bandung | Perjalanan Waktu</title>
     <link rel="icon" href="../image/logo-gedung-sate.png" type="image/png">
     <link rel="apple-touch-icon" href="../image/logo-gedung-sate.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/timeline.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -15,22 +16,35 @@
 </head>
 
 <body>
-    <nav class="navbar scrolled" id="navbar">
+
+    <nav class="navbar" id="navbar">
         <div class="container nav-inner">
-            <a class="brand" href="../index.html">
+            <a class="brand" href="#home">
                 <img src="../image/logo-gedung-sate.png" alt="Bandung icon">
                 <div class="brand-text">
-                    <small>Creative Smart City</small>
+                    <small data-translate>Creative Smart City</small>
                 </div>
             </a>
+
+            <div class="sejarah-container" id="sunda-culture">
+            </div>
             <ul class="nav-menu">
-                <li><a href="../index.html#home">Home</a></li>
-                <li><a href="../index.html#about">About</a></li>
-                <li><a href="../index.html#categories">Categories</a></li>
-                <li><a href="../index.html#timeline">Timeline</a></li>
-                <li><a href="../index.html#events">Events</a></li>
-                <li><a href="../index.html#maps">Maps</a></li>
+                <li><a href="../index.html" data-i18n-key="navHome">Beranda</a></li>
+
+                <li class="has-dropdown">
+                    <a href="#tl-section" data-i18n-key="navAbout">Pusat ⏷</a>
+                    <div class="dropdown-panel">
+                        <a href="../index.html">Tentang</a>
+                        <a href="../html/destinasi">Destinasi Favorit</a>
+                        <a href="../html/sunda_culture.html">Sunda Culture</a>
+                    </div>
+                </li>
+
+                <li><a href="../html/timeline.html" data-i18n-key="navTimeline">Sejarah</a></li>
+                <li><a href="../html/event.html" data-i18n-key="navEvents">Acara</a></li>
+                <li><a href="../html/quiz.html" data-i18n-key="navQuiz">Kuis</a></li>
             </ul>
+
             <div class="nav-actions">
                 <div class="language-switcher view-toggle">
                     <div class="toggle-pill">
@@ -38,8 +52,15 @@
                         <button class="toggle-btn lang-btn" data-lang="en">EN</button>
                     </div>
                 </div>
-                <a class="btn-outline" id="exploreBtn" href="../destinasion.html">#</a>
+                <a class="btn-outline" id="exploreBtn" href="html/destinasion.html" data-i18n-key="btnExplore">
+                    <i class="fa-regular fa-bookmark"></i>
+                </a>
             </div>
+
+            <!-- Tombol Hamburger untuk Mobile -->
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -49,15 +70,19 @@
             <div class="page">
 
                 <div class="tm reveal">
-                    <h1 data-i18n-key="timelinePageTitle">Perjalanan Waktu <span class="gradient-bandung">Bandung</span></h1>
-                    <p data-i18n-key="timelinePageSubtitle">Melihat Alur Sederhana Perkembangan dari <span class="gradient-bandung">Bandung</span> Tempo Dulu hingga Bandung Era Smart City</p>
+                    <h1 data-i18n-key="timelinePageTitle">Perjalanan Waktu <span class="gradient-bandung">Bandung</span>
+                    </h1>
+                    <p data-i18n-key="timelinePageSubtitle">Melihat Alur Sederhana Perkembangan dari <span
+                            class="gradient-bandung">Bandung</span> Tempo Dulu hingga Bandung Era Smart City</p>
                 </div>
 
                 <!-- Toggle -->
                 <div class="view-toggle reveal">
                     <div class="toggle-pill">
-                        <button class="toggle-btn active" data-view="vertical" data-i18n-key="timelineViewVertical">Vertikal</button>
-                        <button class="toggle-btn" data-view="horizontal" data-i18n-key="timelineViewHorizontal">Horizontal</button>
+                        <button class="toggle-btn active" data-view="vertical"
+                            data-i18n-key="timelineViewVertical">Vertikal</button>
+                        <button class="toggle-btn" data-view="horizontal"
+                            data-i18n-key="timelineViewHorizontal">Horizontal</button>
                     </div>
                 </div>
 
@@ -71,9 +96,16 @@
                         </div>
                         <div class="v-num reveal">1</div>
                         <div class="v-text reveal">
-                            <span class="v-tag" data-i18n-key="timelineItem1Tag"><span class="gradient-bandung">Bandung</span> Tempo Dulu</span>
+                            <span class="v-tag" data-i18n-key="timelineItem1Tag"><span
+                                    class="gradient-bandung">Bandung</span> Tempo Dulu</span>
                             <div class="v-rectanggel">
-                                <p data-i18n-key="timelineItem1Desc"><span class="gradient-bandung">Bandung</span> awalnya merupakan daerah pedalaman. Titik baliknya terjadi ketika Gubernur Jenderal Daendels membangun Jalan Raya Pos (Groote Postweg). Bupati <span class="gradient-bandung">Bandung</span>                                    saat itu, R.A. Wiranatakusumah II, memindahkan ibu kota kabupaten dari Krapyak (Dayeuhkolot) ke situs kota <span class="gradient-bandung">Bandung</span> yang sekarang pada tahun 1810 agar lebih dekat dengan jalur transportasi
+                                <p data-i18n-key="timelineItem1Desc"><span class="gradient-bandung">Bandung</span>
+                                    awalnya merupakan daerah pedalaman. Titik baliknya terjadi ketika Gubernur Jenderal
+                                    Daendels membangun Jalan Raya Pos (Groote Postweg). Bupati <span
+                                        class="gradient-bandung">Bandung</span> saat itu, R.A. Wiranatakusumah II,
+                                    memindahkan ibu kota kabupaten dari Krapyak (Dayeuhkolot) ke situs kota <span
+                                        class="gradient-bandung">Bandung</span> yang sekarang pada tahun 1810 agar lebih
+                                    dekat dengan jalur transportasi
                                     utama tersebut.</p>
                             </div>
                         </div>
@@ -84,27 +116,38 @@
                         <div class="v-text reveal">
                             <span class="v-tag" data-i18n-key="timelineItem2Tag">Modernisasi dan Asia Afrika</span>
                             <div class="v-rectanggel">
-                                <p data-i18n-key="timelineItem2Desc">Jalan Raya Pos bertransformasi menjadi pusat modernisasi dengan arsitektur bergaya Art Deco yang megah, seperti Hotel Savoy Homann dan Gedung Merdeka, hingga dijuluki Parijs van Java. Puncaknya, kawasan ini mencetak sejarah
-                                    dunia saat menjadi tempat berlangsungnya Konferensi Asia Afrika (KAA) pada April 1955 yang mempersatukan bangsa-bangsa di Asia dan Afrika.</p>
+                                <p data-i18n-key="timelineItem2Desc">Jalan Raya Pos bertransformasi menjadi pusat
+                                    modernisasi dengan arsitektur bergaya Art Deco yang megah, seperti Hotel Savoy
+                                    Homann dan Gedung Merdeka, hingga dijuluki Parijs van Java. Puncaknya, kawasan ini
+                                    mencetak sejarah
+                                    dunia saat menjadi tempat berlangsungnya Konferensi Asia Afrika (KAA) pada April
+                                    1955 yang mempersatukan bangsa-bangsa di Asia dan Afrika.</p>
                             </div>
                         </div>
                         <div class="v-num reveal">2</div>
                         <div class="v-media reveal">
-                            <img src="../image/timeline/konverensiasiaafrika.jpg" alt="Foto Konferensi Asia Afrika (1955)">
+                            <img src="../image/timeline/konverensiasiaafrika.jpg"
+                                alt="Foto Konferensi Asia Afrika (1955)">
                         </div>
                     </div>
 
                     <!-- TIMELINE 3 ||  BANDUNG LAUTAN API -->
                     <div class="v-item">
                         <div class="v-media reveal">
-                            <img src="../image/timeline/bandunglautanapi.jpg" alt="Monumen Bandung Lautan Api (24 Maret 1946)">
+                            <img src="../image/timeline/bandunglautanapi.jpg"
+                                alt="Monumen Bandung Lautan Api (24 Maret 1946)">
                         </div>
                         <div class="v-num reveal">3</div>
                         <div class="v-text reveal">
-                            <span class="v-tag" data-i18n-key="timelineItem3Tag"><span class="gradient-bandung">Bandung</span> Lautan Api</span>
+                            <span class="v-tag" data-i18n-key="timelineItem3Tag"><span
+                                    class="gradient-bandung">Bandung</span> Lautan Api</span>
                             <div class="v-rectanggel">
-                                <p data-i18n-key="timelineItem3Desc">Menolak menyerahkan kota kepada Sekutu dan NICA untuk dijadikan markas militer, sekitar 200.000 penduduk <span class="gradient-bandung">Bandung</span> Selatan membakar rumah mereka sendiri dalam waktu tujuh jam sebelum
-                                    mengungsi. Peristiwa heroik ini juga menandai gugurnya Mohammad Toha saat meledakkan gudang mesiu sekutu di Dayeuhkolot.</p>
+                                <p data-i18n-key="timelineItem3Desc">Menolak menyerahkan kota kepada Sekutu dan NICA
+                                    untuk dijadikan markas militer, sekitar 200.000 penduduk <span
+                                        class="gradient-bandung">Bandung</span> Selatan membakar rumah mereka sendiri
+                                    dalam waktu tujuh jam sebelum
+                                    mengungsi. Peristiwa heroik ini juga menandai gugurnya Mohammad Toha saat meledakkan
+                                    gudang mesiu sekutu di Dayeuhkolot.</p>
                             </div>
                         </div>
                     </div>
@@ -112,15 +155,22 @@
                     <!-- TIMELINE 4 ||  KOTA PENDIDIKAN -->
                     <div class="v-item reverse">
                         <div class="v-text reveal">
-                            <span class="v-tag" data-i18n-key="timelineItem4Tag"><span class="gradient-bandung">Bandung</span> Kota Pendidikan</span>
+                            <span class="v-tag" data-i18n-key="timelineItem4Tag"><span
+                                    class="gradient-bandung">Bandung</span> Kota Pendidikan</span>
                             <div class="v-rectanggel">
-                                <p data-i18n-key="timelineItem4Desc">Identitas <span class="gradient-bandung">Bandung</span> sebagai kota pendidikan berakar dari dibukanya Technische Hoogeschool te <span class="gradient-bandung">Bandoeng</span> (sekarang ITB) pada 3 Juli 1920 sebagai sekolah
-                                    tinggi teknik pertama di Hindia Belanda. Kehadiran institusi ini menarik kaum intelektual dari berbagai daerah dan memicu lahirnya berbagai perguruan tinggi besar lainnya yang membentuk karakter akademis kota ini.</p>
+                                <p data-i18n-key="timelineItem4Desc">Identitas <span
+                                        class="gradient-bandung">Bandung</span> sebagai kota pendidikan berakar dari
+                                    dibukanya Technische Hoogeschool te <span class="gradient-bandung">Bandoeng</span>
+                                    (sekarang ITB) pada 3 Juli 1920 sebagai sekolah
+                                    tinggi teknik pertama di Hindia Belanda. Kehadiran institusi ini menarik kaum
+                                    intelektual dari berbagai daerah dan memicu lahirnya berbagai perguruan tinggi besar
+                                    lainnya yang membentuk karakter akademis kota ini.</p>
                             </div>
                         </div>
                         <div class="v-num reveal">4</div>
                         <div class="v-media reveal">
-                            <img src="../image/timeline/itb1920.jpg" alt="Technische Hoogeschool te Bandoeng (ITB) 1920">
+                            <img src="../image/timeline/itb1920.jpg"
+                                alt="Technische Hoogeschool te Bandoeng (ITB) 1920">
                         </div>
                     </div>
 
@@ -131,11 +181,16 @@
                         </div>
                         <div class="v-num reveal">5</div>
                         <div class="v-text reveal">
-                            <span class="v-tag" data-i18n-key="timelineItem5Tag"><span class="gradient-bandung">Bandung</span> Kota Kreatif</span>
+                            <span class="v-tag" data-i18n-key="timelineItem5Tag"><span
+                                    class="gradient-bandung">Bandung</span> Kota Kreatif</span>
                             <div class="v-rectanggel">
                                 <div class="v-rectanggel">
-                                    <p data-i18n-key="timelineItem5Desc"><span class="gradient-bandung">Bandung</span> resmi dinobatkan sebagai bagian dari UNESCO Creative Cities Network (UCCN) dalam bidang Design pada Desember 2015. Pengakuan internasional ini didasarkan pada kuatnya ekonomi
-                                        kreatif yang digerakkan oleh komunitas anak muda, mulai dari industri fashion lokal (distro), musik independen, hingga desain grafis dan arsitektur.</p>
+                                    <p data-i18n-key="timelineItem5Desc"><span class="gradient-bandung">Bandung</span>
+                                        resmi dinobatkan sebagai bagian dari UNESCO Creative Cities Network (UCCN) dalam
+                                        bidang Design pada Desember 2015. Pengakuan internasional ini didasarkan pada
+                                        kuatnya ekonomi
+                                        kreatif yang digerakkan oleh komunitas anak muda, mulai dari industri fashion
+                                        lokal (distro), musik independen, hingga desain grafis dan arsitektur.</p>
                                 </div>
                             </div>
                         </div>
@@ -144,10 +199,17 @@
                     <!-- TIMELINE 6 ||  KOTA PINTAR -->
                     <div class="v-item reverse">
                         <div class="v-text reveal">
-                            <span class="v-tag" data-i18n-key="timelineItem6Tag"><span class="gradient-bandung">Bandung</span> Kota Pintar</span>
+                            <span class="v-tag" data-i18n-key="timelineItem6Tag"><span
+                                    class="gradient-bandung">Bandung</span> Kota Pintar</span>
                             <div class="v-rectanggel">
-                                <p data-i18n-key="timelineItem6Desc">Transformasi <span class="gradient-bandung">Bandung</span> menuju kota pintar diwujudkan melalui integrasi teknologi informasi dalam tata kelola pemerintahan dan pelayanan publik. Langkah besarnya ditandai dengan peresmian
-                                    <span class="gradient-bandung">Bandung</span> Command Center (BCC) untuk memantau kondisi kota secara real-time, mengintegrasikan data internal, serta mempercepat penanganan pengaduan warga melalui aplikasi digital.</p>
+                                <p data-i18n-key="timelineItem6Desc">Transformasi <span
+                                        class="gradient-bandung">Bandung</span> menuju kota pintar diwujudkan melalui
+                                    integrasi teknologi informasi dalam tata kelola pemerintahan dan pelayanan publik.
+                                    Langkah besarnya ditandai dengan peresmian
+                                    <span class="gradient-bandung">Bandung</span> Command Center (BCC) untuk memantau
+                                    kondisi kota secara real-time, mengintegrasikan data internal, serta mempercepat
+                                    penanganan pengaduan warga melalui aplikasi digital.
+                                </p>
                             </div>
                         </div>
                         <div class="v-num reveal">6</div>
@@ -162,7 +224,8 @@
 
 
                 <div id="viewHorizontal">
-                    <p class="h-hint" data-i18n-key="timelineHint">geser atau pakai tombol panah untuk melihat lebih banyak</p>
+                    <p class="h-hint" data-i18n-key="timelineHint">geser atau pakai tombol panah untuk melihat lebih
+                        banyak</p>
 
                     <div class="h-wrap">
                         <button class="h-nav-btn prev" id="hPrev">&#8592;</button>
@@ -174,13 +237,24 @@
                                 <!-- 1: gambar atas, teks bawah -->
                                 <div class="h-item up">
                                     <div class="h-media">
-                                        <img src="../image/timeline/braga.lama.jpg" alt="Foto Bandung Tempo Dulu (Jalan Braga)" data-i18n-key="timelineItem1Media">
+                                        <img src="../image/timeline/braga.lama.jpg"
+                                            alt="Foto Bandung Tempo Dulu (Jalan Braga)"
+                                            data-i18n-key="timelineItem1Media">
                                     </div>
                                     <div class="h-num">1</div>
                                     <div class="h-info">
-                                        <span class="h-tag" data-i18n-key="timelineItem1Tag"><span class="gradient-bandung">Bandung</span> Tempo Dulu</span>
+                                        <span class="h-tag" data-i18n-key="timelineItem1Tag"><span
+                                                class="gradient-bandung">Bandung</span> Tempo Dulu</span>
                                         <div class="v-rectanggel">
-                                            <p data-i18n-key="timelineItem1Desc"><span class="gradient-bandung">Bandung</span> awalnya merupakan daerah pedalaman. Titik baliknya terjadi ketika Gubernur Jenderal Daendels membangun Jalan Raya Pos (Groote Postweg). Bupati <span class="gradient-bandung">Bandung</span>                                                saat itu, R.A. Wiranatakusumah II, memindahkan ibu kota kabupaten dari Krapyak (Dayeuhkolot) ke situs kota <span class="gradient-bandung">Bandung</span> yang sekarang pada tahun 1810 agar lebih dekat dengan
+                                            <p data-i18n-key="timelineItem1Desc"><span
+                                                    class="gradient-bandung">Bandung</span> awalnya merupakan daerah
+                                                pedalaman. Titik baliknya terjadi ketika Gubernur Jenderal Daendels
+                                                membangun Jalan Raya Pos (Groote Postweg). Bupati <span
+                                                    class="gradient-bandung">Bandung</span> saat itu, R.A.
+                                                Wiranatakusumah II, memindahkan ibu kota kabupaten dari Krapyak
+                                                (Dayeuhkolot) ke situs kota <span
+                                                    class="gradient-bandung">Bandung</span> yang sekarang pada tahun
+                                                1810 agar lebih dekat dengan
                                                 jalur transportasi utama tersebut.</p>
                                         </div>
                                     </div>
@@ -189,29 +263,43 @@
                                 <!-- 2: teks atas, gambar bawah -->
                                 <div class="h-item down">
                                     <div class="h-info">
-                                        <span class="h-tag" data-i18n-key="timelineItem2Tag">Modernisasi dan Asia Afrika</span>
+                                        <span class="h-tag" data-i18n-key="timelineItem2Tag">Modernisasi dan Asia
+                                            Afrika</span>
                                         <div class="v-rectanggel">
-                                            <p data-i18n-key="timelineItem2Desc">Jalan Raya Pos bertransformasi menjadi pusat modernisasi dengan arsitektur bergaya Art Deco yang megah, seperti Hotel Savoy Homann dan Gedung Merdeka, hingga dijuluki Parijs van Java. Puncaknya, kawasan ini
-                                                mencetak sejarah dunia saat menjadi tempat berlangsungnya Konferensi Asia Afrika (KAA) pada April 1955 yang mempersatukan bangsa-bangsa di Asia dan Afrika.</p>
+                                            <p data-i18n-key="timelineItem2Desc">Jalan Raya Pos bertransformasi menjadi
+                                                pusat modernisasi dengan arsitektur bergaya Art Deco yang megah, seperti
+                                                Hotel Savoy Homann dan Gedung Merdeka, hingga dijuluki Parijs van Java.
+                                                Puncaknya, kawasan ini
+                                                mencetak sejarah dunia saat menjadi tempat berlangsungnya Konferensi
+                                                Asia Afrika (KAA) pada April 1955 yang mempersatukan bangsa-bangsa di
+                                                Asia dan Afrika.</p>
                                         </div>
                                     </div>
                                     <div class="h-num">2</div>
                                     <div class="h-media">
-                                        <img src="../image/timeline/konverensiasiaafrika.jpg" alt="Foto Konferensi Asia Afrika (1955)" data-i18n-key="timelineItem2Media">
+                                        <img src="../image/timeline/konverensiasiaafrika.jpg"
+                                            alt="Foto Konferensi Asia Afrika (1955)" data-i18n-key="timelineItem2Media">
                                     </div>
                                 </div>
 
                                 <!-- 3: gambar atas, teks bawah -->
                                 <div class="h-item up">
                                     <div class="h-media">
-                                        <img src="../image/timeline/bandunglautanapi.jpg" alt="Monumen Bandung Lautan Api (24 Maret 1946)" data-i18n-key="timelineItem3Media">
+                                        <img src="../image/timeline/bandunglautanapi.jpg"
+                                            alt="Monumen Bandung Lautan Api (24 Maret 1946)"
+                                            data-i18n-key="timelineItem3Media">
                                     </div>
                                     <div class="h-num">3</div>
                                     <div class="h-info">
-                                        <span class="h-tag" data-i18n-key="timelineItem3Tag"><span class="gradient-bandung">Bandung</span> Lautan Api</span>
+                                        <span class="h-tag" data-i18n-key="timelineItem3Tag"><span
+                                                class="gradient-bandung">Bandung</span> Lautan Api</span>
                                         <div class="v-rectanggel">
-                                            <p data-i18n-key="timelineItem3Desc">Menolak menyerahkan kota kepada Sekutu dan NICA untuk dijadikan markas militer, sekitar 200.000 penduduk <span class="gradient-bandung">Bandung</span> Selatan membakar rumah mereka sendiri dalam waktu tujuh
-                                                jam sebelum mengungsi. Peristiwa heroik ini juga menandai gugurnya Mohammad Toha saat meledakkan gudang mesiu sekutu di Dayeuhkolot.</p>
+                                            <p data-i18n-key="timelineItem3Desc">Menolak menyerahkan kota kepada Sekutu
+                                                dan NICA untuk dijadikan markas militer, sekitar 200.000 penduduk <span
+                                                    class="gradient-bandung">Bandung</span> Selatan membakar rumah
+                                                mereka sendiri dalam waktu tujuh
+                                                jam sebelum mengungsi. Peristiwa heroik ini juga menandai gugurnya
+                                                Mohammad Toha saat meledakkan gudang mesiu sekutu di Dayeuhkolot.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -219,30 +307,46 @@
                                 <!-- 4: teks atas, gambar bawah -->
                                 <div class="h-item down">
                                     <div class="h-info">
-                                        <span class="h-tag" data-i18n-key="timelineItem4Tag"><span class="gradient-bandung">Bandung</span> Kota Pendidikan</span>
+                                        <span class="h-tag" data-i18n-key="timelineItem4Tag"><span
+                                                class="gradient-bandung">Bandung</span> Kota Pendidikan</span>
                                         <div class="v-rectanggel">
-                                            <p data-i18n-key="timelineItem4Desc">Identitas <span class="gradient-bandung">Bandung</span> sebagai kota pendidikan berakar dari dibukanya Technische Hoogeschool te <span class="gradient-bandung">Bandoeng</span> (sekarang ITB) pada 3 Juli 1920
-                                                sebagai sekolah tinggi teknik pertama di Hindia Belanda. Kehadiran institusi ini menarik kaum intelektual dari berbagai daerah dan memicu lahirnya berbagai perguruan tinggi besar lainnya yang membentuk karakter
+                                            <p data-i18n-key="timelineItem4Desc">Identitas <span
+                                                    class="gradient-bandung">Bandung</span> sebagai kota pendidikan
+                                                berakar dari dibukanya Technische Hoogeschool te <span
+                                                    class="gradient-bandung">Bandoeng</span> (sekarang ITB) pada 3 Juli
+                                                1920
+                                                sebagai sekolah tinggi teknik pertama di Hindia Belanda. Kehadiran
+                                                institusi ini menarik kaum intelektual dari berbagai daerah dan memicu
+                                                lahirnya berbagai perguruan tinggi besar lainnya yang membentuk karakter
                                                 akademis kota ini.</p>
                                         </div>
                                     </div>
                                     <div class="h-num">4</div>
                                     <div class="h-media">
-                                        <img src="../image/timeline/itb1920.jpg" alt="Technische Hoogeschool te Bandoeng (ITB) 1920" data-i18n-key="timelineItem4Media">
+                                        <img src="../image/timeline/itb1920.jpg"
+                                            alt="Technische Hoogeschool te Bandoeng (ITB) 1920"
+                                            data-i18n-key="timelineItem4Media">
                                     </div>
                                 </div>
 
                                 <!-- 5: gambar atas, teks bawah -->
                                 <div class="h-item up">
                                     <div class="h-media">
-                                        <img src="../image/timeline/bandunghub.jpg" alt="Bandung Creative Hub" data-i18n-key="timelineItem5Media">
+                                        <img src="../image/timeline/bandunghub.jpg" alt="Bandung Creative Hub"
+                                            data-i18n-key="timelineItem5Media">
                                     </div>
                                     <div class="h-num">5</div>
                                     <div class="h-info">
-                                        <span class="h-tag" data-i18n-key="timelineItem5Tag"><span class="gradient-bandung">Bandung</span> Kota Kreatif</span>
+                                        <span class="h-tag" data-i18n-key="timelineItem5Tag"><span
+                                                class="gradient-bandung">Bandung</span> Kota Kreatif</span>
                                         <div class="v-rectanggel">
-                                            <p data-i18n-key="timelineItem5Desc"><span class="gradient-bandung">Bandung</span> resmi dinobatkan sebagai bagian dari UNESCO Creative Cities Network (UCCN) dalam bidang Design pada Desember 2015. Pengakuan internasional ini didasarkan pada kuatnya
-                                                ekonomi kreatif yang digerakkan oleh komunitas anak muda, mulai dari industri fashion lokal (distro), musik independen, hingga desain grafis dan arsitektur.</p>
+                                            <p data-i18n-key="timelineItem5Desc"><span
+                                                    class="gradient-bandung">Bandung</span> resmi dinobatkan sebagai
+                                                bagian dari UNESCO Creative Cities Network (UCCN) dalam bidang Design
+                                                pada Desember 2015. Pengakuan internasional ini didasarkan pada kuatnya
+                                                ekonomi kreatif yang digerakkan oleh komunitas anak muda, mulai dari
+                                                industri fashion lokal (distro), musik independen, hingga desain grafis
+                                                dan arsitektur.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -250,16 +354,23 @@
                                 <!-- 6: teks atas, gambar bawah -->
                                 <div class="h-item down">
                                     <div class="h-info">
-                                        <span class="h-tag" data-i18n-key="timelineItem6Tag"><span class="gradient-bandung">Bandung</span> Kota Pintar</span>
+                                        <span class="h-tag" data-i18n-key="timelineItem6Tag"><span
+                                                class="gradient-bandung">Bandung</span> Kota Pintar</span>
                                         <div class="v-rectanggel">
-                                            <p data-i18n-key="timelineItem6Desc">Transformasi <span class="gradient-bandung">Bandung</span> menuju kota pintar diwujudkan melalui integrasi teknologi informasi dalam tata kelola pemerintahan dan pelayanan publik. Langkah besarnya ditandai dengan
-                                                peresmian <span class="gradient-bandung">Bandung</span> Command Center (BCC) untuk memantau kondisi kota secara real-time, mengintegrasikan data internal, serta mempercepat penanganan pengaduan warga melalui
+                                            <p data-i18n-key="timelineItem6Desc">Transformasi <span
+                                                    class="gradient-bandung">Bandung</span> menuju kota pintar
+                                                diwujudkan melalui integrasi teknologi informasi dalam tata kelola
+                                                pemerintahan dan pelayanan publik. Langkah besarnya ditandai dengan
+                                                peresmian <span class="gradient-bandung">Bandung</span> Command Center
+                                                (BCC) untuk memantau kondisi kota secara real-time, mengintegrasikan
+                                                data internal, serta mempercepat penanganan pengaduan warga melalui
                                                 aplikasi digital.</p>
                                         </div>
                                     </div>
                                     <div class="h-num">6</div>
                                     <div class="h-media">
-                                        <img src="../image/timeline/bcc.jpg" alt="Bandung Command Center" data-i18n-key="timelineItem6Media">
+                                        <img src="../image/timeline/bcc.jpg" alt="Bandung Command Center"
+                                            data-i18n-key="timelineItem6Media">
                                     </div>
                                 </div>
 
@@ -279,65 +390,66 @@
         </div>
 
         <!-- PREMIUM DARK BLUE FOOTER -->
-        <footer class="main-footer-section">
-            <div class="container footer-grid-layout">
+        <footer class="main-footer-section ">
+            <div class="container footer-grid-layout ">
                 <!-- Kolom 1: Profil Brand -->
-                <div class="footer-column-brand">
-                    <div class="footer-logo">
-                        <a class="brand" href="#home">
-                            <img src="../image/logo-gedung-sate.png" alt="Bandung icon">
-                            <div class="brand-text">
-                                <div class="logo-txt">
-                                    <strong class="gradient-bandung">BANDUNG</strong>
-                                    <small>Creative Smart City</small>
+                <div class="footer-column-brand ">
+                    <div class="footer-logo ">
+                        <a class="brand " href="../index.html">
+                            <img src="../image/logo-gedung-sate.png " alt="Bandung icon ">
+                            <div class="brand-text ">
+                                <div class="logo-txt ">
+                                    <strong class="gradient-bandung ">BANDUNG</strong>
+                                    <small data-i18n-key="brandText ">Creative Smart City</small>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <p class="brand-desc-text">Platform informasi wisata dan budaya Kota Bandung yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
+                    <p class="brand-desc-text " data-i18n-key="footerBrandDesc ">Platform informasi wisata dan budaya
+                        Kota
+                        <span class="gradient-bandung ">Bandung</span> yang kreatif, inovatif, dan terintegrasi untuk
+                        semua.
+                    </p>
                 </div>
                 <!-- Kolom 2: Navigasi Menu -->
-                <div class="footer-column-links">
-                    <h4>Jelajahi</h4>
+                <div class="footer-column-links ">
+                    <h4 data-i18n-key="footerExplore ">Jelajahi</h4>
                     <ul>
-                        <li><a href="../index.html"><i class="fa-solid fa-info-circle"></i><span>Tentang Bandung</span></a></li>
-                        <li><a href="../html/destinasion.html"><i class="fa-solid fa-location-dot"></i><span>Destinasi</span></a></li>
-                        <li><a href="../html/event.html"><i class="fa-solid fa-calendar-days"></i><span>Event</span></a></li>
-                        <li><a href="../html/timeline.html"><i class="fa-solid fa-clock"></i><span>Timeline</span></a></li>
-                        <li><a href="../html/quiz.html"><i class="fa-solid fa-question-circle"></i><span>Kuis Interaktif</span></a></li>
-                    </ul>
-                </div>
-                <!-- Kolom 3: Informasi -->
-                <div class="footer-column-links">
-                    <h4 data-i18n-key="footerInfoTitle">Informasi</h4>
-                    <ul>
-                        <li><a href="#" data-i18n-key="footerGuide"><i class="fa-solid fa-book"></i><span>Panduan Wisata</span></a></li>
-                        <li><a href="#" data-i18n-key="footerTransport"><i class="fa-solid fa-bus"></i><span>Transportasi</span></a></li>
-                        <li><a href="#" data-i18n-key="footerFood"><i class="fa-solid fa-utensils"></i><span>Kuliner</span></a></li>
-                        <li><a href="#" data-i18n-key="footerStay"><i class="fa-solid fa-bed"></i><span>Akomodasi</span></a></li>
-                        <li><a href="#" data-i18n-key="footerNews"><i class="fa-solid fa-newspaper"></i><span>Berita & Update</span></a></li>
+                        <li><a href="../index.html "><i class="fa-solid fa-info-circle "></i><span
+                                    data-i18n-key="navAbout ">Tentang Bandung</span></a></li>
+                        <li><a href="../html/destinasion.html "><i class="fa-solid fa-location-dot "></i><span
+                                    data-i18n-key="footerDestinations ">Destinasi</span></a></li>
+                        <li><a href="../html/event.html "><i class="fa-solid fa-calendar-days "></i><span
+                                    data-i18n-key="footerEvents ">Event</span></a></li>
+                        <li><a href="../html/timeline.html "><i class="fa-solid fa-clock "></i><span
+                                    data-i18n-key="footerTimeline ">Timeline</span></a></li>
+                        <li><a href="../html/quiz.html "><i class="fa-solid fa-question-circle "></i><span
+                                    data-i18n-key="footerQuiz ">Kuis Interaktif</span></a></li>
                     </ul>
                 </div>
                 <!-- Kolom 4: Sosial dan Kontak -->
-                <div class="footer-social-links">
-                    <h4 data-i18n-key="footerInfoTittle">Sosial Media</h4>
+                <div class="footer-social-links ">
+                    <h4 data-i18n-key="footerInfoTittle ">Sosial Media</h4>
                     <ul>
-                        <li><a href="#"><i class="fa-brands fa-instagram"></i><span>@kota_bandung</span></a></li>
-                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i><span>@bandung_kota</span></a></li>
-                        <li><a href="#"><i class="fa-brands fa-tiktok"></i><span>@cinta_bandung</span></a></li>
-                        <li><a href="#"><i class="fa-brands fa-youtube"></i><span>seputar bandung</span></a></li>
+                        <li><a href="https://www.instagram.com/infobandungkota/ "><i
+                                    class="fa-brands fa-instagram "></i><span>@infobdgcom</span></a></li>
+                        <li><a href="https://www.facebook.com/humaskotabandung/?locale=id_ID "><i
+                                    class="fa-brands fa-facebook-f "></i><span>@humaskotabandung</span></a></li>
+                        <li><a href="https://www.tiktok.com/@humasbdg "><i
+                                    class="fa-brands fa-tiktok "></i><span>@humasbdg</span></a></li>
+                        <li><a href="https://www.youtube.com/c/thisisbandung "><i
+                                    class="fa-brands fa-youtube "></i><span>@ThisisBadung</span></a></li>
                     </ul>
                 </div>
             </div>
-            <div class="container">
-                <div class="footer-bottom-copyright">
-                    <span>&copy; 2026 <span class="gradient-bandung">Bandung</span> Smart City. All Rights Reserved.</span>
+            <div class="container ">
+                <div class="footer-bottom-copyright ">
+                    <span>&copy; 2026 <span class="gradient-bandung ">Bandung</span> Smart City. All Rights
+                        Reserved.</span>
 
                 </div>
             </div>
-            </div>
         </footer>
-
 
         <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
         <script src="../js/timeline.js"></script>

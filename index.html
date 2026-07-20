@@ -50,8 +50,8 @@
                             <button class="toggle-btn lang-btn" data-lang="en">EN</button>
                         </div>
                     </div>
-                    <a class="btn-outline" id="exploreBtn" href="html/destinasion.html"
-                        data-i18n-key="btnExplore"><i class="fa-regular fa-bookmark"></i> Simpan Itinerary</a>
+                    <a class="btn-outline" id="exploreBtn" href="../html/itenary.html" data-i18n-key="btnExplore"><i
+                            class="fa-regular fa-bookmark"></i></a>
                 </div>
 
                 <!-- Tombol Hamburger untuk Mobile -->
@@ -94,36 +94,30 @@
             <div class="about-left">
                 <div class="vidio-box">
                     <iframe
-                        src="https://www.youtube.com/embed/QwuTTGibjIY?autoplay=1&mute=1&loop=1&playlist=QwuTTGibjIY&controls=0&modestbranding=1&rel=0&playsinline=1&vq=hd720&iv_load_policy=3&disablekb=1"
-                        width="100%"
-                        height="100%"
-                        frameborder="0"
-                        allow="autoplay; encrypted-media; picture-in-picture"
-                        style="border-radius: inherit; display: block; pointer-events: none;"
-                    ></iframe>
+                        src="https://www.youtube.com/embed/QwuTTGibjIY?autoplay=1&mute=1&loop=1&playlist=QwuTTGibjIY&controls=0&modestbranding=1&rel=0&playsinline=1&vq=hd720&iv_load_policy=3&disablekb=1&cc_load_policy=0"
+                        width="100%" height="100%" frameborder="0" allow="autoplay; encrypted-media; picture-in-picture"
+                        style="border-radius: inherit; display: block; pointer-events: none;"></iframe>
                 </div>
 
+                <!-- Mini-cards SEKARANG DI DALAM about-left, bukan sibling-nya -->
+                <div class="about-mini-cards">
 
-                <div class="about-mini-cards ">
-
-                    <div class="about-mini-card creative " onclick="openInfoModal( 'creative') "
-                        style="cursor:pointer ">
-                        <img src="image/gedungsate.png " class="mini-card-thumb " alt="Creative ">
-                        <div class="mini-card-content ">
-                            <div class="mini-card-icon ">🎨</div>
-                            <div class="cat-text ">
+                    <div class="about-mini-card creative" onclick="openInfoModal('creative')" style="cursor:pointer">
+                        <img src="image/gedungsate.png" class="mini-card-thumb" alt="Creative">
+                        <div class="mini-card-content">
+                            <div class="mini-card-icon">🎨</div>
+                            <div class="cat-text">
                                 <h4>Creative</h4>
                                 <p>Kota kreatif dengan komunitas dan industri yang berkembang pesat.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="about-mini-card smartcity " onclick="openInfoModal( 'smartcity') "
-                        style="cursor:pointer ">
-                        <img src="image/wisata.png " class="mini-card-thumb " alt="Smart City ">
-                        <div class="mini-card-content ">
-                            <div class="mini-card-icon ">🌐</div>
-                            <div class="cat-text ">
+                    <div class="about-mini-card smartcity" onclick="openInfoModal('smartcity')" style="cursor:pointer">
+                        <img src="image/wisata.png" class="mini-card-thumb" alt="Smart City">
+                        <div class="mini-card-content">
+                            <div class="mini-card-icon">🌐</div>
+                            <div class="cat-text">
                                 <h4>Smart City</h4>
                                 <p>Inovasi teknologi untuk pelayanan publik yang modern dan terintegrasi.</p>
                             </div>
@@ -133,46 +127,43 @@
                 </div>
             </div>
 
-            <div class="content ">
-                <span class="subtitle ">TENTANG Bandung</span>
+            <!-- content SEKARANG DI DALAM about-container, jadi kolom kedua grid -->
+            <div class="content">
+                <span class="subtitle">TENTANG Bandung</span>
                 <h1>Discover the Soul of <span>Bandung</span></h1>
 
-                <p class="description ">
+                <p class="description">
                     Bandung merupakan kota yang memadukan kreativitas, budaya, alam, kuliner, sejarah, dan teknologi
                     dalam satu pengalaman wisata yang modern, nyaman, dan berkelanjutan.
                 </p>
 
-                <div class="quote-box ">
-                    <p>“Aku kembali ke Bandung kepada cintaku yang sesungguhnya” <br> – Ir. Soekarno</p>
+                <div class="quote-box">
+                    <p>"Aku kembali ke Bandung kepada cintaku yang sesungguhnya" <br> – Ir. Soekarno</p>
                 </div>
             </div>
 
         </div>
-        </div>
-
 
         <!-- Bar Statistik dengan Ikon Unik Berwarna -->
-        <div class="stats ">
-            <div class="stat-item destinasi " data-i18n-key="statDestinasi ">
-                <div class="icon-wrap "><i class="fa-solid fa-compass "></i></div>
-                <h3 class="stat-number " data-target="150 ">0+</h3>
-                <strong data-i18n-key="statDestinasiTitle ">Destinasi</strong>
-                <p data-i18n-key="statDestinasiDesc ">Tempat wisata menakjubkan</p>
+        <div class="stats">
+            <div class="stat-item destinasi" data-i18n-key="statDestinasi">
+                <div class="icon-wrap"><i class="fa-solid fa-compass"></i></div>
+                <h3 class="stat-number" data-target="150">0+</h3>
+                <strong data-i18n-key="statDestinasiTitle">Destinasi</strong>
+                <p data-i18n-key="statDestinasiDesc">Tempat wisata menakjubkan</p>
             </div>
-            <div class="stat-item kuliner " data-i18n-key="statKuliner ">
-                <div class="icon-wrap "><i class="fa-solid fa-bowl-food "></i></div>
-                <h3 class="stat-number " data-target="250 ">0+</h3>
-                <strong data-i18n-key="statKulinerTitle ">Kuliner</strong>
-                <p data-i18n-key="statKulinerDesc ">Cita rasa khas <span class="gradient-bandung ">Bandung</span></p>
+            <div class="stat-item kuliner" data-i18n-key="statKuliner">
+                <div class="icon-wrap"><i class="fa-solid fa-bowl-food"></i></div>
+                <h3 class="stat-number" data-target="250">0+</h3>
+                <strong data-i18n-key="statKulinerTitle">Kuliner</strong>
+                <p data-i18n-key="statKulinerDesc">Cita rasa khas <span class="gradient-bandung">Bandung</span></p>
             </div>
-            <div class="stat-item event " data-i18n-key="statEvent ">
-                <div class="icon-wrap "><i class="fa-solid fa-calendar-days "></i></div>
-                <h3 class="stat-number " data-target="50 ">0+</h3>
-                <strong data-i18n-key="statEventTitle ">Event</strong>
-                <p data-i18n-key="statEventDesc ">Event menarik setiap tahun</p>
+            <div class="stat-item event" data-i18n-key="statEvent">
+                <div class="icon-wrap"><i class="fa-solid fa-calendar-days"></i></div>
+                <h3 class="stat-number" data-target="50">0+</h3>
+                <strong data-i18n-key="statEventTitle">Event</strong>
+                <p data-i18n-key="statEventDesc">Event menarik setiap tahun</p>
             </div>
-        </div>
-        </div>
         </div>
     </section>
 
@@ -211,7 +202,8 @@
                                     class="fa-solid fa-location-dot "></i> Ciwidey, Bandung Selatan</span>
                             </p>
                         </div>
-                        <button class="arrow-action-btn "><i class="fa-solid fa-arrow-right "></i></button>
+                        <button class="arrow-action-btn " onclick="location.href='html/rekomen_wisata.html'"><i
+                                class="fa-solid fa-arrow-right "></i></button>
                     </div>
 
                     <!-- 2. Jalan Braga -->
@@ -227,7 +219,8 @@
                             <p class="location-text " data-i18n-key="dest2Location "><i
                                     class="fa-solid fa-location-dot "></i> Sumur Bandung</p>
                         </div>
-                        <button class="arrow-action-btn "><i class="fa-solid fa-arrow-right "></i></button>
+                        <button class="arrow-action-btn " onclick="location.href='html/rekomen_wisata.html'"><i
+                                class="fa-solid fa-arrow-right "></i></button>
                     </div>
 
                     <!-- 3. Gedung Sate -->
@@ -243,7 +236,8 @@
                                     class="fa-solid fa-location-dot "></i> Cibeunying, Bandung Wetan</span>
                             </p>
                         </div>
-                        <button class="arrow-action-btn "><i class="fa-solid fa-arrow-right "></i></button>
+                        <button class="arrow-action-btn " onclick="location.href='html/rekomen_wisata.html'"><i
+                                class="fa-solid fa-arrow-right "></i></button>
                     </div>
 
                 </div>
@@ -328,7 +322,8 @@
                         </div>
                         <p data-i18n-key="cardcultureDesc ">Kenali kosakata dan frasa dasar Bahasa Sunda yang digunakan
                             dalam kehidupan sehari-hari.</p>
-                        <a href="# " class="btn-learn-more text-blue " data-i18n-key="btnLearnMoreBlue ">Pelajari lebih
+                        <a href="html/sunda_culture.html" class="btn-learn-more text-blue "
+                            data-i18n-key="btnLearnMoreBlue ">Pelajari lebih
                             lanjut ➔</a>
                     </div>
 
@@ -343,7 +338,8 @@
                         </div>
                         <p data-i18n-key="pAngklung ">Alat musik tradisional yang telah diakui UNESCO sebagai warisan
                             budaya dunia.</p>
-                        <a href="# " class="btn-learn-more text-green " data-i18n-key="btnLearnMoreGreen ">Pelajari
+                        <a href="html/sunda_culture.html" class="btn-learn-more text-green "
+                            data-i18n-key="btnLearnMoreGreen ">Pelajari
                             lebih lanjut ➔</a>
                     </div>
 
@@ -358,7 +354,8 @@
                         </div>
                         <p data-i18n-key="pJaipong ">Tari khas Sunda yang energik, anggun, dan penuh ekspresi
                             kegembiraan.</p>
-                        <a href="# " class="btn-learn-more text-orange " data-i18n-key="btnLearnMoreOrange ">Pelajari
+                        <a href="html/sunda_culture.html" class="btn-learn-more text-orange "
+                            data-i18n-key="btnLearnMoreOrange ">Pelajari
                             lebih lanjut ➔</a>
                     </div>
 
@@ -373,7 +370,8 @@
                         </div>
                         <p data-i18n-key="pSunda ">Keindahan busana tradisional Sunda yang sarat makna dan nilai budaya.
                         </p>
-                        <a href="# " class="btn-learn-more text-purple " data-i18n-key="btnLearnMorePurple ">Pelajari
+                        <a href="html/sunda_culture.html" class="btn-learn-more text-purple "
+                            data-i18n-key="btnLearnMorePurple ">Pelajari
                             lebih lanjut ➔</a>
                     </div>
 
@@ -383,10 +381,12 @@
 
                 <!-- SLIDER ARROWS: category-grid -->
                 <div class="slider-arrow-nav" id="arrowNavCulture">
-                    <button class="slider-arrow-btn" id="culturePrev" aria-label="Sebelumnya" onclick="slideScroll('categoryGridSlider', -1)">
+                    <button class="slider-arrow-btn" id="culturePrev" aria-label="Sebelumnya"
+                        onclick="slideScroll('categoryGridSlider', -1)">
                         <i class="fa-solid fa-chevron-left"></i>
                     </button>
-                    <button class="slider-arrow-btn" id="cultureNext" aria-label="Berikutnya" onclick="slideScroll('categoryGridSlider', 1)">
+                    <button class="slider-arrow-btn" id="cultureNext" aria-label="Berikutnya"
+                        onclick="slideScroll('categoryGridSlider', 1)">
                         <i class="fa-solid fa-chevron-right"></i>
                     </button>
                 </div>
@@ -500,10 +500,12 @@
 
             <!-- SLIDER ARROWS: timeline-cards-grid -->
             <div class="slider-arrow-nav" id="arrowNavTimeline">
-                <button class="slider-arrow-btn" id="timelinePrev" aria-label="Sebelumnya" onclick="slideScroll('timelineGridSlider', -1)">
+                <button class="slider-arrow-btn" id="timelinePrev" aria-label="Sebelumnya"
+                    onclick="slideScroll('timelineGridSlider', -1)">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
-                <button class="slider-arrow-btn" id="timelineNext" aria-label="Berikutnya" onclick="slideScroll('timelineGridSlider', 1)">
+                <button class="slider-arrow-btn" id="timelineNext" aria-label="Berikutnya"
+                    onclick="slideScroll('timelineGridSlider', 1)">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>
@@ -841,15 +843,15 @@
 
     <!-- POP UP CARD KATEGORI-->
     <!-- MODAL INFO CARD -->
-    <div class="info-modal-overlay " id="infoModalOverlay ">
-        <div class="info-modal-card ">
-            <button class="info-modal-close " id="infoModalClose ">✕</button>
-            <div class="info-modal-image ">
-                <img id="infoModalImg " src=" " alt=" ">
+    <div class="info-modal-overlay" id="infoModalOverlay">
+        <div class="info-modal-card">
+            <button class="info-modal-close" id="infoModalClose">✕</button>
+            <div class="info-modal-image">
+                <img id="infoModalImg" src="" alt="">
             </div>
-            <div class="info-modal-content ">
-                <h2 id="infoModalTitle "></h2>
-                <p id="infoModalDesc "></p>
+            <div class="info-modal-content">
+                <h2 id="infoModalTitle"></h2>
+                <p id="infoModalDesc"></p>
             </div>
         </div>
     </div>
