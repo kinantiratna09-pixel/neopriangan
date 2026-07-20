@@ -838,7 +838,6 @@ p {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Biar video terpenuhi di dalam kotak tanpa gepeng */
     display: block;
 }
 
@@ -1499,10 +1498,8 @@ p {
 @media (max-width: 768px) {
     .about-section {
         margin-top: 80px !important;
-        /* Jarak penyesuaian dari navbar atas */
         margin-bottom: 20px !important;
         padding: 24px 16px !important;
-        /* Diperkecil agar area putih pas membungkus konten */
         height: auto !important;
     }
     .about-container {

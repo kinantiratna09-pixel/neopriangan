@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         backgrounds[currentIndex].classList.add('active');
     }
 
-    setInterval(changeBackground, 2000);
+
 });
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -1054,16 +1054,6 @@ document.querySelector(`.sortbox__menu li[data-value="terdekat"]`).classList.add
   }
 })();
 
-/* ============ Initial render ============ */
-render(); dot = document.createElement("span");
-    dot.className = "lantern-dot";
-    dot.style.left = `${Math.random() * 100}%`;
-    dot.style.top = `${20 + Math.random() * 70}%`;
-    dot.style.animationDelay = `${Math.random() * 3.5}s`;
-    dot.style.animationDuration = `${2.8 + Math.random() * 2.4}s`;
-    container.appendChild(dot);
-  }
-})();
 
 /* ============ Initial render ============ */
 render();
