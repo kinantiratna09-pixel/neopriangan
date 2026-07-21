@@ -199,29 +199,49 @@
            color: #dfe8f3;
        }
        
-       @media (max-width:760px) {
-           .v-item {
-               grid-template-columns: 1fr;
-               gap: 20px;
-               text-align: left !important;
-               margin-bottom: 50px;
-           }
-           .v-item .v-num {
-               order: 0;
-               justify-self: start;
-               margin: 0 0 8px 0;
-           }
-           .v-item .v-media {
-               order: 1;
-           }
-           .v-item .v-text {
-               order: 2;
-               text-align: left !important;
-           }
-           .tl-vertical::before {
-               left: 37px;
-           }
-       }
+        @media (max-width:760px) {
+            .tl-vertical::before {
+                left: 25px; /* Center of the 50px number circle */
+                transform: none;
+            }
+            
+            .v-item {
+                display: grid;
+                grid-template-columns: 50px 1fr;
+                grid-template-rows: auto auto;
+                column-gap: 20px;
+                row-gap: 15px;
+                margin-bottom: 60px;
+                align-items: start;
+            }
+
+            .v-item .v-num {
+                grid-column: 1;
+                grid-row: 1 / 3;
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                margin: 0;
+                justify-self: center;
+            }
+
+            .v-item .v-media, .v-item.reverse .v-media {
+                grid-column: 2;
+                grid-row: 1;
+                order: unset;
+            }
+
+            .v-item .v-text, .v-item.reverse .v-text {
+                grid-column: 2;
+                grid-row: 2;
+                order: unset;
+                text-align: left !important;
+            }
+            
+            .v-tag {
+                margin-bottom: 10px;
+            }
+        }
        /* ================= HORIZONTAL VIEW ================= */
        
        #viewHorizontal {
