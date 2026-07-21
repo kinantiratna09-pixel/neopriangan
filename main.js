@@ -454,6 +454,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+/*
     function setLanguage(lang) {
         const current = translations[lang] ? lang : 'id';
         i18nElements.forEach(el => {
@@ -474,6 +475,7 @@ document.addEventListener('DOMContentLoaded', () => {
     langBtns.forEach(btn => {
         btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
     });
+*/
 
     function closeMobileMenu() {
         if (navMenu && navMenu.classList.contains('open')) {
@@ -510,7 +512,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', updateActiveNav, { passive: true });
     updateActiveNav();
-    setLanguage(localStorage.getItem('siteLang') || 'id');
+    // setLanguage(localStorage.getItem('siteLang') || 'id');
 
     const watchVideoBtn = document.getElementById('watchVideo');
     if (watchVideoBtn) {

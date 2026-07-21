@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -8,83 +9,89 @@
     <link rel="apple-touch-icon" href="../image/logo-gedung-sate.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
-    <link rel ="stylesheet" href="../css/itenary.css">
+    <link rel="stylesheet" href="../css/itenary.css">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
-<nav class="navbar" id="navbar">
-    <div class="container nav-inner">
-        <a class="brand" href="../index.html">
-            <img src="../image/logo-gedung-sate.png" alt="Bandung icon">
-            <div class="brand-text">
-                <small data-translate>Creative Smart City</small>
-            </div>
-        </a>
-
-        <div class="sejarah-container" id="sunda-culture">
-        </div>
-        <ul class="nav-menu">
-            <li><a href="#home" data-i18n-key="navHome">Beranda</a></li>
-
-            <li class="has-dropdown">
-                <a href="#about" data-i18n-key="navAbout">Pusat ⏷</a>
-                <div class="dropdown-panel">
-                    <a href="#about">Tentang</a>
-                    <a href="#destinasi">Destinasi Favorit</a>
-                    <a href="#culture">Sunda Culture</a>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-inner">
+            <a class="brand" href="../index.html">
+                <img src="../image/logo-gedung-sate.png" alt="Bandung icon">
+                <div class="brand-text">
+                    <small data-translate>Creative Smart City</small>
                 </div>
-            </li>
+            </a>
 
-            <li><a href="#timeline" data-i18n-key="navTimeline">Sejarah</a></li>
-            <li><a href="#events" data-i18n-key="navEvents">Acara</a></li>
-            <li><a href="#quiz" data-i18n-key="navQuiz">Kuis</a></li>
-        </ul>
-
-        <div class="nav-actions">
-            <div class="language-switcher view-toggle">
-                <div class="toggle-pill">
-                    <button class="toggle-btn lang-btn active" data-lang="id">ID</button>
-                    <button class="toggle-btn lang-btn" data-lang="en">EN</button>
-                </div>
+            <div class="sejarah-container" id="sunda-culture">
             </div>
-            <a class="btn-outline" id="exploreBtn" href="../html/itenary.html" data-i18n-key="btnExplore"><i
-                    class="fa-regular fa-bookmark"></i></a>
+            <ul class="nav-menu">
+                <li><a href="#home" data-i18n-key="navHome">Beranda</a></li>
+
+                <li class="has-dropdown">
+                    <a href="#about" data-i18n-key="navAbout">Pusat ⏷</a>
+                    <div class="dropdown-panel">
+                        <a href="#about">Tentang</a>
+                        <a href="#destinasi">Destinasi Favorit</a>
+                        <a href="#culture">Sunda Culture</a>
+                    </div>
+                </li>
+
+                <li><a href="#timeline" data-i18n-key="navTimeline">Sejarah</a></li>
+                <li><a href="#events" data-i18n-key="navEvents">Acara</a></li>
+                <li><a href="#quiz" data-i18n-key="navQuiz">Kuis</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="language-switcher view-toggle">
+                    <div class="toggle-pill">
+                        <button class="toggle-btn lang-btn active" data-lang="id">ID</button>
+                        <button class="toggle-btn lang-btn" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <a class="btn-outline" id="exploreBtn" href="../html/itenary.html"><i
+                        class="fa-regular fa-bookmark"></i></a>
+            </div>
+
+            <!-- Tombol Hamburger untuk Mobile -->
+            <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
+    </nav>
 
-        <!-- Tombol Hamburger untuk Mobile -->
-        <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
-            <i class="fa-solid fa-bars"></i>
-        </button>
-    </div>
-</nav>
+    <section class="itenary">
+        <div class="container" style="padding-top: 120px; min-height: 70vh;">
+            <h2 style="text-align: center; color: #031828; margin-bottom: 10px;">Itinerary Saya</h2>
+            <p style="text-align: center; color: #5A738E; margin-bottom: 40px;">Daftar destinasi dan tempat favorit yang
+                telah Anda simpan.</p>
 
-<section class="itenary">
-    <div class="container" style="padding-top: 120px; min-height: 70vh;">
-        <h2 style="text-align: center; color: #031828; margin-bottom: 10px;">Itinerary Saya</h2>
-        <p style="text-align: center; color: #5A738E; margin-bottom: 40px;">Daftar destinasi dan tempat favorit yang telah Anda simpan.</p>
-        
-        <div id="bookmarkContainer" class="destinations-cards-grid">
-            <!-- Kartu bookmark akan dimuat menggunakan JavaScript -->
+            <div id="bookmarkContainer" class="destinations-cards-grid">
+                <!-- Kartu bookmark akan dimuat menggunakan JavaScript -->
+            </div>
+
+            <div id="emptyBookmarkMsg" class="empty-state"
+                style="display: none; text-align: center; padding: 60px 20px;">
+                <i class="fa-regular fa-bookmark" style="font-size: 64px; color: #cbd5e1; margin-bottom: 20px;"></i>
+                <h3 style="color: #334155; margin-bottom: 10px;">Belum ada destinasi tersimpan</h3>
+                <p style="color: #64748b; margin-bottom: 24px;">Silakan jelajahi berbagai tempat menarik di Bandung dan
+                    simpan ke Itinerary Anda.</p>
+                <a href="../index.html" class="btn-outline"
+                    style="display: inline-block; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; color: #2F80ED; border: 2px solid #2F80ED;">Jelajahi
+                    Sekarang</a>
+            </div>
         </div>
+    </section>
 
-        <div id="emptyBookmarkMsg" class="empty-state" style="display: none; text-align: center; padding: 60px 20px;">
-            <i class="fa-regular fa-bookmark" style="font-size: 64px; color: #cbd5e1; margin-bottom: 20px;"></i>
-            <h3 style="color: #334155; margin-bottom: 10px;">Belum ada destinasi tersimpan</h3>
-            <p style="color: #64748b; margin-bottom: 24px;">Silakan jelajahi berbagai tempat menarik di Bandung dan simpan ke Itinerary Anda.</p>
-            <a href="../index.html" class="btn-outline" style="display: inline-block; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; color: #2F80ED; border: 2px solid #2F80ED;">Jelajahi Sekarang</a>
-        </div>
-    </div>
-</section>
-
-<!-- PREMIUM DARK BLUE FOOTER -->
+    <!-- PREMIUM DARK BLUE FOOTER -->
     <footer class="main-footer-section ">
         <div class="container footer-grid-layout ">
             <!-- Kolom 1: Profil Brand -->
             <div class="footer-column-brand ">
                 <div class="footer-logo ">
-                    <a class="brand " href="#home ">
-                        <img src="image/logo-gedung-sate.png " alt="Bandung icon ">
+                    <a class="brand " href="../index.html">
+                        <img src="../image/logo-gedung-sate.png " alt="Bandung icon ">
                         <div class="brand-text ">
                             <div class="logo-txt ">
                                 <strong class="gradient-bandung ">BANDUNG</strong>
@@ -101,15 +108,15 @@
             <div class="footer-column-links ">
                 <h4 data-i18n-key="footerExplore ">Jelajahi</h4>
                 <ul>
-                    <li><a href="#about "><i class="fa-solid fa-info-circle "></i><span
+                    <li><a href="../index.html#about"><i class="fa-solid fa-info-circle "></i><span
                                 data-i18n-key="navAbout ">Tentang Bandung</span></a></li>
-                    <li><a href="#destinations "><i class="fa-solid fa-location-dot "></i><span
+                    <li><a href="../html/destinasion.html"><i class="fa-solid fa-location-dot "></i><span
                                 data-i18n-key="footerDestinations ">Destinasi</span></a></li>
-                    <li><a href="#events "><i class="fa-solid fa-calendar-days "></i><span
+                    <li><a href="../html/event.html"><i class="fa-solid fa-calendar-days "></i><span
                                 data-i18n-key="footerEvents ">Event</span></a></li>
-                    <li><a href="#timeline "><i class="fa-solid fa-clock "></i><span
+                    <li><a href="../html/timeline.html"><i class="fa-solid fa-clock "></i><span
                                 data-i18n-key="footerTimeline ">Timeline</span></a></li>
-                    <li><a href="#interactive-quiz "><i class="fa-solid fa-question-circle "></i><span
+                    <li><a href="../html/quiz.html"><i class="fa-solid fa-question-circle "></i><span
                                 data-i18n-key="footerQuiz ">Kuis Interaktif</span></a></li>
                 </ul>
             </div>

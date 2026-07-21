@@ -7,7 +7,8 @@
     <title>Bandung — Creative Smart City</title>
     <link rel="icon" href="../image/logo-gedung-sate.png" type="image/png">
     <link rel="apple-touch-icon" href="../image/logo-gedung-sate.png">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/sunda_culture.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -15,7 +16,7 @@
 
 <body>
     <header id="home">
-        <nav class="navbar scrolled" id="navbar">
+        <nav class="navbar" id="navbar">
             <div class="container nav-inner">
                 <a class="brand" href="../index.html">
                     <img src="../image/logo-gedung-sate.png" alt="Bandung icon">
@@ -24,35 +25,37 @@
                     </div>
                 </a>
 
-                <div class="sejarah-container" id="sunda-culture"></div>
-                
+                <div class="sunda-culture" id="sundaculture">
+                </div>
                 <ul class="nav-menu">
                     <li><a href="../index.html" data-i18n-key="navHome">Beranda</a></li>
+
                     <li class="has-dropdown">
-                        <a href="../index.html#about" data-i18n-key="navAbout">Pusat ⏷</a>
+                        <a href="../index.html" data-i18n-key="navAbout">Pusat ⏷</a>
                         <div class="dropdown-panel">
-                            <a href="../index.html#about">Tentang</a>
-                            <a href="../index.html#destinasi">Destinasi Favorit</a>
-                            <a href="../index.html#culture">Sunda Culture</a>
+                            <a href="#about">Tentang</a>
+                            <a href="../html/destinasion.html">Destinasi Favorit</a>
+                            <a href="../html/sunda_culture.html">Sunda Culture</a>
                         </div>
                     </li>
-                    <li><a href="../index.html#timeline" data-i18n-key="navTimeline">Sejarah</a></li>
-                    <li><a href="../index.html#events" data-i18n-key="navEvents">Acara</a></li>
-                    <li><a href="../index.html#quiz" data-i18n-key="navQuiz">Kuis</a></li>
+
+                    <li><a href="../html/timeline.html" data-i18n-key="navTimeline">Sejarah</a></li>
+                    <li><a href="../html/event.html" data-i18n-key="navEvents">Acara</a></li>
+                    <li><a href="../html/quiz.html" data-i18n-key="navQuiz">Kuis</a></li>
                 </ul>
 
                 <div class="nav-actions">
-                    <div class="language-switcher view-toggle">
+                    <!-- <div class="language-switcher view-toggle">
                         <div class="toggle-pill">
                             <button class="toggle-btn lang-btn active" data-lang="id">ID</button>
                             <button class="toggle-btn lang-btn" data-lang="en">EN</button>
                         </div>
-                    </div>
-                    <a class="btn-outline" id="exploreBtn" href="destinasion.html" data-i18n-key="btnExplore">
-                        <i class="fa-regular fa-bookmark"></i> Simpan Itinerary
-                    </a>
+                    </div> -->
+                    <a class="btn-outline" id="exploreBtn" href="../html/itenary.html"><i
+                            class="fa-regular fa-bookmark"></i></a>
                 </div>
 
+                <!-- Tombol Hamburger untuk Mobile -->
                 <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -61,10 +64,12 @@
     </header>
 
     <section class="culture-p-section">
-        <div class="culture-p-hero" style="background-image: linear-gradient(rgba(3, 24, 40, 0.45), rgba(3, 24, 40, 0.3)), url('../image/rumah-adat-sunda.png');">
+        <div class="culture-p-hero"
+            style="background-image: linear-gradient(rgba(3, 24, 40, 0.45), rgba(3, 24, 40, 0.3)), url('../image/rumah-adat-sunda.png');">
             <div class="culture-p-container">
                 <h1>Jelajahi <br>Budaya Sunda</h1>
-                <p class="culture-p-subtitle">Kenali lebih dalam tentang warisan budaya Sunda yang kaya akan nilai, tradisi, dan kearifan lokal.</p>
+                <p class="culture-p-subtitle">Kenali lebih dalam tentang warisan budaya Sunda yang kaya akan nilai,
+                    tradisi, dan kearifan lokal.</p>
 
                 <div class="culture-p-search-box">
                     <div class="culture-p-input-wrap">
@@ -81,145 +86,169 @@
 
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/aksara-sunda.png" alt="Bahasa Sunda" onerror="this.src='https://unsplash.com/random'">
+                            <img src="../image/aksara-sunda.png" alt="Bahasa Sunda"
+                                onerror="this.src='https://unsplash.com/random'">
                             <span class="culture-p-badge b-purple">Bahasa</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Bahasa Sunda</h3>
-                            <p>Kenali kosakata dan frasa dasar Bahasa Sunda yang digunakan dalam kehidupan sehari-hari.</p>
+                            <p>Kenali kosakata dan frasa dasar Bahasa Sunda yang digunakan dalam kehidupan sehari-hari.
+                            </p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/angklung.png" alt="Angklung" onerror="this.src='https://unsplash.com/random'">
+                            <img src="../image/angklung.png" alt="Angklung"
+                                onerror="this.src='https://unsplash.com/random'">
                             <span class="culture-p-badge b-purple">Seni Pertunjukan</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Angklung</h3>
-                            <p>Pelajari tentang alat musik tradisional Sunda yang terbuat dari bambu dan dimainkan dengan cara digoyangkan.</p>
+                            <p>Pelajari tentang alat musik tradisional Sunda yang terbuat dari bambu dan dimainkan
+                                dengan cara digoyangkan.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/baju-adat.jpg" alt="Pakaian Adat Sunda" onerror="this.src='https://unsplash.com/random'">
+                            <img src="../image/baju-adat.jpg" alt="Pakaian Adat Sunda"
+                                onerror="this.src='https://unsplash.com/random'">
                             <span class="culture-p-badge b-orange">Pakaian Adat</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Pakaian Adat Sunda</h3>
-                            <p>Jelajahi ragam pakaian tradisional Sunda yang mencerminkan identitas dan budaya masyarakatnya.</p>
+                            <p>Jelajahi ragam pakaian tradisional Sunda yang mencerminkan identitas dan budaya
+                                masyarakatnya.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/serentaun.jpg" alt="Upacara Seren Taun" onerror="this.src='https://unsplash.com/random'">
+                            <img src="../image/serentaun.jpg" alt="Upacara Seren Taun"
+                                onerror="this.src='https://unsplash.com/random'">
                             <span class="culture-p-badge b-cyan">Tradisi & Upacara</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Upacara Seren Taun</h3>
-                            <p>Pelajari tentang upacara adat tahunan yang dilakukan oleh masyarakat Sunda untuk menyambut panen padi.</p>
+                            <p>Pelajari tentang upacara adat tahunan yang dilakukan oleh masyarakat Sunda untuk
+                                menyambut panen padi.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/tarimerak.jpg" alt="Tari Merak" onerror="this.src='https://unsplash.com/random'">
+                            <img src="../image/tarimerak.jpg" alt="Tari Merak"
+                                onerror="this.src='https://unsplash.com/random'">
                             <span class="culture-p-badge b-blue">Kesenian</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Tari Merak</h3>
-                            <p>Tarian elok yang mengekspresikan keindahan dan kelincahan burung merak jantan, kebanggaan seni tari Jawa Barat.</p>
+                            <p>Tarian elok yang mengekspresikan keindahan dan kelincahan burung merak jantan, kebanggaan
+                                seni tari Jawa Barat.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/seblak.jpg" alt="Seblak" onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500'">
+                            <img src="../image/seblak.jpg" alt="Seblak"
+                                onerror="this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500'">
                             <span class="culture-p-badge b-blue">Kuliner</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Seblak</h3>
-                            <p>Nikmati perpaduan rasa pedas dan gurih khas kerupuk basah dengan rempah kencur yang menggugah selera.</p>
+                            <p>Nikmati perpaduan rasa pedas dan gurih khas kerupuk basah dengan rempah kencur yang
+                                menggugah selera.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/Batagor.jpg" alt="Batagor" onerror="this.src='https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500'">
+                            <img src="../image/Batagor.jpg" alt="Batagor"
+                                onerror="this.src='https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=500'">
                             <span class="culture-p-badge b-blue">Kuliner</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Batagor</h3>
-                            <p>Jajanan legendaris Bandung berupa bakso tahu goreng yang renyah, disiram saus kacang kental yang manis gurih.</p>
+                            <p>Jajanan legendaris Bandung berupa bakso tahu goreng yang renyah, disiram saus kacang
+                                kental yang manis gurih.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/miekocok.jpg" alt="Mie Kocok" onerror="this.src='https://images.unsplash.com/photo-1612966608997-30d529227b86?w=500'">
+                            <img src="../image/miekocok.jpg" alt="Mie Kocok"
+                                onerror="this.src='https://images.unsplash.com/photo-1612966608997-30d529227b86?w=500'">
                             <span class="culture-p-badge b-blue">Kuliner</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Mie Kocok Bandung</h3>
-                            <p>Hidangan mi kuning kenyal berkuah kaldu sapi kental, disajikan dengan potongan kikil empuk, tauge segar, dan perasan jeruk nipis.</p>
+                            <p>Hidangan mi kuning kenyal berkuah kaldu sapi kental, disajikan dengan potongan kikil
+                                empuk, tauge segar, dan perasan jeruk nipis.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
-                   
+
 
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/wayanggolek.jpg" alt="Wayang Golek" onerror="this.src='https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=500'">
+                            <img src="../image/wayanggolek.jpg" alt="Wayang Golek"
+                                onerror="this.src='https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=500'">
                             <span class="culture-p-badge b-blue">Kesenian</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Wayang Golek</h3>
-                            <p>Kesenian teater boneka kayu khas Sunda yang sarat akan nilai moral, humor, dan cerita kepahlawanan epik.</p>
+                            <p>Kesenian teater boneka kayu khas Sunda yang sarat akan nilai moral, humor, dan cerita
+                                kepahlawanan epik.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
- <article class="culture-p-card-item">
+                    <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/brownies.jpg" alt="Brownies Bandung" onerror="this.src='https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500'">
+                            <img src="../image/brownies.jpg" alt="Brownies Bandung"
+                                onerror="this.src='https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500'">
                             <span class="culture-p-badge b-blue">Kuliner</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Brownies Panggang & Kukus</h3>
-                            <p>Oleh-oleh legendaris khas Bandung dengan tekstur yang sangat lembut, cokelat yang super pekat, dan manis yang pas.</p>
+                            <p>Oleh-oleh legendaris khas Bandung dengan tekstur yang sangat lembut, cokelat yang super
+                                pekat, dan manis yang pas.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/benang.jpg" alt="Benjang" onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500'">
+                            <img src="../image/benang.jpg" alt="Benjang"
+                                onerror="this.src='https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500'">
                             <span class="culture-p-badge b-blue">Tradisi</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Seni Benjang</h3>
-                            <p>Kesenian bela diri tradisional sejenis gulat tradisional Sunda yang tumbuh subur dan diiringi musik rampak yang meriah.</p>
+                            <p>Kesenian bela diri tradisional sejenis gulat tradisional Sunda yang tumbuh subur dan
+                                diiringi musik rampak yang meriah.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
 
                     <article class="culture-p-card-item">
                         <div class="culture-p-card-media">
-                            <img src="../image/colenak.jpg" alt="Colenak" onerror="this.src='https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500'">
+                            <img src="../image/colenak.jpg" alt="Colenak"
+                                onerror="this.src='https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=500'">
                             <span class="culture-p-badge b-blue">Kuliner</span>
                         </div>
                         <div class="culture-p-card-info">
                             <h3>Colenak</h3>
-                            <p>Camilan legendaris khas tatar Sunda berupa tape singkong (peuyeum) bakar yang disiram saus gula merah kental dan parutan kelapa.</p>
+                            <p>Camilan legendaris khas tatar Sunda berupa tape singkong (peuyeum) bakar yang disiram
+                                saus gula merah kental dan parutan kelapa.</p>
                         </div>
                         <button class="culture-p-arrow-btn">➔</button>
                     </article>
@@ -256,58 +285,62 @@
         </div>
     </div>
 
-    <footer class="main-footer-section">
-        <div class="container footer-grid-layout">
-            <div class="footer-column-brand">
-                <div class="footer-logo">
-                    <a class="brand" href="#home">
-                        <img src="../image/logo-gedung-sate.png" alt="Bandung icon">
-                        <div class="brand-text">
-                            <div class="logo-txt">
-                                <strong class="gradient-bandung">BANDUNG</strong>
-                                <small>Creative Smart City</small>
+    <!-- PREMIUM DARK BLUE FOOTER -->
+    <footer class="main-footer-section ">
+        <div class="container footer-grid-layout ">
+            <!-- Kolom 1: Profil Brand -->
+            <div class="footer-column-brand ">
+                <div class="footer-logo ">
+                    <a class="brand " href="../index.html">
+                        <img src="../image/logo-gedung-sate.png " alt="Bandung icon ">
+                        <div class="brand-text ">
+                            <div class="logo-txt ">
+                                <strong class="gradient-bandung ">BANDUNG</strong>
+                                <small data-i18n-key="brandText ">Creative Smart City</small>
                             </div>
                         </div>
                     </a>
                 </div>
-                <p class="brand-desc-text">Platform informasi wisata dan budaya Kota Bandung yang kreatif, inovatif, dan terintegrasi untuk semua.</p>
+                <p class="brand-desc-text " data-i18n-key="footerBrandDesc ">Platform informasi wisata dan budaya Kota
+                    <span class="gradient-bandung ">Bandung</span> yang kreatif, inovatif, dan terintegrasi untuk semua.
+                </p>
             </div>
-
-            <div class="footer-column-links">
-                <h4>Jelajahi</h4>
+            <!-- Kolom 2: Navigasi Menu -->
+            <div class="footer-column-links ">
+                <h4 data-i18n-key="footerExplore ">Jelajahi</h4>
                 <ul>
-                    <li><a href="#about"><i class="fa-solid fa-info-circle"></i><span>Tentang Bandung</span></a></li>
-                    <li><a href="#destinations"><i class="fa-solid fa-location-dot"></i><span>Destinasi</span></a></li>
-                    <li><a href="#events"><i class="fa-solid fa-calendar-days"></i><span>Event</span></a></li>
-                    <li><a href="#timeline"><i class="fa-solid fa-clock"></i><span>Timeline</span></a></li>
-                    <li><a href="#quiz-section"><i class="fa-solid fa-question-circle"></i><span>Kuis Interaktif</span></a></li>
+                    <li><a href="../index.html#about"><i class="fa-solid fa-info-circle "></i><span
+                                data-i18n-key="navAbout ">Tentang Bandung</span></a></li>
+                    <li><a href="../html/destinasion.html"><i class="fa-solid fa-location-dot "></i><span
+                                data-i18n-key="footerDestinations ">Destinasi</span></a></li>
+                    <li><a href="../html/event.html"><i class="fa-solid fa-calendar-days "></i><span
+                                data-i18n-key="footerEvents ">Event</span></a></li>
+                    <li><a href="../html/timeline.html"><i class="fa-solid fa-clock "></i><span
+                                data-i18n-key="footerTimeline ">Timeline</span></a></li>
+                    <li><a href="../html/quiz.html"><i class="fa-solid fa-question-circle "></i><span
+                                data-i18n-key="footerQuiz ">Kuis Interaktif</span></a></li>
                 </ul>
             </div>
-
-            <div class="footer-column-links">
-                <h4 data-i18n-key="footerInfoTitle">Informasi</h4>
+            <!-- Kolom 4: Sosial dan Kontak -->
+            <div class="footer-social-links ">
+                <h4 data-i18n-key="footerInfoTittle ">Sosial Media</h4>
                 <ul>
-                    <li><a href="#"><i class="fa-solid fa-book"></i><span>Panduan Wisata</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-bus"></i><span>Transportasi</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-utensils"></i><span>Kuliner</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-bed"></i><span>Akomodasi</span></a></li>
-                    <li><a href="#"><i class="fa-solid fa-newspaper"></i><span>Berita & Update</span></a></li>
-                </ul>
-            </div>
-
-            <div class="footer-social-links">
-                <h4 data-i18n-key="footerInfoTittle">Sosial Media</h4>
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i><span>@kota_bandung</span></a></li>
-                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i><span>@bandung_kota</span></a></li>
-                    <li><a href="#"><i class="fa-brands fa-tiktok"></i><span>@cinta_bandung</span></a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i><span>seputar bandung</span></a></li>
+                    <li><a href="https://www.instagram.com/infobandungkota/ "><i
+                                class="fa-brands fa-instagram "></i><span>@infobdgcom</span></a></li>
+                    <li><a href="https://www.facebook.com/humaskotabandung/?locale=id_ID "><i
+                                class="fa-brands fa-facebook-f "></i><span>@humaskotabandung</span></a></li>
+                    <li><a href="https://www.tiktok.com/@humasbdg "><i
+                                class="fa-brands fa-tiktok "></i><span>@humasbdg</span></a></li>
+                    <li><a href="https://www.youtube.com/c/thisisbandung "><i
+                                class="fa-brands fa-youtube "></i><span>@ThisisBadung</span></a></li>
                 </ul>
             </div>
         </div>
+        <div class="container ">
+            <div class="footer-bottom-copyright ">
+                <span>&copy; 2026 <span class="gradient-bandung ">Bandung</span> Smart City. All Rights Reserved.</span>
 
-        <div class="footer-bottom-copyright">
-            <span>&copy; 2026 Bandung Smart City. All Rights Reserved.</span>
+            </div>
         </div>
     </footer>
 
